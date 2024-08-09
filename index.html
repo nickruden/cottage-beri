@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Коттедж-бери</title>
     <link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon">
+    <link href="https://vjs.zencdn.net/8.16.1/video-js.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
     <link rel="stylesheet" href="./css/style.css">
 
     <!-- не забыть скачать шрифты (ещё Bebas Neue Cyrillic) -->
@@ -16,51 +20,52 @@
     </script>
     <script type="text/javascript">
         ymaps.ready(function () {
-    var myMap = new ymaps.Map(
-        'map', 
-        {
-            center: [54.759393, 56.015000],
-            zoom: 10.5,
-            controls: [],
-        },
-        {
-            suppressMapOpenBlock: true,
-        },
-        )
+            var myMap = new ymaps.Map(
+                'map',
+                {
+                    center: [54.759393, 56.015000],
+                    zoom: 10.5,
+                    controls: [],
+                },
+                {
+                    suppressMapOpenBlock: true,
+                },
+            )
 
-        // отображаем метки
-        myPlacemarkWithContent = new ymaps.Placemark(
-            [54.712879, 55.645140], {
-            hintContent: 'Коттедж-бери',
-        }, {
-            // Опции.
-            // Необходимо указать данный тип макета.
-            iconLayout: 'default#image',
-            // Своё изображение иконки метки.
-            iconImageHref: './img/geo-icon.svg',
-            // Размеры метки.
-            iconImageSize: [50, 65],
-            // Смещение левого верхнего угла иконки относительно её "ножки" (точки привязки).
-            iconImageOffset: [-20, -57],
+            // отображаем метки
+            myPlacemarkWithContent = new ymaps.Placemark(
+                [54.712879, 55.645140], {
+                hintContent: 'Коттедж-бери',
+            }, {
+                // Опции.
+                // Необходимо указать данный тип макета.
+                iconLayout: 'default#image',
+                // Своё изображение иконки метки.
+                iconImageHref: './img/geo-icon.svg',
+                // Размеры метки.
+                iconImageSize: [50, 65],
+                // Смещение левого верхнего угла иконки относительно её "ножки" (точки привязки).
+                iconImageOffset: [-20, -57],
 
+            });
+            console.log(myPlacemarkWithContent)
+
+            const coordinates = [[54.712879, 55.645140]]
+
+            coordinates.forEach(elem => {
+                myMap.geoObjects.add(myPlacemarkWithContent)
+            })
+            myMap.geoObjects
+                .add(myPlacemarkWithContent);
         });
-        console.log(myPlacemarkWithContent)
-
-        const coordinates = [[54.712879, 55.645140]]
-    
-        coordinates.forEach(elem => {
-            myMap.geoObjects.add(myPlacemarkWithContent)
-        })
-        myMap.geoObjects
-        .add(myPlacemarkWithContent);
-});
     </script>
-    
+
 
 </head>
+
 <body>
     <header class="header">
-        <div class="header__container container">
+        <div class="header__container my-container">
             <img src="./img/logo.png" alt="Логотип" class="header__logo">
             <nav class="header__menu">
                 <ul class="header__menu-items">
@@ -94,10 +99,10 @@
             </nav>
             <div class="header__contacts">
                 <div class="header__contacts-numbers">
-                    <a href="tel:+73472665191" class="header__contacts-number-first" >+7 (347) 266-51-91</a>
+                    <a href="tel:+73472665191" class="header__contacts-number-first">+7 (347) 266-51-91</a>
                     <a href="tel:+79273335651" class="header__contacts-numbers-second">+7 (927) 333-56-51</a>
                 </div>
-                <div class="header__contact-address">г. Уфа, ул. Блюхера, 2/1 пн-пт  09:00 – 19:00</div>
+                <div class="header__contact-address">г. Уфа, ул. Блюхера, 2/1 пн-пт 09:00 – 19:00</div>
                 <button class="header__contacts-button">Обратный звонок</button>
             </div>
         </div>
@@ -105,7 +110,7 @@
     <main class="main">
         <div class="main__head-block">ХЕДЕР МЕИН БЛОКА</div>
         <div class="stats">
-            <div class="stats__container container">
+            <div class="stats__container my-container">
                 <div class="stats__items">
                     <div class="stats__item" style="width: 490px;">
                         <div class="stats__item-title">2008</div>
@@ -123,7 +128,7 @@
             </div>
         </div>
         <div class="stocks">
-            <div class="stocks__container container">
+            <div class="stocks__container my-container">
                 <div class="stocks__items">
                     <div class="stock__item">
                         <div class="stock__item-body">
@@ -148,7 +153,7 @@
             </div>
         </div>
         <div class="cottage-complexes">
-            <div class="cottage-complexes__container container">
+            <div class="cottage-complexes__container my-container">
                 <div class="cottage-complexes__title title">Наши <span>коттеджные комплексы</span> в Уфе</div>
                 <div class="cottage-complexes__cards">
                     <div class="cottage-complexes__card">
@@ -160,7 +165,8 @@
                             <div class="cottage-complexes__card-description">
                                 <div class="cottage-complexes__card-texts">
                                     <div class="cottage-complexes__card-title">Красная поляна</div>
-                                    <div class="cottage-complexes__card-text">эффектные кирпичные дома рядом с <br> озером
+                                    <div class="cottage-complexes__card-text">эффектные кирпичные дома рядом с <br>
+                                        озером
                                         Куянкуль</div>
                                 </div>
                                 <a href="" class="link-icon-wrap">
@@ -178,7 +184,8 @@
                             <div class="cottage-complexes__card-description">
                                 <div class="cottage-complexes__card-texts">
                                     <div class="cottage-complexes__card-title">Лермонтов</div>
-                                    <div class="cottage-complexes__card-text">дома в неоклассическом стиле с нежно-голубым <br>
+                                    <div class="cottage-complexes__card-text">дома в неоклассическом стиле с
+                                        нежно-голубым <br>
                                         дизайном</div>
                                 </div>
                                 <a href="" class="link-icon-wrap">
@@ -192,7 +199,7 @@
             </div>
         </div>
         <div class="complexes-map">
-            <div class="container">
+            <div class="my-container">
                 <div class="complexes-map__wrapper">
                     <div class="complexes-map__title title">Коттеджные <span>комплексы на карте</span></div>
                     <div class="complexes-map__map">
@@ -200,7 +207,8 @@
                     </div>
                     <div class="complexes-map__description">
                         <div class="complexes-map__description-title">Построим дом на вашем земельном участке</div>
-                        <div class="complexes-map__description-text">или поможем подобрать участок под ваши требования</div>
+                        <div class="complexes-map__description-text">или поможем подобрать участок под ваши требования
+                        </div>
                     </div>
                     <div class="complexes-map__buttons">
                         <a href="" class="complexes-map__more-link button button_link">Узнать больше</a>
@@ -210,13 +218,14 @@
             </div>
         </div>
         <div class="features">
-            <div class="features__container container">
+            <div class="features__container my-container">
                 <div class="features__title title">Мы строим из материалов по <span>ГОСТу и СНиПу</span></div>
                 <div class="features__cards">
                     <div class="features__card">
                         <div class="features__card-items">
                             <img src="./img/features/Icon-1.svg" alt="" class="features__card-img">
-                            <div class="features__card-text">Cтроительство ведется рабочими и прорабами с опытом 15+ лет</div>
+                            <div class="features__card-text">Cтроительство ведется рабочими и прорабами с опытом 15+ лет
+                            </div>
                         </div>
                     </div>
                     <div class="features__card">
@@ -246,26 +255,28 @@
                     <div class="features__card">
                         <div class="features__card-items">
                             <img src="./img/features/Icon-6.svg" alt="" class="features__card-img">
-                            <div class="features__card-text">C независимым технадзором — так спокойнее и вам, и нам</div>
+                            <div class="features__card-text">C независимым технадзором — так спокойнее и вам, и нам
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="reports">
-            <div class="reports__container container">
+            <div class="reports__container my-container">
                 <div class="reports__title title">Регулярные <span>фото и видеоотчёты</span></div>
                 <div class="reports__text">Вы всегда в курсе, на каком этапе строительство!</div>
                 <div class="reports__slider slider">ТУТ СЛАЙДЕР</div>
             </div>
         </div>
         <div class="advantages">
-            <div class="advantages__container container">
+            <div class="advantages__container my-container">
                 <h2 class="advantages__title title">Наши <span> преимущества </span></h2>
                 <div class="advantages__items">
                     <div class="advantages__item">
                         <img src="./img/advantages/star-icon.svg" alt="" class="advantages____item-icon">
-                        <div class="advantages__item-description">Не имеем ни одного судебного <br> разбирательства — наши
+                        <div class="advantages__item-description">Не имеем ни одного судебного <br> разбирательства —
+                            наши
                             клиенты полностью <span> довольны результатом </span></div>
                     </div>
                     <div class="advantages__item">
@@ -275,29 +286,33 @@
                     </div>
                     <div class="advantages__item">
                         <img src="./img/advantages/building-icon.svg" alt="" class="advantages____item-icon">
-                        <div class="advantages__item-description">Наша компания аккредитована во всех популярных банках. Это
+                        <div class="advantages__item-description">Наша компания аккредитована во всех популярных банках.
+                            Это
                             значит, что вы можете взять <span> ипотеку в удобном месте </span></div>
                     </div>
                     <div class="advantages__item">
                         <img src="./img/advantages/shield-icon.svg" alt="" class="advantages____item-icon">
-                        <div class="advantages__item-description">Отличаемся <span> высокой надежностью </span> благодаря
+                        <div class="advantages__item-description">Отличаемся <span> высокой надежностью </span>
+                            благодаря
                             большой капитализации компании</div>
                     </div>
                     <div class="advantages__item">
                         <img src="./img/advantages/case-icon.svg" alt="" class="advantages____item-icon">
-                        <div class="advantages__item-description">Наш юрист поможет вам подготовить все <span> необходимые
+                        <div class="advantages__item-description">Наш юрист поможет вам подготовить все <span>
+                                необходимые
                                 документы </span></div>
                     </div>
                     <div class="advantages__item">
                         <img src="./img/advantages/person-icon.svg" alt="" class="advantages____item-icon">
-                        <div class="advantages__item-description">Каждого клиента ведет <span> личный менеджер</span>, который
+                        <div class="advantages__item-description">Каждого клиента ведет <span> личный менеджер</span>,
+                            который
                             помогает решить все вопросы</div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="payment">
-            <div class="payment__container container">
+            <div class="payment__container my-container">
                 <div class="payment__wrapper">
                     <div class="payment__title title"><span> Как купить </span> дом в Уфе</div>
                     <div class="payment__items">
@@ -323,7 +338,7 @@
             </div>
         </div>
         <div class="viewing">
-            <div class="viewing__container container">
+            <div class="viewing__container my-container">
                 <div class="viewing__title title">Хотите<span> всё увидеть </span>своими глазами?</div>
                 <div class="viewing__cards">
                     <div class="viewing__card">
@@ -339,6 +354,163 @@
                             <img src="./img/viewing/excursion.jpg" alt="" class="viewing__card-img">
                             <div class="vewing__description">
                                 <button class="viewing__card-button button">Записаться на экскурсию</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="what-saying">
+            <div class="what-saying__container my-container">
+                <div class="what-saying__wrapper bordered-block">
+                    <div class="what-saying__body">
+                        <div class="what-saying__title title"><span>Что говорят</span> люди</div>
+                        <div class="what-saying__text">Нашим клиентам нравятся уютные планировки, готовый дизайнерский
+                            ремонт, наличие своего собственного участка земли, возможность пристроить к дому гараж,
+                            баню, беседку.</div>
+                    </div>
+                    <div class="what-saying__video">
+                        <video style="height: 100%;" id="my-video" class="video-js" controls preload="auto" width="750px"
+                            poster="./video/poster.jpg" data-setup="{}" >
+                            <source src="./video/31637395_MotionElements_earth-hologram_preview.mp4" type="video/mp4" />
+                            <p class="vjs-no-js">
+                                To view this video please enable JavaScript, and consider upgrading to a
+                                web browser that
+                                <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5
+                                    video</a>
+                            </p>
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="reviews">
+            <div class="reviews__container my-container">
+                <div class="reviews__title title">Отзывы</div>
+                <div class="reviews__slider slider">ТУТ СЛАЙДЕР</div>
+            </div>
+        </div>
+        <div class="consultation">
+            <div class="consultation__container my-container">
+                <div class="consultation__wrapper bordered-block">
+                    <div class="consultation__body">
+                        <div class="consultation__title title">Хотите дом <span>«под себя»?</span></div>
+                        <div class="consultation__text">Создадим индивидуальный проект с учетом всех ваших пожеланий,
+                            воплотим в реальность все ваши мечты от этажности и материалов до отделки.</div>
+                        <button class="consultation__button button">Записаться на консультацию</button>
+                    </div>
+                    <img src="./img/consultation/consultation-img.jpg" alt="" class="consultation__img">
+                </div>
+            </div>
+        </div>
+        <div class="FAQ">
+            <div class="FAQ__container my-container">
+                <div class="FAQ__title title">Часто задаваемые вопросы</div>
+                <div class="FAQ__accordion">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button FAQ__accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                    aria-controls="collapseOne">
+                                    Из чего складывается стоимость дома?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show"
+                                data-bs-parent="#accordionExample" style>
+                                <div class="accordion-body FAQ__accordion-body-text">
+                                    Создадим индивидуальный проект с учетом всех ваших пожеланий, воплотим в реальность
+                                    все ваши мечты от этажности и материалов до отделки. Создадим индивидуальный проект
+                                    с учетом всех ваших пожеланий, воплотим в реальность все ваши мечты от этажности и
+                                    материалов до отделки. Создадим индивидуальный проект с учетом всех ваших пожеланий,
+                                    воплотим в реальность все ваши мечты от этажности и материалов до отделки. Создадим
+                                    индивидуальный проект с учетом всех ваших пожеланий, воплотим в реальность все ваши
+                                    мечты от этажности и материалов до отделки.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed FAQ__accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                                    aria-controls="collapseTwo">
+                                    Какие гарантии вы даете?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample"
+                                style>
+                                <div class="accordion-body FAQ__accordion-body-text">
+                                    Создадим индивидуальный проект с учетом всех ваших пожеланий, воплотим в реальность
+                                    все ваши мечты от этажности и материалов до отделки. Создадим индивидуальный проект
+                                    с учетом всех ваших пожеланий, воплотим в реальность все ваши мечты от этажности и
+                                    материалов до отделки. Создадим индивидуальный проект с учетом всех ваших пожеланий,
+                                    воплотим в реальность все ваши мечты от этажности и материалов до отделки. Создадим
+                                    индивидуальный проект с учетом всех ваших пожеланий, воплотим в реальность все ваши
+                                    мечты от этажности и материалов до отделки.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed FAQ__accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                                    aria-controls="collapseThree">
+                                    Какие работы входят в стоимость коттеджа?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample" style>
+                                <div class="accordion-body FAQ__accordion-body-text">
+                                    Создадим индивидуальный проект с учетом всех ваших пожеланий, воплотим в реальность
+                                    все ваши мечты от этажности и материалов до отделки. Создадим индивидуальный проект
+                                    с учетом всех ваших пожеланий, воплотим в реальность все ваши мечты от этажности и
+                                    материалов до отделки. Создадим индивидуальный проект с учетом всех ваших пожеланий,
+                                    воплотим в реальность все ваши мечты от этажности и материалов до отделки. Создадим
+                                    индивидуальный проект с учетом всех ваших пожеланий, воплотим в реальность все ваши
+                                    мечты от этажности и материалов до отделки.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed FAQ__accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+                                    aria-controls="collapseFour">
+                                    Сколько времени уходит на строительство?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample" style>
+                                <div class="accordion-body FAQ__accordion-body-text">
+                                    Создадим индивидуальный проект с учетом всех ваших пожеланий, воплотим в реальность
+                                    все ваши мечты от этажности и материалов до отделки. Создадим индивидуальный проект
+                                    с учетом всех ваших пожеланий, воплотим в реальность все ваши мечты от этажности и
+                                    материалов до отделки. Создадим индивидуальный проект с учетом всех ваших пожеланий,
+                                    воплотим в реальность все ваши мечты от этажности и материалов до отделки. Создадим
+                                    индивидуальный проект с учетом всех ваших пожеланий, воплотим в реальность все ваши
+                                    мечты от этажности и материалов до отделки.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed FAQ__accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false"
+                                    aria-controls="collapseFive">
+                                    Есть ли у вас возможность индивидуального проектирования коттеджа?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample" style>
+                                <div class="accordion-body FAQ__accordion-body-text">
+                                    Создадим индивидуальный проект с учетом всех ваших пожеланий, воплотим в реальность
+                                    все ваши мечты от этажности и материалов до отделки. Создадим индивидуальный проект
+                                    с учетом всех ваших пожеланий, воплотим в реальность все ваши мечты от этажности и
+                                    материалов до отделки. Создадим индивидуальный проект с учетом всех ваших пожеланий,
+                                    воплотим в реальность все ваши мечты от этажности и материалов до отделки. Создадим
+                                    индивидуальный проект с учетом всех ваших пожеланий, воплотим в реальность все ваши
+                                    мечты от этажности и материалов до отделки.
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -373,14 +545,15 @@
                     <li class="footer__menu-item"><a href="" class="footer__menu-link">FAMILY PARK</a></li>
                     <li class="footer__menu-item"><a href="" class="footer__menu-link">ЭКО-ВИЛЛАДЖ (НАГАЕВО)</a></li>
                     <li class="footer__menu-item"><a href="" class="footer__menu-link">ЭКО-ВИЛЛАДЖ (ШМИДТОВО)</a></li>
-                    <li class="footer__menu-item"><a href="" class="footer__menu-link">СТРОИТЕЛЬСТВО НА ВАШЕМ УЧАСТКЕ</a>
+                    <li class="footer__menu-item"><a href="" class="footer__menu-link">СТРОИТЕЛЬСТВО НА ВАШЕМ
+                            УЧАСТКЕ</a>
                     </li>
                 </ul>
             </nav>
             <div class="footer__socials">
                 <div class="social__links">
-                    <a href="" class="social__link"><img src="./img/social-media-icons/telegram (Traced).svg" alt="Иконка телеграм"
-                            class="social__link-icon"></a>
+                    <a href="" class="social__link"><img src="./img/social-media-icons/telegram (Traced).svg"
+                            alt="Иконка телеграм" class="social__link-icon"></a>
                     <a href="" class="social__link"><img src="./img/social-media-icons/vk (Traced).svg" alt="Иконка вк"
                             class="social__link-icon"></a>
                     <a href="" class="social__link"><img src="./img/social-media-icons/youtube.svg" alt="Иконка ютьюб"
@@ -390,5 +563,17 @@
             </div>
         </div>
     </footer>
+    <script src="https://vjs.zencdn.net/8.16.1/video.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

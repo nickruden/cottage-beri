@@ -18,6 +18,7 @@ body {
     line-height: 1;
     display: flex;
     flex-direction: column; 
+    overflow-x: hidden;
 }
 
 ul,
@@ -30,19 +31,21 @@ a {
     color: #292929;
 }
 
-img {
+img, iframe {
     vertical-align: bottom;
 }
 
 button {
     cursor: pointer;
 }
-    
-.container {
+
+/* не могу использовать container, так как в Bootstrap есть такое же свойство, и там задана ширина 100%, что не даёт уменьшаться содержимому автоматически при изменении разрешения, вместо этого там реализованы разные широты для разных разрещений медиа запросами */
+.my-container {
     max-width: 1520px;
     margin: 0 auto;
     padding: 0px 30px;
     box-sizing: content-box;
+    overflow-x: hidden;
 }
 
 
@@ -83,6 +86,12 @@ button {
     align-items: center;
 }
 
+.bordered-block {
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
 
 
 /* HEADER */
@@ -103,6 +112,8 @@ button {
 }
 .header__menu-items {
     display: flex;
+    padding: 0;
+    margin: 0;
 }
 .header__menu-item:not(:last-child) {
     margin-right: 20px;
@@ -111,7 +122,6 @@ button {
     max-width: 147px;
     font-size: 14px;
     font-weight: 500;
-    letter-spacing: 0%;
     color: #000;
 }
 .header__menu-link {
@@ -141,7 +151,6 @@ button {
     margin-right: 14px;
 }
 .header__contacts-button {
-    max-width: 160px;
     color: #FFF;
     font-size: 14px;
     font-weight: 600;
@@ -154,7 +163,7 @@ button {
 
 /* MAIN */
 .main {
-    flex: 1 1 auto;
+    flex: 0 1 auto;
 }
 
 /* 2 блок */
@@ -290,12 +299,10 @@ button {
     padding-bottom: 99px;
 }
 .complexes-map__wrapper {
-    border: 1px solid #D9D9D9;
     padding: 40px 0px 50px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 8px;
 }
 
 .complexes-map__title {
@@ -462,7 +469,7 @@ button {
 
 /* 10 блок */
 .viewing {
-    padding-bottom: 99px;
+    padding-bottom: 101px;
 }
 .viewing__container {
 }
@@ -495,6 +502,117 @@ button {
     padding: 30px 0px;
 }
 .viewing__card-button {
+}
+
+/* 11 блок */
+.what-saying {
+    padding-bottom: 99px;
+}
+.what-saying__container {
+}
+.what-saying__wrapper {
+    display: flex;
+}
+.what-saying__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 140px 0px 160px 40px;
+    max-width: 662px;
+    margin-right: 118px;
+}
+.what-saying__title {
+    padding-bottom: 10px;
+}
+.what-saying__text {
+    font-size: 20px;
+    line-height: 25px;
+    color: #646666;
+}
+.what-saying__video {
+    max-width: 750px;
+    justify-self: end;
+}
+
+/* 12 блок */
+.reviews {
+    padding-bottom: 101px;
+}
+.reviews__container {
+}
+.reviews__title {
+    margin-bottom: 50px;
+}
+.reviews__slider {
+}
+.slider {
+}
+
+/* 13 блок */
+.consultation {
+    padding-bottom: 105px;
+}
+.consultation__container {
+}
+.consultation__wrapper {
+    display: flex;
+    align-items: center;
+}
+.consultation__body {
+    max-width: 702px;
+    margin-left: 33px;
+}
+.consultation__title {
+    margin-bottom: 10px;
+}
+.consultation__text {
+    font-size: 20px;
+    line-height: 25px;
+    color: #646666;
+    margin-bottom: 45px;
+}
+.consultation__button {
+}
+.consultation__img {
+    display: inline-block;
+    margin-left: 33px;
+}
+
+/* 14 блок */
+.FAQ {
+    padding-bottom: 94px;
+}
+.FAQ__container {
+}
+.FAQ__title {
+    margin-bottom: 50px;
+}
+.FAQ__accordion {
+}
+.FAQ__accordion-button {
+    padding: 30px 40px 34px 40px;
+    font-size: 30px;
+    font-weight: 500;
+    color: #000;
+}
+.FAQ__accordion-button[aria-expanded="true"] {
+    padding-bottom: 14px;
+}
+.FAQ__accordion-body-text {
+    font-size: 20px;
+    line-height: 25px;
+    color: #646666;
+    padding: 0px 101px 35px 40px;
+}
+.accordion {
+    --bs-accordion-active-bg: none;
+}
+.accordion-button:focus {
+    box-shadow: none;
+}
+.accordion-button:not(.collapsed) {
+    color: inherit;
+    box-shadow: none;
 }
 
 /* FOOTER */
