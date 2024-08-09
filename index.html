@@ -10,6 +10,51 @@
     <!-- не забыть скачать шрифты (ещё Bebas Neue Cyrillic) -->
     <link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Inter:regular,500,600,700" rel="stylesheet" />
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=f028c4f8-776d-4ba3-b079-94a909b9cca1
+    &lang=ru" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+        ymaps.ready(function () {
+    var myMap = new ymaps.Map(
+        'map', 
+        {
+            center: [54.759393, 56.015000],
+            zoom: 10.5,
+            controls: [],
+        },
+        {
+            suppressMapOpenBlock: true,
+        },
+        )
+
+        // отображаем метки
+        myPlacemarkWithContent = new ymaps.Placemark(
+            [54.712879, 55.645140], {
+            hintContent: 'Коттедж-бери',
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: './img/geo-icon.svg',
+            // Размеры метки.
+            iconImageSize: [50, 65],
+            // Смещение левого верхнего угла иконки относительно её "ножки" (точки привязки).
+            iconImageOffset: [-20, -57],
+
+        });
+        console.log(myPlacemarkWithContent)
+
+        const coordinates = [[54.712879, 55.645140]]
+    
+        coordinates.forEach(elem => {
+            myMap.geoObjects.add(myPlacemarkWithContent)
+        })
+        myMap.geoObjects
+        .add(myPlacemarkWithContent);
+});
+    </script>
     
 
 </head>
@@ -60,17 +105,17 @@
     <main class="main">
         <div class="main__head-block">ХЕДЕР МЕИН БЛОКА</div>
         <div class="stats">
-            <div class="container">
+            <div class="stats__container container">
                 <div class="stats__items">
-                    <div class="stats__item">
+                    <div class="stats__item" style="width: 490px;">
                         <div class="stats__item-title">2008</div>
                         <div class="stats__item-text">строим дома с 2008 года</div>
                     </div>
-                    <div class="stats__item">
+                    <div class="stats__item" style="width: 500px;">
                         <div class="stats__item-title">350+</div>
                         <div class="stats__item-text">проектов реализовали под ключ</div>
                     </div>
-                    <div class="stats__item">
+                    <div class="stats__item" style="width: 490px;">
                         <div class="stats__item-title">5 лет</div>
                         <div class="stats__item-text">гарантии на дом и отделку</div>
                     </div>
@@ -81,19 +126,223 @@
             <div class="stocks__container container">
                 <div class="stocks__items">
                     <div class="stock__item">
-                        <img src="./img/stocks/1.png" alt="фото процент" class="stock__img">
-                        <div class="stock__title">Платим ипотеку за вас</div>
+                        <div class="stock__item-body">
+                            <img src="./img/stocks/1.png" alt="фото процент" class="stock__img">
+                            <div class="stock__title">Платим ипотеку за вас</div>
+                        </div>
                     </div>
                     <div class="stock__item">
-                        <img src="./img/stocks/2.png" alt="фото стул" class="stock__img">
-                        <div class="stock__title">Мебель в подарок</div>
+                        <div class="stock__item-body">
+                            <img src="./img/stocks/2.png" alt="фото стул" class="stock__img">
+                            <div class="stock__title">Мебель в подарок</div>
+                        </div>
                     </div>
                     <div class="stock__item">
-                        <img src="./img/stocks/3.png" alt="фото сертификат" class="stock__img">
-                        <div class="stock__title">Сертификат 100 000 ₽</div>
+                        <div class="stock__item-body">
+                            <img src="./img/stocks/3.png" alt="фото сертификат" class="stock__img">
+                            <div class="stock__title">Сертификат 100 000 ₽</div>
+                        </div>
                     </div>
                 </div>
                 <a href="" class="stocks__link button button_link">Все акции</a>
+            </div>
+        </div>
+        <div class="cottage-complexes">
+            <div class="cottage-complexes__container container">
+                <div class="cottage-complexes__title title">Наши <span>коттеджные комплексы</span> в Уфе</div>
+                <div class="cottage-complexes__cards">
+                    <div class="cottage-complexes__card">
+                        <div class="cottage-complexes__card-items">
+                            <div class="cottage-complexes__card-img-wrap">
+                                <img src="./img/cottage-complexes/card1.jpg" alt="" class="cottage-complexes__card-img">
+                                <div class="img-pre-title">Акбердинский район, 44 дома</div>
+                            </div>
+                            <div class="cottage-complexes__card-description">
+                                <div class="cottage-complexes__card-texts">
+                                    <div class="cottage-complexes__card-title">Красная поляна</div>
+                                    <div class="cottage-complexes__card-text">эффектные кирпичные дома рядом с <br> озером
+                                        Куянкуль</div>
+                                </div>
+                                <a href="" class="link-icon-wrap">
+                                    <img src="./img/link-arrow.svg" alt="иконка ссылки" class="link-icon">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cottage-complexes__card">
+                        <div class="cottage-complexes__card-items">
+                            <div class="cottage-complexes__card-img-wrap">
+                                <img src="./img/cottage-complexes/card2.jpg" alt="" class="cottage-complexes__card-img">
+                                <div class="img-pre-title">32 дома</div>
+                            </div>
+                            <div class="cottage-complexes__card-description">
+                                <div class="cottage-complexes__card-texts">
+                                    <div class="cottage-complexes__card-title">Лермонтов</div>
+                                    <div class="cottage-complexes__card-text">дома в неоклассическом стиле с нежно-голубым <br>
+                                        дизайном</div>
+                                </div>
+                                <a href="" class="link-icon-wrap">
+                                    <img src="./img/link-arrow.svg" alt="иконка ссылки" class="link-icon">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="" class="cottage-complexes__link button button_link">Смотреть все комплексы</a>
+            </div>
+        </div>
+        <div class="complexes-map">
+            <div class="container">
+                <div class="complexes-map__wrapper">
+                    <div class="complexes-map__title title">Коттеджные <span>комплексы на карте</span></div>
+                    <div class="complexes-map__map">
+                        <div id="map" style="width: 100%; height: 100%;"></div>
+                    </div>
+                    <div class="complexes-map__description">
+                        <div class="complexes-map__description-title">Построим дом на вашем земельном участке</div>
+                        <div class="complexes-map__description-text">или поможем подобрать участок под ваши требования</div>
+                    </div>
+                    <div class="complexes-map__buttons">
+                        <a href="" class="complexes-map__more-link button button_link">Узнать больше</a>
+                        <button class="complexes-map__consult-button button">Записаться на консультацию</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="features">
+            <div class="features__container container">
+                <div class="features__title title">Мы строим из материалов по <span>ГОСТу и СНиПу</span></div>
+                <div class="features__cards">
+                    <div class="features__card">
+                        <div class="features__card-items">
+                            <img src="./img/features/Icon-1.svg" alt="" class="features__card-img">
+                            <div class="features__card-text">Cтроительство ведется рабочими и прорабами с опытом 15+ лет</div>
+                        </div>
+                    </div>
+                    <div class="features__card">
+                        <div class="features__card-items">
+                            <img src="./img/features/Icon-2.svg" alt="" class="features__card-img">
+                            <div class="features__card-text">Cвоей спецтехникой — никаких субподрядчиков</div>
+                        </div>
+                    </div>
+                    <div class="features__card">
+                        <div class="features__card-items">
+                            <img src="./img/features/Icon-3.svg" alt="" class="features__card-img">
+                            <div class="features__card-text">C соблюдением сроков — нет переносов и задержек</div>
+                        </div>
+                    </div>
+                    <div class="features__card">
+                        <div class="features__card-items">
+                            <img src="./img/features/Icon-4.svg" alt="" class="features__card-img">
+                            <div class="features__card-text">C точной сметой для каждого этапа строительства</div>
+                        </div>
+                    </div>
+                    <div class="features__card">
+                        <div class="features__card-items">
+                            <img src="./img/features/Icon-5.svg" alt="" class="features__card-img">
+                            <div class="features__card-text">C эскроу-счетами — безопасная сделка с покупателем</div>
+                        </div>
+                    </div>
+                    <div class="features__card">
+                        <div class="features__card-items">
+                            <img src="./img/features/Icon-6.svg" alt="" class="features__card-img">
+                            <div class="features__card-text">C независимым технадзором — так спокойнее и вам, и нам</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="reports">
+            <div class="reports__container container">
+                <div class="reports__title title">Регулярные <span>фото и видеоотчёты</span></div>
+                <div class="reports__text">Вы всегда в курсе, на каком этапе строительство!</div>
+                <div class="reports__slider slider">ТУТ СЛАЙДЕР</div>
+            </div>
+        </div>
+        <div class="advantages">
+            <div class="advantages__container container">
+                <h2 class="advantages__title title">Наши <span> преимущества </span></h2>
+                <div class="advantages__items">
+                    <div class="advantages__item">
+                        <img src="./img/advantages/star-icon.svg" alt="" class="advantages____item-icon">
+                        <div class="advantages__item-description">Не имеем ни одного судебного <br> разбирательства — наши
+                            клиенты полностью <span> довольны результатом </span></div>
+                    </div>
+                    <div class="advantages__item">
+                        <img src="./img/advantages/medal-icon.svg" alt="" class="advantages____item-icon">
+                        <div class="advantages__item-description">Мы являемся <span> авторизованными партнерами </span>
+                            производителей материалов, поставляемых на строительную площадку</div>
+                    </div>
+                    <div class="advantages__item">
+                        <img src="./img/advantages/building-icon.svg" alt="" class="advantages____item-icon">
+                        <div class="advantages__item-description">Наша компания аккредитована во всех популярных банках. Это
+                            значит, что вы можете взять <span> ипотеку в удобном месте </span></div>
+                    </div>
+                    <div class="advantages__item">
+                        <img src="./img/advantages/shield-icon.svg" alt="" class="advantages____item-icon">
+                        <div class="advantages__item-description">Отличаемся <span> высокой надежностью </span> благодаря
+                            большой капитализации компании</div>
+                    </div>
+                    <div class="advantages__item">
+                        <img src="./img/advantages/case-icon.svg" alt="" class="advantages____item-icon">
+                        <div class="advantages__item-description">Наш юрист поможет вам подготовить все <span> необходимые
+                                документы </span></div>
+                    </div>
+                    <div class="advantages__item">
+                        <img src="./img/advantages/person-icon.svg" alt="" class="advantages____item-icon">
+                        <div class="advantages__item-description">Каждого клиента ведет <span> личный менеджер</span>, который
+                            помогает решить все вопросы</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="payment">
+            <div class="payment__container container">
+                <div class="payment__wrapper">
+                    <div class="payment__title title"><span> Как купить </span> дом в Уфе</div>
+                    <div class="payment__items">
+                        <div class="payment__item">
+                            <img src="./img/payment/cash-icon.svg" alt="" class="payment__icon">
+                            <div class="payment__name">Наличными</div>
+                        </div>
+                        <div class="payment__item">
+                            <img src="./img/payment/mortgage-icon.svg" alt="" class="payment__icon">
+                            <div class="payment__name">В ипотеку</div>
+                        </div>
+                        <div class="payment__item">
+                            <img src="./img/payment/trade-in-icon.svg" alt="" class="payment__icon">
+                            <div class="payment__name">Trade-in</div>
+                        </div>
+                        <div class="payment__item">
+                            <img src="./img/payment/installment-plan-icon.svg" alt="" class="payment__icon">
+                            <div class="payment__name">В рассрочку 0%</div>
+                        </div>
+                    </div>
+                    <a href="" class="payment__link button button_link">Все варианты оплаты</a>
+                </div>
+            </div>
+        </div>
+        <div class="viewing">
+            <div class="viewing__container container">
+                <div class="viewing__title title">Хотите<span> всё увидеть </span>своими глазами?</div>
+                <div class="viewing__cards">
+                    <div class="viewing__card">
+                        <div class="viewing__card-items">
+                            <img src="./img/viewing/3D-tour.jpg" alt="" class="viewing__card-img">
+                            <div class="vewing__description">
+                                <button class="viewing__card-button button">Записаться на 3Д-тур</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="viewing__card">
+                        <div class="viewing__card-items">
+                            <img src="./img/viewing/excursion.jpg" alt="" class="viewing__card-img">
+                            <div class="vewing__description">
+                                <button class="viewing__card-button button">Записаться на экскурсию</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
