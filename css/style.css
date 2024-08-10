@@ -8,18 +8,27 @@
     box-sizing: border-box;
 }
 
+:root {
+    font-family: Inter, sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+  }
+  @supports (font-variation-settings: normal) {
+    :root { font-family: InterVariable, sans-serif; }
+  }
+
 html,
 body {
     height: 100%;
     font-family: 'Inter';
     font-size: 18px;
-    font-weight: 'regular';
+    font-weight: 400;
     color: #292929;
     line-height: 1.2;
     letter-spacing: .0em;
     display: flex;
     flex-direction: column; 
 }
+
 
 a {
     text-decoration: none;
