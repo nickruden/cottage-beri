@@ -501,10 +501,18 @@ button {
     text-align: center;
     margin-bottom: 30px;
 }
+/* .customControl {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 3px;
+    width: 200px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+} */
 .complexes-map__description-title {
     font-size: 36px;
     font-weight: 700;
     line-height: 40px;
+    letter-spacing: -0.05em;
     margin-bottom: 10px;
 }
 .complexes-map__description-text {
@@ -862,7 +870,7 @@ button {
 
 /* 15 блок */
 .feedback {
-    padding-bottom: 101px;
+    padding-bottom: 100px;
 }
 .feedback__container {
 }
@@ -906,6 +914,63 @@ button {
 }
 .feedback__button {
     width: 100%;
+}
+
+/* 16 блок */
+.contacts {
+
+}
+.contacts__container {
+}
+.contacts__info-wrapper {
+    position: relative;
+    height: 1px;
+    overflow: visible;
+}
+.contacts__info {
+    position: absolute;
+    z-index: 100;
+    top: 100px;
+    width: 490px;
+    padding: 40px;
+    border-radius: 8px;
+    background: #FFF;
+}
+.contacts__title {
+    margin-bottom: 30px;
+}
+.contacts__numbers {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14px;
+}
+.contacts__phone {
+    font-size: 30px;
+    font-weight: 600;
+}
+.contacts__phone:not(:last-child) {
+    margin-bottom: 14px;
+}
+.contacts__email {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 600;
+    color: #83B32B;
+    margin-bottom: 30px;
+}
+.contacts__address {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #646666;
+    max-width: 245px;
+}
+.contacts__map {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 620px;
 }
 
 /* FOOTER */
@@ -953,6 +1018,7 @@ button {
     margin-right: 220px;
 }
 .footer__menu-item {
+    list-style-type: none;
     margin-bottom: 15px;
 }
 .footer__menu-link {

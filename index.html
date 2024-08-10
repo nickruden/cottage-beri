@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" href="./css/style.css">
 
-    <!-- не забыть скачать шрифты (ещё Bebas Neue Cyrillic) -->
+    <!-- не забыть скачать шрифты -->
     <link href="https://fonts.googleapis.com/css?family=Inter:regular,500,600,700" rel="stylesheet" />
 
     <script src="https://api-maps.yandex.ru/2.1/?apikey=f028c4f8-776d-4ba3-b079-94a909b9cca1
@@ -22,12 +22,13 @@
     <script type="text/javascript">
         ymaps.ready(function () {
             var myMap = new ymaps.Map(
-                'map',
+                'myMap',
                 {
                     center: [54.759393, 56.015000],
                     zoom: 10.5,
-                    controls: []
+                    controls: [],
                 },
+                { suppressMapOpenBlock: true }
             )
 
             // отображаем метки
@@ -48,9 +49,79 @@
             });
             myMap.geoObjects
                 .add(myPlacemarkWithContent);
+
+            // Пример реализации собственного элемента управления на основе наследования от collection.Item.
+            // Элемент управления отображает название объекта, который находится в центре карты.
+            const contactsMap = new ymaps.Map("contacts-map", {
+                center: [54.775006, 56.019577],
+                zoom: 17,
+                controls: [],
+            },
+                { suppressMapOpenBlock: true },
+                {
+                    searchControlProvider: 'yandex#search'
+                }),
+
+                myPlacemarkWithContent2 = new ymaps.Placemark(
+                    [54.775179, 56.022966], {}, {
+                    // Опции.
+                    preset: "islands#blueFactoryIcon",
+                    iconColor: '#ff0000',
+
+                    // Размеры метки.
+                    iconImageSize: [50, 65],
+                    // Смещение левого верхнего угла иконки относительно её "ножки" (точки привязки).
+                    iconImageOffset: [-20, -57],
+
+                });
+            contactsMap.geoObjects
+                .add(myPlacemarkWithContent2);
+
+        //     var CustomControlClass = function (options) {
+        //         CustomControlClass.superclass.constructor.call(this, options);
+        //         this._content = null;
+        //         this._geocoderDeferred = null;
+        //     };
+
+        //     // И наследуем его от collection.Item.
+        //     ymaps.util.augment(CustomControlClass, ymaps.collection.Item, {
+        //         onAddToMap: function (map) {
+        //             CustomControlClass.superclass.onAddToMap.call(this, map);
+        //             this._lastCenter = null;
+        //             this.getParent().getChildElement(this).then(this._onGetChildElement, this);
+        //         },
+
+        //         _onGetChildElement: function (parentDomContainer) {
+        //             // Создаем HTML-элемент с текстом.
+        //             this._content = document.createElement('div');
+        //             this._content.innerHTML = `
+        //     <div class="contacts__info">
+        //         <div class="contacts__title title">Контакты</div>
+        //         <div class="contacts__numbers">
+        //             <a href="tel:+73472665191" class="contacts__phone">+7 (347) 266-51-91</a>
+        //             <a href="tel:+79273335651" class="contacts__phone">+7 (927) 333-56-51</a>
+        //         </div>
+        //         <a href="mailto:sales.cottagebery@yandex.ru" class="contacts__email">sales.cottagebery@yandex.ru</a>
+        //         <div class="contacts__address">г. Уфа, ул. Блюхера, 2/1 пн-пт 09:00 – 19:00</div>
+        //     </div>
+        // `;
+        //             parentDomContainer.appendChild(this._content);
+        //         },
+        //     });
+
+        //     // Создание экземпляра пользовательского элемента управления
+        //     var customControl = new CustomControlClass();
+
+        //     // Добавление пользовательского элемента управления на карту
+        //     contactsMap.controls.add(customControl, {
+        //         float: 'none',
+        //         position: {
+        //             top: 10,
+        //             left: 10
+        //         }
+        //     });
         });
     </script>
-
 
 </head>
 
@@ -338,7 +409,7 @@
                 <div class="complexes-map__wrapper bordered-block">
                     <div class="complexes-map__title title">Коттеджные <span>комплексы на карте</span></div>
                     <div class="complexes-map__map">
-                        <div id="map" style="width: 100%; height: 100%;"></div>
+                        <div id="myMap" style="width: 100%; height: 100%;"></div>
                     </div>
                     <div class="complexes-map__description">
                         <div class="complexes-map__description-title">Построим дом на вашем земельном участке</div>
@@ -564,41 +635,41 @@
             <div class="reviews__container my-container">
                 <div class="reviews__title title">Отзывы</div>
                 <div class="reviews__slider">
-                        <div class="swiper reviews__swiper">
-                            <div class="swiper-wrapper reviews__slider-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="reviews__slide bordered-block">
-                                        <img src="./img/reviews/1.png" alt="" class="reviews__slide-img">
-                                    </div>
-                                    <div class="reviews__slide-triangle"></div>
+                    <div class="swiper reviews__swiper">
+                        <div class="swiper-wrapper reviews__slider-wrapper">
+                            <div class="swiper-slide">
+                                <div class="reviews__slide bordered-block">
+                                    <img src="./img/reviews/1.png" alt="" class="reviews__slide-img">
                                 </div>
-                                <div class="swiper-slide">
-                                    <div class="reviews__slide bordered-block">
-                                        <img src="./img/reviews/2.png" alt="" class="reviews__slide-img">
-                                    </div>
-                                    <div class="reviews__slide-triangle"></div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="reviews__slide bordered-block">
-                                        <img src="./img/reviews/3.png" alt="" class="reviews__slide-img">
-                                    </div>
-                                    <div class="reviews__slide-triangle"></div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="reviews__slide bordered-block">
-                                        <img src="./img/reviews/1.png" alt="" class="reviews__slide-img">
-                                    </div>
-                                    <div class="reviews__slide-triangle"></div>
-                                </div>
+                                <div class="reviews__slide-triangle"></div>
                             </div>
-                            <div class="swiper-pagination"></div>
+                            <div class="swiper-slide">
+                                <div class="reviews__slide bordered-block">
+                                    <img src="./img/reviews/2.png" alt="" class="reviews__slide-img">
+                                </div>
+                                <div class="reviews__slide-triangle"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="reviews__slide bordered-block">
+                                    <img src="./img/reviews/3.png" alt="" class="reviews__slide-img">
+                                </div>
+                                <div class="reviews__slide-triangle"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="reviews__slide bordered-block">
+                                    <img src="./img/reviews/1.png" alt="" class="reviews__slide-img">
+                                </div>
+                                <div class="reviews__slide-triangle"></div>
+                            </div>
                         </div>
-                        <div class="swiper-button-next reviews__slider-button-next">
-                            <img src="./img/link-arrow.svg" alt="" class="swiper-button__next-img">
-                        </div>
-                        <div class="swiper-button-prev reviews__slider-button-prev ">
-                            <img src="./img/link-arrow.svg" alt="" class="swiper-button__prev-img">
-                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="swiper-button-next reviews__slider-button-next">
+                        <img src="./img/link-arrow.svg" alt="" class="swiper-button__next-img">
+                    </div>
+                    <div class="swiper-button-prev reviews__slider-button-prev ">
+                        <img src="./img/link-arrow.svg" alt="" class="swiper-button__prev-img">
+                    </div>
                 </div>
             </div>
         </div>
@@ -747,6 +818,25 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="contacts">
+            <div class="contacts__container">
+                <div class="contacts__info-wrapper my-container">
+                <div class="contacts__info">
+                    <div class="contacts__title title">Контакты</div>
+                    <div class="contacts__numbers">
+                        <a href="tel:+73472665191" class="contacts__phone">+7 (347) 266-51-91</a>
+                        <a href="tel:+79273335651" class="contacts__phone">+7 (927) 333-56-51</a>
+                    </div>
+                    <a href="mailto:sales.cottagebery@yandex.ru" class="contacts__email">sales.cottagebery@yandex.ru</a>
+                    <div class="contacts__address">г. Уфа, ул. Блюхера, 2/1 пн-пт 09:00 – 19:00</div>
+                </div> 
+            </div>
+                <div class="contacts__map">
+                    <div id="contacts-map" style="width: 100%; height: 620px;"></div>
+                </div>
+            </div>
+        </div>
         </div>
     </main>
     <footer class="footer">
