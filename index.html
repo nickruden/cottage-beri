@@ -7,7 +7,9 @@
     <title>Коттедж-бери</title>
     <link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon">
     <link href="https://vjs.zencdn.net/8.16.1/video-js.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <link rel="stylesheet" href="./css/style.css">
 
@@ -62,16 +64,46 @@
                     <li class="header__menu-item">
                         <a href="" class="header__menu-link">О компании</a>
                     </li>
-                    <li class="header__menu-item">
-                        <select name="" id="">
-                            <option value="default">Выбрать комплекс</option>
-                            <option value="">ЭКО-ВИЛЛАДЖ (НАГАЕВО)</option>
-                            <option value="">FAMILY PARK</option>
-                            <option value="">ГЕОМЕТРИЯ</option>
-                            <option value="">ЭКО-ВИЛЛАДЖ (ШМИДТОВО)</option>
-                            <option value="">КРАСНАЯ ПОЛЯНА</option>
-                            <option value="">ЛЕРМОНТОВ</option>
-                        </select>
+                    <li class="header__menu-item dropdown">
+                        <a class="dropdown-toggle header__menu-link" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Выбрать комплекс
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item header__menu-link" href="">ЭКО-ВИЛЛАДЖ (Нагаево)</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a class="dropdown-item header__menu-link" href="">FAMILY PARK</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a class="dropdown-item header__menu-link" href="">геометрия</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a class="dropdown-item header__menu-link" href="">Эко-вилладж (Шмидтово)</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a class="dropdown-item header__menu-link" href="">красная поляна</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a class="dropdown-item header__menu-link" href="">Лермонтов</a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="header__menu-item">
                         <a href="" class="header__menu-link">Акции</a>
@@ -102,35 +134,107 @@
             <div class="top-block__container my-container">
                 <div class="top-block__left">
                     <div class="top-block__left-wrapper">
-                    <div class="top-block__title title"><span> Дом под ключ </span> в Уфе <br> за 6 месяцев <span> +участок </span></div>
-                    <ul class="top-block__unique-offers">
-                        <li class="top-block__unique-offers-item"> <span> подбор земельного участка; </span></li>
-                        <li class="top-block__unique-offers-item"><span> скидки на отделочные работы; </span></li>
-                        <li class="top-block__unique-offers-item"> <span> жизнь в красивом коттеджном комплексе; </span></li>
-                        <li class="top-block__unique-offers-item"> <span> городской комфорт на свежем воздухе </span></li>
-                    </ul>
-                    <button class="top-block__button button">Скачать каталог проектов <img src="./img/download-icon.svg" alt="иконка загрузить" class="top-block__button-icon"></button>
-                    <div class="top-block__catalog-info">
-                        <div class="top-block__catalog-file-size">Размер файла — 4,3 МБ</div>
-                        <div class="top-block__catalog-update">каталог обновлён 16.04.24</div>
+                        <div class="top-block__title title"><span> Дом под ключ </span> в Уфе <br> за 6 месяцев <span>
+                                +участок </span></div>
+                        <ul class="top-block__unique-offers">
+                            <li class="top-block__unique-offers-item"> <span> подбор земельного участка; </span></li>
+                            <li class="top-block__unique-offers-item"><span> скидки на отделочные работы; </span></li>
+                            <li class="top-block__unique-offers-item"> <span> жизнь в красивом коттеджном комплексе;
+                                </span></li>
+                            <li class="top-block__unique-offers-item"> <span> городской комфорт на свежем воздухе
+                                </span></li>
+                        </ul>
+                        <button class="top-block__button button">Скачать каталог проектов <img
+                                src="./img/download-icon.svg" alt="иконка загрузить"
+                                class="top-block__button-icon"></button>
+                        <div class="top-block__catalog-info">
+                            <div class="top-block__catalog-file-size">Размер файла — 4,3 МБ</div>
+                            <div class="top-block__catalog-update">каталог обновлён 16.04.24</div>
+                        </div>
                     </div>
-                </div>
-                <img src="./img/top-block/left-bg.jpg" alt="" class="top-block__left-img">
+                    <img src="./img/top-block/left-bg.jpg" alt="" class="top-block__left-img">
                 </div>
                 <div class="top-block__right">
-                    <div class="top-block__slider slider">
-                        ТУТ СЛАЙДЕР
+                    <div class="top-block__slider">
+                        <div class="swiper top-block__swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="top-block__slide">
+                                        <div class="top-block__slide-logo">
+                                            <img src="./img/top-block/logo-slide-1.svg" alt=""
+                                                class="top-block__slide-logo-img" style="height: 43px;">
+                                            <div class="top-block__slide-logo-text"
+                                                style="font-size: 10px; font-weight: 700;line-height: 12px; color: #BA141C; text-transform: uppercase;">
+                                                Красная <br> поляна</div>
+                                        </div>
+                                        <img src="./img/top-block/carusel-img-1.jpg" alt=""
+                                            class="top-block__slide-img">
+                                        <a href="" class="top-block__slide-link link-icon-wrap">
+                                            <img src="./img/link-arrow.svg" alt="иконка ссылки" class="link-icon">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="top-block__slide">
+                                        <div class="top-block__slide-logo">
+                                            <img src="./img/top-block/logo-slide-2.png" alt=""
+                                                class="top-block__slide-logo-img" style="height: 43px;">
+                                            <div class="top-block__slide-logo-text" style="display: none;"></div>
+                                        </div>
+                                        <img src="./img/top-block/carusel-img-2.jpg" alt=""
+                                            class="top-block__slide-img">
+                                        <a href="" class="top-block__slide-link link-icon-wrap">
+                                            <img src="./img/link-arrow.svg" alt="иконка ссылки" class="link-icon">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="top-block__slide">
+                                        <div class="top-block__slide-logo">
+                                            <img src="./img/top-block/logo-slide-1.svg" alt=""
+                                                class="top-block__slide-logo-img" style="height: 43px;">
+                                            <div class="top-block__slide-logo-text"
+                                                style="font-size: 10px; font-weight: 700;line-height: 12px; color: #BA141C; text-transform: uppercase;">
+                                                Красная <br> поляна</div>
+                                        </div>
+                                        <img src="./img/top-block/carusel-img-1.jpg" alt=""
+                                            class="top-block__slide-img">
+                                        <a href="" class="top-block__slide-link link-icon-wrap">
+                                            <img src="./img/link-arrow.svg" alt="иконка ссылки" class="link-icon">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="top-block__slide">
+                                        <div class="top-block__slide-logo">
+                                            <img src="./img/top-block/logo-slide-2.png" alt=""
+                                                class="top-block__slide-logo-img" style="height: 43px;">
+                                            <div class="top-block__slide-logo-text" style="display: none;"></div>
+                                        </div>
+                                        <img src="./img/top-block/carusel-img-2.jpg" alt=""
+                                            class="top-block__slide-img">
+                                        <a href="" class="top-block__slide-link link-icon-wrap">
+                                            <img src="./img/link-arrow.svg" alt="иконка ссылки" class="link-icon">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
                     </div>
                     <div class="top-block__advantages">
                         <div class="top-block__advantages-body">
-                        <div class="top-block__advantages-title">Преимущества</div>
+                            <div class="top-block__advantages-title">Преимущества</div>
                             <ul class="top-block__advantages-items">
                                 <li class="top-block__advantages-item">строим дома с 2008 года</li>
                                 <li class="top-block__advantages-item">реализовали под ключ 350+ проектов</li>
-                                <li class="top-block__advantages-item">предоставляем гарантию <br> 5 лет на дом и отделку</li>
+                                <li class="top-block__advantages-item">предоставляем гарантию <br> 5 лет на дом и
+                                    отделку</li>
                             </ul>
-                        <a href="" class="top-block__advantages-link button button_link">Смотреть все комплексы <img src="./img/link-arrow.svg" alt="иконка ссылки" class="top-block__advantages-link-icon"></a>
-                    </div>
+                            <a href="" class="top-block__advantages-link button button_link">Смотреть все комплексы <img
+                                    src="./img/link-arrow.svg" alt="иконка ссылки"
+                                    class="top-block__advantages-link-icon"></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -156,24 +260,24 @@
         <div class="stocks">
             <div class="stocks__container my-container">
                 <div class="stocks__items">
-                    <div class="stock__item">
+                    <a href="" class="stock__item">
                         <div class="stock__item-body">
                             <img src="./img/stocks/1.png" alt="фото процент" class="stock__img">
                             <div class="stock__title">Платим ипотеку за вас</div>
                         </div>
-                    </div>
-                    <div class="stock__item">
+                    </a>
+                    <a href="" class="stock__item">
                         <div class="stock__item-body">
                             <img src="./img/stocks/2.png" alt="фото стул" class="stock__img">
                             <div class="stock__title">Мебель в подарок</div>
                         </div>
-                    </div>
-                    <div class="stock__item">
+                    </a>
+                    <a href="" class="stock__item">
                         <div class="stock__item-body">
                             <img src="./img/stocks/3.png" alt="фото сертификат" class="stock__img">
                             <div class="stock__title">Сертификат 100 000 ₽</div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <a href="" class="stocks__link button button_link">Все акции</a>
             </div>
@@ -183,43 +287,49 @@
                 <div class="cottage-complexes__title title">Наши <span>коттеджные комплексы</span> в Уфе</div>
                 <div class="cottage-complexes__cards">
                     <div class="cottage-complexes__card">
-                        <div class="cottage-complexes__card-items">
-                            <div class="cottage-complexes__card-img-wrap">
-                                <img src="./img/cottage-complexes/card1.jpg" alt="" class="cottage-complexes__card-img">
-                                <div class="img-pre-title">Акбердинский район, 44 дома</div>
-                            </div>
-                            <div class="cottage-complexes__card-description">
-                                <div class="cottage-complexes__card-texts">
-                                    <div class="cottage-complexes__card-title">Красная поляна</div>
-                                    <div class="cottage-complexes__card-text">эффектные кирпичные дома рядом с <br>
-                                        озером
-                                        Куянкуль</div>
+                        <a href="" class="cottage-complexes__card-link">
+                            <div class="cottage-complexes__card-items">
+                                <div class="cottage-complexes__card-img-wrap">
+                                    <img src="./img/cottage-complexes/card1.jpg" alt=""
+                                        class="cottage-complexes__card-img">
+                                    <div class="img-pre-title">Акбердинский район, 44 дома</div>
                                 </div>
-                                <a href="" class="link-icon-wrap">
-                                    <img src="./img/link-arrow.svg" alt="иконка ссылки" class="link-icon">
-                                </a>
+                                <div class="cottage-complexes__card-description">
+                                    <div class="cottage-complexes__card-texts">
+                                        <div class="cottage-complexes__card-title">Красная поляна</div>
+                                        <div class="cottage-complexes__card-text">эффектные кирпичные дома рядом с <br>
+                                            озером
+                                            Куянкуль</div>
+                                    </div>
+                                    <a href="" class="link-icon-wrap">
+                                        <img src="./img/link-arrow.svg" alt="иконка ссылки" class="link-icon">
+                                    </a>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="cottage-complexes__card">
-                        <div class="cottage-complexes__card-items">
-                            <div class="cottage-complexes__card-img-wrap">
-                                <img src="./img/cottage-complexes/card2.jpg" alt="" class="cottage-complexes__card-img">
-                                <div class="img-pre-title">32 дома</div>
-                            </div>
-                            <div class="cottage-complexes__card-description">
-                                <div class="cottage-complexes__card-texts">
-                                    <div class="cottage-complexes__card-title">Лермонтов</div>
-                                    <div class="cottage-complexes__card-text">дома в неоклассическом стиле с
-                                        нежно-голубым <br>
-                                        дизайном</div>
+                        <a href="" class="cottage-complexes__card-link">
+                            <div class="cottage-complexes__card-items">
+                                <div class="cottage-complexes__card-img-wrap">
+                                    <img src="./img/cottage-complexes/card2.jpg" alt=""
+                                        class="cottage-complexes__card-img">
+                                    <div class="img-pre-title">32 дома</div>
                                 </div>
-                                <a href="" class="link-icon-wrap">
-                                    <img src="./img/link-arrow.svg" alt="иконка ссылки" class="link-icon">
-                                </a>
+                                <div class="cottage-complexes__card-description">
+                                    <div class="cottage-complexes__card-texts">
+                                        <div class="cottage-complexes__card-title">Лермонтов</div>
+                                        <div class="cottage-complexes__card-text">дома в неоклассическом стиле с
+                                            нежно-голубым <br>
+                                            дизайном</div>
+                                    </div>
+                                    <a href="" class="link-icon-wrap">
+                                        <img src="./img/link-arrow.svg" alt="иконка ссылки" class="link-icon">
+                                    </a>
+                                </div>
                             </div>
-                        </div>
                     </div>
+                    </a>
                 </div>
                 <a href="" class="cottage-complexes__link button button_link">Смотреть все комплексы</a>
             </div>
@@ -292,7 +402,48 @@
             <div class="reports__container my-container">
                 <div class="reports__title title">Регулярные <span>фото и видеоотчёты</span></div>
                 <div class="reports__text">Вы всегда в курсе, на каком этапе строительство!</div>
-                <div class="reports__slider slider">ТУТ СЛАЙДЕР</div>
+                <div class="reports__slider">
+                    <div class="swiper reports__swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="reports__slide">
+                                    <img src="./img/reports/slide-1-img.jpg" alt="" class="reports__slide-img">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="reports__slide">
+                                    <img src="./img/reports/slide-2-img.jpg" alt="" class="reports__slide-img">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="reports__slide">
+                                    <img src="./img/reports/slide-3-img.jpg" alt="" class="reports__slide-img">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="reports__slide">
+                                    <img src="./img/reports/slide-1-img.jpg" alt="" class="reports__slide-img">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="reports__slide">
+                                    <img src="./img/reports/slide-2-img.jpg" alt="" class="reports__slide-img">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="reports__slide">
+                                    <img src="./img/reports/slide-3-img.jpg" alt="" class="reports__slide-img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next reports__slider-button-next">
+                        <img src="./img/link-arrow.svg" alt="" class="swiper-button__next-img">
+                    </div>
+                    <div class="swiper-button-prev reports__slider-button-prev ">
+                        <img src="./img/link-arrow.svg" alt="" class="swiper-button__prev-img">
+                    </div>
+                </div>
             </div>
         </div>
         <div class="advantages">
@@ -396,8 +547,8 @@
                             баню, беседку.</div>
                     </div>
                     <div class="what-saying__video">
-                        <video style="height: 100%;" id="my-video" class="video-js" controls preload="auto" width="750px"
-                            poster="./video/poster.jpg" data-setup="{}" >
+                        <video style="height: 100%;" id="my-video" class="video-js" controls preload="auto"
+                            width="750px" poster="./video/poster.jpg" data-setup="{}">
                             <source src="./video/31637395_MotionElements_earth-hologram_preview.mp4" type="video/mp4" />
                             <p class="vjs-no-js">
                                 To view this video please enable JavaScript, and consider upgrading to a
@@ -413,7 +564,43 @@
         <div class="reviews">
             <div class="reviews__container my-container">
                 <div class="reviews__title title">Отзывы</div>
-                <div class="reviews__slider slider">ТУТ СЛАЙДЕР</div>
+                <div class="reviews__slider">
+                        <div class="swiper reviews__swiper">
+                            <div class="swiper-wrapper reviews__slider-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="reviews__slide bordered-block">
+                                        <img src="./img/reviews/1.png" alt="" class="reviews__slide-img">
+                                    </div>
+                                    <div class="reviews__slide-triangle"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="reviews__slide bordered-block">
+                                        <img src="./img/reviews/2.png" alt="" class="reviews__slide-img">
+                                    </div>
+                                    <div class="reviews__slide-triangle"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="reviews__slide bordered-block">
+                                        <img src="./img/reviews/3.png" alt="" class="reviews__slide-img">
+                                    </div>
+                                    <div class="reviews__slide-triangle"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="reviews__slide bordered-block">
+                                        <img src="./img/reviews/1.png" alt="" class="reviews__slide-img">
+                                    </div>
+                                    <div class="reviews__slide-triangle"></div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="swiper-button-next reviews__slider-button-next">
+                            <img src="./img/link-arrow.svg" alt="" class="swiper-button__next-img">
+                        </div>
+                        <div class="swiper-button-prev reviews__slider-button-prev ">
+                            <img src="./img/link-arrow.svg" alt="" class="swiper-button__prev-img">
+                        </div>
+                </div>
             </div>
         </div>
         <div class="consultation">
@@ -549,10 +736,13 @@
                     <img src="./img/feedback/feedback-block-img.jpg" alt="" class="feedback__img">
                     <div class="feedback__body">
                         <div class="feedback__title title">Остались вопросы?</div>
-                        <div class="feedback__text">Хотите уточнить информацию? Оставьте свои контактные данные, и мы вам перезвоним в ближайшее время.</div>
+                        <div class="feedback__text">Хотите уточнить информацию? Оставьте свои контактные данные, и мы
+                            вам перезвоним в ближайшее время.</div>
                         <form action="" class="feedback__form">
-                            <input type="text" name="" id="" placeholder="Имя" class="feedback__input-name bordered-block">
-                            <input type="text" name="" id="" placeholder="Телефон" class="feedback__input-phone bordered-block">
+                            <input type="text" name="" id="" placeholder="Имя"
+                                class="feedback__input-name bordered-block">
+                            <input type="text" name="" id="" placeholder="Телефон"
+                                class="feedback__input-phone bordered-block">
                             <button class="feedback__button button">Отправить</button>
                         </form>
                     </div>
@@ -609,13 +799,50 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper_topBlock = new Swiper('.top-block__swiper', {
+            direction: 'horizontal',
+            loop: true,
+            slidesPerView: 2, // сколько слайдов видно
+            spaceBetween: 20,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            autoplay: {
+                delay: 4000,
+            }
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-        crossorigin="anonymous"></script>
+        });
+    </script>
+    <script>
+        const swiper_reports = new Swiper('.reports__swiper', {
+            direction: 'horizontal',
+            loop: true,
+            slidesPerView: 3, // сколько слайдов видно
+            spaceBetween: 20,
+            navigation: {
+                nextEl: ".reports__slider-button-next",
+                prevEl: ".reports__slider-button-prev",
+            },
+        });
+    </script>
+    <script>
+        const swiper_reviews = new Swiper('.reviews__swiper', {
+            direction: 'horizontal',
+            loop: true,
+            slidesPerView: 3, // сколько слайдов видно
+            spaceBetween: 25,
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            navigation: {
+                nextEl: ".reviews__slider-button-next",
+                prevEl: ".reviews__slider-button-prev",
+            },
+        });
+    </script>
 </body>
 
 </html>
