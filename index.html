@@ -608,16 +608,26 @@
                             баню, беседку.</div>
                     </div>
                     <div class="what-saying__video">
-                        <video style="height: 100%;" id="trigger-video" class="vjs-theme-city video-js" controls
-                            preload="auto" width="750px" poster="./video/poster.jpg" data-setup="{}">
+                        <video style="height: 100%;" id="main-video" class="vjs-theme-city video-js" controls preload="auto" width="750px" poster="./video/poster.jpg" data-setup='{"controlBar": {"pictureInPictureToggle": false}}'>
                             <source src="./video/31637395_MotionElements_earth-hologram_preview.mp4" type="video/mp4" />
-                            <p class="vjs-no-js">
-                                To view this video please enable JavaScript, and consider upgrading to a
-                                web browser that
-                                <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5
-                                    video</a>
-                            </p>
+                            <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
                         </video>
+                    </div>
+                    
+                    <div style="margin: 0 auto;" class="modal fade" id="videoModal" aria-labelledby="videoModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" style="max-width: 90%; height: 90%;">
+                            <div class="modal-content" style="width: 100%; height: 100%;">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body d-flex justify-content-center align-items-center">
+                                    <video id="modal-video" class="video-js vjs-theme-city what-saying__modal-video" controls preload="auto" data-setup='{"controlBar": {"pictureInPictureToggle": false}}'>
+                                        <source src="./video/31637395_MotionElements_earth-hologram_preview.mp4" type="video/mp4">
+                                        Ваш браузер не поддерживает видео.
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -923,6 +933,37 @@
                 nextEl: ".reviews__slider-button-next",
                 prevEl: ".reviews__slider-button-prev",
             },
+        });
+    </script>
+    <script>
+        const mainVideo = videojs('main-video');
+        const modalVideo = videojs('modal-video');
+        const videoModal = document.getElementById('videoModal');
+
+        document.getElementById('main-video').addEventListener('click', function() {
+            // Получаем текущий таймкод видео на странице
+            const currentTime = mainVideo.currentTime();
+    
+            // Устанавливаем таймкод в модальном видео
+            modalVideo.currentTime(currentTime);
+    
+            // Останавливаем основное видео
+            mainVideo.pause();
+    
+            // Открываем модальное окно
+            const modal = new bootstrap.Modal(videoModal);
+            modal.show();
+    
+            // Воспроизводим видео в модальном окне
+            modalVideo.play();
+        });
+    
+        // При закрытии модального окна
+        videoModal.addEventListener('hidden.bs.modal', function() {
+            // Останавливаем видео в модальном окне
+            modalVideo.pause();
+            // Устанавливаем таймкод основного видео
+            mainVideo.currentTime(modalVideo.currentTime());
         });
     </script>
 </body>

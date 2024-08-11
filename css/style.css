@@ -819,6 +819,17 @@ button {
     max-width: 750px;
     justify-self: end;
 }
+.what-saying__modal-video {
+    height: 90%;
+    width: 90%;
+}
+.what-saying__modal-video .video-js { 
+    border-radius: 8px;
+}
+.what-saying__modal-video .vjs-control {
+    background-color: rgba(0, 0, 0, 0.123);
+    border-radius: 5px;
+}
 
 /* 12 блок */
 .reviews {
@@ -982,7 +993,6 @@ button {
 
 /* 16 блок */
 .contacts {
-
 }
 .contacts__container {
 }
