@@ -1090,6 +1090,9 @@ button {
     color: #646666;
     text-transform: uppercase;
 }
+.footer__menu-link:hover {
+    color: #83B32B;
+}
 .footer__socials {
     max-width: 300px;
 }
