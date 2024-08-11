@@ -109,7 +109,7 @@ button {
 }
 .header__container {
     display: flex;
-    justify-content: space-between;
+
     align-items: center;
     overflow: visible;
 }
@@ -129,35 +129,71 @@ button {
 .header__menu-item:not(:last-child) {
     margin-right: 20px;
 }
+.header__menu-link:hover {
+    color: #83B32B;
+}
+@media (max-width: 1578px) {
+    .header__menu-items {
+        flex-wrap: wrap;
+        max-width: 450px;
+        row-gap: 5px;
+    }
+    .header__menu {
+        margin-right: 0px;
+    }
+}
+@media (max-width: 1209px) {
+    .header__menu-items {
+        flex-wrap: wrap;
+        max-width: 360px;
+    }
+}
 .dropdown-toggle::after {
     display: inline-block;
     margin-left: 4px;
     vertical-align: middle;
+    border-top: 5px solid #83B32B;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
     content: "";
-    border-top: 7px solid #83B32B;
-    border-right: 4px solid transparent;
-    border-bottom: 0;
-    border-left: 4px solid transparent;
+    border-top-color: #83B32B;
+}
+.dropdown-toggle[aria-expanded="true"]::after {
+    transform: scale(-1);
 }
 .dropdown {
     max-width: 151px;
 }
 .dropdown-menu {
-    padding: 0;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    background: #83B32B;
+    width: 300px;
+    border: 1px solid #83B32B;
 }
 .dropdown-divider {
     margin: 0;
 }
 .dropdown-item {
     display: block;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    color: #FFF!Important;
+    font-size: 14px!Important;
+    font-weight: 400!Important;
 }
-.dropdown-item:active {
-    background-color: #83B32B !important;
+.dropdown-item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.dropdown-item:hover {
+    color: #83B32B!Important;
+    background-color: #FFF;
+    border: 0;
+}
+.show {
+    color: #83B32B!Important; 
 }
 .dropdown-menu {
-    transform: translate3d(-20px, 25px, 0px)!Important;
+    transform: translate3d(-25%, 40px, 0px)!Important;
 }
 .dropdown-item {
     text-transform: uppercase;
@@ -169,6 +205,7 @@ button {
 }
 .header__contacts {
     display: flex;
+    margin-left: auto;
 }
 .header__contacts-numbers {
     display: flex;
