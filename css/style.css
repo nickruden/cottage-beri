@@ -231,6 +231,7 @@ button {
 }
 .top-block__title {
     margin-bottom: 20px;
+    font-size: 64px;
 }
 .top-block__unique-offers {
     margin-bottom: 25px;
@@ -262,9 +263,10 @@ button {
 .top-block__catalog-update {
 }
 .top-block__right {
+    
 }
 .top-block__slider {
-    margin-bottom: 7px;
+    margin-bottom: 4px;
     width: 750px;
 }
 .top-block__slide {
@@ -308,7 +310,7 @@ button {
     justify-content: center;
     align-items: center;
 }
-.swiper-pagination {
+.top-block__right .swiper-pagination {
     position: relative;
 }
 .top-block__swiper > .swiper-wrapper {
@@ -414,7 +416,7 @@ button {
     font-weight: 500;
     line-height: 40px;
     letter-spacing: -0.05em;
-    padding: 30px 0px 40px 40px;
+    padding: 30px 0px 40px 39px;
 }
 
 /* 4 блок */
@@ -441,7 +443,7 @@ button {
     overflow: hidden;
 }
 .cottage-complexes__card:not(:last-child) {
-    margin-right: 20px;
+    margin-right: 18px;
 }
 .cottage-complexes__card-items {
 }
@@ -525,7 +527,7 @@ button {
     margin-bottom: 10px;
 }
 .complexes-map__description-text {
-    font-style: 20px;
+    font-size: 20px;
     line-height: 30px;
     color: #646666;
 }
@@ -633,7 +635,7 @@ button {
 
 /* 8 блок */
 .advantages {
-    padding-bottom: 111px;
+    padding-bottom: 109px;
 }
 .advantages__container {
 }
@@ -664,13 +666,13 @@ button {
 
 /* 9 блок */
 .payment {
-    padding-bottom: 99px;
+    padding-bottom: 100px;
 }
 .payment__container {
 }
 .payment__wrapper {
     border: 1px solid #D9D9D9;
-    padding: 40px 0px 40px 0px;
+    padding: 39px 0px 39px 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -694,7 +696,7 @@ button {
 }
 .payment__icon {
     height: 120px;
-    margin-bottom: 26px;
+    margin-bottom: 20px;
 }
 .payment__name {
     font-size: 30px;
@@ -710,7 +712,7 @@ button {
 .viewing__container {
 }
 .viewing__title {
-    margin-bottom: 49px;
+    margin-bottom: 50px;
 }
 .viewing__cards {
     display: flex;
@@ -803,9 +805,13 @@ button {
     top: 230px;
 }
 
+.reviews__slider .swiper-pagination {
+    position: initial;
+    margin-top: -13px;
+}
 /* 13 блок */
 .consultation {
-    padding-bottom: 105px;
+    padding-bottom: 94px;
 }
 .consultation__container {
 }
@@ -845,13 +851,13 @@ button {
 .FAQ__accordion {
 }
 .FAQ__accordion-button {
-    padding: 30px 40px 34px 40px;
+    padding: 29px 39px 33px 39px;
     font-size: 30px;
     font-weight: 500;
     color: #000;
 }
 .FAQ__accordion-button[aria-expanded="true"] {
-    padding-bottom: 14px;
+    padding-bottom: 13px;
 }
 .FAQ__accordion-body-text {
     font-size: 20px;
@@ -903,6 +909,7 @@ button {
     line-height: 25px;
     color: #646666;
     margin-bottom: 30px;
+    padding-right: 16px;
 }
 .feedback__form {
     display: flex;
