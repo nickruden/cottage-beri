@@ -451,13 +451,13 @@ button {
     vertical-align: middle;
     margin-left: 8px;
 }
-@media (max-width: 1440px) {
-    .top-block__container > * {
-        flex-basis: 50%;
-    }
-    .top-block__slider {
+@media (max-width: 1578px) {
+      .top-block__container > * {
+        max-width: calc(50% - 20px);
+      }
+      .top-block__slider {
         width: 100%;
-    }
+      }
   }
   @media (max-width: 1130px) {
     .title {
