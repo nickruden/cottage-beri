@@ -19,7 +19,7 @@
 html,
 body {
     height: 100%;
-    font-family: 'Inter';
+    font-family: Inter, sans-serif;
     font-size: 18px;
     font-weight: 400;
     color: #292929;
@@ -29,7 +29,6 @@ body {
     flex-direction: column; 
     overflow-x: hidden;
 }
-
 
 a {
     text-decoration: none;
@@ -90,6 +89,39 @@ button {
 .title > span {
     color: #83B32B;
 }
+@media (max-width: 1440px) {
+    .title {
+      font-size: 50px;
+      line-height: 60px;
+    }
+  }
+  @media (max-width: 1130px) {
+    .title {
+      font-size: 42px;
+      line-height: 52px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .title {
+      font-size: 40px;
+      line-height: 50px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .title {
+      font-size: 30px;
+      line-height: 40px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .title {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
 
 .link-icon-wrap {
     display: flex;
@@ -419,6 +451,41 @@ button {
     vertical-align: middle;
     margin-left: 8px;
 }
+@media (max-width: 1440px) {
+    .top-block__container > * {
+        flex-basis: 50%;
+    }
+    .top-block__slider {
+        width: 100%;
+    }
+  }
+  @media (max-width: 1130px) {
+    .title {
+      font-size: 42px;
+      line-height: 52px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .title {
+      font-size: 40px;
+      line-height: 50px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .title {
+      font-size: 30px;
+      line-height: 40px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .title {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
 
 /* 2 блок */
 .stats {
