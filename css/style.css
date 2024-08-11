@@ -156,7 +156,6 @@ button {
     border-left: 3px solid transparent;
     border-right: 3px solid transparent;
     content: "";
-    border-top-color: #83B32B;
 }
 .dropdown-toggle[aria-expanded="true"]::after {
     transform: scale(-1);
@@ -170,6 +169,18 @@ button {
     background: #83B32B;
     width: 300px;
     border: 1px solid #83B32B;
+    position: relative;
+}
+.dropdown-menu::before {
+    display: inline-block;
+    position: absolute;
+    vertical-align: middle;
+    border-bottom: 10px solid #83B32B;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    content: "";
+    left: 128px;
+    top: -10px;
 }
 .dropdown-divider {
     margin: 0;
