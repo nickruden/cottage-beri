@@ -11,7 +11,9 @@
 :root {
     font-family: Inter, sans-serif;
     font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+    --swiper-theme-color: #292929;
   }
+
   @supports (font-variation-settings: normal) {
     :root { font-family: InterVariable, sans-serif; }
   }
@@ -907,13 +909,79 @@ button {
 .what-saying__video {
     max-width: 750px;
     justify-self: end;
+    position: relative;
+    cursor: pointer;
+}
+.what-saying__video-poster {
+    height: 100%;
+}
+.what-saying__vide-play-button {
+    position: absolute;
+    z-index: 2;
+    height: 100px;
+    width: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(234, 235, 229, 0.35);
+    backdrop-filter: blur(45px);    
+    border-radius: 50%;
+    transition: background .3s;
+}
+.what-saying__vide-play-button::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 17.5px solid transparent;
+    border-bottom: 17.5px solid transparent;
+    border-left: 30px solid #FFF; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+    transition: border-left .3s;
+}
+.what-saying__vide-play-button:hover {
+    background: rgba(171, 172, 167, 0.35);
+}
+.what-saying__vide-play-button:hover::after {
+    border-left: 30px solid #cccccc;
+}
+.modal-backdrop {
+    background-color: #000;
+}
+.modal-backdrop.show {
+    opacity: 0.9;
+}
+.btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+    opacity: 0.9;
+}
+.btn-close:hover {
+    opacity: 1; 
+}
+.modal-content {
+    background-color: transparent;
+}
+.modal-header {
+    border-bottom: none;
+    padding: 0;
+}
+.modal-body {
+    padding: 0;
 }
 .what-saying__modal-video {
     height: 90%;
     width: 90%;
 }
-.what-saying__modal-video .video-js { 
+.what-saying__modal-video-title {
+    font-size: 40px;
+    font-weight: 500;
+    color: #FFF;
+}
+.what-saying__modal-video { 
     border-radius: 8px;
+    overflow: hidden;
 }
 .what-saying__modal-video .vjs-control {
     background-color: rgba(0, 0, 0, 0.123);
@@ -1003,6 +1071,7 @@ button {
     font-size: 30px;
     font-weight: 500;
     color: #000;
+    transition: padding .3s;
 }
 .FAQ__accordion-button[aria-expanded="true"] {
     padding-bottom: 13px;
@@ -1012,6 +1081,7 @@ button {
     line-height: 25px;
     color: #646666;
     padding: 0px 101px 35px 40px;
+    transition: opacity .3s;
 }
 .accordion {
     --bs-accordion-active-bg: none;
@@ -1023,12 +1093,17 @@ button {
     color: inherit;
     box-shadow: none;
 }
-
 .accordion-button:not(.collapsed)::after {
     background-image: url('../img/accordion-close.svg');
 }
 .accordion-button.collapsed::after {
     background-image: url('../img/accordion-open.svg');
+}
+.accordion-button::after {
+    transition: transform 0.3s;
+}
+.accordion-collapse {
+    transition: height .3s;
 }
 
 /* 15 блок */
