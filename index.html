@@ -180,6 +180,24 @@
                     </li>
                 </ul>
             </nav>
+            <div class="header__mobile-menu mobile-menu">
+                <div class="burger-menu" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+                    <div class="burger-menu__items">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <nav class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link" href="#">Pricing</a>
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </nav>
+                </div>
+            </div>
             <div class="header__contacts">
                 <div class="header__contacts-numbers">
                     <a href="tel:+73472665191" class="header__contacts-number-first">+7 (347) 266-51-91</a>
@@ -895,16 +913,20 @@
         const swiper_topBlock = new Swiper('.top-block__swiper', {
             direction: 'horizontal',
             loop: true,
-            slidesPerView: 2, // сколько слайдов видно
+            slidesPerView: 1, // показываем 1 слайд
             spaceBetween: 20,
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
             },
             autoplay: {
-                delay: 4000,
+                delay: 10000,
+            },
+            breakpoints: {
+                1131: {
+                    slidesPerView: 2, // два слайда при ширине 1131px и выше
+                }
             }
-
         });
     </script>
     <script>
