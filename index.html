@@ -590,6 +590,7 @@
                     <div class="swiper-button-prev reports__slider-button-prev ">
                         <img src="./img/link-arrow.svg" alt="" class="swiper-button__prev-img">
                     </div>
+                    <div class="swiper-pagination reports__swiper-pagination"></div>
                 </div>
             </div>
         </div>
@@ -599,7 +600,7 @@
                 <div class="advantages__items">
                     <div class="advantages__item">
                         <img src="./img/advantages/star-icon.svg" alt="" class="advantages____item-icon">
-                        <div class="advantages__item-description text-block_fSize_20">Не имеем ни одного судебного <br> разбирательства —
+                        <div class="advantages__item-description text-block_fSize_20">Не имеем ни одного судебного разбирательства <br> —
                             наши
                             клиенты полностью <span> довольны результатом </span></div>
                     </div>
@@ -768,7 +769,9 @@
                             воплотим в реальность все ваши мечты от этажности и материалов до отделки.</div>
                         <button class="consultation__button button">Записаться на консультацию</button>
                     </div>
+                    <div class="consultation__img-wrap">
                     <img src="./img/consultation/consultation-img.jpg" alt="" class="consultation__img">
+                </div>  
                 </div>
             </div>
         </div>
@@ -978,29 +981,10 @@
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        const swiper_stocks= new Swiper('.stocks__swiper', {
-            direction: 'horizontal',
-            loop: true,
-            slidesPerView: 1, // показываем 1 слайд
-            spaceBetween: 20,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-
-            breakpoints: {
-                701:
-                 {
-                    slidesPerView: 2, // два слайда при ширине 701px и выше
-                }
-            }
-        });
-    </script>
-    <script>
         const swiper_topBlock = new Swiper('.top-block__swiper', {
             direction: 'horizontal',
             loop: true,
-            slidesPerView: 1, // показываем 1 слайд
+            slidesPerView: 1, // показываем 1 слайд по умолчанию(то есть если не действует breakpoints)
             spaceBetween: 20,
             pagination: {
                 el: ".swiper-pagination",
@@ -1017,22 +1001,54 @@
         });
     </script>
     <script>
+        const swiper_stocks= new Swiper('.stocks__swiper', {
+            direction: 'horizontal',
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 20,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+
+            breakpoints: {
+                701:
+                 {
+                    slidesPerView: 2, // два слайда при ширине 701px и выше
+                }
+            }
+        });
+    </script>
+    <script>
         const swiper_reports = new Swiper('.reports__swiper', {
             direction: 'horizontal',
             loop: true,
-            slidesPerView: 3, // сколько слайдов видно
+            slidesPerView: 1,
             spaceBetween: 20,
+            pagination: {
+                el: ".reports__swiper-pagination",
+                clickable: true,
+            },
             navigation: {
                 nextEl: ".reports__slider-button-next",
                 prevEl: ".reports__slider-button-prev",
             },
+            breakpoints: {
+                992:
+                 {
+                    slidesPerView: 3,
+                },
+                501: {
+                    slidesPerView: 2
+                }
+            }
         });
     </script>
     <script>
         const swiper_reviews = new Swiper('.reviews__swiper', {
             direction: 'horizontal',
             loop: true,
-            slidesPerView: 3, // сколько слайдов видно
+            slidesPerView: 1,
             spaceBetween: 25,
             pagination: {
                 el: ".swiper-pagination",
@@ -1041,6 +1057,15 @@
                 nextEl: ".reviews__slider-button-next",
                 prevEl: ".reviews__slider-button-prev",
             },
+            breakpoints: {
+                992:
+                 {
+                    slidesPerView: 3,
+                },
+                501: {
+                    slidesPerView: 2
+                }
+            }
         });
     </script>
     <script>
