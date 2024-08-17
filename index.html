@@ -22,189 +22,193 @@
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=f028c4f8-776d-4ba3-b079-94a909b9cca1
-    &lang=ru" type="text/javascript">
-    </script>
-    <script type="text/javascript">
-        ymaps.ready(function () {
-            var myMap = new ymaps.Map(
-                'myMap',
-                {
-                    center: [54.759393, 56.015000],
-                    zoom: 10.5,
-                    controls: [],
-                },
-                { suppressMapOpenBlock: true }
-            )
-
-            // отображаем метки
-            myPlacemarkWithContent = new ymaps.Placemark(
-                [54.712879, 55.645140], {
-                hintContent: 'Коттедж-бери',
-            }, {
-                // Опции.
-                // Необходимо указать данный тип макета.
-                iconLayout: 'default#image',
-                // Своё изображение иконки метки.
-                iconImageHref: './img/geo-icon.svg',
-                // Размеры метки.
-                iconImageSize: [50, 65],
-                // Смещение левого верхнего угла иконки относительно её "ножки" (точки привязки).
-                iconImageOffset: [-20, -57],
-
-            });
-            myMap.geoObjects
-                .add(myPlacemarkWithContent);
-
-            // Пример реализации собственного элемента управления на основе наследования от collection.Item.
-            // Элемент управления отображает название объекта, который находится в центре карты.
-            const contactsMap = new ymaps.Map("contacts-map", {
-                center: [54.775006, 56.019577],
-                zoom: 17,
-                controls: [],
-            },
-                { suppressMapOpenBlock: true },
-                {
-                    searchControlProvider: 'yandex#search'
-                }),
-
-                myPlacemarkWithContent2 = new ymaps.Placemark(
-                    [54.775179, 56.022966], {}, {
-                    // Опции.
-                    preset: "islands#blueFactoryIcon",
-                    iconColor: '#ff0000',
-
-                    // Размеры метки.
-                    iconImageSize: [50, 65],
-                    // Смещение левого верхнего угла иконки относительно её "ножки" (точки привязки).
-                    iconImageOffset: [-20, -57],
-
-                });
-            contactsMap.geoObjects
-                .add(myPlacemarkWithContent2);
-
-            //     var CustomControlClass = function (options) {
-            //         CustomControlClass.superclass.constructor.call(this, options);
-            //         this._content = null;
-            //         this._geocoderDeferred = null;
-            //     };
-
-            //     // И наследуем его от collection.Item.
-            //     ymaps.util.augment(CustomControlClass, ymaps.collection.Item, {
-            //         onAddToMap: function (map) {
-            //             CustomControlClass.superclass.onAddToMap.call(this, map);
-            //             this._lastCenter = null;
-            //             this.getParent().getChildElement(this).then(this._onGetChildElement, this);
-            //         },
-
-            //         _onGetChildElement: function (parentDomContainer) {
-            //             // Создаем HTML-элемент с текстом.
-            //             this._content = document.createElement('div');
-            //             this._content.innerHTML = `
-            //     <div class="contacts__info">
-            //         <div class="contacts__title title">Контакты</div>
-            //         <div class="contacts__numbers">
-            //             <a href="tel:+73472665191" class="contacts__phone">+7 (347) 266-51-91</a>
-            //             <a href="tel:+79273335651" class="contacts__phone">+7 (927) 333-56-51</a>
-            //         </div>
-            //         <a href="mailto:sales.cottagebery@yandex.ru" class="contacts__email">sales.cottagebery@yandex.ru</a>
-            //         <div class="contacts__address">г. Уфа, ул. Блюхера, 2/1 пн-пт 09:00 – 19:00</div>
-            //     </div>
-            // `;
-            //             parentDomContainer.appendChild(this._content);
-            //         },
-            //     });
-
-            //     // Создание экземпляра пользовательского элемента управления
-            //     var customControl = new CustomControlClass();
-
-            //     // Добавление пользовательского элемента управления на карту
-            //     contactsMap.controls.add(customControl, {
-            //         float: 'none',
-            //         position: {
-            //             top: 10,
-            //             left: 10
-            //         }
-            //     });
-        });
-    </script>
-
 </head>
 
 <body>
     <header class="header">
         <div class="header__container my-container">
-            <a href="#"><img src="./img/logo.png" alt="Логотип" class="header__logo"></a>
-            <nav class="header__menu">
-                <ul class="header__menu-items">
-                    <li class="header__menu-item">
-                        <a href="" class="header__menu-link">О компании</a>
-                    </li>
-                    <li class="header__menu-item dropdown">
-                        <a class="dropdown-toggle header__menu-link" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Выбрать комплекс
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a class="dropdown-item header__menu-link" href="">ЭКО-ВИЛЛАДЖ (Нагаево)</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item header__menu-link" href="">FAMILY PARK</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item header__menu-link" href="">геометрия</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item header__menu-link" href="">Эко-вилладж (Шмидтово)</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item header__menu-link" href="">красная поляна</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item header__menu-link" href="">Лермонтов</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="header__menu-item">
-                        <a href="" class="header__menu-link">Акции</a>
-                    </li>
-                    <li class="header__menu-item">
-                        <a href="" class="header__menu-link">Как купить</a>
-                    </li>
-                    <li class="header__menu-item">
-                        <a href="" class="header__menu-link">Строительство на вашем участке</a>
-                    </li>
-                    <li class="header__menu-item">
-                        <a href="" class="header__menu-link">Фото и видео</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="header__mobile-menu mobile-menu">
-                <div class="burger-menu" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
-                    <div class="burger-menu__items">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
+            <div class="header__main">
+                <a href="#"><img src="./img/logo.png" alt="Логотип" class="header__logo"></a>
+                <nav class="header__menu">
+                    <ul class="header__menu-items">
+                        <li class="header__menu-item">
+                            <a href="" class="header__menu-link">О компании</a>
+                        </li>
+                        <li class="header__menu-item dropdown header__menu-dropdown">
+                            <a class="dropdown-toggle header__menu-dropdown-toggle header__menu-link" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Выбрать комплекс
+                            </a>
+                            <ul class="dropdown-menu header__main-dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item header__main-dropdown-menu-item header__menu-link" href="">ЭКО-ВИЛЛАДЖ (Нагаево)</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item header__main-dropdown-menu-item header__menu-link" href="">FAMILY PARK</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item header__main-dropdown-menu-item header__menu-link" href="">геометрия</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item header__main-dropdown-menu-item header__menu-link" href="">Эко-вилладж (Шмидтово)</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item header__main-dropdown-menu-item header__menu-link" href="">красная поляна</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item header__main-dropdown-menu-item header__menu-link" href="">Лермонтов</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="" class="header__menu-link">Акции</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="" class="header__menu-link">Как купить</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="" class="header__menu-link">Строительство на вашем участке</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="" class="header__menu-link">Фото и видео</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="dropdown header__dropdown-nav dropdown-nav">
+                    <a class="dropdown-nav__toggle header__menu-link burger-menu" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <div class="burger-menu__items animated-icon2">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="header__menu-item">
+                            <a href="" class="header__menu-link">О компании</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="" class="header__menu-link">Акции</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="" class="header__menu-link">Как купить</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="" class="header__menu-link">Строительство на вашем участке</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="" class="header__menu-link">Фото и видео</a>
+                        </li>
+                    </ul>
                 </div>
-            
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <nav class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        <a class="nav-link" href="#">Features</a>
-                        <a class="nav-link" href="#">Pricing</a>
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                    </nav>
+                <div class="header__menu-item dropdown header__main-dropdown">
+                    <a class="dropdown-toggle header__menu-dropdown-toggle header__menu-link" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Выбрать комплекс
+                    </a>
+                    <ul class="dropdown-menu header__main-dropdown-menu">
+                        <li>
+                            <a class="dropdown-item header__main-dropdown-menu-item header__menu-link" href="">ЭКО-ВИЛЛАДЖ (Нагаево)</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item header__main-dropdown-menu-item header__menu-link" href="">FAMILY PARK</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item header__main-dropdown-menu-item header__menu-link" href="">геометрия</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item header__main-dropdown-menu-item header__menu-link" href="">Эко-вилладж (Шмидтово)</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item header__main-dropdown-menu-item header__menu-link" href="">красная поляна</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item header__main-dropdown-menu-item header__menu-link" href="">Лермонтов</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header__contacts">
+                    <div class="header__contacts-numbers">
+                        <a href="tel:+73472665191" class="header__contacts-number-first">+7 (347) 266-51-91</a>
+                        <a href="tel:+79273335651" class="header__contacts-numbers-second">+7 (927) 333-56-51</a>
+                    </div>
+                    <div class="header__contact-address">г. Уфа, ул. Блюхера, 2/1 пн-пт 09:00 – 19:00</div>
+                    <button class="header__contacts-button">Обратный звонок</button>
                 </div>
             </div>
-            <div class="header__contacts">
-                <div class="header__contacts-numbers">
-                    <a href="tel:+73472665191" class="header__contacts-number-first">+7 (347) 266-51-91</a>
-                    <a href="tel:+79273335651" class="header__contacts-numbers-second">+7 (927) 333-56-51</a>
-                </div>
-                <div class="header__contact-address">г. Уфа, ул. Блюхера, 2/1 пн-пт 09:00 – 19:00</div>
-                <button class="header__contacts-button">Обратный звонок</button>
+            <div class="header__mobile-menu mobile-menu">
+                <nav class="navbar p-0">
+                    <div class="container-fluid p-0">
+                        <a href="#"><img src="./img/logo.png" alt="Логотип" class="header__logo"></a>
+                        <button class="navbar-toggler burger-menu collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <div class="burger-menu__items animated-icon2">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarCollapse">
+                            <div class="offcanvas-body">
+                                <ul class="header__menu-items header__mobile-menu-items">
+                                    <li class="header__menu-item">
+                                        <a href="" class="header__menu-link">О компании</a>
+                                    </li>
+                                    <li class="header__menu-item dropdown">
+                                        <a class="dropdown-toggle header__menu-link" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            Выбрать комплекс
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a class="dropdown-item header__menu-link" href="">ЭКО-ВИЛЛАДЖ (Нагаево)</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item header__menu-link" href="">FAMILY PARK</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item header__menu-link" href="">геометрия</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item header__menu-link" href="">Эко-вилладж
+                                                    (Шмидтово)</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item header__menu-link" href="">красная поляна</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item header__menu-link" href="">Лермонтов</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="header__menu-item">
+                                        <a href="" class="header__menu-link">Акции</a>
+                                    </li>
+                                    <li class="header__menu-item">
+                                        <a href="" class="header__menu-link">Как купить</a>
+                                    </li>
+                                    <li class="header__menu-item">
+                                        <a href="" class="header__menu-link">Строительство на вашем участке</a>
+                                    </li>
+                                    <li class="header__menu-item">
+                                        <a href="" class="header__menu-link">Фото и видео</a>
+                                    </li>
+                                </ul>
+                                <div class="header__contacts">
+                                    <div class="header__contacts-numbers">
+                                        <a href="tel:+73472665191" class="header__contacts-number-first">+7 (347)
+                                            266-51-91</a>
+                                        <a href="tel:+79273335651" class="header__contacts-numbers-second">+7 (927)
+                                            333-56-51</a>
+                                    </div>
+                                    <div class="header__contact-address">г. Уфа, ул. Блюхера, 2/1 пн-пт 09:00 – 19:00</div>
+                                    <button class="header__contacts-button">Обратный звонок</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
             </div>
         </div>
     </header>
@@ -391,7 +395,7 @@
                 </div>
                 <div class="stocks__slider">
                     <div class="swiper stocks__swiper">
-                        <div class="swiper-wrapper">
+                        <div class="swiper-wrapper stocks__swiper-wrapper">
                             <div class="swiper-slide">
                                 <a href="" class="stock__item">
                                     <div class="stock__item-body">
@@ -785,7 +789,7 @@
                                 <button class="accordion-button FAQ__accordion-button" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
                                     aria-controls="collapseOne">
-                                    Из чего складывается стоимость дома?
+                                    <span> Из чего складывается стоимость дома? </span>
                                 </button>
                             </h2>
                             <div id="collapseOne" class="accordion-collapse collapse show"
@@ -806,7 +810,7 @@
                                 <button class="accordion-button collapsed FAQ__accordion-button" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
                                     aria-controls="collapseTwo">
-                                    Какие гарантии вы даете?
+                                    <span>Какие гарантии вы даете?</span>
                                 </button>
                             </h2>
                             <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample"
@@ -827,7 +831,7 @@
                                 <button class="accordion-button collapsed FAQ__accordion-button" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
                                     aria-controls="collapseThree">
-                                    Какие работы входят в стоимость коттеджа?
+                                    <span>Какие работы входят в стоимость коттеджа?</span>
                                 </button>
                             </h2>
                             <div id="collapseThree" class="accordion-collapse collapse"
@@ -848,7 +852,7 @@
                                 <button class="accordion-button collapsed FAQ__accordion-button" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
                                     aria-controls="collapseFour">
-                                    Сколько времени уходит на строительство?
+                                    <span>Сколько времени уходит на строительство?</span>
                                 </button>
                             </h2>
                             <div id="collapseFour" class="accordion-collapse collapse"
@@ -869,7 +873,7 @@
                                 <button class="accordion-button collapsed FAQ__accordion-button" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false"
                                     aria-controls="collapseFive">
-                                    Есть ли у вас возможность индивидуального проектирования коттеджа?
+                                    <span>Есть ли у вас возможность индивидуального проектирования коттеджа?</span>
                                 </button>
                             </h2>
                             <div id="collapseFive" class="accordion-collapse collapse"
@@ -926,7 +930,6 @@
                     <div id="contacts-map" style="width: 100%; height: 620px;"></div>
                 </div>
             </div>
-        </div>
         </div>
     </main>
     <footer class="footer">
@@ -990,11 +993,9 @@
                 el: ".swiper-pagination",
                 clickable: true,
             },
-            autoplay: {
-                delay: 10000,
-            },
+
             breakpoints: {
-                1131: {
+                1132: {
                     slidesPerView: 2, // два слайда при ширине 1131px и выше
                 }
             }
@@ -1052,6 +1053,7 @@
             spaceBetween: 25,
             pagination: {
                 el: ".swiper-pagination",
+                clickable: true,
             },
             navigation: {
                 nextEl: ".reviews__slider-button-next",
@@ -1079,6 +1081,134 @@
                 videoPlayer.pause();
                 videoPlayer.currentTime(0);
             });
+    </script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=f028c4f8-776d-4ba3-b079-94a909b9cca1
+    &lang=ru" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+        ymaps.ready(function () {
+            var myMap = new ymaps.Map(
+                'myMap',
+                {
+                    center: [54.759393, 56.015000],
+                    zoom: 10.5,
+                    controls: [],
+                },
+                { suppressMapOpenBlock: true }
+            )
+
+            // отображаем метки
+            myPlacemarkWithContent = new ymaps.Placemark(
+                [54.712879, 55.645140], {
+                hintContent: 'Коттедж-бери',
+            }, {
+                // Опции.
+                // Необходимо указать данный тип макета.
+                iconLayout: 'default#image',
+                // Своё изображение иконки метки.
+                iconImageHref: './img/geo-icon.svg',
+                // Размеры метки.
+                iconImageSize: [50, 65],
+                // Смещение левого верхнего угла иконки относительно её "ножки" (точки привязки).
+                iconImageOffset: [-20, -57],
+
+            });
+            myMap.geoObjects
+                .add(myPlacemarkWithContent);
+
+            // Пример реализации собственного элемента управления на основе наследования от collection.Item.
+            // Элемент управления отображает название объекта, который находится в центре карты.
+            const contactsMap = new ymaps.Map("contacts-map", {
+                center: [54.775006, 56.019577],
+                zoom: 17,
+                controls: [],
+            },
+                { suppressMapOpenBlock: true },
+                {
+                    searchControlProvider: 'yandex#search'
+                }),
+
+                myPlacemarkWithContent2 = new ymaps.Placemark(
+                    [54.775179, 56.022966], {}, {
+                    // Опции.
+                    preset: "islands#blueFactoryIcon",
+                    iconColor: '#ff0000',
+
+                    // Размеры метки.
+                    iconImageSize: [50, 65],
+                    // Смещение левого верхнего угла иконки относительно её "ножки" (точки привязки).
+                    iconImageOffset: [-20, -57],
+
+                });
+            contactsMap.geoObjects
+                .add(myPlacemarkWithContent2);
+                
+            function updateMapCenter() {
+                const windowWidth = window.innerWidth;
+                let newCenter, newZoom;
+                if (windowWidth <= 847) {
+                    newCenter = [54.777279, 56.022686];
+                    newZoom = 16; // Новые координаты центра для маленьких экранов
+                }
+                else if (windowWidth <= 500) {
+                    newCenter = [54.775979, 56.022966]; // Новые координаты центра для маленьких экранов
+                } else {
+                    newCenter = [54.775006, 56.019577]; // Исходные координаты центра
+                }
+
+                contactsMap.setCenter(newCenter, newZoom);
+            }
+
+            // Обновление центра карты при загрузке страницы
+            updateMapCenter();
+
+            // Обновление центра карты при изменении размера окна
+            window.addEventListener('resize', updateMapCenter);
+
+            //     var CustomControlClass = function (options) {
+            //         CustomControlClass.superclass.constructor.call(this, options);
+            //         this._content = null;
+            //         this._geocoderDeferred = null;
+            //     };
+
+            //     // И наследуем его от collection.Item.
+            //     ymaps.util.augment(CustomControlClass, ymaps.collection.Item, {
+            //         onAddToMap: function (map) {
+            //             CustomControlClass.superclass.onAddToMap.call(this, map);
+            //             this._lastCenter = null;
+            //             this.getParent().getChildElement(this).then(this._onGetChildElement, this);
+            //         },
+
+            //         _onGetChildElement: function (parentDomContainer) {
+            //             // Создаем HTML-элемент с текстом.
+            //             this._content = document.createElement('div');
+            //             this._content.innerHTML = `
+            //     <div class="contacts__info">
+            //         <div class="contacts__title title">Контакты</div>
+            //         <div class="contacts__numbers">
+            //             <a href="tel:+73472665191" class="contacts__phone">+7 (347) 266-51-91</a>
+            //             <a href="tel:+79273335651" class="contacts__phone">+7 (927) 333-56-51</a>
+            //         </div>
+            //         <a href="mailto:sales.cottagebery@yandex.ru" class="contacts__email">sales.cottagebery@yandex.ru</a>
+            //         <div class="contacts__address">г. Уфа, ул. Блюхера, 2/1 пн-пт 09:00 – 19:00</div>
+            //     </div>
+            // `;
+            //             parentDomContainer.appendChild(this._content);
+            //         },
+            //     });
+
+            //     // Создание экземпляра пользовательского элемента управления
+            //     var customControl = new CustomControlClass();
+
+            //     // Добавление пользовательского элемента управления на карту
+            //     contactsMap.controls.add(customControl, {
+            //         float: 'none',
+            //         position: {
+            //             top: 10,
+            //             left: 10
+            //         }
+            //     });
+        });
     </script>
 </body>
 
