@@ -1722,7 +1722,7 @@ button {
     .complexes-map__title {
         margin-bottom: 30px;
     }
-    .complexes-map__map .ymaps-2-1-79-map {
+    .complexes-map__map {
         height: 470px!Important;
     }
   }
@@ -1784,7 +1784,7 @@ button {
         flex-direction: column;
         align-items: center;
     }
-    .complexes-map__map .ymaps-2-1-79-map {
+    .complexes-map__map {
         height: 400px!Important;
     }
   }
@@ -1818,12 +1818,12 @@ button {
         row-gap: 10px;
         margin-bottom: 0;
     }
-    .complexes-map__map .ymaps-2-1-79-map {
+    .complexes-map__map {
         height: 340px!Important;
     }
   }
   @media (max-width: 425px) {
-    .complexes-map__map .ymaps-2-1-79-map {
+    .complexes-map__map {
         height: 320px!Important;
     }
   }
@@ -1837,7 +1837,7 @@ button {
     }
   }
   @media (max-width: 375px) {
-    .complexes-map__map .ymaps-2-1-79-map {
+    .complexes-map__map {
         height: 300px!Important;
     }
   }
