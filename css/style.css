@@ -1690,6 +1690,9 @@ button {
         font-size: 33px;
         line-height: 39px;
     }
+    .complexes-map__map {
+        height: 500px!Important;
+    }
 }
   @media (max-width: 1230px) {
     .complexes-map__description-title {

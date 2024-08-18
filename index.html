@@ -1087,7 +1087,7 @@
     </script>
     <script type="text/javascript">
         ymaps.ready(function () {
-            var myMap = new ymaps.Map(
+            const myMap = new ymaps.Map(
                 'myMap',
                 {
                     center: [54.759393, 56.015000],
@@ -1145,18 +1145,25 @@
                 
             function updateMapCenter() {
                 const windowWidth = window.innerWidth;
-                let newCenter, newZoom;
+                let newCenterContactsMap, newZoomContactsMap, newCenterMyMap, newZoomMyMap;
+
                 if (windowWidth <= 847) {
-                    newCenter = [54.777279, 56.022686];
-                    newZoom = 16; // Новые координаты центра для маленьких экранов
+                    newCenterContactsMap = [54.777279, 56.022686];
+                    newZoomContactsMap = 16;
+                    newCenterMyMap = [54.733080, 55.960528];
+                    newZoomMyMap = 9;
                 }
                 else if (windowWidth <= 500) {
-                    newCenter = [54.775979, 56.022966]; // Новые координаты центра для маленьких экранов
+                    newCenterContactsMap = [54.775979, 56.022966];
                 } else {
-                    newCenter = [54.775006, 56.019577]; // Исходные координаты центра
+                    newCenterContactsMap = [54.775006, 56.019577];
+                    newZoomContactsMap = 17;
+                    newCenterMyMap = [54.759393, 56.015000];
+                    newZoomMyMap = 10.5;
                 }
 
-                contactsMap.setCenter(newCenter, newZoom);
+                contactsMap.setCenter(newCenterContactsMap, newZoomContactsMap);
+                myMap.setCenter(newCenterMyMap, newZoomMyMap);
             }
 
             // Обновление центра карты при загрузке страницы
