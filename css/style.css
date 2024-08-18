@@ -1898,7 +1898,7 @@ button {
         max-width: 270px;
     }
     .complexes-map__map {
-        height: 320px!Important;
+        height: 390px!Important;
     }
   }
   @media (max-width: 390px) {
@@ -1911,6 +1911,11 @@ button {
     }
   }
   @media (max-width: 375px) {
+    .complexes-map__map {
+        height: 380px!Important;
+    }
+  }
+  @media (max-width: 350px) {
     .complexes-map__map {
         height: 300px!Important;
     }
@@ -3897,6 +3902,7 @@ button {
     color: #646666;
     margin-bottom: 30px;
     padding-right: 16px;
+    max-width: 650px;
 }
 .feedback__form {
     display: flex;

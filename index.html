@@ -133,7 +133,7 @@
                         <a href="tel:+79273335651" class="header__contacts-numbers-second">+7 (927) 333-56-51</a>
                     </div>
                     <div class="header__contact-address">г. Уфа, ул. Блюхера, 2/1 пн-пт 09:00 – 19:00</div>
-                    <button class="header__contacts-button">Обратный звонок</button>
+                    <button class="header__contacts-button" data-bs-toggle="modal" data-bs-target="#callModal">Обратный звонок</button>
                 </div>
             </div>
             <div class="header__mobile-menu mobile-menu">
@@ -212,6 +212,27 @@
             </div>
         </div>
     </header>
+    <div class="modal fade call-modal" id="callModal" tabindex="-1" aria-labelledby="callModalLabel" aria-hidden="true">
+        <div class="modal-dialog call-modal__dialog">
+          <div class="modal-content call-modal__content">
+            <div class="modal-header call-modal__header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body call-modal__body">
+                <div class="call-modal__title title">Обратный звонок</div>
+                <div class="call-modal__text text-block_fSize_20">Хотите уточнить информацию? Оставьте свои контактные данные, и мы
+                    вам перезвоним в ближайшее время.</div>
+                <form action="" class="call-modal__form form">
+                    <input type="text" name="" id="" placeholder="Имя"
+                        class="form-imput call-modal__input-name bordered-block">
+                    <input type="text" name="" id="" placeholder="Телефон"
+                        class="form-input call-modal__input-phone bordered-block">
+                    <button class="call-modal__button button">Отправить</button>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
     <main class="main">
         <div class="top-block">
             <div class="top-block__container my-container">
@@ -901,11 +922,11 @@
                         <div class="feedback__title title">Остались вопросы?</div>
                         <div class="feedback__text text-block_fSize_20">Хотите уточнить информацию? Оставьте свои контактные данные, и мы
                             вам перезвоним в ближайшее время.</div>
-                        <form action="" class="feedback__form">
+                        <form action="" class="feedback__form form">
                             <input type="text" name="" id="" placeholder="Имя"
-                                class="feedback__input-name bordered-block">
+                                class="form-imput feedback__input-name bordered-block">
                             <input type="text" name="" id="" placeholder="Телефон"
-                                class="feedback__input-phone bordered-block">
+                                class="form-input feedback__input-phone bordered-block">
                             <button class="feedback__button button">Отправить</button>
                         </form>
                     </div>
