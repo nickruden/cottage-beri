@@ -1644,10 +1644,13 @@ button {
 .complexes-map__title {
     margin-bottom: 50px;
 }
+.complexes-map__map {
+    width: 100%;
+}
+
 @media (min-width: 992px) {
     .complexes-map__map {
         height: 600px;
-        width: 100%;
     }
 }
 .complexes-map__description {
