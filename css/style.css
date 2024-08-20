@@ -5953,6 +5953,10 @@ button {
         flex-direction: column;
         margin-bottom: 26px;
     }
+    
+    .footer__contacts-numbers>*:not(:last-child) {
+        margin-bottom: 15px;
+    }
 
     .footer__email {
         order: 3;
@@ -6020,6 +6024,7 @@ button {
 
     .footer__contact-address {
         line-height: 23px;
+        max-width: 180px;
     }
 }
 
