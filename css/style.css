@@ -6003,6 +6003,10 @@ button {
     .footer__nav {
         margin-bottom: 35px;
     }
+    .footer__contact-address {
+        font-size: 15px;
+        line-height: 26px;
+    }
 }
 
 @media (max-width: 425px) {
@@ -6012,6 +6016,10 @@ button {
 
     .footer__logo {
         margin-bottom: 25px;
+    }
+
+    .footer__contact-address {
+        line-height: 23px;
     }
 }
 
