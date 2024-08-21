@@ -991,7 +991,7 @@ button {
 
 @media (max-height: 800px) {
     .mobile-menu__collapse-body {
-        padding-bottom: 70px!Important;
+        padding-bottom: 60px!Important;
     }
 }
 
