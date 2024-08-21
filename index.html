@@ -151,7 +151,7 @@
                 </div>
             </div>
             <div class="header__mobile-menu mobile-menu">
-                <nav class="navbar p-0">
+                <!-- <nav class="navbar p-0">
                     <div class="container-fluid p-0">
                         <a href="#"><img src="./img/logo.png" alt="Логотип" class="header__logo"></a>
                         <button class="navbar-toggler burger-menu" type="button" data-bs-toggle="offcanvas"
@@ -256,35 +256,117 @@
                             </div>
                         </div>
                     </div>
+                </nav> -->
+                <nav class="navbar p-0">
+                    <div class="container-fluid header__navbar-container p-0">
+                        <div class="navbar-header">
+                        <a href="#"><img src="./img/logo.png" alt="Логотип" class="header__logo"></a>
+                        <button class="navbar-toggler header__mobile-menu-dropdown-toggle burger-menu" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <div class="burger-menu__items">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </button>
+                    </div>
+                        <div class="collapse navbar-collapse mobile-menu__collapse my-container" id="navbarNav">
+                            <div class="mobile-menu__collapse-body">
+                                <ul class="header__menu-items header__mobile-menu-items flex-column">
+                                    <li class="header__menu-item header__mobile-menu-item">
+                                        <a href="" class="header__menu-link">О компании</a>
+                                    </li>
+                                    <li class="header__menu-item dropdown header__menu-dropdown">
+                                        <a class="dropdown-toggle header__menu-dropdown-toggle header__menu-link"
+                                            href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Выбрать комплекс
+                                        </a>
+                                        <ul class="dropdown-menu header__mobile-dropdown-menu">
+                                            <li class="header__mobile-dropdown-menu-item">
+                                                <a class="dropdown-item header__menu-link header__mobile-dropdown-menu-link"
+                                                    href="">ЭКО-ВИЛЛАДЖ (Нагаево)</a>
+                                            </li>
+                                            <li class="header__mobile-dropdown-menu-item">
+                                                <a class="dropdown-item header__menu-link header__mobile-dropdown-menu-link"
+                                                    href="">FAMILY PARK</a>
+                                            </li>
+                                            <li class="header__mobile-dropdown-menu-item">
+                                                <a class="dropdown-item header__menu-link header__mobile-dropdown-menu-link"
+                                                    href="">геометрия</a>
+                                            </li>
+                                            <li class="header__mobile-dropdown-menu-item">
+                                                <a class="dropdown-item header__menu-link header__mobile-dropdown-menu-link"
+                                                    href="">Эко-вилладж (Шмидтово)</a>
+                                            </li>
+                                            <li class="header__mobile-dropdown-menu-item">
+                                                <a class="dropdown-item header__menu-link header__mobile-dropdown-menu-link"
+                                                    href="">красная поляна</a>
+                                            </li>
+                                            <li class="header__mobile-dropdown-menu-item">
+                                                <a class="dropdown-item header__menu-link header__mobile-dropdown-menu-link"
+                                                    href="">Лермонтов</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="header__menu-item header__mobile-menu-item">
+                                        <a href="" class="header__menu-link">Акции</a>
+                                    </li>
+                                    <li class="header__menu-item header__mobile-menu-item">
+                                        <a href="" class="header__menu-link">Как купить</a>
+                                    </li>
+                                    <li class="header__menu-item header__mobile-menu-item">
+                                        <a href="" class="header__menu-link">Строительство на вашем участке</a>
+                                    </li>
+                                    <li class="header__menu-item header__mobile-menu-item">
+                                        <a href="" class="header__menu-link">Фото и видео</a>
+                                    </li>
+                                </ul>
+                                <div class="header__mobile-contacts">
+                                    <div class="header__mobile-contacts-numbers">
+                                        <a href="tel:+73472665191" class="header__contacts-number-first">+7 (347)
+                                            266-51-91</a>
+                                        <a href="tel:+79273335651" class="header__contacts-number-second">+7 (927)
+                                            333-56-51</a>
+                                    </div>
+                                    <a class="header__email"
+                                        href="mailto:sales.cottagebery@yandex.ru">sales.cottagebery@yandex.ru</a>
+                                    <div class="header__mobile-contact-bottom">
+                                        <div class="header__socials social">
+                                            <div class="social__links header__social-links">
+                                                <a href="" class="social__link header__social-link"><img
+                                                        src="./img/social-media-icons/telegram (Traced).svg"
+                                                        alt="Иконка телеграм" class="social__link-icon"></a>
+                                                <a href="" class="social__link header__social-link"><img
+                                                        src="./img/social-media-icons/vk (Traced).svg" alt="Иконка вк"
+                                                        class="social__link-icon"></a>
+                                                <a href="" class="social__link header__social-link"><img
+                                                        src="./img/social-media-icons/youtube.svg" alt="Иконка ютьюб"
+                                                        class="social__link-icon"></a>
+                                            </div>
+                                        </div>
+                                        <button class="header__contacts-button header__mobile-contacts-button"
+                                            data-bs-toggle="modal" data-bs-target="#callModal">Обратный звонок</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </nav>
             </div>
         </div>
     </header>
-    <!-- <div class="call-modal" id="callModal" tabindex="-1" aria-labelledby="callModalLabel" aria-hidden="true">
-        <div class="call-modal__content">
-            <button class="btn-close call-modal__close-button" data-bs-dismiss="call-modal" aria-label="Close"></button>
-            <div class="call-modal__body">
-                <div class="call-modal__title title"></div>
-                <div class="call-modal__text text-block_fSize_20"></div>
-                <form action="" class="feedback-form">
-                    <input type="text" name="" id="" placeholder="Имя"
-                        class="feedback-form__input call-modal__input-name bordered-block">
-                    <input type="text" name="" id="" placeholder="Телефон"
-                        class="feedback-form__input call-modal__input-phone bordered-block">
-                    <button class="feedback-form__button call-modal__button button">Отправить</button>
-                </form>
-            </div>
-        </div>
-    </div> -->
     <div class="modal fade call-modal" id="callModal" tabindex="-1" aria-labelledby="callModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered call-modal__dialog">
             <div class="modal-content call-modal__content">
                 <div class="modal-header call-modal__header">
-                    <button type="button" class="btn-close call-modal__close-button p-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close call-modal__close-button p-0" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
                 </div>
                 <div class="modal-body call-modal__body">
                     <div class="call-modal__title title">Обратный звонок</div>
-                    <div class="call-modal__text text-block_fSize_20">Хотите уточнить информацию? Оставьте свои контактные данные, и мы вам перезвоним в ближайшее время.</div>
+                    <div class="call-modal__text text-block_fSize_20">Хотите уточнить информацию? Оставьте свои контактные
+                        данные, и мы вам перезвоним в ближайшее время.</div>
                     <form action="" class="feedback-form">
                         <input type="text" name="" id="" placeholder="Имя"
                             class="feedback-form__input call-modal__input-name bordered-block">
@@ -296,7 +378,7 @@
             </div>
         </div>
     </div>
-    </div>
+    <div class="overlay" id="overlay"></div>
     <main class="main">
         <div class="top-block">
             <div class="top-block__container my-container">
@@ -1095,6 +1177,29 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.getElementById('navbarNav');
+        const overlay = document.getElementById('overlay');
+        const callbackButton = document.querySelector('.header__mobile-contacts-button');
+
+        navbarToggler.addEventListener('click', function () {
+                document.body.style.overflow = 'hidden';
+                overlay.style.display = 'block';
+        });
+
+        navbarCollapse.addEventListener('hidden.bs.collapse', function () {
+            document.body.style.overflow = 'visible';
+            overlay.style.display = 'none';
+        });
+
+        callbackButton.addEventListener('click', function () {
+        navbarCollapse.classList.remove('show');
+        navbarToggler.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = 'visible';
+        overlay.style.display = 'none';
+    });
+    </script>
     <script>
         const swiper_topBlock = new Swiper('.top-block__swiper', {
             direction: 'horizontal',
