@@ -131,11 +131,7 @@ button {
 
 @media (max-width: 991px) {
     .button {
-        font-size: 16px;
-        padding: 15px 0px 15px 0px;
-    }
-
-    .button_link {
+        font-size: 15px;
         padding: 13px 0px 12px 0px;
     }
 }
@@ -154,10 +150,6 @@ button {
 @media (max-width: 600px) {
     .button {
         font-size: 17px;
-        padding: 16px 0px 16px 0px;
-    }
-
-    .button_link {
         padding: 14px 0px 13px 0px;
     }
 }
@@ -165,10 +157,6 @@ button {
 @media (max-width: 500px) {
     .button {
         font-size: 16px;
-        padding: 15px 0px 15px 0px;
-    }
-
-    .button_link {
         padding: 13px 0px 12px 0px;
     }
 }
@@ -4809,10 +4797,6 @@ button {
         flex-direction: column;
     }
 
-    .consultation__text {
-        margin-bottom: 20px;
-    }
-
     .consultation__body {
         display: flex;
         flex-direction: column;
@@ -4822,11 +4806,13 @@ button {
         margin-right: 0px;
         margin-top: 0px;
         margin-bottom: 0px;
+        width: 100%;
     }
 
     .consultation__text {
-        font-size: 16px;
-        max-width: 700px;
+        font-size: 17px;
+        max-width: 570px;
+        margin-bottom: 20px;
     }
 
     .consultation__img-wrap {
@@ -5222,9 +5208,14 @@ button {
     display: flex;
     align-items: center;
 }
-
-.feedback__img {
+.feedback__img-wrap {
     margin-right: 59px;
+    max-width: 760px;
+    max-height: 480px;
+}
+.feedback__img {
+    width: 760px;
+    aspect-ratio: 760 / 480;
 }
 
 .feedback__body {
@@ -5241,6 +5232,170 @@ button {
     padding-right: 16px;
     max-width: 650px;
 }
+
+@media (max-width: 1600px) {
+    .feedback__body  {
+        max-width: 50%;
+    }
+
+    .feedback__img-wrap {
+        max-width: 50%;
+    }
+
+    .feedback__img {
+        height: 100%;
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 1453px) {}
+
+@media (max-width: 1400px) {
+    .feedback__img-wrap {
+        margin-right: 49px;
+    }
+    .feedback__body {
+        margin-right: 30px;
+    }
+}
+
+@media (max-width: 1329px) {
+    .feedback__text {
+        margin-bottom: 27px;
+    }
+}
+
+@media (max-width: 1298px) {
+    .feedback__img-wrap {
+        margin-right: 39px;
+    }
+    .feedback__body {
+        margin-right: 28px;
+    }
+
+    .feedback__img {
+        height: 500px;
+    }
+
+    .feedback__text {
+        font-size: 17px;
+        line-height: 22px;
+    }
+    .feedback-form__input {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1170px) {}
+
+@media (max-width: 1096px) {
+    .feedback__img-wrap {
+        margin-right: 32px;
+    }
+
+    .feedback__body {
+        margin-right: 25px;
+    }
+
+    .feedback__text {
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+    .feedback-form__input {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 991px) {
+    .feedback__text {
+        font-size: 14px;
+    }
+
+    .feedback__body {
+        max-width: 45%;
+    }
+
+    .feedback__img-wrap {
+        max-width: 55%;
+    }
+}
+
+@media (max-width: 847px) {}
+
+@media (max-width: 794px) {
+    .feedback__wrapper {
+        flex-direction: column;
+    }
+
+    .feedback__text {
+        margin-bottom: 21px;
+        padding-right: 50px;
+        font-size: 17px;
+    }
+    .feedback__wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .feedback__body {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 28px;
+        max-width: 100%;
+        margin-right: 0px;
+    }
+
+    .feedback__img-wrap  {
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    .feedback__img {
+        height: 100%;
+    }
+}
+
+@media (max-width: 650px) {
+    .feedback__body {
+        padding: 25px;
+    }
+}
+@media (max-width: 600px) {
+    .feedback__text {
+        margin-bottom: 17px;
+        padding-right: 20px;
+    }
+    .feedback-form__input {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 500px) {
+    .feedback__body {
+        padding: 19px;
+    }
+
+    .feedback__text {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 425px) {
+    .feedback__text {
+        margin-bottom: 13px;
+        padding-right: 0px;
+    }
+}
+
+@media (max-width: 375px) {
+    .feedback__text {
+        margin-bottom: 10px;
+    }
+}
+
 
 /* 16 блок */
 .contacts {}

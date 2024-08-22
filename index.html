@@ -1087,7 +1087,9 @@
         <div class="feedback">
             <div class="feedback__container my-container">
                 <div class="feedback__wrapper bordered-block">
+                    <div class="feedback__img-wrap">
                     <img src="./img/feedback/feedback-block-img.jpg" alt="" class="feedback__img">
+                </div>
                     <div class="feedback__body">
                         <div class="feedback__title title">Остались вопросы?</div>
                         <div class="feedback__text text-block_fSize_20">Хотите уточнить информацию? Оставьте свои
@@ -1182,6 +1184,7 @@
         const navbarCollapse = document.getElementById('navbarNav');
         const overlay = document.getElementById('overlay');
         const callbackButton = document.querySelector('.header__mobile-contacts-button');
+        const callModal = document.getElementById('callModal');
 
         navbarToggler.addEventListener('click', function () {
                 document.body.style.overflow = 'hidden';
@@ -1194,8 +1197,13 @@
         });
 
         callbackButton.addEventListener('click', function () {
-        navbarCollapse.classList.remove('show');
-        navbarToggler.setAttribute('aria-expanded', 'false');
+            navbarCollapse.classList.remove('show');
+            navbarToggler.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = 'visible';
+            overlay.style.display = 'none';
+    });
+
+    callModal.addEventListener('hidden.bs.modal', function () {
         document.body.style.overflow = 'visible';
         overlay.style.display = 'none';
     });
