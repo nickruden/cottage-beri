@@ -994,6 +994,11 @@ button {
         padding-bottom: 90px!Important;
     }
 }
+@media (max-height: 500px) {
+    .mobile-menu__collapse-body {
+        padding-bottom: 120px!Important;
+    }
+}
 
 .navbar-collapse {
     transition: height 0.3s ease;
