@@ -860,7 +860,7 @@ button {
         padding: 0px 10px;
     } */
     .mobile-menu__collapse-body {
-        max-height: 606px;
+        max-height: 93vh;
         overflow-y: auto;
     }
 
