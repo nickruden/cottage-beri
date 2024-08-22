@@ -859,13 +859,9 @@ button {
     .mobile-menu__offcanvas-body {
         padding: 0px 10px;
     } */
-    .mobile-menu__collapse {
+    .mobile-menu__collapse-body {
         max-height: 91vh;
         overflow-y: auto;
-    }
-    .mobile-menu__collapse-body {
-        /* max-height: 91vh;
-        overflow-y: auto; */
     }
 
     .header__mobile-menu-items {
