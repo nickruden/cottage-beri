@@ -859,9 +859,13 @@ button {
     .mobile-menu__offcanvas-body {
         padding: 0px 10px;
     } */
-    .mobile-menu__collapse-body {
+    .mobile-menu__collapse {
         max-height: 91vh;
         overflow-y: auto;
+    }
+    .mobile-menu__collapse-body {
+        /* max-height: 91vh;
+        overflow-y: auto; */
     }
 
     .header__mobile-menu-items {
@@ -991,7 +995,7 @@ button {
 
 @media (max-height: 800px) {
     .mobile-menu__collapse-body {
-        padding-bottom: 60px!Important;
+        padding-bottom: 80px!Important;
     }
 }
 
