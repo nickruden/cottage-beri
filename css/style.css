@@ -1498,15 +1498,15 @@ button {
 @media (max-width: 794px) {
     .top-block__slider {
         max-width: 100%;
+        margin-bottom: 20px;
     }
      .top-block__slide {
         height: auto;
     }
     .top-block__right {
-        column-gap: 20px;
-        max-width: 100%;
         display: flex;
         flex-direction: column;
+        max-width: 100%;
     } 
 }
     /* .top-block__right > * {
