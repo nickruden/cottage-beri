@@ -1513,9 +1513,9 @@ button {
         max-width: 100%;
     }
 }
-.top-block__right > * {
+    /* .top-block__right > * {
         width: 50%;
-    }
+    } 
     .top-block__left {
         position: relative;
         margin-right: 0px;
@@ -1562,9 +1562,12 @@ button {
         flex-direction: row;
         max-width: 100%;
     }
+    .top-block__right > * {
+        width: 50%;
+    }
     .top-block__slider {
         margin-right: 20px;
-    } 
+    } */
 @media (max-width: 991px) {
     .top-block__left {
         height: 800px;
