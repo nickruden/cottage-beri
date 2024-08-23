@@ -1172,7 +1172,7 @@ button {
     }
 }
 
-.top-block__container { 
+/* .top-block__container { 
     display: flex;
 }
 .top-block__container > * {
@@ -1513,7 +1513,7 @@ button {
         max-width: 100%;
     }
 }
-    /* .top-block__right > * {
+/* .top-block__right > * {
         width: 50%;
     }
     .top-block__left {
