@@ -1510,7 +1510,7 @@ button {
         display: flex;
         flex-direction: column;
         max-width: 100%;
-    } 
+    }
 }
     /* .top-block__right > * {
         width: 50%;
