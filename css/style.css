@@ -1515,8 +1515,7 @@ button {
 }
     /* .top-block__right > * {
         width: 50%;
-    } */
-    /* 
+    }
     .top-block__left {
         position: relative;
         margin-right: 0px;
@@ -1569,7 +1568,7 @@ button {
     .top-block__slider {
         margin-right: 20px;
     } */
-@media (max-width: 991px) {
+/* @media (max-width: 991px) {
     .top-block__left {
         height: 800px;
     }
@@ -1603,7 +1602,7 @@ button {
     .top-block__left {
         height: 500px;
     }
-} 
+}  */
 
 /* 2 блок */
 .stats {
