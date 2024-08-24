@@ -3458,7 +3458,7 @@ button {
 
 @media (max-width: 375px) {
     .complexes-map__map {
-        height: 320px !Important;
+        height: 330px !Important;
     }
 }
 
