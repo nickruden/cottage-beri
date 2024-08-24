@@ -3441,7 +3441,7 @@ button {
     }
 
     .complexes-map__map {
-        height: 390px !Important;
+        height: 370px !Important;
     }
 }
 
@@ -3458,7 +3458,7 @@ button {
 
 @media (max-width: 375px) {
     .complexes-map__map {
-        height: 380px !Important;
+        height: 320px !Important;
     }
 }
 
