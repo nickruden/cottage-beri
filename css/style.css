@@ -3732,12 +3732,15 @@ button {
     }
 
     .features__card-text {
-        max-width: 250px;
+        max-width: 270px;
     }
 }
 
 @media (max-width: 322px) {
     .features__title {
+        max-width: 250px;
+    }
+    .features__card-text {
         max-width: 250px;
     }
 }
@@ -4259,6 +4262,9 @@ button {
 @media (max-width: 375px) {
     .advantages__item-description {
         padding-right: 0px;
+    }
+    .advantages__item {
+        max-width: 320px;
     }
 }
 
