@@ -1268,12 +1268,7 @@ button {
 }
 @media (max-width: 490px) {
     .top-block {
-        padding-top: calc(13px + 54px);
-    }
-}
-@media (max-width: 375px) {
-    .top-block {
-        padding-top: 54px;
+        padding-top: calc(12px + 54px);
     }
 }
 @media (max-width: 794px) {
