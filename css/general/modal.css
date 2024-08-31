@@ -1,0 +1,116 @@
+.call-modal__dialog {
+    max-width: 760px;
+}
+
+.call-modal__header {
+    padding: 20px 20px 0px 20px !Important;
+}
+
+.call-modal__close-button {
+    height: 16px;
+    width: 16px;
+    margin: 0 0 0 auto !Important;
+}
+
+.call-modal__body {
+    padding: 0px 40px 60px 40px;
+    padding-top: 4px !Important;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.call-modal__title {
+    margin-bottom: 10px;
+}
+
+.call-modal__text {
+    margin-bottom: 30px;
+}
+
+.feedback-form__button {
+    max-width: 100%;
+    width: 100%;
+}
+
+@media (max-width: 1400px) {
+    .call-modal__text {
+        font-size: 20px !Important;
+    }
+}
+
+@media (max-width: 1230px) {
+    .call-modal__text {
+        margin-bottom: 28px;
+    }
+}
+
+@media (max-width: 1170px) {
+    .call-modal__text {
+        font-size: 18px !Important;
+    }
+}
+
+@media (max-width: 1045px) {
+    .call-modal__text {
+        margin-bottom: 27px;
+    }
+}
+
+@media (max-width: 991px) {
+    .call-modal__body {
+        padding: 0px 35px 55px 35px;
+    }
+
+    .call-modal__text {
+        font-size: 17px !Important;
+    }
+}
+
+@media (max-width: 794px) {
+    .call-modal__body {
+        padding: 0px 30px 50px 30px;
+    }
+
+    .call-modal__text {
+        margin-bottom: 26px;
+    }
+}
+
+@media (max-width: 650px) {
+    .call-modal__body {
+        padding: 0px 28px 48px 28px;
+    }
+}
+
+@media (max-width: 600px) {
+    .payment__wrapper {
+        padding: 25px 0px 25px 0px;
+    }
+}
+
+@media (max-width: 516px) {
+    .call-modal__body {
+        padding: 0px 25px 45px 25px;
+    }
+
+    .call-modal__text {
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 500px) {
+    .feedback-form__input {
+        padding: 13px 20px 14px 20px;
+    }
+}
+
+@media (max-width: 425px) {
+    .feedback-form__input {
+        padding: 12px 20px 13px 20px;
+    }
+
+    .call-modal__body {
+        padding: 0px 20px 40px 20px;
+    }
+}

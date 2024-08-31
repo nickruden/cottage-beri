@@ -7,18 +7,31 @@
     <title>Коттедж-бери</title>
     <link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon">
 
+    <!-- ПОДКЛЮЧЕНИЕ СТИЛЕЙ ДЛЯ VIDEOSJS -->
     <link href="https://vjs.zencdn.net/8.16.1/video-js.css" rel="stylesheet" />
     <link href="https://unpkg.com/@videojs/themes@1/dist/city/index.css" rel="stylesheet" />
     <link href="https://unpkg.com/@videojs/themes@1/dist/sea/index.css" rel="stylesheet">
 
+    <!-- ПОДКЛЮЧЕНИЕ СТИЛЕЙ ДЛЯ BOOTSTRAP 5.3.3 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
+        
+    <!-- ПОДКЛЮЧЕНИЕ СТИЛЕЙ ДЛЯ СЛАЙДЕРА -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <link rel="stylesheet" href="./css/style.css">
+    <!-- ПОДКЛЮЧЕНИЕ ОБЩИХ СТИЛЕЙ -->
+    <link rel="stylesheet" href="./css/general/reset.css">
+    <link rel="stylesheet" href="./css/general/custom.css">
+    <link rel="stylesheet" href="./css/general/header.css">
+    <link rel="stylesheet" href="./css/general/footer.css">
+    <link rel="stylesheet" href="./css/general/form.css">
+    <link rel="stylesheet" href="./css/general/buttons.css">
+    <link rel="stylesheet" href="./css/general/modal.css">
 
-    <!-- Подключение шрифта -->
+    <!-- ПОДКЛЮЧЕНИЕ СТИЛЕЙ ДЛЯ ГЛАВНОЙ СТРАНИЦЫ -->
+    <link rel="stylesheet" href="./css/main-page/style.css">
+
+    <!-- ПОДКЛЮЧЕНИЕ ШРИФТА-->
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 
@@ -35,8 +48,8 @@
                             <a href="" class="header__menu-link">О компании</a>
                         </li>
                         <li class="header__menu-item dropdown header__menu-dropdown">
-                            <a class="dropdown-toggle header__menu-dropdown-toggle header__menu-link" href="#"
-                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="dropdown-toggle header__menu-dropdown-toggle header__menu-link" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
                                 Выбрать комплекс
                             </a>
                             <ul class="dropdown-menu header__main-dropdown-menu">
@@ -80,65 +93,67 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="header__menu-item dropdown header__main-dropdown">
-                    <a class="dropdown-toggle header__menu-dropdown-toggle header__menu-link" href="#" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Выбрать комплекс
-                    </a>
-                    <ul class="dropdown-menu header__main-dropdown-menu">
-                        <li>
-                            <a class="dropdown-item header__main-dropdown-menu-item header__menu-link"
-                                href="">ЭКО-ВИЛЛАДЖ (Нагаево)</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item header__main-dropdown-menu-item header__menu-link" href="">FAMILY
-                                PARK</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item header__main-dropdown-menu-item header__menu-link"
-                                href="">геометрия</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item header__main-dropdown-menu-item header__menu-link"
-                                href="">Эко-вилладж (Шмидтово)</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item header__main-dropdown-menu-item header__menu-link" href="">красная
-                                поляна</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item header__main-dropdown-menu-item header__menu-link"
-                                href="">Лермонтов</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="dropdown header__dropdown-nav dropdown-nav">
-                    <a class="dropdown-nav__toggle header__menu-link burger-menu" href="#" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <div class="burger-menu__items dropdown-nav__icon">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                    </a>
-                    <ul class="dropdown-menu dropdown-nav__menu">
-                        <li class="dropdown-nav__menu-item bordered-block animate__slideInDown">
-                            <a href="" class="header__menu-link dropdown-nav__menu-link">О компании</a>
-                        </li>
-                        <li class="dropdown-nav__menu-item bordered-block animate__slideInDown">
-                            <a href="" class="header__menu-link dropdown-nav__menu-link">Акции</a>
-                        </li>
-                        <li class="dropdown-nav__menu-item bordered-block animate__slideInDown">
-                            <a href="" class="header__menu-link dropdown-nav__menu-link">Как купить</a>
-                        </li>
-                        <li class="dropdown-nav__menu-item bordered-block animate__slideInDown">
-                            <a href="" class="header__menu-link dropdown-nav__menu-link">Строительство на вашем
-                                участке</a>
-                        </li>
-                        <li class="dropdown-nav__menu-item bordered-block animate__slideInDown">
-                            <a href="" class="header__menu-link dropdown-nav__menu-link">Фото и видео</a>
-                        </li>
-                    </ul>
+                <div class="header__pre-movbile-menu">
+                    <div class="header__menu-item dropdown header__main-dropdown">
+                        <a class="dropdown-toggle header__menu-dropdown-toggle header__menu-link" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Выбрать комплекс
+                        </a>
+                        <ul class="dropdown-menu header__main-dropdown-menu">
+                            <li>
+                                <a class="dropdown-item header__main-dropdown-menu-item header__menu-link"
+                                    href="">ЭКО-ВИЛЛАДЖ (Нагаево)</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item header__main-dropdown-menu-item header__menu-link" href="">FAMILY
+                                    PARK</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item header__main-dropdown-menu-item header__menu-link"
+                                    href="">геометрия</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item header__main-dropdown-menu-item header__menu-link"
+                                    href="">Эко-вилладж (Шмидтово)</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item header__main-dropdown-menu-item header__menu-link" href="">красная
+                                    поляна</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item header__main-dropdown-menu-item header__menu-link"
+                                    href="">Лермонтов</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="dropdown header__dropdown-nav dropdown-nav">
+                        <a class="dropdown-nav__toggle header__menu-link burger-menu" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="burger-menu__items dropdown-nav__icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu dropdown-nav__menu">
+                            <li class="dropdown-nav__menu-item bordered-block animate__slideInDown">
+                                <a href="" class="header__menu-link dropdown-nav__menu-link">О компании</a>
+                            </li>
+                            <li class="dropdown-nav__menu-item bordered-block animate__slideInDown">
+                                <a href="" class="header__menu-link dropdown-nav__menu-link">Акции</a>
+                            </li>
+                            <li class="dropdown-nav__menu-item bordered-block animate__slideInDown">
+                                <a href="" class="header__menu-link dropdown-nav__menu-link">Как купить</a>
+                            </li>
+                            <li class="dropdown-nav__menu-item bordered-block animate__slideInDown">
+                                <a href="" class="header__menu-link dropdown-nav__menu-link">Строительство на вашем
+                                    участке</a>
+                            </li>
+                            <li class="dropdown-nav__menu-item bordered-block animate__slideInDown">
+                                <a href="" class="header__menu-link dropdown-nav__menu-link">Фото и видео</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="header__contacts">
                     <div class="header__contacts-numbers">
@@ -151,126 +166,20 @@
                 </div>
             </div>
             <div class="header__mobile-menu mobile-menu">
-                <!-- <nav class="navbar p-0">
-                    <div class="container-fluid p-0">
-                        <a href="#"><img src="./img/logo.png" alt="Логотип" class="header__logo"></a>
-                        <button class="navbar-toggler burger-menu" type="button" data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                            <div class="burger-menu__items animated-icon2">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                        </button>
-                        <div class="offcanvas mobile-menu__offcanvas offcanvas-top my-container tabindex=" -1"
-                            id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                            <div class="offcanvas-header mobile-menu__offcanvas-header d-flex justify-content-between">
-                                <a href="#"><img src="./img/logo.png" alt="Логотип" class="header__logo"></a>
-                                <button class="navbar-toggler burger-menu" type="button" data-bs-dismiss="offcanvas"
-                                    aria-label="Close">
-                                    <div class="burger-menu__items animated-icon2">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </button>
-                            </div>
-                            <div class="offcanvas-body mobile-menu__offcanvas-body">
-                                <ul class="header__menu-items flex-column">
-                                    <li class="header__menu-item">
-                                        <a href="" class="header__menu-link">О компании</a>
-                                    </li>
-                                    <li class="header__menu-item dropdown header__menu-dropdown">
-                                        <a class="dropdown-toggle header__menu-dropdown-toggle header__menu-link"
-                                            href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            Выбрать комплекс
-                                        </a>
-                                        <ul class="dropdown-menu header__mobile-dropdown-menu">
-                                            <li class="header__mobile-dropdown-menu-item">
-                                                <a class="dropdown-item header__menu-link header__mobile-dropdown-menu-link"
-                                                    href="">ЭКО-ВИЛЛАДЖ (Нагаево)</a>
-                                            </li>
-                                            <li class="header__mobile-dropdown-menu-item">
-                                                <a class="dropdown-item header__menu-link header__mobile-dropdown-menu-link"
-                                                    href="">FAMILY PARK</a>
-                                            </li>
-                                            <li class="header__mobile-dropdown-menu-item">
-                                                <a class="dropdown-item header__menu-link header__mobile-dropdown-menu-link"
-                                                    href="">геометрия</a>
-                                            </li>
-                                            <li class="header__mobile-dropdown-menu-item">
-                                                <a class="dropdown-item header__menu-link header__mobile-dropdown-menu-link"
-                                                    href="">Эко-вилладж (Шмидтово)</a>
-                                            </li>
-                                            <li class="header__mobile-dropdown-menu-item">
-                                                <a class="dropdown-item header__menu-link header__mobile-dropdown-menu-link"
-                                                    href="">красная поляна</a>
-                                            </li>
-                                            <li class="header__mobile-dropdown-menu-item">
-                                                <a class="dropdown-item header__menu-link header__mobile-dropdown-menu-link"
-                                                    href="">Лермонтов</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="header__menu-item">
-                                        <a href="" class="header__menu-link">Акции</a>
-                                    </li>
-                                    <li class="header__menu-item">
-                                        <a href="" class="header__menu-link">Как купить</a>
-                                    </li>
-                                    <li class="header__menu-item">
-                                        <a href="" class="header__menu-link">Строительство на вашем участке</a>
-                                    </li>
-                                    <li class="header__menu-item">
-                                        <a href="" class="header__menu-link">Фото и видео</a>
-                                    </li>
-                                </ul>
-                                <div class="header__mobile-contacts">
-                                    <div class="header__mobile-contacts-numbers">
-                                        <a href="tel:+73472665191" class="header__contacts-number-first">+7 (347)
-                                            266-51-91</a>
-                                        <a href="tel:+79273335651" class="header__contacts-number-second">+7 (927)
-                                            333-56-51</a>
-                                    </div>
-                                    <a class="header__email"
-                                        href="mailto:sales.cottagebery@yandex.ru">sales.cottagebery@yandex.ru</a>
-                                    <div class="header__mobile-contact-bottom">
-                                        <div class="header__socials social">
-                                            <div class="social__links header__social-links">
-                                                <a href="" class="social__link header__social-link"><img
-                                                        src="./img/social-media-icons/telegram (Traced).svg"
-                                                        alt="Иконка телеграм" class="social__link-icon"></a>
-                                                <a href="" class="social__link header__social-link"><img
-                                                        src="./img/social-media-icons/vk (Traced).svg" alt="Иконка вк"
-                                                        class="social__link-icon"></a>
-                                                <a href="" class="social__link header__social-link"><img
-                                                        src="./img/social-media-icons/youtube.svg" alt="Иконка ютьюб"
-                                                        class="social__link-icon"></a>
-                                            </div>
-                                        </div>
-                                        <button class="header__contacts-button header__mobile-contacts-button"
-                                            data-bs-toggle="modal" data-bs-target="#callModal">Обратный звонок</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </nav> -->
                 <nav class="navbar p-0">
                     <div class="container-fluid header__navbar-container p-0">
                         <div class="navbar-header">
-                        <a href="#"><img src="./img/logo.png" alt="Логотип" class="header__logo"></a>
-                        <button class="navbar-toggler header__mobile-menu-dropdown-toggle burger-menu" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                            <div class="burger-menu__items">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                        </button>
-                    </div>
+                            <a href="#"><img src="./img/logo.png" alt="Логотип" class="header__logo"></a>
+                            <button class="navbar-toggler header__mobile-menu-dropdown-toggle burger-menu" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <div class="burger-menu__items">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </button>
+                        </div>
                         <div class="collapse navbar-collapse mobile-menu__collapse my-container" id="navbarNav">
                             <div class="mobile-menu__collapse-body">
                                 <ul class="header__menu-items header__mobile-menu-items flex-column">
@@ -278,8 +187,8 @@
                                         <a href="" class="header__menu-link">О компании</a>
                                     </li>
                                     <li class="header__menu-item dropdown header__menu-dropdown">
-                                        <a class="dropdown-toggle header__menu-dropdown-toggle header__menu-link"
-                                            href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <a class="dropdown-toggle header__menu-dropdown-toggle header__menu-link" href="#"
+                                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             Выбрать комплекс
                                         </a>
                                         <ul class="dropdown-menu header__mobile-dropdown-menu">
@@ -356,6 +265,8 @@
             </div>
         </div>
     </header>
+
+    <!-- МОДАЛЬНОЕ ОКНО С ФОРМОЙ -->
     <div class="modal fade call-modal" id="callModal" tabindex="-1" aria-labelledby="callModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered call-modal__dialog">
             <div class="modal-content call-modal__content">
@@ -378,13 +289,17 @@
             </div>
         </div>
     </div>
+
+    <!-- ОВЕРЛЕЙ ТОЛЬКО ДЛЯ МОДАЛКИ С ФОРМОЙ -->
     <div class="overlay" id="overlay"></div>
+
     <main class="main">
         <div class="top-block">
             <div class="top-block__container my-container">
                 <div class="top-block__left">
                     <div class="top-block__left-body">
-                        <div class="top-block__title title"><span> Дом под ключ </span> <br style="display: none;"> в Уфе <br> за 6 месяцев <span>
+                        <div class="top-block__title title"><span> Дом под ключ </span> <br style="display: none;"> в Уфе <br>
+                            за 6 месяцев <span>
                                 +участок </span></div>
                         <ul class="top-block__unique-offers">
                             <li class="top-block__unique-offers-item"> <span> подбор земельного участка; </span></li>
@@ -394,9 +309,8 @@
                             <li class="top-block__unique-offers-item"> <span> городской комфорт на свежем воздухе
                                 </span></li>
                         </ul>
-                        <button class="top-block__button button">Скачать каталог проектов <img
-                                src="./img/download-icon.svg" alt="иконка загрузить"
-                                class="top-block__button-icon"></button>
+                        <button class="top-block__button button">Скачать каталог проектов <img src="./img/download-icon.svg"
+                                alt="иконка загрузить" class="top-block__button-icon"></button>
                         <div class="top-block__catalog-info">
                             <div class="top-block__catalog-file-size">Размер файла — 4,3 МБ</div>
                             <div class="top-block__catalog-update">каталог обновлён 16.04.24</div>
@@ -413,14 +327,13 @@
                                 <div class="swiper-slide top-block__swiper-slide">
                                     <div class="top-block__slide">
                                         <div class="top-block__slide-logo">
-                                            <img src="./img/top-block/logo-slide-1.svg" alt=""
-                                                class="top-block__slide-logo-img" style="height: 43px;">
+                                            <img src="./img/top-block/logo-slide-1.svg" alt="" class="top-block__slide-logo-img"
+                                                style="height: 43px;">
                                             <div class="top-block__slide-logo-text"
                                                 style="font-size: 10px; font-weight: 700;line-height: 12px; color: #BA141C; text-transform: uppercase;">
                                                 Красная <br> поляна</div>
                                         </div>
-                                        <img src="./img/top-block/carusel-img-1.jpg" alt=""
-                                            class="top-block__slide-img">
+                                        <img src="./img/top-block/carusel-img-1.jpg" alt="" class="top-block__slide-img">
                                         <a href="" class="link-icon-wrap top-block__slide-link">
                                             <img src="./img/link-arrow.svg" alt="иконка ссылки" class="link-icon">
                                         </a>
@@ -429,12 +342,11 @@
                                 <div class="swiper-slide top-block__swiper-slide">
                                     <div class="top-block__slide">
                                         <div class="top-block__slide-logo">
-                                            <img src="./img/top-block/logo-slide-2.png" alt=""
-                                                class="top-block__slide-logo-img" style="height: 43px;">
+                                            <img src="./img/top-block/logo-slide-2.png" alt="" class="top-block__slide-logo-img"
+                                                style="height: 43px;">
                                             <div class="top-block__slide-logo-text" style="display: none;"></div>
                                         </div>
-                                        <img src="./img/top-block/carusel-img-2.jpg" alt=""
-                                            class="top-block__slide-img">
+                                        <img src="./img/top-block/carusel-img-2.jpg" alt="" class="top-block__slide-img">
                                         <a href="" class="top-block__slide-link link-icon-wrap">
                                             <img src="./img/link-arrow.svg" alt="иконка ссылки" class="link-icon">
                                         </a>
@@ -443,14 +355,13 @@
                                 <div class="swiper-slide top-block__swiper-slide">
                                     <div class="top-block__slide">
                                         <div class="top-block__slide-logo">
-                                            <img src="./img/top-block/logo-slide-1.svg" alt=""
-                                                class="top-block__slide-logo-img" style="height: 43px;">
+                                            <img src="./img/top-block/logo-slide-1.svg" alt="" class="top-block__slide-logo-img"
+                                                style="height: 43px;">
                                             <div class="top-block__slide-logo-text"
                                                 style="font-size: 10px; font-weight: 700;line-height: 12px; color: #BA141C; text-transform: uppercase;">
                                                 Красная <br> поляна</div>
                                         </div>
-                                        <img src="./img/top-block/carusel-img-1.jpg" alt=""
-                                            class="top-block__slide-img">
+                                        <img src="./img/top-block/carusel-img-1.jpg" alt="" class="top-block__slide-img">
                                         <a href="" class="top-block__slide-link link-icon-wrap">
                                             <img src="./img/link-arrow.svg" alt="иконка ссылки" class="link-icon">
                                         </a>
@@ -459,12 +370,11 @@
                                 <div class="swiper-slide top-block__swiper-slide">
                                     <div class="top-block__slide">
                                         <div class="top-block__slide-logo">
-                                            <img src="./img/top-block/logo-slide-2.png" alt=""
-                                                class="top-block__slide-logo-img" style="height: 43px;">
+                                            <img src="./img/top-block/logo-slide-2.png" alt="" class="top-block__slide-logo-img"
+                                                style="height: 43px;">
                                             <div class="top-block__slide-logo-text" style="display: none;"></div>
                                         </div>
-                                        <img src="./img/top-block/carusel-img-2.jpg" alt=""
-                                            class="top-block__slide-img">
+                                        <img src="./img/top-block/carusel-img-2.jpg" alt="" class="top-block__slide-img">
                                         <a href="" class="top-block__slide-link link-icon-wrap">
                                             <img src="./img/link-arrow.svg" alt="иконка ссылки" class="link-icon">
                                         </a>
@@ -478,15 +388,16 @@
                         <div class="top-block__advantages-body">
                             <div class="top-block__advantages-title">Преимущества</div>
                             <ul class="top-block__advantages-items">
-                                <li class="top-block__advantages-item"><span>строим дома с 2008 года</span> <span style="display: none;">с 2008 года строим дома</span></li>
-                                <li class="top-block__advantages-item"><span>реализовали под ключ 350+ проектов</span><span style="display: none;">350 проектов реализовали 
-                                    под ключ</span></li>
+                                <li class="top-block__advantages-item"><span>строим дома с 2008 года</span> <span
+                                        style="display: none;">с 2008 года строим дома</span></li>
+                                <li class="top-block__advantages-item"><span>реализовали под ключ 350+ проектов</span><span
+                                        style="display: none;">350 проектов реализовали
+                                        под ключ</span></li>
                                 <li class="top-block__advantages-item"><span>предоставляем гарантию <br> 5 лет на дом и
-                                    отделку </span><span style="display: none;">5 лет гарантии на дом и отделку</span></li>
+                                        отделку </span><span style="display: none;">5 лет гарантии на дом и отделку</span></li>
                             </ul>
                             <a href="" class="top-block__advantages-link button button_link">Смотреть все комплексы <img
-                                    src="./img/link-arrow.svg" alt="иконка ссылки"
-                                    class="top-block__advantages-link-icon"></a>
+                                    src="./img/link-arrow.svg" alt="иконка ссылки" class="top-block__advantages-link-icon"></a>
                         </div>
                     </div>
                 </div>
@@ -519,7 +430,7 @@
                             <div class="stock__img-wrap">
                                 <img src="./img/stocks/1.png" alt="фото процент" class="stock__img">
                             </div>
-                            <div class="stock__title">Платим ипотеку за вас</div>
+                            <div class="stock__item-title">Платим ипотеку за вас</div>
                         </div>
                     </a>
                     <a href="" class="stock__item">
@@ -527,7 +438,7 @@
                             <div class="stock__img-wrap">
                                 <img src="./img/stocks/2.png" alt="фото стул" class="stock__img">
                             </div>
-                            <div class="stock__title">Мебель в подарок</div>
+                            <div class="stock__item-title">Мебель в подарок</div>
                         </div>
                     </a>
                     <a href="" class="stock__item">
@@ -535,7 +446,7 @@
                             <div class="stock__img-wrap">
                                 <img src="./img/stocks/3.png" alt="фото сертификат" class="stock__img">
                             </div>
-                            <div class="stock__title">Сертификат 100 000 ₽</div>
+                            <div class="stock__item-title">Сертификат 100 000 ₽</div>
                         </div>
                     </a>
                 </div>
@@ -548,7 +459,7 @@
                                         <div class="stock__img-wrap">
                                             <img src="./img/stocks/1.png" alt="фото процент" class="stock__img">
                                         </div>
-                                        <div class="stock__title">Платим ипотеку за вас</div>
+                                        <div class="stock__item-title">Платим ипотеку за вас</div>
                                     </div>
                                 </a>
                             </div>
@@ -558,7 +469,7 @@
                                         <div class="stock__img-wrap">
                                             <img src="./img/stocks/2.png" alt="фото стул" class="stock__img">
                                         </div>
-                                        <div class="stock__title">Мебель в подарок</div>
+                                        <div class="stock__item-title">Мебель в подарок</div>
                                     </div>
                                 </a>
                             </div>
@@ -568,7 +479,7 @@
                                         <div class="stock__img-wrap">
                                             <img src="./img/stocks/3.png" alt="фото сертификат" class="stock__img">
                                         </div>
-                                        <div class="stock__title">Сертификат 100 000 ₽</div>
+                                        <div class="stock__item-title">Сертификат 100 000 ₽</div>
                                     </div>
                                 </a>
                             </div>
@@ -587,8 +498,7 @@
                         <a href="" class="cottage-complexes__card-link">
                             <div class="cottage-complexes__card-items">
                                 <div class="cottage-complexes__card-img-wrap">
-                                    <img src="./img/cottage-complexes/card1.jpg" alt=""
-                                        class="cottage-complexes__card-img">
+                                    <img src="./img/cottage-complexes/card1.jpg" alt="" class="cottage-complexes__card-img">
                                     <div class="img-pre-title">Акбердинский район, 44 дома</div>
                                 </div>
                                 <div class="cottage-complexes__card-description">
@@ -610,8 +520,7 @@
                         <a href="" class="cottage-complexes__card-link">
                             <div class="cottage-complexes__card-items">
                                 <div class="cottage-complexes__card-img-wrap">
-                                    <img src="./img/cottage-complexes/card2.jpg" alt=""
-                                        class="cottage-complexes__card-img">
+                                    <img src="./img/cottage-complexes/card2.jpg" alt="" class="cottage-complexes__card-img">
                                     <div class="img-pre-title">32 дома</div>
                                 </div>
                                 <div class="cottage-complexes__card-description">
@@ -861,9 +770,9 @@
                     </div>
                     <div class="what-saying__video" data-bs-toggle="modal" data-bs-target="#videoModal">
                         <img src="./video/poster.jpg" alt="" class="what-saying__video-poster">
-                        <div class="what-saying__vide-play-button"></div>
+                        <div class="what-saying__video-play-button"></div>
                     </div>
-
+        
                     <div style="margin: 0 auto;" class="modal fade" id="videoModal" aria-labelledby="videoModalLabel"
                         aria-hidden="true">
                         <div class="modal-dialog what-saying__modal-dialog modal-dialog-centered"
@@ -872,14 +781,12 @@
                                 <div class="modal-header what-saying__modal-header">
                                     <div class="what-saying__modal-video-title title"><span>Что говорят</span> люди
                                     </div>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div
                                     class="modal-body what-saying__modal-body d-flex justify-content-center align-items-center">
-                                    <video id="modal-video" class="video-js vjs-theme-city what-saying__modal-video"
-                                        controls preload="auto"
-                                        data-setup='{"controlBar": {"pictureInPictureToggle": false}}'>
+                                    <video id="modal-video" class="video-js vjs-theme-city what-saying__modal-video" controls
+                                        preload="auto" data-setup='{"controlBar": {"pictureInPictureToggle": false}}'>
                                         <source src="./video/31637395_MotionElements_earth-hologram_preview.mp4"
                                             type="video/mp4">
                                         Ваш браузер не поддерживает видео.
@@ -956,14 +863,13 @@
                     <div class="accordion" id="accordionExample">
                         <div class="accordion-item">
                             <h2 class="accordion-header">
-                                <button class="accordion-button FAQ__accordion-button" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
-                                    aria-controls="collapseOne">
+                                <button class="accordion-button FAQ__accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                     <span> Из чего складывается стоимость дома? </span>
                                 </button>
                             </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show"
-                                data-bs-parent="#accordionExample" style>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample"
+                                style>
                                 <div class="accordion-body FAQ__accordion-body-text text-block_fSize_20">
                                     Создадим индивидуальный проект с учетом всех ваших пожеланий, воплотим в реальность
                                     все ваши мечты от этажности и материалов до отделки. Создадим индивидуальный проект
@@ -983,8 +889,7 @@
                                     <span>Какие гарантии вы даете?</span>
                                 </button>
                             </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample"
-                                style>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample" style>
                                 <div class="accordion-body FAQ__accordion-body-text text-block_fSize_20">
                                     Создадим индивидуальный проект с учетом всех ваших пожеланий, воплотим в реальность
                                     все ваши мечты от этажности и материалов до отделки. Создадим индивидуальный проект
@@ -1004,8 +909,8 @@
                                     <span>Какие работы входят в стоимость коттеджа?</span>
                                 </button>
                             </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse"
-                                data-bs-parent="#accordionExample" style>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample"
+                                style>
                                 <div class="accordion-body FAQ__accordion-body-text text-block_fSize_20">
                                     Создадим индивидуальный проект с учетом всех ваших пожеланий, воплотим в реальность
                                     все ваши мечты от этажности и материалов до отделки. Создадим индивидуальный проект
@@ -1025,8 +930,7 @@
                                     <span>Сколько времени уходит на строительство?</span>
                                 </button>
                             </h2>
-                            <div id="collapseFour" class="accordion-collapse collapse"
-                                data-bs-parent="#accordionExample" style>
+                            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample" style>
                                 <div class="accordion-body FAQ__accordion-body-text text-block_fSize_20">
                                     Создадим индивидуальный проект с учетом всех ваших пожеланий, воплотим в реальность
                                     все ваши мечты от этажности и материалов до отделки. Создадим индивидуальный проект
@@ -1046,8 +950,7 @@
                                     <span>Есть ли у вас возможность индивидуального проектирования коттеджа?</span>
                                 </button>
                             </h2>
-                            <div id="collapseFive" class="accordion-collapse collapse"
-                                data-bs-parent="#accordionExample" style>
+                            <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample" style>
                                 <div class="accordion-body FAQ__accordion-body-text text-block_fSize_20">
                                     Создадим индивидуальный проект с учетом всех ваших пожеланий, воплотим в реальность
                                     все ваши мечты от этажности и материалов до отделки. Создадим индивидуальный проект
@@ -1067,8 +970,8 @@
             <div class="feedback__container my-container">
                 <div class="feedback__wrapper bordered-block">
                     <div class="feedback__img-wrap">
-                    <img src="./img/feedback/feedback-block-img.jpg" alt="" class="feedback__img">
-                </div>
+                        <img src="./img/feedback/feedback-block-img.jpg" alt="" class="feedback__img">
+                    </div>
                     <div class="feedback__body">
                         <div class="feedback__title title">Остались вопросы?</div>
                         <div class="feedback__text text-block_fSize_20">Хотите уточнить информацию? Оставьте свои
@@ -1085,6 +988,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- ПОВТОРЯЕТСЯ НА ВСЕХ СТРАНИЦАХ, МОЖНО ДОБАВИТЬ В ОБЩИЙ ШАБЛОН -->
         <div class="contacts">
             <div class="contacts__container">
                 <div class="contacts__info-wrapper my-container">
@@ -1094,8 +999,7 @@
                             <a href="tel:+73472665191" class="contacts__phone">+7 (347) 266-51-91</a>
                             <a href="tel:+79273335651" class="contacts__phone">+7 (927) 333-56-51</a>
                         </div>
-                        <a href="mailto:sales.cottagebery@yandex.ru"
-                            class="contacts__email">sales.cottagebery@yandex.ru</a>
+                        <a href="mailto:sales.cottagebery@yandex.ru" class="contacts__email">sales.cottagebery@yandex.ru</a>
                         <div class="contacts__address">г. Уфа, ул. Блюхера, 2/1 пн-пт 09:00 – 19:00</div>
                     </div>
                 </div>
@@ -1105,10 +1009,12 @@
             </div>
         </div>
     </main>
+
     <footer class="footer">
         <div class="footer__container my-container">
             <div class="footer__contacts">
-                <a href="" class="footer__logo-link"><img src="./img/logo-footer.png" alt="Логотип" class="footer__logo"></a>
+                <a href="" class="footer__logo-link"><img src="./img/logo-footer.png" alt="Логотип"
+                        class="footer__logo"></a>
                 <div class="footer__contacts-numbers">
                     <a href="tel:+73472665191" class="footer__contacts-number-first">+7 (347) 266-51-91</a>
                     <a href="tel:+79273335651" class="footer__contacts-numbers-second">+7 (927) 333-56-51</a>
@@ -1117,32 +1023,33 @@
                 <a class="footer__email" href="mailto:sales.cottagebery@yandex.ru">sales.cottagebery@yandex.ru</a>
             </div>
             <div class="footer__nav">
-            <nav class="footer__menu">
-                <ul class="footer__menu-items">
-                    <li class="footer__menu-item"><a href="" class="footer__menu-link">О КОМПАНИИ</a></li>
-                    <li class="footer__menu-item"><a href="" class="footer__menu-link">АКЦИИ</a></li>
-                    <li class="footer__menu-item"><a href="" class="footer__menu-link">ОПЛАТА И ИПОТЕКА</a></li>
-                    <li class="footer__menu-item"><a href="" class="footer__menu-link">ГАЛЕРЕЯ</a></li>
-                    <li class="footer__menu-item"><a href="" class="footer__menu-link">НОВОСТИ</a></li>
-                </ul>
-                <ul class="footer__menu-items">
-                    <li class="footer__menu-item"><a href="" class="footer__menu-link">КОТТЕДЖНЫЕ КОМПЛЕКСЫ</a></li>
-                    <li class="footer__menu-item"><a href="" class="footer__menu-link">КРАСНАЯ ПОЛЯНА</a></li>
-                    <li class="footer__menu-item"><a href="" class="footer__menu-link">ГЕОМЕТРИЯ</a></li>
-                    <li class="footer__menu-item"><a href="" class="footer__menu-link">ЛЕРМОНТОВ</a></li>
-                    <li class="footer__menu-item"><a href="" class="footer__menu-link">FAMILY PARK</a></li>
-                    <li class="footer__menu-item"><a href="" class="footer__menu-link">ЭКО-ВИЛЛАДЖ (НАГАЕВО)</a></li>
-                    <li class="footer__menu-item"><a href="" class="footer__menu-link">ЭКО-ВИЛЛАДЖ (ШМИДТОВО)</a></li>
-                    <li class="footer__menu-item"><a href="" class="footer__menu-link">СТРОИТЕЛЬСТВО НА ВАШЕМ
-                            УЧАСТКЕ</a>
-                    </li>
-                </ul>
-            </nav>
+                <nav class="footer__menu">
+                    <ul class="footer__menu-items">
+                        <li class="footer__menu-item"><a href="" class="footer__menu-link">О КОМПАНИИ</a></li>
+                        <li class="footer__menu-item"><a href="" class="footer__menu-link">АКЦИИ</a></li>
+                        <li class="footer__menu-item"><a href="" class="footer__menu-link">ОПЛАТА И ИПОТЕКА</a></li>
+                        <li class="footer__menu-item"><a href="" class="footer__menu-link">ГАЛЕРЕЯ</a></li>
+                        <li class="footer__menu-item"><a href="" class="footer__menu-link">НОВОСТИ</a></li>
+                    </ul>
+                    <ul class="footer__menu-items">
+                        <li class="footer__menu-item"><a href="" class="footer__menu-link">КОТТЕДЖНЫЕ КОМПЛЕКСЫ</a></li>
+                        <li class="footer__menu-item"><a href="" class="footer__menu-link">КРАСНАЯ ПОЛЯНА</a></li>
+                        <li class="footer__menu-item"><a href="" class="footer__menu-link">ГЕОМЕТРИЯ</a></li>
+                        <li class="footer__menu-item"><a href="" class="footer__menu-link">ЛЕРМОНТОВ</a></li>
+                        <li class="footer__menu-item"><a href="" class="footer__menu-link">FAMILY PARK</a></li>
+                        <li class="footer__menu-item"><a href="" class="footer__menu-link">ЭКО-ВИЛЛАДЖ (НАГАЕВО)</a></li>
+                        <li class="footer__menu-item"><a href="" class="footer__menu-link">ЭКО-ВИЛЛАДЖ (ШМИДТОВО)</a></li>
+                        <li class="footer__menu-item"><a href="" class="footer__menu-link">СТРОИТЕЛЬСТВО НА ВАШЕМ
+                                УЧАСТКЕ</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
             <div class="footer__socials">
                 <div class="social__links footer__socials-links">
-                    <a href="" class="social__link footer__socials-link"><img src="./img/social-media-icons/telegram (Traced).svg"
-                            alt="Иконка телеграм" class="social__link-icon footer__social-link-icon"></a>
+                    <a href="" class="social__link footer__socials-link"><img
+                            src="./img/social-media-icons/telegram (Traced).svg" alt="Иконка телеграм"
+                            class="social__link-icon footer__social-link-icon"></a>
                     <a href="" class="social__link"><img src="./img/social-media-icons/vk (Traced).svg" alt="Иконка вк"
                             class="social__link-icon footer__social-link-icon"></a>
                     <a href="" class="social__link"><img src="./img/social-media-icons/youtube.svg" alt="Иконка ютьюб"
@@ -1152,12 +1059,17 @@
             </div>
         </div>
     </footer>
+
+
+    <!-- ПОДКЛЮЧЕНИE СКРИПТОВ ДЛЯ РАБОТЫ BOOTSTRAP 5.3.3 И VIDEOSJS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://vjs.zencdn.net/8.16.1/video.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- СКРИПТ ДЛЯ ХЕДЕРА -->
     <script>
         const navbarToggler = document.querySelector('.navbar-toggler');
         const navbarCollapse = document.getElementById('navbarNav');
@@ -1187,6 +1099,8 @@
         overlay.style.display = 'none';
     });
     </script>
+
+    <!-- СКРИПТ ДЛЯ СЛАЙРЕА ПЕРВОГО БЛОКА -->
     <script>
         const swiper_topBlock = new Swiper('.top-block__swiper', {
             direction: 'horizontal',
@@ -1200,17 +1114,19 @@
 
             breakpoints: {
                 992: {
-                    slidesPerView: 2, // два слайда при ширине 1131px и выше
+                    slidesPerView: 2,
                 },
                 795: {
-                    slidesPerView: 1, // два слайда при ширине 1131px и выше
+                    slidesPerView: 1,
                 },
                 501: {
-                    slidesPerView: 2, // два слайда при ширине 1131px и выше
+                    slidesPerView: 2, 
                 }
             }
         });
     </script>
+
+    <!-- СКРИПТ ДЛЯ СЛАЙДЕРА БЛОКА АКЦИИ -->
     <script>
         const swiper_stocks = new Swiper('.stocks__swiper', {
             direction: 'horizontal',
@@ -1230,6 +1146,8 @@
             }
         });
     </script>
+
+    <!-- СКРИПТ ДЛЯ СЛАЙДЕРА БЛОКА REPORTS -->
     <script>
         const swiper_reports = new Swiper('.reports__swiper', {
             direction: 'horizontal',
@@ -1255,6 +1173,8 @@
             }
         });
     </script>
+
+    <!-- СКРИПТ ДЛЯ СЛАЙДЕРА БЛОКА REVIEWS -->
     <script>
         const swiper_reviews = new Swiper('.reviews__swiper', {
             direction: 'horizontal',
@@ -1280,6 +1200,8 @@
             }
         });
     </script>
+
+    <!-- СКРИПТ МОДАЛЬНОГО ОКНА С ВИДЕО В БЛОКЕ WHAT-SAYING -->
     <script>
         const videoModal = document.getElementById('videoModal');
         videoModal.addEventListener('shown.bs.modal', function () {
@@ -1292,9 +1214,13 @@
             videoPlayer.currentTime(0);
         });
     </script>
+
+    <!-- ПОДКЛЮЧЕНИЕ API КАРТ (ВЗЯЛ СВОЁ API ЯНДЕКСА) -->
     <script src="https://api-maps.yandex.ru/2.1/?apikey=f028c4f8-776d-4ba3-b079-94a909b9cca1
     &lang=ru" type="text/javascript">
     </script>
+
+    <!-- СКРИПТ ДЛЯ КАРТЫ БЛОКА COTTAGE-COMPLEXES -->
     <script type="text/javascript">
         ymaps.ready(function () {
             const myMap = new ymaps.Map(
@@ -1323,11 +1249,34 @@
                 iconImageOffset: [-20, -57],
 
             });
-            myMap.geoObjects
-                .add(myPlacemarkWithContent);
+            myMap.geoObjects.add(myPlacemarkWithContent);
 
-            // Пример реализации собственного элемента управления на основе наследования от collection.Item.
-            // Элемент управления отображает название объекта, который находится в центре карты.
+            function updateMapCenter() {
+                const windowWidth = window.innerWidth;
+                let newCenterMyMap, newZoomMyMap;
+
+                if (windowWidth <= 847) {
+                    newCenterMyMap = [54.733080, 55.960528];
+                    newZoomMyMap = 9;
+                } else {
+                    newCenterMyMap = [54.759393, 56.015000];
+                    newZoomMyMap = 10.5;
+                }
+
+                myMap.setCenter(newCenterMyMap, newZoomMyMap);
+            }
+
+            // Обновление центра карты при загрузке страницы
+            updateMapCenter();
+
+            // Обновление центра карты при изменении размера окна
+            window.addEventListener('resize', updateMapCenter);
+        });
+    </script>
+    
+    <!-- СКРИПТ ДЛЯ КАРТЫ БЛОКА КОНТАКТЫ -->
+    <script type="text/javascript">
+        ymaps.ready(function () {
             const contactsMap = new ymaps.Map("contacts-map", {
                 center: [54.775006, 56.019577],
                 zoom: 17,
@@ -1360,20 +1309,15 @@
                 if (windowWidth <= 847) {
                     newCenterContactsMap = [54.777279, 56.022686];
                     newZoomContactsMap = 16;
-                    newCenterMyMap = [54.733080, 55.960528];
-                    newZoomMyMap = 9;
                 }
                 else if (windowWidth <= 500) {
                     newCenterContactsMap = [54.775979, 56.022966];
                 } else {
                     newCenterContactsMap = [54.775006, 56.019577];
                     newZoomContactsMap = 17;
-                    newCenterMyMap = [54.759393, 56.015000];
-                    newZoomMyMap = 10.5;
                 }
 
                 contactsMap.setCenter(newCenterContactsMap, newZoomContactsMap);
-                myMap.setCenter(newCenterMyMap, newZoomMyMap);
             }
 
             // Обновление центра карты при загрузке страницы
@@ -1381,50 +1325,6 @@
 
             // Обновление центра карты при изменении размера окна
             window.addEventListener('resize', updateMapCenter);
-
-            //     var CustomControlClass = function (options) {
-            //         CustomControlClass.superclass.constructor.call(this, options);
-            //         this._content = null;
-            //         this._geocoderDeferred = null;
-            //     };
-
-            //     // И наследуем его от collection.Item.
-            //     ymaps.util.augment(CustomControlClass, ymaps.collection.Item, {
-            //         onAddToMap: function (map) {
-            //             CustomControlClass.superclass.onAddToMap.call(this, map);
-            //             this._lastCenter = null;
-            //             this.getParent().getChildElement(this).then(this._onGetChildElement, this);
-            //         },
-
-            //         _onGetChildElement: function (parentDomContainer) {
-            //             // Создаем HTML-элемент с текстом.
-            //             this._content = document.createElement('div');
-            //             this._content.innerHTML = `
-            //     <div class="contacts__info">
-            //         <div class="contacts__title title">Контакты</div>
-            //         <div class="contacts__numbers">
-            //             <a href="tel:+73472665191" class="contacts__phone">+7 (347) 266-51-91</a>
-            //             <a href="tel:+79273335651" class="contacts__phone">+7 (927) 333-56-51</a>
-            //         </div>
-            //         <a href="mailto:sales.cottagebery@yandex.ru" class="contacts__email">sales.cottagebery@yandex.ru</a>
-            //         <div class="contacts__address">г. Уфа, ул. Блюхера, 2/1 пн-пт 09:00 – 19:00</div>
-            //     </div>
-            // `;
-            //             parentDomContainer.appendChild(this._content);
-            //         },
-            //     });
-
-            //     // Создание экземпляра пользовательского элемента управления
-            //     var customControl = new CustomControlClass();
-
-            //     // Добавление пользовательского элемента управления на карту
-            //     contactsMap.controls.add(customControl, {
-            //         float: 'none',
-            //         position: {
-            //             top: 10,
-            //             left: 10
-            //         }
-            //     });
         });
     </script>
 </body>
