@@ -1,3 +1,15 @@
+.modal-backdrop.show {
+    opacity: 0.7;
+}
+
+.btn-close:hover {
+    opacity: 1;
+}
+
+.modal-body {
+    padding-top: 0;
+}
+
 .call-modal__dialog {
     max-width: 760px;
 }

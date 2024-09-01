@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="./css/general/form.css">
     <link rel="stylesheet" href="./css/general/buttons.css">
     <link rel="stylesheet" href="./css/general/modal.css">
+    <link rel="stylesheet" href="./css/general/video.css">
 
     <!-- ПОДКЛЮЧЕНИЕ СТИЛЕЙ ДЛЯ ГЛАВНОЙ СТРАНИЦЫ -->
     <link rel="stylesheet" href="./css/main-page/style.css">
@@ -770,22 +771,22 @@
                     </div>
                     <div class="what-saying__video" data-bs-toggle="modal" data-bs-target="#videoModal">
                         <img src="./video/poster.jpg" alt="" class="what-saying__video-poster">
-                        <div class="what-saying__video-play-button"></div>
+                        <div class="video-play-button"></div>
                     </div>
         
-                    <div style="margin: 0 auto;" class="modal fade" id="videoModal" aria-labelledby="videoModalLabel"
+                    <div style="margin: 0 auto;" class="modal fade modal-video" id="videoModal" aria-labelledby="videoModalLabel"
                         aria-hidden="true">
-                        <div class="modal-dialog what-saying__modal-dialog modal-dialog-centered"
-                            style="max-width: 90%; height: 90%;">
-                            <div class="modal-content what-saying__video-modal-content" style="width: 100%;">
-                                <div class="modal-header what-saying__modal-header">
-                                    <div class="what-saying__modal-video-title title"><span>Что говорят</span> люди
+                        <div class="modal-dialog modal-video__modal-dialog"
+                            style="max-width: 90%; width: 90%; height: 90%;">
+                            <div class="modal-content modal-video__modal-content" style="width: 100%;">
+                                <div class="modal-header modal-video__modal-header">
+                                    <div class="modal-video__title title"><span>Что говорят</span> люди
                                     </div>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div
-                                    class="modal-body what-saying__modal-body d-flex justify-content-center align-items-center">
-                                    <video id="modal-video" class="video-js vjs-theme-city what-saying__modal-video" controls
+                                    class="modal-body modal-video__modal-body d-flex justify-content-center align-items-center">
+                                    <video id="modal-video" class="video-js vjs-theme-city modal-video__video" controls
                                         preload="auto" data-setup='{"controlBar": {"pictureInPictureToggle": false}}'>
                                         <source src="./video/31637395_MotionElements_earth-hologram_preview.mp4"
                                             type="video/mp4">
@@ -1100,7 +1101,7 @@
     });
     </script>
 
-    <!-- СКРИПТ ДЛЯ СЛАЙРЕА ПЕРВОГО БЛОКА -->
+    <!-- СКРИПТ ДЛЯ СЛАЙДЕРА ПЕРВОГО БЛОКА -->
     <script>
         const swiper_topBlock = new Swiper('.top-block__swiper', {
             direction: 'horizontal',
@@ -1233,23 +1234,38 @@
                 { suppressMapOpenBlock: true }
             )
 
-            // отображаем метки
-            myPlacemarkWithContent = new ymaps.Placemark(
-                [54.712879, 55.645140], {
-                hintContent: 'Коттедж-бери',
-            }, {
-                // Опции.
-                // Необходимо указать данный тип макета.
-                iconLayout: 'default#image',
-                // Своё изображение иконки метки.
-                iconImageHref: './img/geo-icon.svg',
-                // Размеры метки.
-                iconImageSize: [50, 65],
-                // Смещение левого верхнего угла иконки относительно её "ножки" (точки привязки).
-                iconImageOffset: [-20, -57],
+            // ДЛЯ НОВЫХ ПОСЁЛКОВ ПРОСТО В МАССИВЕ СОЗДАЁТЕ НОВЫЙ ОБЪЕКТ С КООРДИНАТАМИ И НАЗВАНИЕМ МЕТКИ
+            const placemarks = [
+                {
+                    coordinates: [54.712879, 55.645140],
+                    hintContent: 'Коттедж-бери',
+                },
+                {
+                    coordinates: [54.759393, 56.015000],
+                    hintContent: 'Коттедж-бери2',
+                },
+            ];
 
+            // отображаем метки
+            placemarks.forEach(placemarkData => {
+                const placemark = new ymaps.Placemark(
+                    placemarkData.coordinates,
+                    {
+                        hintContent: placemarkData.hintContent
+                    }, {
+                    // Опции.
+                    // Необходимо указать данный тип макета.
+                    iconLayout: 'default#image',
+                    // Своё изображение иконки метки.
+                    iconImageHref: './img/geo-icon.svg',
+                    // Размеры метки.
+                    iconImageSize: [50, 65],
+                    // Смещение левого верхнего угла иконки относительно её "ножки" (точки привязки).
+                    iconImageOffset: [-20, -57],
+
+                });
+                myMap.geoObjects.add(placemark);
             });
-            myMap.geoObjects.add(myPlacemarkWithContent);
 
             function updateMapCenter() {
                 const windowWidth = window.innerWidth;
@@ -1288,19 +1304,22 @@
                 }),
 
                 myPlacemarkWithContent2 = new ymaps.Placemark(
-                    [54.775179, 56.022966], {}, {
-                    // Опции.
+                    [54.775179, 56.022966], {
+                        balloonContent: "г. Уфа, ул. Блюхера, 2/1"
+                    }, {
+                    // Опции
                     preset: "islands#blueFactoryIcon",
                     iconColor: '#ff0000',
 
-                    // Размеры метки.
+                    // Размеры метки
                     iconImageSize: [50, 65],
-                    // Смещение левого верхнего угла иконки относительно её "ножки" (точки привязки).
+                    // Смещение левого верхнего угла иконки относительно её "ножки" (точки привязки)
                     iconImageOffset: [-20, -57],
 
                 });
-            contactsMap.geoObjects
-                .add(myPlacemarkWithContent2);
+            // блокировка передвижения карты
+            contactsMap.behaviors.disable('drag');
+            contactsMap.geoObjects.add(myPlacemarkWithContent2);
 
             function updateMapCenter() {
                 const windowWidth = window.innerWidth;

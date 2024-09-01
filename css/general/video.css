@@ -1,0 +1,212 @@
+.video-play-button {
+    position: absolute;
+    z-index: 2;
+    height: 100px;
+    width: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(234, 235, 229, 0.35);
+    backdrop-filter: blur(45px);
+    border-radius: 50%;
+    transition: background .3s;
+}
+
+.video-play-button::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 17.5px solid transparent;
+    border-bottom: 17.5px solid transparent;
+    border-left: 30px solid #FFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+    transition: border-left .3s;
+}
+
+.video-play-button:hover {
+    background: rgba(171, 172, 167, 0.35);
+}
+
+.video-play-button:hover::after {
+    border-left: 30px solid #cccccc;
+}
+
+.modal-video__modal-content {
+    background-color: #FFF;
+}
+
+.modal-video__modal-header {
+    border-bottom: none;
+    padding-bottom: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 15px;
+}
+
+.modal-video__modal-dialog {
+    display: flex;
+    align-items: center;
+    min-height: 200px;
+    min-width: 100px;
+}
+
+.modal-video {
+    display: none!Important;
+}
+
+.modal-video.show {
+    display: flex!Important;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-video__video {
+    height: 90%;
+    width: 90%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.modal-video__title {
+    font-weight: 500;
+}
+
+.modal-video__video .vjs-control {
+    background-color: rgba(0, 0, 0, 0.123);
+    border-radius: 5px;
+}
+
+.modal-video__modal-content {
+    height: 90%;
+}
+
+@media (max-width: 1453px) {
+    .modal-video__modal-content {
+        height: 90%;
+    }
+}
+
+@media (max-width: 1400px) {
+    .modal-video__modal-content {
+        height: 100%;
+    }
+}
+
+@media (max-width: 1329px) {
+    .modal-video__title {
+        font-size: 42px;
+        font-weight: 500;
+    }
+}
+
+@media (max-width: 1298px) {
+    .video-play-button::after {
+        border-top: 15.5px solid transparent;
+        border-bottom: 15.5px solid transparent;
+        border-left: 28px solid #FFF;
+    }
+
+    .video-play-button {
+        height: 90px;
+        width: 90px;
+    }
+}
+
+@media (max-width: 1170px) {
+    .modal-video__title {
+        font-size: 35px;
+        font-weight: 500;
+    }
+}
+@media (max-width: 1096px) {
+    .modal-video__modal-dialog {
+        height: 60%!Important;
+    }
+}
+
+
+@media (max-width: 991px) {
+    .modal-video__modal-header {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .modal-video__title {
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    .video-play-button::after {
+        border-top: 13.5px solid transparent;
+        border-bottom: 13.5px solid transparent;
+        border-left: 26px solid #FFF;
+    }
+
+    .video-play-button {
+        height: 80px;
+        width: 80px;
+    }
+}
+
+@media (max-width: 794px) {
+    .modal-video__title {
+        font-size: 25px;
+        font-weight: 500;
+    }
+
+    .video-play-button::after {
+        border-top: 11.5px solid transparent;
+        border-bottom: 11.5px solid transparent;
+        border-left: 24px solid #FFF;
+    }
+
+    .video-play-button {
+        height: 70px;
+        width: 70px;
+    }
+}
+
+@media (max-height: 600px) {
+    .modal-video__modal-dialog {
+        height: 80%!Important;
+    }
+}
+@media (max-width: 600px) {
+    .modal-video__modal-body {
+        padding: 0 0;
+    }
+
+    .modal-video__modal-dialog {
+        max-width: 100% !Important;
+    }
+
+    .modal-video__modal-header {
+        padding: 20px 20px 0px 20px;
+    }
+
+    .modal-video__title {
+        font-size: 20px;
+        font-weight: 500;
+    }
+}
+
+@media (max-width: 500px) {
+    .video-play-button::after {
+        border-left: 22px solid #FFF;
+    }
+
+    .video-play-button {
+        height: 60px;
+        width: 60px;
+    }
+}
+
+@media (max-width: 425px) {
+    .modal-video__modal-dialog {
+        height: 40%!Important;
+    }
+}
+

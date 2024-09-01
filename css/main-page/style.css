@@ -3335,85 +3335,6 @@
     aspect-ratio: 760 / 480;
 }
 
-.what-saying__video-play-button {
-    position: absolute;
-    z-index: 2;
-    height: 100px;
-    width: 100px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(234, 235, 229, 0.35);
-    backdrop-filter: blur(45px);
-    border-radius: 50%;
-    transition: background .3s;
-}
-
-.what-saying__video-play-button::after {
-    content: '';
-    width: 0;
-    height: 0;
-    border-top: 17.5px solid transparent;
-    border-bottom: 17.5px solid transparent;
-    border-left: 30px solid #FFF;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-40%, -50%);
-    transition: border-left .3s;
-}
-
-.what-saying__video-play-button:hover {
-    background: rgba(171, 172, 167, 0.35);
-}
-
-.what-saying__video-play-button:hover::after {
-    border-left: 30px solid #cccccc;
-}
-
-.modal-backdrop.show {
-    opacity: 0.7;
-}
-
-.btn-close:hover {
-    opacity: 1;
-}
-
-.modal-body {
-    padding-top: 0;
-}
-
-.modal-content {
-    background-color: #FFF;
-}
-
-.modal-header {
-    border-bottom: none;
-    padding-bottom: 0;
-    padding-left: 80px;
-    padding-right: 80px;
-    padding-top: 30px;
-}
-
-.what-saying__modal-video {
-    height: 90%;
-    width: 90%;
-}
-
-.what-saying__modal-video-title {
-    font-weight: 500;
-}
-
-.what-saying__modal-video {
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.what-saying__modal-video .vjs-control {
-    background-color: rgba(0, 0, 0, 0.123);
-    border-radius: 5px;
-}
-
 @media (max-width: 1600px) {
     .what-saying__body {
         flex: 1 1 44%;
@@ -3426,17 +3347,9 @@
     }
 }
 
-.what-saying__video-modal-content {
-    height: 90%;
-}
-
 @media (max-width: 1453px) {
     .what-saying__body {
         margin-right: 110px;
-    }
-
-    .what-saying__video-modal-content {
-        height: 90%;
     }
 }
 
@@ -3449,35 +3362,15 @@
         font-size: 18px;
         line-height: 23px;
     }
-
-    .what-saying__video-modal-content {
-        height: 100%;
-    }
 }
 
 @media (max-width: 1329px) {
-    .what-saying__modal-video-title {
-        font-size: 42px;
-        font-weight: 500;
-    }
-
     .what-saying__body {
         margin-right: 80px;
     }
 }
 
 @media (max-width: 1298px) {
-    .what-saying__video-play-button::after {
-        border-top: 15.5px solid transparent;
-        border-bottom: 15.5px solid transparent;
-        border-left: 28px solid #FFF;
-    }
-
-    .what-saying__video-play-button {
-        height: 90px;
-        width: 90px;
-    }
-
     .what-saying__video {
         flex: 1 1 56%;
     }
@@ -3498,13 +3391,6 @@
     }
 }
 
-@media (max-width: 1170px) {
-    .what-saying__modal-video-title {
-        font-size: 35px;
-        font-weight: 500;
-    }
-}
-
 @media (max-width: 1096px) {
     .what-saying__body {
         padding: 0px 0px 0px 30px;
@@ -3522,31 +3408,6 @@
 }
 
 @media (max-width: 991px) {
-    .what-saying__modal-header {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-
-    .what-saying__video-modal-content {
-        height: 50%;
-    }
-
-    .what-saying__modal-video-title {
-        font-size: 30px;
-        font-weight: 500;
-    }
-
-    .what-saying__video-play-button::after {
-        border-top: 13.5px solid transparent;
-        border-bottom: 13.5px solid transparent;
-        border-left: 26px solid #FFF;
-    }
-
-    .what-saying__video-play-button {
-        height: 80px;
-        width: 80px;
-    }
-
     .what-saying__text {
         font-size: 14px;
     }
@@ -3580,26 +3441,6 @@
         padding-bottom: 67px;
     }
 
-    .what-saying__video-modal-content {
-        height: 50%;
-    }
-
-    .what-saying__modal-video-title {
-        font-size: 25px;
-        font-weight: 500;
-    }
-
-    .what-saying__video-play-button::after {
-        border-top: 11.5px solid transparent;
-        border-bottom: 11.5px solid transparent;
-        border-left: 24px solid #FFF;
-    }
-
-    .what-saying__video-play-button {
-        height: 70px;
-        width: 70px;
-    }
-
     .what-saying__wrapper {
         flex-direction: column;
     }
@@ -3625,29 +3466,6 @@
     }
 }
 
-@media (max-width: 600px) {
-    .what-saying__modal-body {
-        padding: 0 0;
-    }
-
-    .what-saying__modal-dialog {
-        max-width: 100% !Important;
-    }
-
-    .what-saying__modal-header {
-        padding: 20px 20px 0px 20px;
-    }
-
-    .what-saying__video-modal-content {
-        height: 60%;
-    }
-
-    .what-saying__modal-video-title {
-        font-size: 20px;
-        font-weight: 500;
-    }
-}
-
 @media (max-width: 560px) {
     .what-saying {
         padding-bottom: 50px;
@@ -3659,27 +3477,12 @@
         padding-bottom: 40px;
     }
 
-    .what-saying__video-play-button::after {
-        border-left: 22px solid #FFF;
-    }
-
-    .what-saying__video-play-button {
-        height: 60px;
-        width: 60px;
-    }
-
     .what-saying__body {
         padding: 20px 10px 20px 20px;
     }
 
     .what-saying__text {
         font-size: 14px;
-    }
-}
-
-@media (max-width: 425px) {
-    .what-saying__video-modal-content {
-        height: 40%;
     }
 }
 
