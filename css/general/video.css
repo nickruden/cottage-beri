@@ -43,7 +43,7 @@
     padding-bottom: 0;
     padding-left: 40px;
     padding-right: 40px;
-    padding-top: 15px;
+    padding-top: 30px;
 }
 
 .modal-video__modal-dialog {
@@ -125,6 +125,9 @@
     .modal-video__modal-dialog {
         height: 60%!Important;
     }
+    .modal-video__modal-header {
+        padding-top: 15px;
+    }
 }
 
 
@@ -184,7 +187,7 @@
     }
 
     .modal-video__modal-header {
-        padding: 20px 20px 0px 20px;
+        padding: 10px 20px 0px 20px;
     }
 
     .modal-video__title {
