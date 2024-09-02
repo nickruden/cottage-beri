@@ -16,6 +16,7 @@
 
 .call-modal__header {
     padding: 20px 20px 0px 20px !Important;
+    border: 0;
 }
 
 .call-modal__close-button {
