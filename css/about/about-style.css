@@ -1,0 +1,282 @@
+.stocks {
+    padding-bottom: 100px;
+}
+
+.stocks__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stocks__title {
+    align-self: flex-start;
+    margin-bottom: 50px;
+}
+
+.stocks__items {
+    display: flex;
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.stocks__items>* {
+    flex: 0 1 50%;
+}
+
+.stock__item {
+    overflow: hidden;
+}
+
+.stock__item:not(:last-child) {
+    margin-right: 20px;
+}
+
+.stock__item-body {
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+    max-height: 460px;
+}
+
+.stock__img {
+    width: 100%;
+    aspect-ratio: 490 / 350;
+}
+
+.stock__item-title {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 40px;
+    letter-spacing: -0.05em;
+    padding: 30px 0px 40px 39px;
+}
+
+.stocks__slider {
+    display: none;
+}
+
+.stocks__swiper-pagination {
+    position: relative;
+}
+
+.stocks__swiper>.swiper-wrapper {
+    margin-bottom: 15px;
+}
+
+@media (max-width: 1400px) {
+    .stocks__title {
+        margin-bottom: 40px;
+    }
+
+    .stocks__items {
+        margin-bottom: 55px;
+    }
+
+    .stock__item-title {
+        font-size: 28px;
+        line-height: 38px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .stocks__title {
+        margin-bottom: 35px;
+    }
+
+    .stocks__items {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 1230px) {
+    .stock__item-title {
+        font-size: 26px;
+        line-height: 36px;
+    }
+}
+
+@media (max-width: 1260px) {
+    .stocks {
+        padding-bottom: 90px;
+    }
+}
+
+@media (max-width: 1170px) {
+    .stocks__title {
+        margin-bottom: 33px;
+    }
+
+    .stocks__items {
+        margin-bottom: 45px;
+    }
+
+    .stock__item-title {
+        padding: 20px 0px 30px 19px;
+        font-size: 23px;
+        line-height: 36px;
+    }
+}
+
+@media (max-width: 1070px) {
+    .stocks {
+        padding-bottom: 80px;
+    }
+}
+
+@media (max-width: 991px) {
+    .stocks__title {
+        margin-bottom: 30px;
+    }
+
+    .stocks__items {
+        display: none;
+    }
+
+    .stocks__slider {
+        display: flex;
+        margin-bottom: 27px;
+        width: 100%;
+    }
+    
+    .stocks__swiper-wrapper {
+        margin-bottom: 26px !Important;
+    }
+}
+
+@media (max-width: 880px) {
+    .stocks {
+        padding-bottom: 70px;
+    }
+}
+
+@media (max-width: 847px) {
+    .stock__item-title {
+        padding: 20px 0px 20px 20px;
+    }
+
+    .stocks__slider {
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 794px) {
+    .stocks {
+        padding-bottom: 60px;
+    }
+
+    .stocks__title {
+        margin-bottom: 27px;
+    }
+
+    .stock__item-title {
+        padding: 20px 0px 20px 20px;
+    }
+
+    .stocks__slider {
+        margin-bottom: 21px;
+    }
+}
+
+@media (max-width: 700px) {
+    .stocks__swiper-wrapper {
+        margin-bottom: 23px !Important;
+    }
+
+    .stocks__slider {
+        margin-bottom: 22px;
+    }
+
+    .stock__item {
+        width: 100%;
+    }
+
+    .stocks__slider>.swiper-slide {
+        width: 100% !important;
+    }
+
+    .stock__item-body {
+        max-height: none;
+    }
+
+    .stock__item-title {
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    .stocks__slider {
+        margin-bottom: 26px;
+    }
+}
+
+@media (max-width: 600px) {
+    .stocks__slider {
+        margin-bottom: 17px;
+    }
+}
+
+@media (max-width: 560px) {
+    .stocks {
+        padding-bottom: 50px;
+    }
+}
+
+@media (max-width: 516px) {
+    .stocks__title {
+        margin-bottom: 20px;
+    }
+
+    .stocks__swiper-wrapper {
+        margin-bottom: 18px !Important;
+    }
+}
+
+@media (max-width: 500px) {
+    .stocks {
+        padding-bottom: 40px;
+    }
+
+    .stocks__slider {
+        margin-bottom: 15px;
+    }
+
+    .stock__item-title {
+        font-size: 26px;
+        line-height: 36px;
+    }
+}
+
+@media (max-width: 425px) {
+    .stocks__swiper-wrapper {
+        margin-bottom: 15px !Important;
+    }
+
+    .stock__item-title {
+        font-size: 20px;
+        line-height: 30px;
+        padding: 15px 0px 20px 15px;
+    }
+}
+
+@media (max-width: 390px) {
+    .stocks__link {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 375px) {
+    .stock__item-title {
+        font-size: 18px;
+        line-height: 25px;
+        padding: 10px 0px 10px 10px;
+    }
+
+    .stocks__slider {
+        margin-bottom: 9px;
+    }
+}
+
+@media (max-width: 320px) {
+    .stock__item-title {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
