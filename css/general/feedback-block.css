@@ -126,6 +126,7 @@
 @media (max-width: 991px) {
     .feedback__text {
         font-size: 14px;
+        line-height: 20px;
     }
 
     .feedback__body {
@@ -150,6 +151,7 @@
         margin-bottom: 21px;
         padding-right: 50px;
         font-size: 17px;
+        line-height: 22px;
     }
 
     .feedback__wrapper {
@@ -191,6 +193,7 @@
 
     .feedback-form__input {
         font-size: 16px;
+        line-height: 21px;
     }
 }
 
@@ -211,6 +214,7 @@
 
     .feedback__text {
         font-size: 14px;
+        line-height: 20px;
     }
 }
 
