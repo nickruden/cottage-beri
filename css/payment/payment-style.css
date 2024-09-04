@@ -1,3 +1,4 @@
+/* 1 БЛОК */
 .top-banner__container {
     max-height: 510px;
 }
@@ -20,6 +21,686 @@
     max-height: 510px;
 }
 
+
+/* 2 БЛОК */
+.advantage-speed {
+    padding-bottom: 100px;
+}
+
+.advantage-speed__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.advantage-speed__title {
+    align-self: flex-start;
+    margin-bottom: 50px;
+}
+
+.advantage-speed__items {
+    display: flex;
+    width: 100%;
+}
+
+.advantage-speed__items > * {
+    flex: 0 1 50%;
+}
+
+.advantage-speed__item {
+    overflow: hidden;
+}
+
+.advantage-speed__item:not(:last-child) {
+    margin-right: 20px;
+}
+
+.advantage-speed__item-body {
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+    max-height: 460px;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.advantage-speed__img {
+    width: 100%;
+    aspect-ratio: 500 / 350;
+}
+
+.advantage-speed__item-text {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.05em;
+    padding: 30px 40px 32px 40px;
+}
+.advantage-speed__item:first-child .advantage-speed__item-text {
+    padding: 30px 30px 32px 30px;
+}
+
+@media (max-width: 1400px) {
+    .advantage-speed__title {
+        margin-bottom: 40px;
+    }
+
+    .advantage-speed__items {
+        margin-bottom: 55px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .advantage-speed__title {
+        margin-bottom: 35px;
+    }
+
+    .advantage-speed__items {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 1230px) {
+    .advantage-speed__item-title {
+        font-size: 26px;
+        line-height: 36px;
+    }
+}
+
+@media (max-width: 1260px) {
+    .advantage-speed {
+        padding-bottom: 90px;
+    }
+}
+
+@media (max-width: 1170px) {
+    .advantage-speed__title {
+        margin-bottom: 33px;
+    }
+
+    .advantage-speed__item-title {
+        padding: 20px 0px 30px 19px;
+        font-size: 23px;
+        line-height: 36px;
+    }
+}
+
+@media (max-width: 1070px) {
+    .advantage-speed {
+        padding-bottom: 80px;
+    }
+}
+
+
+/* 4 БЛОК */
+.advantage-reliable {
+    padding-bottom: 100px;
+}
+.advantage-reliable__container {
+    display: flex;
+}
+.advantage-reliable__left {
+    margin-right: 18px;
+}
+.advantage-reliable__title {
+    margin-top: 6px;
+    margin-bottom: 20px;
+}
+.advantage-reliable__text {
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.05em;
+    margin-bottom: 41px;
+    max-width: 389px;
+}
+.advantage-reliable__left-img-wrap {
+    border-radius: 8px;
+    overflow: hidden;
+}
+.advantage-reliable__banks-logo {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.advantage-reliable__banks-logo-group {
+    display: flex;
+    column-gap: 20px;
+}
+.advantage-reliable__banks-img-wrap {
+    border-radius: 8px;
+    overflow: hidden;
+}
+.advantage-reliable__img {
+    object-fit: cover;
+}
+
+
+/* 5 БЛОК */
+.advantage-safety {
+    margin-bottom: 100px;
+}
+.advantage-safety__wrapper {
+    display: flex;
+}
+.advantage-safety__wrapper > * {
+    flex: 1 1 50%;
+}
+.advantage-safety__left-text {
+    padding: 40px 0px 61px 40px;
+}
+.advantage-safety__title {
+    line-height: 66px;
+    margin-bottom: 30px;
+}
+.advantage-safety__text {
+    font-size: 18px;
+    max-width: 566px;
+}
+.advantage-safety__text:not(:last-child) {
+    margin-bottom: 15px;
+}
+.advantage-safety__right-text {
+    background: #F4F4F4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.advantage-safety__list  {
+    list-style-type: none; /* Убираем исходные маркеры */
+    counter-reset: my-counter; /* Задаём имя счетчика */
+    font-size: 22px;
+    line-height: 30px;
+  }
+.advantage-safety__list-item  {
+    margin-left: calc(12.5px + 30px);
+    position: relative;
+  }
+.advantage-safety__list-item:not(:last-child)  {
+    margin-bottom: 53px;
+  }
+.advantage-safety__list-item:last-child  {
+    margin-top: 3px;
+  }
+.advantage-safety__list-item > span  {
+    font-weight: 700;
+    color: #83B32B;
+  }
+.advantage-safety__list-item::before {
+    content: counter(my-counter); /* Выводим число */
+    counter-increment: my-counter; /* Увеличиваем значение счётчика */
+    font-size: 18px;
+    position: relative;
+    left: -30px;
+    z-index: 4;
+    background-color: #D9D9D9;
+    background-size: 35px;
+  }
+.advantage-safety__list-item::after {
+    content: "";
+    display: block;
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    top: 0;
+    left: calc(-12.5px - 30px);
+    border-radius: 50%;
+    background: #D9D9D9;
+  }
+
+
+/* 6 БЛОК */
+.mortgage-types {
+    padding-bottom: 127px;
+}
+.mortgage-types__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mortgage-types__title {
+    line-height: 66px;
+    margin-bottom: 50px;
+}
+.mortgage-types__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.mortgage-types__card {
+    display: flex;
+    flex: 1 1 calc(50% - 20px);
+}
+.mortgage-types__card > * {
+    flex: 1 1 50%;
+}
+.mortgage-types__card-body {
+    padding: 40px 0px 0px 40px;
+}
+.mortgage-types__card-title {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #83B32B;
+}
+.mortgage-types__card-list {
+    max-width: 293px;
+}
+.mortgage-types__card-list-item {
+    color: #646666;
+    margin-left: 18px;
+}
+.mortgage-types__card-list-item:not(:last-child) {
+    margin-bottom: 10px;
+}
+.mortgage-types__card-list-item::marker {
+    display: block;
+    width: 6px;
+    color: #292929;
+}
+.mortgage-types__card-img-wrap {
+}
+.mortgage-types__card-img {
+    object-fit: contain;
+}
+
+
+/* 8 БЛОК */
+.mortgage-calculator {
+    margin-bottom: 100px;
+}
+.mortgage-calculator__container {
+    
+}
+.mortgage-calculator__wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 1500px;
+    margin-left: 40px;
+}
+.mortgage-calculator__top {
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: space-between;
+}
+.mortgage-calculator__description {
+    margin-right: 116px;
+}
+.mortgage-calculator__title {
+    line-height: 66px;
+    margin-bottom: 30px;
+    letter-spacing: 0;
+}
+.mortgage-calculator__text {
+    color: #000;
+    max-width: 609px;
+}
+.mortgage-calculator__recommendation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EFF6FF;
+    max-width: 640px;
+    width: 100%;
+    border-radius: 8px;
+}
+.mortgage-calculator__recommendation-text {
+    max-width: 462px;
+}
+.mortgage-calculator__calculator {
+    display: flex;
+    margin-bottom: 50px;
+}
+.mortgage-calculator__form {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 118px;
+    max-width: 743px;
+}
+.mortgage-calculator__form-item {
+    display: inline-block;
+    position: relative;
+}
+.mortgage-calculator__form-lable {
+    position: absolute;
+    color: #646666;
+}
+.mortgage-calculator__form-input {
+    max-height: 68px;
+    height: 100%;
+    padding: 10px 20px 12px 20px;
+    font-size: 16px;
+    border: 1px solid #D9D9D9;
+}
+.mortgage-calculator__check {
+    display: flex;
+    flex-direction: column;
+    max-height: 144px;
+    row-gap: 32px;
+    column-gap: 100px;
+    flex-wrap: wrap;
+}
+.mortgage-calculator__check-title {
+    color: #646666;
+    margin-bottom: 10px;
+}
+.mortgage-calculator__check-title > span {
+    margin-left: 6px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: top;
+    height: 16px;
+    width: 16px;
+    color: #000;
+    font-size: 12px;
+    border-radius: 50%;
+    background: #D9D9D9;
+}
+.mortgage-calculator__check-number {
+    font-size: 20px;
+}
+.mortgage-calculator__button {
+    align-self: center;
+    max-width: 361px;
+}
+
+
+/* 9 БЛОК */
+.trade-in {
+    margin-bottom: 110px;
+}
+.traid-in__container {
+}
+.traid-in__wrapper {
+    display: flex;
+}
+.traid-in__wrapper > * {
+    flex: 1 1 50%;
+}
+.traid-in__body {
+    padding: 40px 0px 0px 40px;
+}
+.traid-in__title {
+    line-height: 66px;
+    margin-bottom: 20px;
+}
+.trade-in__text {
+    max-width: 550px;
+    color: #646666;
+    margin-bottom: 25px;
+}
+.trade-in__list {
+    margin-bottom: 43px;
+    list-style: none;
+    max-width: 410px;
+}
+.trade-in__list-item {
+    color: #646666;
+    display: flex;
+    align-items: center;
+}
+
+.trade-in__list-item::before {
+    content: '•';
+    font-size: 21px;
+    color: #83B32B;
+    margin-right: 17px;
+}
+.trade-in__list-item:not(:last-child) {
+    margin-bottom: 20px;
+}
+.trade-in__link {
+    max-width: 326px;
+}
+.traid-in__img-wrap {
+}
+.traid-in__img {
+}
+
+
+/* 10 БЛОК */
+.payment {
+    padding-bottom: 100px;
+}
+
+.payment__wrapper {
+    border: 1px solid #D9D9D9;
+    padding: 39px 0px 43px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.payment__title {
+    margin-bottom: 50px;
+}
+
+.payment__items {
+    align-self: normal;
+    margin-bottom: 60px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.payment__item {
+    flex: 1 1 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.payment__icon {
+    max-height: 120px;
+    margin-bottom: 20px;
+}
+
+.payment__name {
+    font-size: 30px;
+    letter-spacing: -0.05em;
+}
+
+@media (max-width: 1400px) {
+    .payment__items {
+        margin-bottom: 54px;
+    }
+
+    .payment__title {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 1386px) {
+    .payment__name {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .payment__items {
+        margin-bottom: 47px;
+    }
+
+    .payment__title {
+        margin-bottom: 37px;
+    }
+}
+
+@media (max-width: 1260px) {
+    .payment {
+        padding-bottom: 90px;
+    }
+}
+
+@media (max-width: 1170px) {
+    .payment__items {
+        margin-bottom: 42px;
+    }
+
+    .payment__wrapper {
+        padding: 35px 0px 35px 0px;
+    }
+
+    .payment__icon {
+        max-height: 110px;
+        margin-bottom: 18px;
+    }
+
+    .payment__name {
+        font-size: 22px;
+    }
+
+    .payment__title {
+        margin-bottom: 33px;
+    }
+}
+
+@media (max-width: 1070px) {
+    .payment {
+        padding-bottom: 80px;
+    }
+}
+
+@media (max-width: 1030px) {
+    .payment__icon {
+        max-height: 95px;
+        margin-bottom: 16px;
+    }
+}
+
+@media (max-width: 991px) {
+    .payment__items {
+        margin-bottom: 37px;
+    }
+
+    .payment__wrapper {
+        padding: 30px 0px 30px 0px;
+    }
+
+    .payment__icon {
+        max-height: 80px;
+        margin-bottom: 16px;
+    }
+
+    .payment__name {
+        font-size: 22px;
+    }
+
+    .payment__title {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 880px) {
+    .payment {
+        padding-bottom: 70px;
+    }
+}
+
+@media (max-width: 794px) {
+    .payment {
+        padding-bottom: 60px;
+    }
+
+    .payment__items {
+        margin-bottom: 32px;
+    }
+
+    .payment__wrapper {
+        padding: 27px 0px 27px 0px;
+    }
+
+    .payment__items {
+        row-gap: 25px;
+    }
+
+    .payment__item {
+        flex: 1 1 50%;
+    }
+
+    .payment__icon {
+        max-height: 85px;
+        margin-bottom: 16px;
+    }
+
+    .payment__title {
+        margin-bottom: 27px;
+    }
+}
+
+@media (max-width: 650px) {
+    .payment__items {
+        margin-bottom: 27px;
+    }
+
+    .payment__icon {
+        max-height: 80px;
+        margin-bottom: 13px;
+    }
+
+    .payment__name {
+        font-size: 18px;
+    }
+
+    .payment__title {
+        margin-bottom: 22px;
+    }
+}
+
+@media (max-width: 600px) {
+    .payment__wrapper {
+        padding: 25px 0px 25px 0px;
+    }
+}
+
+@media (max-width: 560px) {
+    .payment {
+        padding-bottom: 50px;
+    }
+}
+
+@media (max-width: 516px) {
+    .payment__items {
+        margin-bottom: 21px;
+    }
+
+    .payment__title {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .payment {
+        padding-bottom: 40px;
+    }
+
+    .payment__wrapper {
+        padding: 20px 0px 20px 0px;
+    }
+
+    .payment__items {
+        row-gap: 20px;
+    }
+
+    .payment__icon {
+        max-height: 60px;
+        margin-bottom: 10px;
+    }
+
+    .payment__name {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 390px) {
+    .payment__link {
+        max-width: calc(100% - 20px);
+    }
+}
+
+
+/* 11 блок */
 .stocks {
     padding-bottom: 100px;
 }
@@ -300,246 +981,5 @@
     .stock__item-title {
         font-size: 16px;
         line-height: 20px;
-    }
-}
-
-
-.payment {
-    padding-bottom: 100px;
-}
-
-.payment__wrapper {
-    border: 1px solid #D9D9D9;
-    padding: 39px 0px 43px 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
-}
-
-.payment__title {
-    margin-bottom: 50px;
-}
-
-.payment__items {
-    align-self: normal;
-    margin-bottom: 60px;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.payment__item {
-    flex: 1 1 25%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.payment__icon {
-    max-height: 120px;
-    margin-bottom: 20px;
-}
-
-.payment__name {
-    font-size: 30px;
-    letter-spacing: -0.05em;
-}
-
-@media (max-width: 1400px) {
-    .payment__items {
-        margin-bottom: 54px;
-    }
-
-    .payment__title {
-        margin-bottom: 40px;
-    }
-}
-
-@media (max-width: 1386px) {
-    .payment__name {
-        font-size: 25px;
-    }
-}
-
-@media (max-width: 1300px) {
-    .payment__items {
-        margin-bottom: 47px;
-    }
-
-    .payment__title {
-        margin-bottom: 37px;
-    }
-}
-
-@media (max-width: 1260px) {
-    .payment {
-        padding-bottom: 90px;
-    }
-}
-
-@media (max-width: 1170px) {
-    .payment__items {
-        margin-bottom: 42px;
-    }
-
-    .payment__wrapper {
-        padding: 35px 0px 35px 0px;
-    }
-
-    .payment__icon {
-        max-height: 110px;
-        margin-bottom: 18px;
-    }
-
-    .payment__name {
-        font-size: 22px;
-    }
-
-    .payment__title {
-        margin-bottom: 33px;
-    }
-}
-
-@media (max-width: 1070px) {
-    .payment {
-        padding-bottom: 80px;
-    }
-}
-
-@media (max-width: 1030px) {
-    .payment__icon {
-        max-height: 95px;
-        margin-bottom: 16px;
-    }
-}
-
-@media (max-width: 991px) {
-    .payment__items {
-        margin-bottom: 37px;
-    }
-
-    .payment__wrapper {
-        padding: 30px 0px 30px 0px;
-    }
-
-    .payment__icon {
-        max-height: 80px;
-        margin-bottom: 16px;
-    }
-
-    .payment__name {
-        font-size: 22px;
-    }
-
-    .payment__title {
-        margin-bottom: 30px;
-    }
-}
-
-@media (max-width: 880px) {
-    .payment {
-        padding-bottom: 70px;
-    }
-}
-
-@media (max-width: 794px) {
-    .payment {
-        padding-bottom: 60px;
-    }
-
-    .payment__items {
-        margin-bottom: 32px;
-    }
-
-    .payment__wrapper {
-        padding: 27px 0px 27px 0px;
-    }
-
-    .payment__items {
-        row-gap: 25px;
-    }
-
-    .payment__item {
-        flex: 1 1 50%;
-    }
-
-    .payment__icon {
-        max-height: 85px;
-        margin-bottom: 16px;
-    }
-
-    .payment__title {
-        margin-bottom: 27px;
-    }
-}
-
-@media (max-width: 650px) {
-    .payment__items {
-        margin-bottom: 27px;
-    }
-
-    .payment__icon {
-        max-height: 80px;
-        margin-bottom: 13px;
-    }
-
-    .payment__name {
-        font-size: 18px;
-    }
-
-    .payment__title {
-        margin-bottom: 22px;
-    }
-}
-
-@media (max-width: 600px) {
-    .payment__wrapper {
-        padding: 25px 0px 25px 0px;
-    }
-}
-
-@media (max-width: 560px) {
-    .payment {
-        padding-bottom: 50px;
-    }
-}
-
-@media (max-width: 516px) {
-    .payment__items {
-        margin-bottom: 21px;
-    }
-
-    .payment__title {
-        margin-bottom: 20px;
-    }
-}
-
-@media (max-width: 500px) {
-    .payment {
-        padding-bottom: 40px;
-    }
-
-    .payment__wrapper {
-        padding: 20px 0px 20px 0px;
-    }
-
-    .payment__items {
-        row-gap: 20px;
-    }
-
-    .payment__icon {
-        max-height: 60px;
-        margin-bottom: 10px;
-    }
-
-    .payment__name {
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 390px) {
-    .payment__link {
-        max-width: calc(100% - 20px);
     }
 }

@@ -1,0 +1,13 @@
+.top-banner__left {
+    padding-top: 0;
+    display: flex;
+}
+.top-banner__left-inner {
+    align-self: center;
+}
+.top-banner__text {
+    margin-bottom: 50px;
+}
+.top-banner__img-wrap {
+    max-height: 500px;
+}

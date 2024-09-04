@@ -12,11 +12,6 @@
     color: #646666;
 }
 
-.feedback-form__input:focus {
-    outline: none;
-    box-shadow: 0px 0px 8px 1px #e6e6e6a9;
-}
-
 .feedback__form > input {
     border: 1px solid #D9D9D9;
     outline: none;

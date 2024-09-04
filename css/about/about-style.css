@@ -1,3 +1,232 @@
+/* 3 БЛОК */
+.our-mission {
+    padding-bottom: 100px;
+}
+.our-mission__container {
+}
+.our-mission__wrapper {
+    display: flex;
+}
+.our-mission__wrapper > * {
+    flex: 1 1 50%;
+}
+.our-mission__body {
+    padding: 40px 0px 0px 40px;
+}
+.our-mission__title {
+    margin-bottom: 10px;
+}
+.our-mission__text {
+    max-width: 603px;
+    color: #646666;
+}
+.our-mission__text:not(:last-child) {
+    margin-bottom: 22px;
+}
+.our-mission__img-wrap {
+}
+.our-mission__img {
+    object-fit: cover
+}
+
+
+/* 4 БЛОК */
+.our-goal {
+    padding-bottom: 100px;
+}
+.our-goal__container {
+}
+.our-goal__wrapper {
+    display: flex;
+}
+.our-goal__img-wrap {
+}
+.our-goal__img {
+    object-fit: cover;
+}
+.our-goal__body {
+    padding: 40px 0px 0px 40px;
+    max-width: 740px;
+}
+.our-goal__title {
+}
+.our-goal__text {
+    color: #646666;
+}
+.our-goal__text:nth-of-type(2) {
+    margin-bottom: 0px;
+}
+.our-mission__text:not(:last-child) {
+    margin-bottom: 22px;
+}
+.our-goal__list {
+    list-style: none;
+    margin-bottom: 22px;
+}
+.our-goal__list-item {
+    color: #646666;
+}
+
+.our-goal__list-item::before {
+    content: '—';
+    font-size: 21px;
+    color: #646666;
+    margin-right: 5px;
+}
+
+
+/* 5 БЛОК */
+.our-team {
+    padding-bottom: 100px;
+}
+.our-team__container {
+}
+.our-team__title {
+    align-self: flex-start;
+    margin-bottom: 50px;
+}
+.our-team__persone-cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    column-gap: 20px;
+    row-gap: 114px;
+}
+.our-team__persone-card {
+    overflow: visible;
+    max-width: 500px;
+    width: 100%;
+}
+.our-team__persone-card-items {
+}
+.our-team__persone-card-img-wrap {
+    position: relative;
+    height: 350px;
+    background: #F4F4F4;
+    overflow: visible;
+}
+.our-team__persone-card-img {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+}
+.our-team__persone-card-description {
+    text-align: center;
+    padding: 30px 40px 0px 40px;
+}
+.our-team__persone-card-title {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 40px;
+    letter-spacing: -0.05em;
+}
+.our-team__persone-card-text {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 40px;
+    letter-spacing: -0.05em;
+    margin-bottom: 24px;
+    color: #646666;
+}
+
+
+/* 6 БЛОК */
+.why-choose-us {
+    padding-bottom: 100px;
+}
+.why-choose-us__container {
+}
+.why-choose-us__title {
+    margin-bottom: 50px;
+}
+.why-choose-us__cards {
+    display: flex;
+    column-gap: 20px;
+}
+.why-choose-us__card {
+    flex: 1 1 50%;
+}
+.why-choose-us__card-items {
+    display: flex;
+}
+.why-choose-us__card-body {
+    padding: 40px 0px 0px 40px;
+}
+.why-choose-us__card__title {
+    font-size: 30px;
+    margin-bottom: 16px;
+}
+.why-choose-us__card-list {
+    max-width: 412px;
+}
+.why-choose-us__card-list-item {
+    font-size: 16px;
+    line-height: 30px;
+    color: #646666;
+    display: flex;
+    align-items: center;
+}
+.why-choose-us__card-list-item::before {
+    content: '•';
+    font-size: 18px;
+    color: #83B32B;
+    margin-right: 10px;
+}
+.why-choose-us__card-img-wrap {
+    margin-left: auto;
+}
+.why-choose-us__card-img {
+    object-fit: cover;
+}
+
+
+/* 7 БЛОК */
+.awards {
+    padding-bottom: 100px;
+}
+.awards__container {
+}
+.awards__title {
+    margin-bottom: 50px;
+}
+.awards__slider {
+}
+.awards__swiper {
+}
+.awards__slider-wrapper {
+    margin-bottom: 57.5px;
+}
+.awards__slide {
+    border-radius: 8px;
+    overflow: hidden;
+    max-height: 550px;
+    user-select: none;
+}
+.awards__slide:not(:last-child) {
+    margin-right: 20px;
+}
+.awards__slide-img {
+    
+}
+.awards__slider-pagination {
+    position: relative;
+}
+.awards__slider-pagination > .swiper-pagination-bullet {
+    height: 15px;
+    width: 15px;
+    background: #292929;
+    opacity: 1;
+}
+.awards__slider-pagination > .swiper-pagination-bullet:not(:last-child) {
+    margin-right: 25px;
+}
+.awards__slider-pagination > .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #83B32B;
+}
+
+
+/* 8 БЛОК */
 .stocks {
     padding-bottom: 100px;
 }
@@ -19,7 +248,7 @@
     margin-bottom: 60px;
 }
 
-.stocks__items>* {
+.stocks__items > * {
     flex: 0 1 50%;
 }
 
@@ -58,7 +287,7 @@
     position: relative;
 }
 
-.stocks__swiper>.swiper-wrapper {
+.stocks__swiper > .swiper-wrapper {
     margin-bottom: 15px;
 }
 
