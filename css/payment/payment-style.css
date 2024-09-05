@@ -353,23 +353,37 @@
 .mortgage-calculator__form {
     display: flex;
     flex-wrap: wrap;
+    gap: 21px;
     margin-right: 118px;
     max-width: 743px;
 }
 .mortgage-calculator__form-item {
     display: inline-block;
+    max-height: 68px;
     position: relative;
+}
+.mortgage-calculator__form-item:nth-of-type(odd) {
+    width: 417px;
+}
+.mortgage-calculator__form-item:nth-of-type(even) {
+    width: 305px;
 }
 .mortgage-calculator__form-lable {
     position: absolute;
+    top: 10px; 
+    left: 20px;
+    font-size: 12px;
     color: #646666;
 }
 .mortgage-calculator__form-input {
     max-height: 68px;
     height: 100%;
-    padding: 10px 20px 12px 20px;
+    width: 100%;
+    padding: 37px 20px 12px 20px;
     font-size: 16px;
+    color: #292929;
     border: 1px solid #D9D9D9;
+    border-radius: 5px;
 }
 .mortgage-calculator__check {
     display: flex;
@@ -395,6 +409,7 @@
     font-size: 12px;
     border-radius: 50%;
     background: #D9D9D9;
+    user-select: none;
 }
 .mortgage-calculator__check-number {
     font-size: 20px;
@@ -722,7 +737,7 @@
     margin-bottom: 60px;
 }
 
-.stocks__items>* {
+.stocks__items > * {
     flex: 0 1 50%;
 }
 
