@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дом из газобетона и кирпича «Лайт 65»</title>
+    <link rel="shortcut icon" href="../img/favicon.svg" type="image/x-icon">
+
+    <!-- ПОДКЛЮЧЕНИЕ СТИЛЕЙ ДЛЯ BOOTSTRAP 5.3.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- ПОДКЛЮЧЕНИЕ СТИЛЕЙ ДЛЯ СЛАЙДЕРА -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- ПОДКЛЮЧЕНИЕ ОБЩИХ СТИЛЕЙ -->
+    <link rel="stylesheet" href="../css/general/reset.css">
+    <link rel="stylesheet" href="../css/general/custom.css">
+    <link rel="stylesheet" href="../css/general/header.css">
+    <link rel="stylesheet" href="../css/general/footer.css">
+    <link rel="stylesheet" href="../css/general/stats.css">
+    <link rel="stylesheet" href="../css/general/contacts.css">
+    <link rel="stylesheet" href="../css/general/form.css">
+    <link rel="stylesheet" href="../css/general/buttons.css">
+    <link rel="stylesheet" href="../css/general/modal.css">
+    <link rel="stylesheet" href="../css/general/top-banner.css">
+
+    <!-- ПОДКЛЮЧЕНИЕ СТИЛЕЙ ДЛЯ СТРАНИЦЫ АКЦИЙ -->
+    <link rel="stylesheet" href="../css/project-page/style.css">
+
+    <!-- ПОДКЛЮЧЕНИЕ ШРИФТА-->
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__container my-container">
+            <div class="header__main">
+                <a href="../../index.html"><img src="../../img/logo.png" alt="Логотип" class="header__logo"></a>
+                <nav class="header__menu">
+                    <ul class="header__menu-items">
+                        <li class="header__menu-item">
+                            <a href="../about.html" class="header__menu-link">О компании</a>
+                        </li>
+                        <li class="header__menu-item dropdown header__menu-dropdown">
+                            <a class="dropdown-toggle header__menu-dropdown-toggle header__menu-link" href="#"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Выбрать комплекс
+                            </a>
+                            <ul class="dropdown-menu header__main-dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item header__main-dropdown-menu-item header__menu-link"
+                                        href="../complexes/single-complex.html">ЭКО-ВИЛЛАДЖ (Нагаево)</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item header__main-dropdown-menu-item header__menu-link"
+                                        href="../complexes/single-complex.html">FAMILY PARK</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item header__main-dropdown-menu-item header__menu-link"
+                                        href="../complexes/single-complex.html">геометрия</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item header__main-dropdown-menu-item header__menu-link"
+                                        href="../complexes/single-complex.html">Эко-вилладж (Шмидтово)</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item header__main-dropdown-menu-item header__menu-link"
+                                        href="../complexes/single-complex.html">красная поляна</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item header__main-dropdown-menu-item header__menu-link"
+                                        href="../complexes/single-complex.html">Лермонтов</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="./similar-projects.html" class="header__menu-link">Акции</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="../payment.html" class="header__menu-link">Как купить</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="../construction.html" class="header__menu-link">Строительство на вашем участке</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="../photo-and-video.html" class="header__menu-link">Фото и видео</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__pre-movbile-menu">
+                    <div class="header__menu-item dropdown header__main-dropdown">
+                        <a class="dropdown-toggle header__menu-dropdown-toggle header__menu-link" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Выбрать комплекс
+                        </a>
+                        <ul class="dropdown-menu header__main-dropdown-menu">
+                            <li>
+                                <a class="dropdown-item header__main-dropdown-menu-item header__menu-link"
+                                    href="../complexes/single-complex.html">ЭКО-ВИЛЛАДЖ (Нагаево)</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item header__main-dropdown-menu-item header__menu-link"
+                                    href="../complexes/single-complex.html">FAMILY
+                                    PARK</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item header__main-dropdown-menu-item header__menu-link"
+                                    href="../complexes/single-complex.html">геометрия</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item header__main-dropdown-menu-item header__menu-link"
+                                    href="../complexes/single-complex.html">Эко-вилладж (Шмидтово)</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item header__main-dropdown-menu-item header__menu-link"
+                                    href="../complexes/single-complex.html">красная
+                                    поляна</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item header__main-dropdown-menu-item header__menu-link"
+                                    href="../complexes/single-complex.html">Лермонтов</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="dropdown header__dropdown-nav dropdown-nav">
+                        <a class="dropdown-nav__toggle header__menu-link burger-menu" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="burger-menu__items dropdown-nav__icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu dropdown-nav__menu">
+                            <li class="dropdown-nav__menu-item bordered-block animate__slideInDown">
+                                <a href="../about.html" class="header__menu-link dropdown-nav__menu-link">О компании</a>
+                            </li>
+                            <li class="dropdown-nav__menu-item bordered-block animate__slideInDown">
+                                <a href="./similar-projects.html" class="header__menu-link dropdown-nav__menu-link">Акции</a>
+                            </li>
+                            <li class="dropdown-nav__menu-item bordered-block animate__slideInDown">
+                                <a href="../payment.html" class="header__menu-link dropdown-nav__menu-link">Как
+                                    купить</a>
+                            </li>
+                            <li class="dropdown-nav__menu-item bordered-block animate__slideInDown">
+                                <a href="../construction.html"
+                                    class="header__menu-link dropdown-nav__menu-link">Строительство на вашем
+                                    участке</a>
+                            </li>
+                            <li class="dropdown-nav__menu-item bordered-block animate__slideInDown">
+                                <a href="../photo-and-video.html" class="header__menu-link dropdown-nav__menu-link">Фото
+                                    и видео</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header__contacts">
+                    <div class="header__contacts-numbers">
+                        <a href="tel:+73472665191" class="header__contacts-number-first">+7 (347) 266-51-91</a>
+                        <a href="tel:+79273335651" class="header__contacts-numbers-second">+7 (927) 333-56-51</a>
+                    </div>
+                    <div class="header__contact-address">г. Уфа, ул. Блюхера, 2/1 пн-пт 09:00 – 19:00</div>
+                    <button class="header__contacts-button" data-bs-toggle="modal" data-bs-target="#callModal">Обратный
+                        звонок</button>
+                </div>
+            </div>
+            <div class="header__mobile-menu mobile-menu">
+                <nav class="navbar p-0">
+                    <div class="container-fluid header__navbar-container p-0">
+                        <div class="navbar-header">
+                            <a href="../../index.html"><img src="../../img/logo.png" alt="Логотип"
+                                    class="header__logo"></a>
+                            <button class="navbar-toggler header__mobile-menu-dropdown-toggle burger-menu" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <div class="burger-menu__items">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse mobile-menu__collapse my-container" id="navbarNav">
+                            <div class="mobile-menu__collapse-body">
+                                <ul class="header__menu-items header__mobile-menu-items flex-column">
+                                    <li class="header__menu-item header__mobile-menu-item">
+                                        <a href="../about.html" class="header__menu-link">О компании</a>
+                                    </li>
+                                    <li class="header__menu-item dropdown header__menu-dropdown">
+                                        <a class="dropdown-toggle header__menu-dropdown-toggle header__menu-link"
+                                            href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Выбрать комплекс
+                                        </a>
+                                        <ul class="dropdown-menu header__mobile-dropdown-menu">
+                                            <li class="header__mobile-dropdown-menu-item">
+                                                <a class="dropdown-item header__menu-link header__mobile-dropdown-menu-link"
+                                                    href="../complexes/single-complex.html">ЭКО-ВИЛЛАДЖ (Нагаево)</a>
+                                            </li>
+                                            <li class="header__mobile-dropdown-menu-item">
+                                                <a class="dropdown-item header__menu-link header__mobile-dropdown-menu-link"
+                                                    href="../complexes/single-complex.html">FAMILY PARK</a>
+                                            </li>
+                                            <li class="header__mobile-dropdown-menu-item">
+                                                <a class="dropdown-item header__menu-link header__mobile-dropdown-menu-link"
+                                                    href="../complexes/single-complex.html">геометрия</a>
+                                            </li>
+                                            <li class="header__mobile-dropdown-menu-item">
+                                                <a class="dropdown-item header__menu-link header__mobile-dropdown-menu-link"
+                                                    href="../complexes/single-complex.html">Эко-вилладж (Шмидтово)</a>
+                                            </li>
+                                            <li class="header__mobile-dropdown-menu-item">
+                                                <a class="dropdown-item header__menu-link header__mobile-dropdown-menu-link"
+                                                    href="../complexes/single-complex.html">красная поляна</a>
+                                            </li>
+                                            <li class="header__mobile-dropdown-menu-item">
+                                                <a class="dropdown-item header__menu-link header__mobile-dropdown-menu-link"
+                                                    href="../complexes/single-complex.html">Лермонтов</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="header__menu-item header__mobile-menu-item">
+                                        <a href="./similar-projects.html" class="header__menu-link">Акции</a>
+                                    </li>
+                                    <li class="header__menu-item header__mobile-menu-item">
+                                        <a href="../payment.html" class="header__menu-link">Как купить</a>
+                                    </li>
+                                    <li class="header__menu-item header__mobile-menu-item">
+                                        <a href="../construction.html" class="header__menu-link">Строительство на вашем
+                                            участке</a>
+                                    </li>
+                                    <li class="header__menu-item header__mobile-menu-item">
+                                        <a href="../photo-and-video.html" class="header__menu-link">Фото и видео</a>
+                                    </li>
+                                </ul>
+                                <div class="header__mobile-contacts">
+                                    <div class="header__mobile-contacts-numbers">
+                                        <a href="tel:+73472665191" class="header__contacts-number-first">+7 (347)
+                                            266-51-91</a>
+                                        <a href="tel:+79273335651" class="header__contacts-number-second">+7 (927)
+                                            333-56-51</a>
+                                    </div>
+                                    <a class="header__email"
+                                        href="mailto:sales.cottagebery@yandex.ru">sales.cottagebery@yandex.ru</a>
+                                    <div class="header__mobile-contact-bottom">
+                                        <div class="header__socials social">
+                                            <div class="social__links header__social-links">
+                                                <a href="" class="social__link header__social-link"><img
+                                                        src="../../img/social-media-icons/telegram (Traced).svg"
+                                                        alt="Иконка телеграм" class="social__link-icon"></a>
+                                                <a href="" class="social__link header__social-link"><img
+                                                        src="../../img/social-media-icons/vk (Traced).svg"
+                                                        alt="Иконка вк" class="social__link-icon"></a>
+                                                <a href="" class="social__link header__social-link"><img
+                                                        src="../../img/social-media-icons/youtube.svg"
+                                                        alt="Иконка ютьюб" class="social__link-icon"></a>
+                                            </div>
+                                        </div>
+                                        <button class="header__contacts-button header__mobile-contacts-button"
+                                            data-bs-toggle="modal" data-bs-target="#callModal">Обратный звонок</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- МОДАЛЬНОЕ ОКНО С ФОРМОЙ -->
+    <div class="modal fade call-modal" id="callModal" tabindex="-1" aria-labelledby="callModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered call-modal__dialog">
+            <div class="modal-content call-modal__content">
+                <div class="modal-header call-modal__header">
+                    <button type="button" class="btn-close call-modal__close-button p-0" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body call-modal__body">
+                    <div class="call-modal__title title">Обратный звонок</div>
+                    <div class="call-modal__text text-block_fSize_20">Хотите уточнить информацию? Оставьте свои
+                        контактные
+                        данные, и мы вам перезвоним в ближайшее время.</div>
+                    <form action="" class="feedback-form">
+                        <input type="text" name="" id="" placeholder="Имя"
+                            class="feedback-form__input call-modal__input-name bordered-block">
+                        <input type="text" name="" id="" placeholder="Телефон"
+                            class="feedback-form__input call-modal__input-phone bordered-block">
+                        <button class="feedback-form__button call-modal__button button">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ОВЕРЛЕЙ ТОЛЬКО ДЛЯ МОДАЛКИ С ФОРМОЙ -->
+    <div class="overlay" id="overlay"></div>
+
+    <main class="main">
+        <div class="top-banner">
+            <div class="top-banner__container my-container">
+                <div class="top-banner__left">
+                    <div class="top-banner__title title">Дом из газобетона и кирпича <span>«Лайт 65»</span></div>
+                    <div class="top-banner__text">Коттедж эконом-класса в самом центре Нагаево</div>
+                    <button class="top-banner__button button">Посмотреть комплекс</button>
+                </div>
+                <div class="top-banner__img-wrap">
+                    <img src="../img/project-page/top-banner.jpg" alt="баннер" class="top-banner__img">
+                </div>
+            </div>
+        </div>
+        <div class="stats">
+            <div class="stats__container my-container">
+                <div class="stats__items">
+                    <div class="stats__item">
+                        <div class="stats__item-title title">2008</div>
+                        <div class="stats__item-text">строим дома с 2008 года</div>
+                    </div>
+                    <div class="stats__item">
+                        <div class="stats__item-title title">350+</div>
+                        <div class="stats__item-text">проектов реализовали под ключ</div>
+                    </div>
+                    <div class="stats__item">
+                        <div class="stats__item-title title">5 лет</div>
+                        <div class="stats__item-text">гарантии на дом и отделку</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="project-desc">
+            <div class="project-desc__container my-container">
+                <div class="project-desc__wrapper bordered-block">
+                    <div class="project-desc__wrap-img">
+                        <img src="../img/project-page/project-desc/project.jpg" alt="" class="project-desc__img">
+                    </div>
+                    <div class="project-desc__body">
+                        <div class="project-desc__head">
+                            <ul class="cottage-types__list">
+                                <li class="cottage-types__list-item">3 комнаты</li>
+                                <li class="cottage-types__list-item">от 3 160 000 ₽</li>
+                                <li class="cottage-types__list-item">от 46470 ₽/м²</li>
+                            </ul>
+                            <div class="cottage-types__payment-option">
+                                <div class="cottage-types__payment-option-title">Ипотека от 30 000 ₽/месяц
+                                </div>
+                                <a class="cottage-types__payment-option-button button">Выбрать программу</a>
+                            </div>
+                        </div>
+                        <div class="project-desc__body-wrapper">
+                            <div class="project-desc__texts">
+                                <p class="project-desc__text">Коттедж подойдет как молодоженам, так и семье с детьми.
+                                    Неотъемлемым плюсом всех наших архитектурных решений является выход на террасу из кухни.
+                                    Благодаря этому хозяевам дома будет удобно собирать гостей, проводить летние вечера и
+                                    детские праздники, готовить на гриле и обедать на свежем воздухе.</p>
+                                <p class="project-desc__text">Коттедж площадью 68 м² — прекрасная альтернатива трехкомнатной
+                                    квартире. Это 2 большие спальни и просторная гостиная, объединенная с кухней площадью 24.2
+                                    м².</p>
+                            </div>
+                            <div class="project-desc__cottage-components">
+                                <div class="project-desc__cottage-component-items">
+                                    <div class="project-desc__cottage-component-item">
+                                        <img src="../img/complexes/single-complex/cottage-types/cottage-components/component_1.svg"
+                                            alt="" class="project-desc__cottage-component-icon">
+                                        <div class="project-desc__cottage-component-text">Внешняя отделка
+                                            <span>облицовочный кирпич</span>
+                                        </div>
+                                    </div>
+                                    <div class="project-desc__cottage-component-item">
+                                        <img src="../img/complexes/single-complex/cottage-types/cottage-components/component_2.svg"
+                                            alt="" class="project-desc__cottage-component-icon">
+                                        <div class="project-desc__cottage-component-text">Стены
+                                            <span>бетонные блоки</span>
+                                        </div>
+                                    </div>
+                                    <div class="project-desc__cottage-component-item">
+                                        <img src="../img/complexes/single-complex/cottage-types/cottage-components/component_3.svg"
+                                            alt="" class="project-desc__cottage-component-icon">
+                                        <div class="project-desc__cottage-component-text">Кровля
+                                            <span>металлочерепица</span>
+                                        </div>
+                                    </div>
+                                    <div class="project-desc__cottage-component-item">
+                                        <img src="../img/complexes/single-complex/cottage-types/cottage-components/component_4.svg"
+                                            alt="" class="project-desc__cottage-component-icon">
+                                        <div class="project-desc__cottage-component-text">Фундамент
+                                            <span>свайный ростверк</span>
+                                        </div>
+                                    </div>
+                                    <div class="project-desc__cottage-component-item">
+                                        <img src="../img/complexes/single-complex/cottage-types/cottage-components/component_5.svg"
+                                            alt="" class="project-desc__cottage-component-icon">
+                                        <div class="project-desc__cottage-component-text">Внутренняя отделка
+                                            <span>черновая, white box, чистовая</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="project-desc__button button">Забронировать дом</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-complex">
+            <div class="about-complex__container my-container">
+                <div class="about-complex__desc">
+                    <div class="about-complex__title">Характеристики</div>
+                    <ul class="about-complex__list">
+                        <li class="about-complex__list-item">Жилая площадь 68 м²</li>
+                        <li class="about-complex__list-item">Площадь кухни 24.8 м²</li>
+                        <li class="about-complex__list-item">Площадь санузла 4.1 м²</li>
+                        <li class="about-complex__list-item">Длина: 10740 мм</li>
+                        <li class="about-complex__list-item">Ширина: 6100 мм</li>
+                        <li class="about-complex__list-item">Общая площадь: 89.2 кв.м</li>
+                        <li class="about-complex__list-item">Терраса: 21.2 (по запросу)</li>
+                        <li class="about-complex__list-item">Общая толщина стены: 470 мм</li>
+                    </ul>
+                </div>
+                    <div class="gallery__wrap-img">
+                        <img src="../img/project-page/characteristics/img_1.jpg" alt="" class="gallery__img">
+                    </div>
+                    <div class="gallery__wrap-img">
+                        <img src="../img/project-page/characteristics/img_2.jpg" alt="" class="gallery__img">
+                    </div>
+            </div>
+        </div>
+        <div class="complex-advantages">
+            <div class="complex-advantages__container my-container">
+                <div class="complex-advantages__title title">О территории</div>
+                <div class="complex-advantages__items">
+                    <div class="complex-advantages__item">
+                        <div class="complex-advantages__item-img-wrap">
+                            <img src="../img/complexes/complexes-advantages/card1.jpg" alt=""
+                                class="complex-advantages__img">
+                        </div>
+                        <div class="complex-advantages__item-body">
+                            <div class="complex-advantages__item-title">Безопасность</div>
+                            <div class="complex-advantages__item-desc">Отдельный въезд через шлагбаум и огороженная
+                                охраняемая территория</div>
+                        </div>
+                    </div>
+                    <div class="complex-advantages__item">
+                        <div class="complex-advantages__item-img-wrap">
+                            <img src="../img/complexes/complexes-advantages/card2.jpg" alt=""
+                                class="complex-advantages__img">
+                        </div>
+                        <div class="complex-advantages__item-body">
+                            <div class="complex-advantages__item-title">Благоустройство</div>
+                            <div class="complex-advantages__item-desc">Городские электросети, высокоскоростной
+                                интернет, возможность подключения газа</div>
+                        </div>
+                    </div>
+                    <div class="complex-advantages__item">
+                        <div class="complex-advantages__item-img-wrap">
+                            <img src="../img/complexes/complexes-advantages/card3.jpg" alt=""
+                                class="complex-advantages__img">
+                        </div>
+                        <div class="complex-advantages__item-body">
+                            <div class="complex-advantages__item-title">Комфорт</div>
+                            <div class="complex-advantages__item-desc">Качественные подъездные <br> пути,
+                                асфальтированная <br> дорога и красивое освещение</div>
+                        </div>
+                    </div>
+                    <div class="complex-advantages__item">
+                        <div class="complex-advantages__item-img-wrap">
+                            <img src="../img/complexes/complexes-advantages/card4.jpg" alt=""
+                                class="complex-advantages__img">
+                        </div>
+                        <div class="complex-advantages__item-body">
+                            <div class="complex-advantages__item-title">Экологичность</div>
+                            <div class="complex-advantages__item-desc">Жизнь на природе: <br> рядом река, лес, озеро,
+                                <br> оздоровительный комплекс
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="complex-advantages__item">
+                        <div class="complex-advantages__item-img-wrap">
+                            <img src="../img/complexes/complexes-advantages/card5.jpg" alt=""
+                                class="complex-advantages__img">
+                        </div>
+                        <div class="complex-advantages__item-body">
+                            <div class="complex-advantages__item-title">Зонирование</div>
+                            <div class="complex-advantages__item-desc">Придомового участка <br> площадью в 6 соток
+                                хватит на <br> гараж, баню и красивый сад</div>
+                        </div>
+                    </div>
+                    <div class="complex-advantages__item">
+                        <div class="complex-advantages__item-img-wrap">
+                            <img src="../img/complexes/complexes-advantages/card6.jpg" alt=""
+                                class="complex-advantages__img">
+                        </div>
+                        <div class="complex-advantages__item-body">
+                            <div class="complex-advantages__item-title">Все для детей</div>
+                            <div class="complex-advantages__item-desc">Детская площадка, кружки, секции, факультативы.
+                                поликлиники, школы и сады</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="complex-advantages__buttons">
+                    <a href="" class="complex-advantages__link button button_link">Посмотреть комплекс</a>
+                    <button class="complex-advantages__button button">Записаться на экскурсию</button>
+                </div>
+            </div>
+        </div>
+        <div class="project-map">
+            <div class="project-map__container my-container">
+                <div class="project-map__title title">Местоположение</div>
+                <div class="project-map__map-block" id="project-map"></div>
+            </div>
+        </div>
+        <div class="how-buy">
+            <div class="how-buy__container my-container">
+                <div class="how-buy__title title">Как <span>купить дом</span></div>
+                <div class="how-buy__payment-types">
+                    <button class="how-buy__button how-buy__button_active">Рассрочка</button>
+                    <button class="how-buy__button">Trade-in</button>
+                    <button class="how-buy__button">Ипотека</button>
+                    <button class="how-buy__button">Полная оплата</button>
+                </div>
+                <div class="how-buy__body bordered-block">
+                    <div class="how-buy__payment-type-descriprion">
+                        <div class="how-buy__payment-type-title">Рассрочка 0%</div>
+                        <p class="how-buy__payment-type-text">Мы готовы обсудить с вами индивидуальные условия
+                            беспроцентной рассрочки на период до одного года без участия банков.</p>
+                        <p class="how-buy__payment-type-text">Оставьте заявку, и мы рассмотрим ваш запрос и найдем
+                            оптимальное решение</p>
+                    </div>
+                    <div class="how-buy__feedback">
+                        <div class="how-buy__feedback-title">Оставьте свои данные</div>
+                        <div class="how-buy__feedback-text">И узнайте, на каких условиях вы получите рассрочку</div>
+                        <form action="" class="feedback-form how-buy__feedback-form">
+                            <input type="text" name="" id="" placeholder="Имя"
+                                class="feedback-form__input how-buy__input bordered-block">
+                            <input type="text" name="" id="" placeholder="Телефон"
+                                class="feedback-form__input how-buy__input bordered-block">
+                            <button class="feedback-form__button how-buy__form-button button">Узнать</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="similar-projects">
+            <div class="similar-projects__container my-container">
+                <div class="similar-projects__title title"><span>Похожие</span> проекты</div>
+            <div class="similar-projects__items">
+                <a href="../pages/project.html" class="similar-projects__item">
+                    <div class="similar-projects__item-body bordered-block">
+                        <div class="similar-projects__img-wrap">
+                            <img src="../img/project-page/similar/item_1.jpg" alt="фото процент" class="similar-projects__img">
+                            <div class="similar-projects__img-option">1 этаж / 94 м²</div>
+                        </div>
+                        <div class="similar-projects__item-title">Проект ЛАЙТ 65, штукатурка</div>
+                    </div>
+                </a>
+                <a href="../pages/project.html" class="similar-projects__item">
+                    <div class="similar-projects__item-body bordered-block">
+                        <div class="similar-projects__img-wrap">
+                            <img src="../img/project-page/similar/item_2.jpg" alt="фото стул" class="similar-projects__img">
+                            <div class="similar-projects__img-option">1 этаж / 94 м²</div>
+                        </div>
+                        <div class="similar-projects__item-title">Проект ЛАЙТ+95, кирпич</div>
+                    </div>
+                </a>
+                <a href="../pages/project.html" class="similar-projects__item">
+                    <div class="similar-projects__item-body bordered-block">
+                        <div class="similar-projects__img-wrap">
+                            <img src="../img/project-page/similar/item_3.jpg" alt="фото сертификат" class="similar-projects__img">
+                            <div class="similar-projects__img-option">1 этаж / 94 м²</div>
+                        </div>
+                        <div class="similar-projects__item-title">Проект ЛАЙТ+95, штукатурка</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        </div>
+        <div class="viewied-projects">
+            <div class="viewied-projects__container my-container">
+                <div class="viewied-projects__title title"><span>Похожие</span> проекты</div>
+            <div class="viewied-projects__items">
+                <a href="../pages/project.html" class="viewied-projects__item">
+                    <div class="viewied-projects__item-body bordered-block">
+                        <div class="viewied-projects__img-wrap">
+                            <img src="../img/project-page/viewed/item_1.jpg" alt="фото процент" class="viewied-projects__img">
+                            <div class="viewied-projects__img-option">1 этаж / 94 м²</div>
+                        </div>
+                        <div class="viewied-projects__item-title">Коттедж «Альфа», 7 300 000  ₽</div>
+                    </div>
+                </a>
+                <a href="../pages/project.html" class="viewied-projects__item">
+                    <div class="viewied-projects__item-body bordered-block">
+                        <div class="viewied-projects__img-wrap">
+                            <img src="../img/project-page/viewed/item_2.jpg" alt="фото стул" class="viewied-projects__img">
+                            <div class="viewied-projects__img-option">1 этаж / 94 м²</div>
+                        </div>
+                        <div class="viewied-projects__item-title">Коттедж «Омега», 8 200 000  ₽</div>
+                    </div>
+                </a>
+                <a href="../pages/project.html" class="viewied-projects__item">
+                    <div class="viewied-projects__item-body bordered-block">
+                        <div class="viewied-projects__img-wrap">
+                            <img src="../img/project-page/viewed/item_3.jpg" alt="фото сертификат" class="viewied-projects__img">
+                            <div class="viewied-projects__img-option">1 этаж / 94 м²</div>
+                        </div>
+                        <div class="viewied-projects__item-title">Коттедж «Сигма», 7 800 000  ₽</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        </div>
+
+        <!-- ПОВТОРЯЕТСЯ НА ВСЕХ СТРАНИЦАХ, МОЖНО ДОБАВИТЬ В ОБЩИЙ ШАБЛОН -->
+        <div class="contacts">
+            <div class="contacts__container">
+                <div class="contacts__info-wrapper my-container">
+                    <div class="contacts__info">
+                        <div class="contacts__title title">Контакты</div>
+                        <div class="contacts__numbers">
+                            <a href="tel:+73472665191" class="contacts__phone">+7 (347) 266-51-91</a>
+                            <a href="tel:+79273335651" class="contacts__phone">+7 (927) 333-56-51</a>
+                        </div>
+                        <a href="mailto:sales.cottagebery@yandex.ru"
+                            class="contacts__email">sales.cottagebery@yandex.ru</a>
+                        <div class="contacts__address">г. Уфа, ул. Блюхера, 2/1 пн-пт 09:00 – 19:00</div>
+                    </div>
+                </div>
+                <div class="contacts__map">
+                    <div id="contacts-map" style="width: 100%; height: 620px;"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container my-container">
+            <div class="footer__contacts">
+                <a href="../../index.html" class="footer__logo-link"><img src="../../img/logo-footer.png" alt="Логотип"
+                        class="footer__logo"></a>
+                <div class="footer__contacts-numbers">
+                    <a href="tel:+73472665191" class="footer__contacts-number-first">+7 (347) 266-51-91</a>
+                    <a href="tel:+79273335651" class="footer__contacts-numbers-second">+7 (927) 333-56-51</a>
+                </div>
+                <div class="footer__contact-address">г. Уфа, ул. Блюхера, 2/1 пн-пт 09:00 – 19:00</div>
+                <a class="footer__email" href="mailto:sales.cottagebery@yandex.ru">sales.cottagebery@yandex.ru</a>
+            </div>
+            <div class="footer__nav">
+                <nav class="footer__menu">
+                    <ul class="footer__menu-items">
+                        <li class="footer__menu-item"><a href="" class="footer__menu-link">О КОМПАНИИ</a></li>
+                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">АКЦИИ</a></li>
+                        <li class="footer__menu-item"><a href="" class="footer__menu-link">ОПЛАТА И ИПОТЕКА</a></li>
+                        <li class="footer__menu-item"><a href="" class="footer__menu-link">ГАЛЕРЕЯ</a></li>
+                        <li class="footer__menu-item"><a href="" class="footer__menu-link">НОВОСТИ</a></li>
+                    </ul>
+                    <ul class="footer__menu-items">
+                        <li class="footer__menu-item"><a href="" class="footer__menu-link">КОТТЕДЖНЫЕ КОМПЛЕКСЫ</a></li>
+                        <li class="footer__menu-item"><a href="" class="footer__menu-link">КРАСНАЯ ПОЛЯНА</a></li>
+                        <li class="footer__menu-item"><a href="" class="footer__menu-link">ГЕОМЕТРИЯ</a></li>
+                        <li class="footer__menu-item"><a href="" class="footer__menu-link">ЛЕРМОНТОВ</a></li>
+                        <li class="footer__menu-item"><a href="" class="footer__menu-link">FAMILY PARK</a></li>
+                        <li class="footer__menu-item"><a href="" class="footer__menu-link">ЭКО-ВИЛЛАДЖ (НАГАЕВО)</a>
+                        </li>
+                        <li class="footer__menu-item"><a href="" class="footer__menu-link">ЭКО-ВИЛЛАДЖ (ШМИДТОВО)</a>
+                        </li>
+                        <li class="footer__menu-item"><a href="" class="footer__menu-link">СТРОИТЕЛЬСТВО НА ВАШЕМ
+                                УЧАСТКЕ</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__socials">
+                <div class="social__links footer__socials-links">
+                    <a href="" class="social__link footer__socials-link"><img
+                            src="../../img/social-media-icons/telegram (Traced).svg" alt="Иконка телеграм"
+                            class="social__link-icon footer__social-link-icon"></a>
+                    <a href="" class="social__link"><img src="../../img/social-media-icons/vk (Traced).svg"
+                            alt="Иконка вк" class="social__link-icon footer__social-link-icon"></a>
+                    <a href="" class="social__link"><img src="../../img/social-media-icons/youtube.svg"
+                            alt="Иконка ютьюб" class="social__link-icon footer__social-link-icon"></a>
+                </div>
+                <button class="footer__button">Обратный звонок</button>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ПОДКЛЮЧЕНИE СКРИПТОВ ДЛЯ РАБОТЫ БИБЛИОТЕК -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://vjs.zencdn.net/8.16.1/video.min.js"></script>
+
+    <!-- СКРИПТ ДЛЯ ХЕДЕРА -->
+    <script>
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.getElementById('navbarNav');
+        const overlay = document.getElementById('overlay');
+        const callbackButton = document.querySelector('.header__mobile-contacts-button');
+        const callModal = document.getElementById('callModal');
+
+        navbarToggler.addEventListener('click', function () {
+            document.body.style.overflow = 'hidden';
+            overlay.style.display = 'block';
+        });
+
+        navbarCollapse.addEventListener('hidden.bs.collapse', function () {
+            document.body.style.overflow = 'visible';
+            overlay.style.display = 'none';
+        });
+
+        callbackButton.addEventListener('click', function () {
+            navbarCollapse.classList.remove('show');
+            navbarToggler.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = 'visible';
+            overlay.style.display = 'none';
+        });
+
+        callModal.addEventListener('hidden.bs.modal', function () {
+            document.body.style.overflow = 'visible';
+            overlay.style.display = 'none';
+        });
+    </script>
+
+    <!-- ПОДКЛЮЧЕНИЕ API КАРТ (ВЗЯЛ СВОЁ API ЯНДЕКСА) -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=f028c4f8-776d-4ba3-b079-94a909b9cca1
+    &lang=ru" type="text/javascript">
+    </script>
+
+    <!-- СКРИПТ ДЛЯ КАРТЫ БЛОКА PROJECT-MAP -->
+    <script type="text/javascript">
+        ymaps.ready(function () {
+            const projectMap = new ymaps.Map(
+                'project-map',
+                {
+                    center: [54.759393, 56.015000],
+                    zoom: 10.5,
+                    controls: [],
+                },
+                { suppressMapOpenBlock: true }
+            )
+
+            function updateMapCenter() {
+                const windowWidth = window.innerWidth;
+                let newCenterMyMap, newZoomMyMap;
+
+                if (windowWidth <= 847) {
+                    newCenterMyMap = [54.733080, 55.960528];
+                    newZoomMyMap = 9;
+                } else {
+                    newCenterMyMap = [54.759393, 56.015000];
+                    newZoomMyMap = 10.5;
+                }
+
+                projectMap.setCenter(newCenterMyMap, newZoomMyMap);
+            }
+
+            // Обновление центра карты при загрузке страницы
+            updateMapCenter();
+
+            // Обновление центра карты при изменении размера окна
+            window.addEventListener('resize', updateMapCenter);
+        });
+    </script>
+
+    <!-- СКРИПТ ДЛЯ КАРТЫ БЛОКА КОНТАКТЫ -->
+    <script type="text/javascript">
+        ymaps.ready(function () {
+            const contactsMap = new ymaps.Map("contacts-map", {
+                center: [54.775006, 56.019577],
+                zoom: 17,
+                controls: [],
+            },
+                { suppressMapOpenBlock: true },
+                {
+                    searchControlProvider: 'yandex#search'
+                }),
+
+                myPlacemarkWithContent2 = new ymaps.Placemark(
+                    [54.775179, 56.022966], {
+                    balloonContent: "г. Уфа, ул. Блюхера, 2/1"
+                }, {
+                    // Опции
+                    preset: "islands#blueFactoryIcon",
+                    iconColor: '#ff0000',
+
+                    // Размеры метки
+                    iconImageSize: [50, 65],
+                    // Смещение левого верхнего угла иконки относительно её "ножки" (точки привязки)
+                    iconImageOffset: [-20, -57],
+
+                });
+            // блокировка передвижения карты
+            contactsMap.behaviors.disable('drag');
+            contactsMap.geoObjects.add(myPlacemarkWithContent2);
+
+            function updateMapCenter() {
+                const windowWidth = window.innerWidth;
+                let newCenterContactsMap, newZoomContactsMap, newCenterMyMap, newZoomMyMap;
+
+                if (windowWidth <= 847) {
+                    newCenterContactsMap = [54.777279, 56.022686];
+                    newZoomContactsMap = 16;
+                }
+                else if (windowWidth <= 500) {
+                    newCenterContactsMap = [54.775979, 56.022966];
+                } else {
+                    newCenterContactsMap = [54.775006, 56.019577];
+                    newZoomContactsMap = 17;
+                }
+
+                contactsMap.setCenter(newCenterContactsMap, newZoomContactsMap);
+            }
+
+            // Обновление центра карты при загрузке страницы
+            updateMapCenter();
+
+            // Обновление центра карты при изменении размера окна
+            window.addEventListener('resize', updateMapCenter);
+        });
+    </script>
+</body>
+
+</html>

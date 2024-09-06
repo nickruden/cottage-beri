@@ -4,13 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Коттеджный комплекс Экко-Виладж</title>
+    <title>Строительство на вашем участке</title>
     <link rel="shortcut icon" href="../../img/favicon.svg" type="image/x-icon">
-
-    <!-- ПОДКЛЮЧЕНИЕ СТИЛЕЙ ДЛЯ VIDEOSJS -->
-    <link href="https://vjs.zencdn.net/8.16.1/video-js.css" rel="stylesheet" />
-    <link href="https://unpkg.com/@videojs/themes@1/dist/city/index.css" rel="stylesheet" />
-    <link href="https://unpkg.com/@videojs/themes@1/dist/sea/index.css" rel="stylesheet">
 
     <!-- ПОДКЛЮЧЕНИЕ СТИЛЕЙ ДЛЯ BOOTSTRAP 5.3.3 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -20,21 +15,20 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <!-- ПОДКЛЮЧЕНИЕ ОБЩИХ СТИЛЕЙ -->
-    <link rel="stylesheet" href="../../css/general/reset.css">
-    <link rel="stylesheet" href="../../css/general/custom.css">
-    <link rel="stylesheet" href="../../css/general/header.css">
-    <link rel="stylesheet" href="../../css/general/footer.css">
-    <link rel="stylesheet" href="../../css/general/stats.css">
-    <link rel="stylesheet" href="../../css/general/contacts.css">
-    <link rel="stylesheet" href="../../css/general/form.css">
-    <link rel="stylesheet" href="../../css/general/buttons.css">
-    <link rel="stylesheet" href="../../css/general/modal.css">
-    <link rel="stylesheet" href="../../css/general/video.css">
-    <link rel="stylesheet" href="../../css/general/top-banner.css">
-    <link rel="stylesheet" href="../../css/general/feedback-block.css">
+    <link rel="stylesheet" href="../css/general/reset.css">
+    <link rel="stylesheet" href="../css/general/custom.css">
+    <link rel="stylesheet" href="../css/general/header.css">
+    <link rel="stylesheet" href="../css/general/footer.css">
+    <link rel="stylesheet" href="../css/general/stats.css">
+    <link rel="stylesheet" href="../css/general/contacts.css">
+    <link rel="stylesheet" href="../css/general/form.css">
+    <link rel="stylesheet" href="../css/general/buttons.css">
+    <link rel="stylesheet" href="../css/general/modal.css">
+    <link rel="stylesheet" href="../css/general/top-banner.css">
+    <link rel="stylesheet" href="../css/general/feedback-block.css">
 
     <!-- ПОДКЛЮЧЕНИЕ СТИЛЕЙ ДЛЯ СТРАНИЦЫ АКЦИЙ -->
-    <link rel="stylesheet" href="../../css/complexes/single-complex-style.css">
+    <link rel="stylesheet" href="../css/construction/style.css">
 
     <!-- ПОДКЛЮЧЕНИЕ ШРИФТА-->
     <link rel="preconnect" href="https://rsms.me/">
@@ -310,18 +304,12 @@
         <div class="top-banner">
             <div class="top-banner__container my-container">
                 <div class="top-banner__left">
-                    <div class="top-banner__title banner-title">Коттеджи Эко-Вилладж <span>в Нагаево</span></div>
-                    <div class="top-banner__text">23 дома эконом-класса в самом центре Нагаево</div>
-                    <button class="top-banner__button button">Скачать каталог проектов <img
-                            src="../../img/download-icon.svg" alt="иконка загрузить"
-                            class="top-banner__button-icon"></button>
-                    <div class="top-banner__catalog-info">
-                        <div class="top-banner__catalog-file-size">Размер файла — 4,3 МБ</div>
-                        <div class="top-banner__catalog-update">каталог обновлён 16.04.24</div>
-                    </div>
+                    <div class="top-banner__title banner-title">Строительство <span>на вашем участке</span></div>
+                    <div class="top-banner__text">Готовые архитектурные решения</div>
+                    <button class="top-banner__button button">Заказать консультацию</button>
                 </div>
                 <div class="top-banner__img-wrap">
-                    <img src="../../img/complexes/single-complex/top-banner.jpg" alt="баннер" class="top-banner__img">
+                    <img src="../img/construction/top-banner.jpg" alt="баннер" class="top-banner__img">
                 </div>
             </div>
         </div>
@@ -343,383 +331,50 @@
                 </div>
             </div>
         </div>
-        <div class="about-complex">
-            <div class="about-complex__container my-container">
-                <div class="about-complex__wrapper bordered-block">
-                    <div class="about-complex__body">
-                        <div class="about-complex__title title">О комплексе</div>
-                        <div class="about-complex__text text-block_fSize_20">ЭКО-ВИЛЛАДЖ в Нагаево — это охраняемый
-                            комплекс с развитой инфраструктурой, современными коммуникациями, отличной экологией и
-                            красивой природой. Подробнее о планировках, комплектациях, актуальных ценах и оплате вы
-                            можете узнать из презентации проекта</div>
-                        <button class="about-complex__button button">Скачать презентацию</button>
-                    </div>
-                    <div class="about-complex__video" data-bs-toggle="modal" data-bs-target="#videoModal">
-                        <img src="../../img/complexes/single-complex/about-complex/about-video-img.jpg" alt=""
-                            class="about-complex__video-poster">
-                        <div class="video-play-button"></div>
-                    </div>
-
-                    <div style="margin: 0 auto;" class="modal fade modal-video" id="videoModal"
-                        aria-labelledby="videoModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-video__modal-dialog"
-                            style="max-width: 90%; width: 90%; height: 90%;">
-                            <div class="modal-content modal-video__modal-content" style="width: 100%;">
-                                <div class="modal-header modal-video__modal-header">
-                                    <div class="modal-video__title title"><span>Что говорят</span> люди
-                                    </div>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div
-                                    class="modal-body modal-video__modal-body d-flex justify-content-center align-items-center">
-                                    <video id="modal-video" class="video-js vjs-theme-city modal-video__video" controls
-                                        preload="auto" data-setup='{"controlBar": {"pictureInPictureToggle": false}}'>
-                                        <source src="../../video/31637395_MotionElements_earth-hologram_preview.mp4"
-                                            type="video/mp4">
-                                        Ваш браузер не поддерживает видео.
-                                    </video>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="complexes-advantages">
-            <div class="complexes-advantages__container my-container">
-                <div class="complexes-advantages__title title"><span>Жизнь</span> в доме своей мечты</div>
-                <div class="complexes-advantages__items">
-                    <div class="complexes-advantages__item">
-                        <div class="complexes-advantages__item-img-wrap">
-                            <img src="../../img/complexes/complexes-advantages/card1.jpg" alt=""
-                                class="complexes-advantages__img">
-                        </div>
+        <div class="constraction-advantages">
+            <div class="constraction-advantages__container my-container">
+                <div class="constraction-advantages__title title">Преимущества <span>типового строительства</span></div>
+                <div class="constraction-advantages__items">
+                    <div class="constraction-advantages__item">
+                        <img src="../img/construction/constraction-advantages/check-mark-icon.png" alt="" class="complexes-advantages__icon">
                         <div class="complexes-advantages__item-body">
-                            <div class="complexes-advantages__item-title">Безопасность</div>
-                            <div class="complexes-advantages__item-desc">Отдельный въезд через шлагбаум и огороженная
-                                охраняемая территория</div>
+                            <div class="complexes-advantages__item-title">Скорость реализации</div>
+                            <div class="complexes-advantages__item-text">Планировка, размеры комнат, количество материалов уже просчитаны — время тратится только на реализацию</div>
                         </div>
                     </div>
-                    <div class="complexes-advantages__item">
-                        <div class="complexes-advantages__item-img-wrap">
-                            <img src="../../img/complexes/complexes-advantages/card2.jpg" alt=""
-                                class="complexes-advantages__img">
-                        </div>
+                    <div class="constraction-advantages__item">
+                        <img src="../img/construction/constraction-advantages/money-icon.png" alt="" class="complexes-advantages__icon">
                         <div class="complexes-advantages__item-body">
-                            <div class="complexes-advantages__item-title">Благоустройство</div>
-                            <div class="complexes-advantages__item-desc">Городские электросети, высокоскоростной
-                                интернет, возможность подключения газа</div>
+                            <div class="complexes-advantages__item-title">Низкая стоимость</div>
+                            <div class="complexes-advantages__item-text">Вам не нужно платить за проектирование <br> и придумывать планировку — просто выбираете то, что понравилось</div>
                         </div>
                     </div>
-                    <div class="complexes-advantages__item">
-                        <div class="complexes-advantages__item-img-wrap">
-                            <img src="../../img/complexes/complexes-advantages/card3.jpg" alt=""
-                                class="complexes-advantages__img">
-                        </div>
+                    <div class="constraction-advantages__item">
+                        <img src="../img/construction/constraction-advantages/check-mark-star-icon.png" alt="" class="complexes-advantages__icon">
                         <div class="complexes-advantages__item-body">
-                            <div class="complexes-advantages__item-title">Комфорт</div>
-                            <div class="complexes-advantages__item-desc">Качественные подъездные <br> пути,
-                                асфальтированная <br> дорога и красивое освещение</div>
+                            <div class="complexes-advantages__item-title">Проверенное решение</div>
+                            <div class="complexes-advantages__item-text">Предлагаемые решения уже обкатаны <br> на практике и исправлены с учетом выявленных неточностей</div>
                         </div>
                     </div>
-                    <div class="complexes-advantages__item">
-                        <div class="complexes-advantages__item-img-wrap">
-                            <img src="../../img/complexes/complexes-advantages/card4.jpg" alt=""
-                                class="complexes-advantages__img">
-                        </div>
+                    <div class="constraction-advantages__item">
+                        <img src="../img/construction/constraction-advantages/shield-icon.png" alt="" class="complexes-advantages__icon">
                         <div class="complexes-advantages__item-body">
-                            <div class="complexes-advantages__item-title">Экологичность</div>
-                            <div class="complexes-advantages__item-desc">Жизнь на природе: <br> рядом река, лес, озеро,
-                                <br> оздоровительный комплекс
-
-                            </div>
+                            <div class="complexes-advantages__item-title">Отсутствие неожиданностей</div>
+                            <div class="complexes-advantages__item-text">Вы заранее знаете, как будет выглядеть ваш будущий дом и даже сможете посмотреть на него в реальности</div>
                         </div>
                     </div>
-                    <div class="complexes-advantages__item">
-                        <div class="complexes-advantages__item-img-wrap">
-                            <img src="../../img/complexes/complexes-advantages/card5.jpg" alt=""
-                                class="complexes-advantages__img">
-                        </div>
+                    <div class="constraction-advantages__item">
+                        <img src="../img/construction/constraction-advantages/coin-icon.png" alt="" class="complexes-advantages__icon">
                         <div class="complexes-advantages__item-body">
-                            <div class="complexes-advantages__item-title">Зонирование</div>
-                            <div class="complexes-advantages__item-desc">Придомового участка <br> площадью в 6 соток
-                                хватит на <br> гараж, баню и красивый сад</div>
+                            <div class="complexes-advantages__item-title">Экономия на стройматериалах</div>
+                            <div class="complexes-advantages__item-text">Готовые решения всегда стоят <br> дешевле за счет высокой точности <br> и выверенности</div>
                         </div>
                     </div>
-                    <div class="complexes-advantages__item">
-                        <div class="complexes-advantages__item-img-wrap">
-                            <img src="../../img/complexes/complexes-advantages/card6.jpg" alt=""
-                                class="complexes-advantages__img">
-                        </div>
+                    <div class="constraction-advantages__item">
+                        <img src="../img/construction/constraction-advantages/book-icon.png" alt="" class="complexes-advantages__icon">
                         <div class="complexes-advantages__item-body">
-                            <div class="complexes-advantages__item-title">Все для детей</div>
-                            <div class="complexes-advantages__item-desc">Детская площадка, кружки, секции, факультативы.
-                                поликлиники, школы и сады</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="gallery">
-            <div class="gallery__container my-container">
-                <div class="gallery__slider">
-                    <div class="swiper gallery__swiper">
-                        <div class="swiper-wrapper gallery__slider-wrapper">
-                            <div class="swiper-slide">
-                                <div class="gallery__slide">
-                                    <img src="../../img/complexes/single-complex/gallery/image_1.jpg" alt="" class="gallery__slide-img">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="gallery__slide">
-                                    <img src="../../img/complexes/single-complex/gallery/image_2.jpg" alt="" class="gallery__slide-img">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="gallery__slide">
-                                    <img src="../../img/complexes/single-complex/gallery/image_3.jpg" alt="" class="gallery__slide-img">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="gallery__slide">
-                                    <img src="../../img/complexes/single-complex/gallery/image_1.jpg" alt="" class="gallery__slide-img">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-pagination gallery__slider-pagination"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="complex-map">
-            <div class="complex-map__containet my-container">
-                <div class="complex-map__title title">Все в пешей доступности</div>
-                <div class="complex-map__map-block" id="complex-map"></div>
-            </div>
-        </div>
-        <div class="cottage-types">
-            <div class="cottage-types__container my-container">
-                <div class="cottage-types__title title">Три вида коттеджей</div>
-                <div class="cottage-types__cottages">
-                    <div class="cottage-types__cottage bordered-block">
-                        <a href="../project.html" class="cottage-types__cottage-link">
-                        <div class="cottage-types__cottage-wrap-img">
-                            <img src="../../img/complexes/single-complex/cottage-types/cottage_1.jpg" alt=""
-                                class="cottage-types__cottage-img">
-                            <div class="cottage-types__img-cottage-options">
-                                <div class="cottage-types__img-cottage-option">3 комнаты</div>
-                                <div class="cottage-types__img-cottage-option">от 3,16 млн ₽</div>
-                            </div>
-                        </div>
-                    </a>
-                        <div class="cottage-types__body">
-                            <a href="../project.html" class="cottage-types__cottage-link">
-                                <div class="cottage-types__cottage-title">Коттедж «Лайт»</div>
-                            </a>
-                            <div class="cottage-types__body-wrapper">
-                                <div class="cottage-types__desc">
-
-                                    <p class="cottage-types__text">Коттедж подойдет как молодоженам, так и семье с
-                                        детьми.
-
-                                        Неотъемлемым
-                                        плюсом всех наших архитектурных решений является выход на террасу из кухни.
-
-                                        Благодаря
-                                        этому
-                                        хозяевам дома будет удобно собирать гостей, проводить летние вечера и детские
-                                        праздники,
-
-                                        готовить на гриле и обедать на свежем воздухе.</p>
-                                    <p class="cottage-types__text">Коттедж площадью 68 м² — прекрасная альтернатива
-                                        трехкомнатной
-                                        квартире. Это 2 большие спальни и просторная гостиная, объединенная с кухней
-                                        площадью
-                                        24.2 м².
-                                    </p>
-                                </div>
-                                <div class="cottage-types__cottage-components">
-                                    <div class="cottage-types__cottage-component-items">
-                                        <div class="cottage-types__cottage-component-item">
-                                            <img src="../../img/complexes/single-complex/cottage-types/cottage-components/component_1.svg"
-                                                alt="" class="cottage-types__cottage-component-icon">
-                                            <div class="cottage-types__cottage-component-text">Внешняя отделка
-                                                <span>облицовочный кирпич</span>
-                                            </div>
-                                        </div>
-                                        <div class="cottage-types__cottage-component-item">
-                                            <img src="../../img/complexes/single-complex/cottage-types/cottage-components/component_2.svg"
-                                                alt="" class="cottage-types__cottage-component-icon">
-                                            <div class="cottage-types__cottage-component-text">Стены
-                                                <span>бетонные блоки</span>
-                                            </div>
-                                        </div>
-                                        <div class="cottage-types__cottage-component-item">
-                                            <img src="../../img/complexes/single-complex/cottage-types/cottage-components/component_3.svg"
-                                                alt="" class="cottage-types__cottage-component-icon">
-                                            <div class="cottage-types__cottage-component-text">Кровля
-                                                <span>металлочерепица</span>
-                                            </div>
-                                        </div>
-                                        <div class="cottage-types__cottage-component-item">
-                                            <img src="../../img/complexes/single-complex/cottage-types/cottage-components/component_4.svg"
-                                                alt="" class="cottage-types__cottage-component-icon">
-                                            <div class="cottage-types__cottage-component-text">Фундамент
-                                                <span>свайный ростверк</span>
-                                            </div>
-                                        </div>
-                                        <div class="cottage-types__cottage-component-item">
-                                            <img src="../../img/complexes/single-complex/cottage-types/cottage-components/component_5.svg"
-                                                alt="" class="cottage-types__cottage-component-icon">
-                                            <div class="cottage-types__cottage-component-text">Внутренняя отделка
-                                                <span>черновая, white box, чистовая</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button class="cottage-types__button button">Забронировать дом</button>
-                                    <a href="../project.html" class="cottage-types__link button button_link">Подробнее</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cottage-types__cottage bordered-block">
-                        <div class="cottage-types__body">
-                            <div class="cottage-types__cottage-title">Коттедж «Оптима»</div>
-                            <div class="cottage-types__body-wrapper">
-                                <div class="cottage-types__desc">
-                                    <p class="cottage-types__text">Коттедж площадью 85 м²состоит из 3 спален и
-                                        просторной жилой зоны площадью 27 м², включающей кухню, которая может быть как
-                                        выделена, так и объединена с залом.</p>
-                                    <p class="cottage-types__text">Из зала предусмотрен выход на террасу. Ваша семья
-                                        оценит э alt="" то преимущество – детские праздники, летние вечера с друзьями и
-                                        даже
-                                        прос тые обеды обретут новые краски и надолго останутся в памяти. Этот проект
-                                        оптимале н для семьи с детьми, третья спальня может быть гостевой или комнатой
-                                        ваших родителей.
-                                    </p>
-                                </div>
-                                <div class="  cottage-types__cottage-components">
-                                    <div class="  alt="" cottage-types__cottage-components-inner">
-                                        <div class="cottage-types__cottage-component-items">
-                                            <div class="cottage-types__cottage-component-item">
-                                                <img src="../../img/complexes/single-complex/cottage-types/cottage-components/component_1.svg"
-                                                    alt="" class="cottage-types__cottage-component-icon">
-                                                <div class="cottage-types__cottage-component-text">Внешняя отделка
-                                                    <span>облицовочный кирпич</span>
-                                                    alt=""
-                                                </div>
-                                            </div>
-                                            <div class="cottage-types__cottage-component-item">
-                                                <img src="../../img/complexes/single-complex/cottage-types/cottage-components/component_2.svg"
-                                                    alt="" class="cottage-types__cottage-component-icon">
-                                                <div class="cottage-types__cottage-component-text">Стены
-                                                    <span>бетонные блоки</span>
-                                                    alt=""
-                                                </div>
-                                            </div>
-                                            <div class="cottage-types__cottage-component-item">
-                                                <img src="../../img/complexes/single-complex/cottage-types/cottage-components/component_3.svg"
-                                                    alt="" class="cottage-types__cottage-component-icon">
-                                                <div class="cottage-types__cottage-component-text">Кровля
-                                                    <span>металлочерепица</span>
-                                                    alt=""
-                                                </div>
-                                            </div>
-                                            <div class="cottage-types__cottage-component-item">
-                                                <img src="../../img/complexes/single-complex/cottage-types/cottage-components/component_4.svg"
-                                                    alt="" class="cottage-types__cottage-component-icon">
-                                                <div class="cottage-types__cottage-component-text">Фундамент
-                                                    <span>свайный ростверк</span>
-                                                </div>
-                                            </div>
-                                            <div class="cottage-types__cottage-component-item">
-                                                <img src="../../img/complexes/single-complex/cottage-types/cottage-components/component_5.svg"
-                                                    alt="" class="cottage-types__cottage-component-icon">
-                                                <div class="cottage-types__cottage-component-text">Внутренняя отделка
-                                                    <span>черновая, white box, чистовая</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <button class="cottage-types__button button">Забронировать дом</button>
-                                        <a href="" class="cottage-types__link button button_link">Подробнее</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cottage-types__cottage-wrap-img">
-                            <img src="../../img/complexes/single-complex/cottage-types/cottage_2.jpg" alt=""
-                                class="cottage-types__cottage-img">
-                            <div class="cottage-types__img-cottage-options">
-                                <div class="cottage-types__img-cottage-option">4 комнаты</div>
-                                <div class="cottage-types__img-cottage-option">от 3,65 млн ₽</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cottage-types__cottage bordered-block">
-                        <div class="cottage-types__cottage-wrap-img">
-                            <img src="../../img/complexes/single-complex/cottage-types/cottage_3.jpg" alt=""
-                                class="cottage-types__cottage-img">
-                            <div class="cottage-types__img-cottage-options">
-                                <div class="cottage-types__img-cottage-option">3 комнаты</div>
-                                <div class="cottage-types__img-cottage-option">от 3,16 млн ₽</div>
-                            </div>
-                        </div>
-                        <div class="cottage-types__body">
-                            <div class="cottage-types__cottage-title">Коттедж «Фэмели»</div>
-                            <div class="cottage-types__body-wrapper">
-                                <div class="cottage-types__desc">
-                                    <p class="cottage-types__text">Просторный двухэтажный коттедж площадью 105 м² —
-                                        образец комфорта и функциональности. Продуманная планировка включает жилую зону
-                                        гостиной и спальни на первом этаже, которую вы можете использовать как кабинет,
-                                        гостевую, домашний офис, и три спальни на втором этаже.</p>
-                                    <p c lass="cottage-types__text">Такая планировка позволит всем иметь свое жизненное
-                                        пространство и собираться вместе на уютные семейные вечера. Идеальное решение
-                                        для современных родителей и детей и ценителей двухэтажного домостроения.
-                                    </p>
-                                </div>
-                                <div class="cottage-types__cottage-components">
-                                    <div class="cottage-types__cottage-component-items">
-                                        <div class="cottage-types__cottage-component-item">
-                                            <img src="../../img/complexes/single-complex/cottage-types/cottage-components/component_1.svg"
-                                                alt="" class="cottage-types__cottage-component-icon">
-                                            <div class="cottage-types__cottage-component-text">Внешняя отделка
-                                                <span>облицовочный кирпич</span>
-                                            </div>
-                                        </div>
-                                        <div class="cottage-types__cottage-component-item">
-                                            <img src="../../img/complexes/single-complex/cottage-types/cottage-components/component_2.svg"
-                                                alt="" class="cottage-types__cottage-component-icon">
-                                            <div class="cottage-types__cottage-component-text">Стены
-                                                <span>бетонные блоки</span>
-                                            </div>
-                                        </div>
-                                        <div class="cottage-types__cottage-component-item">
-                                            <img src="../../img/complexes/single-complex/cottage-types/cottage-components/component_3.svg"
-                                                alt="" class="cottage-types__cottage-component-icon">
-                                            <div class="cottage-types__cottage-component-text">Кровля
-                                                <span>металлочерепица</span>
-                                            </div>
-                                        </div>
-                                        <div class="cottage-types__cottage-component-item">
-                                            <img src="../../img/complexes/single-complex/cottage-types/cottage-components/component_4.svg"
-                                                alt="" class="cottage-types__cottage-component-icon">
-                                            <div class="cottage-types__cottage-component-text">Фундамент
-                                                <span>свайный ростверк</span>
-                                            </div>
-                                        </div>
-                                        <div class="cottage-types__cottage-component-item">
-                                            <img src="../../img/complexes/single-complex/cottage-types/cottage-components/component_5.svg"
-                                                alt="" class="cottage-types__cottage-component-icon">
-                                            <div class="cottage-types__cottage-component-text">Внутренняя отделка
-                                                <span>черновая, white box, чистовая</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button class="cottage-types__button button">Забронировать дом</button>
-                                    <a href="" class="cottage-types__link button button_link">Подробнее</a>
-                                </div>
-                            </div>
+                            <div class="complexes-advantages__item-title">Большой выбор</div>
+                            <div class="complexes-advantages__item-text">Мы предлагаем 30 готовых решений. <br> Среди такого разнообразия вы <br> непременно найдете что-нибудь по душе</div>
                         </div>
                     </div>
                 </div>
@@ -773,7 +428,7 @@
         </div>
         <div class="how-buy">
             <div class="how-buy__container my-container">
-                <div class="how-buy__title title">Как <span>купить дом</span> в Уфе</div>
+                <div class="how-buy__title title">Как заказать <span>строительство</span></div>
                 <div class="how-buy__payment-types">
                     <button class="how-buy__button how-buy__button_active">Рассрочка</button>
                     <button class="how-buy__button">Trade-in</button>
@@ -802,21 +457,74 @@
                 </div>
             </div>
         </div>
-        <div class="master-plan">
-            <div class="master-plan__container my-container">
-                <div class="master-plan__title title">Генплан поселка <span>Эко-Вилладж</span></div>
-                <div class="master-plan__doc"></div>
+        <div class="why-us">
+            <div class="why-us__container my-container">
+                <div class="why-us__title title">Почему мы</div>
+                <div class="why-us__cards">
+                    <div class="why-us__card bordered-block">
+                        <div class="why-us__card-body">
+                            <div class="why-us__card-title">Профессионально</div>
+                            <ul class="why-us__card-list">
+                                <li class="why-us__card-list-item">проверенные технологии</li>
+                                <li class="why-us__card-list-item">материалы по ГОСТу и СНИПу</li>
+                                <li class="why-us__card-list-item">точные сметы для каждого этапа строительства</li>
+                            </ul>
+                        </div>
+                        <div class="why-us__card-img-wrap">
+                            <img src="../img/construction/constraction-why-us/item_1.jpg" alt="" class="why-us__card-img">
+                        </div>
+                    </div>
+                    <div class="why-us__card bordered-block">
+                        <div class="why-us__card-body">
+                            <div class="why-us__card-title">Надежно</div>
+                            <ul class="why-us__card-list">
+                                <li class="why-us__card-list-item">работают специалисты с опытом более 10 лет</li>
+                                <li class="why-us__card-list-item">независимый технадзор</li>
+                                <li class="why-us__card-list-item">эскроу-счета — безопасная сделка</li>
+                            </ul>
+                        </div>
+                        <div class="why-us__card-img-wrap">
+                            <img src="../img/construction/constraction-why-us/item_2.jpg" alt="" class="why-us__card-img">
+                        </div>
+                    </div>
+                    <div class="why-us__card bordered-block">
+                        <div class="why-us__card-body">
+                            <div class="why-us__card-title">Недорого</div>
+                            <ul class="why-us__card-list">
+                                <li class="why-us__card-list-item">доступная стоимость, ипотека </li>
+                                <li class="why-us__card-list-item">три варианта отделки — выбирайте под свой бюджет</li>
+                                <li class="why-us__card-list-item">собственная спецтехника — никаких субподрядчиков</li>
+                            </ul>
+                        </div>
+                        <div class="why-us__card-img-wrap">
+                            <img src="../img/construction/constraction-why-us/item_4.jpg" alt="" class="why-us__card-img">
+                        </div>
+                    </div>
+                    <div class="why-us__card bordered-block">
+                        <div class="why-us__card-body">
+                            <div class="why-us__card-title">Удобно</div>
+                            <ul class="why-us__card-list">
+                                <li class="why-us__card-list-item">соблюдаем сроки, без задержек и переносов</li>
+                                <li class="why-us__card-list-item">продуманные эргономичные планировки</li>
+                                <li class="why-us__card-list-item">строим под ключ по запросу</li>
+                            </ul>
+                        </div>
+                        <div class="why-us__card-img-wrap">
+                            <img src="../img/construction/constraction-why-us/item_3.jpg" alt="" class="why-us__card-img">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="feedback">
             <div class="feedback__container my-container">
                 <div class="feedback__wrapper bordered-block">
                     <div class="feedback__img-wrap">
-                        <img src="../../img/feedback/feedback-block-img.jpg" alt="" class="feedback__img">
+                        <img src="../img/feedback/feedback-block-img.jpg" alt="" class="feedback__img">
                     </div>
                     <div class="feedback__body">
-                        <div class="feedback__title title">Сомневаетесь? Посмотрите сами!</div>
-                        <div class="feedback__text">Запишитесь на экскурсию, и мы покажем вам территорию коттеджного комплекса, земельный участок и дом с понравившейся планировкой</div>
+                        <div class="feedback__title title">Хотите посмотреть, как выглядят наши дома изнутри?</div>
+                        <div class="feedback__text">Оставьте свои контактные данные, и мы вам перезвоним в ближайшее время, чтобы пригласить на бесплатную экскурсию.</div>
                         <form action="" class="feedback-form">
                             <input type="text" name="" id="" placeholder="Имя"
                                 class="feedback-form__input feedback__input-name bordered-block">
@@ -954,27 +662,6 @@
             var videoPlayer = videojs('modal-video');
             videoPlayer.pause();
             videoPlayer.currentTime(0);
-        });
-    </script>
-
-    <!-- СКРИПТ ДЛЯ СЛАЙДЕРА БЛОКА GALLERY -->
-    <script>
-        const swiper_gallery = new Swiper('.gallery__swiper', {
-            direction: 'horizontal',
-            loop: true,
-            slidesPerView: 2, // Устанавливаем количество слайдов на вид автоматически
-            spaceBetween: 20,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-
-            breakpoints: {
-                701:
-                {
-                    slidesPerView: 3,
-                }
-            }
         });
     </script>
 

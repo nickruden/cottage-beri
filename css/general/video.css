@@ -8,6 +8,7 @@
     transform: translate(-50%, -50%);
     background: rgba(234, 235, 229, 0.35);
     backdrop-filter: blur(45px);
+    cursor: pointer;
     border-radius: 50%;
     transition: background .3s;
 }
