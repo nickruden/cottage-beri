@@ -340,6 +340,7 @@
 }
 
 .cottage-types__cottage-wrap-img {
+    height: 100%;
     position: relative;
 }
 

@@ -7,6 +7,11 @@
     <title>Как купить</title>
     <link rel="shortcut icon" href="../img/favicon.svg" type="image/x-icon">
 
+    <!-- ПОДКЛЮЧЕНИЕ СТИЛЕЙ ДЛЯ VIDEOSJS -->
+    <link href="https://vjs.zencdn.net/8.16.1/video-js.css" rel="stylesheet" />
+    <link href="https://unpkg.com/@videojs/themes@1/dist/city/index.css" rel="stylesheet" />
+    <link href="https://unpkg.com/@videojs/themes@1/dist/sea/index.css" rel="stylesheet">
+
     <!-- ПОДКЛЮЧЕНИЕ СТИЛЕЙ ДЛЯ BOOTSTRAP 5.3.3 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -28,7 +33,7 @@
     <link rel="stylesheet" href="../css/general/feedback-block.css">
 
     <!-- ПОДКЛЮЧЕНИЕ СТИЛЕЙ ДЛЯ СТРАНИЦЫ АКЦИЙ -->
-    <link rel="stylesheet" href="../css/payment/payment-style.css">
+    <link rel="stylesheet" href="../css/payment/style.css">
 
     <!-- ПОДКЛЮЧЕНИЕ ШРИФТА-->
     <link rel="preconnect" href="https://rsms.me/">
@@ -243,10 +248,10 @@
                                         <div class="header__socials social">
                                             <div class="social__links header__social-links">
                                                 <a href="" class="social__link header__social-link"><img
-                                                        src="../img/social-media-icons/telegram (Traced).svg"
+                                                        src="../img/social-media-icons/telegram.svg"
                                                         alt="Иконка телеграм" class="social__link-icon"></a>
                                                 <a href="" class="social__link header__social-link"><img
-                                                        src="../img/social-media-icons/vk (Traced).svg" alt="Иконка вк"
+                                                        src="../img/social-media-icons/vk.svg" alt="Иконка вк"
                                                         class="social__link-icon"></a>
                                                 <a href="" class="social__link header__social-link"><img
                                                         src="../img/social-media-icons/youtube.svg" alt="Иконка ютьюб"
@@ -293,6 +298,7 @@
     <div class="overlay" id="overlay"></div>
 
     <main class="main">
+        <!-- ПОВТОРЯЕТСЯ НА ВСЕХ СТРАНИЦАХ КРОМЕ ГЛАВНОЙ(но иногда есть различия в контенте - вынес в отдельный стиль) -->
         <div class="top-banner">
             <div class="top-banner__container my-container">
                 <div class="top-banner__left">
@@ -315,10 +321,12 @@
                     <button class="top-banner__button button">Узнать больше</button>
                 </div>
                 <div class="top-banner__img-wrap">
-                    <img src="../img/payment-page/top-nanner/banner.jpg" alt="баннер" class="top-banner__img">
+                    <img src="../img/pages-img/payment/top-nanner/banner.jpg" alt="баннер" class="top-banner__img">
                 </div>
             </div>
         </div>
+
+        <!-- ПОВТОРЯЕТЯ НА 8 СТРАНИЦАХ - вынес в отдельный стиль -->
         <div class="stats">
             <div class="stats__container my-container">
                 <div class="stats__items">
@@ -337,6 +345,7 @@
                 </div>
             </div>
         </div>
+
         <div class="advantage-speed">
             <div class="advantage-speed__container my-container">
                 <div class="advantage-speed__title title"><span>Быстро</span></div>
@@ -344,7 +353,7 @@
                     <div href="./stocks/single-stock.html" class="advantage-speed__item">
                         <div class="advantage-speed__item-body">
                             <div class=advantage-speed__img-wrap">
-                                <img src="../img/payment-page/avantage-speed/card1.jpg" alt="фото стол с журналом" class="advantage-speed__img">
+                                <img src="../img/pages-img/payment/avantage-speed/card1.jpg" alt="фото стол с журналом" class="advantage-speed__img">
                             </div>
                             <div class="advantage-speed__item-text">мы сразу информируем вас о всех условиях сделки</div>
                         </div>
@@ -352,7 +361,7 @@
                     <div href="./stocks/single-stock.html" class="advantage-speed__item">
                         <div class="advantage-speed__item-body">
                             <div class="advantage-speed__img-wrap">
-                                <img src="../img/payment-page/avantage-speed/card2.jpg" alt="фото девушка улыбается" class="advantage-speed__img">
+                                <img src="../img/pages-img/payment/avantage-speed/card2.jpg" alt="фото девушка улыбается" class="advantage-speed__img">
                             </div>
                             <div class="advantage-speed__item-text">к вам прикрепляется личный менеджер, который будет всегда на связи</div>
                         </div>
@@ -360,7 +369,7 @@
                     <div href="./stocks/single-stock.html" class="advantage-speed__item">
                         <div class="advantage-speed__item-body">
                             <div class="advantage-speed__img-wrap">
-                                <img src="../img/payment-page/avantage-speed/card3.jpg" alt="фото семья сидит на крыльце" class="advantage-speed__img">
+                                <img src="../img/pages-img/payment/avantage-speed/card3.jpg" alt="фото семья сидит на крыльце" class="advantage-speed__img">
                             </div>
                             <div class="advantage-speed__item-text">на одобрение заявки у банка уходит от трех дней</div>
                         </div>
@@ -374,20 +383,20 @@
                     <div class="advantage-reliable__title title"><span>Надежно</span></div>
                     <div class="advantage-reliable__text">Наша компания аккредитована во всех популярных у населения банках
                     </div>
-                    <div class="advantage-reliable__left-img-wrap"><img src="../img/payment-page/reliable/sber-logo.jpg" alt="логотип сбербанк"
+                    <div class="advantage-reliable__left-img-wrap"><img src="../img/pages-img/payment/reliable/sber-logo.jpg" alt="логотип сбербанк"
                             class="advantage-reliable__img"></div>
                 </div>
                 <div class="advantage-reliable__banks-logo">
                     <div class="advantage-reliable__banks-logo-group">
-                        <div class="advantage-reliable__banks-img-wrap"><img src="../img/payment-page/reliable/vtb-logo.png" alt="логотип втб банк"
+                        <div class="advantage-reliable__banks-img-wrap"><img src="../img/pages-img/payment/reliable/vtb-logo.png" alt="логотип втб банк"
                                 class="advantage-reliable__img"></div>
-                        <div class="advantage-reliable__banks-img-wrap"><img src="../img/payment-page/reliable/alpha-bank-logo.png" alt="логотип альфа банк"
+                        <div class="advantage-reliable__banks-img-wrap"><img src="../img/pages-img/payment/reliable/alpha-bank-logo.png" alt="логотип альфа банк"
                                 class="advantage-reliable__img"></div>
                     </div>
                     <div class="advantage-reliable__banks-logo-group">
-                        <div class="advantage-reliable__banks-img-wrap"><img src="../img/payment-page/reliable/rosbank-logo.png" alt="логотип росбанк"
+                        <div class="advantage-reliable__banks-img-wrap"><img src="../img/pages-img/payment/reliable/rosbank-logo.png" alt="логотип росбанк"
                                 class="advantage-reliable__img"></div>
-                        <div class="advantage-reliable__banks-img-wrap"><img src="../img/payment-page/reliable/rsxb-logo.png" alt="логотип рсхб"
+                        <div class="advantage-reliable__banks-img-wrap"><img src="../img/pages-img/payment/reliable/rsxb-logo.png" alt="логотип рсхб"
                                 class="advantage-reliable__img"></div>
                     </div>
                 </div>
@@ -435,7 +444,7 @@
                             </ul>
                         </div>
                         <div class="mortgage-types__card-img-wrap">
-                            <img src="../img/payment-page/mortgage-types/card1.jpg" alt="" class="mortgage-types__card-img">
+                            <img src="../img/pages-img/payment/mortgage-types/card1.jpg" alt="" class="mortgage-types__card-img">
                         </div>
                     </div>
                     <div class="mortgage-types__card bordered-block">
@@ -448,7 +457,7 @@
                             </ul>
                         </div>
                         <div class="mortgage-types__card-img-wrap">
-                            <img src="../img/payment-page/mortgage-types/card2.jpg" alt="" class="mortgage-types__card-img">
+                            <img src="../img/pages-img/payment/mortgage-types/card2.jpg" alt="" class="mortgage-types__card-img">
                         </div>
                     </div>
                     <div class="mortgage-types__card bordered-block">
@@ -461,7 +470,7 @@
                             </ul>
                         </div>
                         <div class="mortgage-types__card-img-wrap">
-                            <img src="../img/payment-page/mortgage-types/card3.jpg" alt="" class="mortgage-types__card-img">
+                            <img src="../img/pages-img/payment/mortgage-types/card3.jpg" alt="" class="mortgage-types__card-img">
                         </div>
                     </div>
                     <div class="mortgage-types__card bordered-block">
@@ -474,7 +483,7 @@
                             </ul>
                         </div>
                         <div class="mortgage-types__card-img-wrap">
-                            <img src="../img/payment-page/mortgage-types/card4.jpg" alt="" class="mortgage-types__card-img">
+                            <img src="../img/pages-img/payment/mortgage-types/card4.jpg" alt="" class="mortgage-types__card-img">
                         </div>
                     </div>
                 </div>
@@ -555,7 +564,7 @@
                         <a href="" class="trade-in__link button button_link">Узнать больше о trade-in</a>
                     </div>
                     <div class="traid-in__img-wrap">
-                        <img src="../img/payment-page/trade-in/traid-in-img.jpg" alt="" class="traid-in__img">
+                        <img src="../img/pages-img/payment/trade-in/traid-in-img.jpg" alt="" class="traid-in__img">
                     </div>
                 </div>
             </div>
@@ -566,19 +575,19 @@
                     <div class="payment__title title"><span>В результате вы можете купить </span> дом в Уфе</div>
                     <div class="payment__items">
                         <div class="payment__item">
-                            <img src="../img/payment/cash-icon.svg" alt="" class="payment__icon">
+                            <img src="../img/payment-icons/cash-icon.svg" alt="" class="payment__icon">
                             <div class="payment__name">Наличными</div>
                         </div>
                         <div class="payment__item">
-                            <img src="../img/payment/mortgage-icon.svg" alt="" class="payment__icon">
+                            <img src="../img/payment-icons/mortgage-icon.svg" alt="" class="payment__icon">
                             <div class="payment__name">В ипотеку</div>
                         </div>
                         <div class="payment__item">
-                            <img src="../img/payment/trade-in-icon.svg" alt="" class="payment__icon">
+                            <img src="../img/payment-icons/trade-in-icon.svg" alt="" class="payment__icon">
                             <div class="payment__name">Trade-in</div>
                         </div>
                         <div class="payment__item">
-                            <img src="../img/payment/installment-plan-icon.svg" alt="" class="payment__icon">
+                            <img src="../img/payment-icons/installment-plan-icon.svg" alt="" class="payment__icon">
                             <div class="payment__name">В рассрочку 0%</div>
                         </div>
                     </div>
@@ -593,7 +602,7 @@
                     <a href="./stocks/single-stock.html" class="stock__item">
                         <div class="stock__item-body">
                             <div class="stock__img-wrap">
-                                <img src="../img/main/stocks/1.png" alt="фото процент" class="stock__img">
+                                <img src="../img/pages-img/main/stocks/1.png" alt="фото процент" class="stock__img">
                             </div>
                             <div class="stock__item-title">Платим ипотеку за вас</div>
                         </div>
@@ -601,7 +610,7 @@
                     <a href="./stocks/single-stock.html" class="stock__item">
                         <div class="stock__item-body">
                             <div class="stock__img-wrap">
-                                <img src="../img/main/stocks/2.png" alt="фото стул" class="stock__img">
+                                <img src="../img/pages-img/main/stocks/2.png" alt="фото стул" class="stock__img">
                             </div>
                             <div class="stock__item-title">Мебель в подарок</div>
                         </div>
@@ -609,7 +618,7 @@
                     <a href="./stocks/single-stock.html" class="stock__item">
                         <div class="stock__item-body">
                             <div class="stock__img-wrap">
-                                <img src="../img/main/stocks/3.png" alt="фото сертификат" class="stock__img">
+                                <img src="../img/pages-img/main/stocks/3.png" alt="фото сертификат" class="stock__img">
                             </div>
                             <div class="stock__item-title">Сертификат 100 000 ₽</div>
                         </div>
@@ -622,7 +631,7 @@
                                 <a href="./stocks/single-stock.html" class="stock__item">
                                     <div class="stock__item-body">
                                         <div class="stock__img-wrap">
-                                            <img src="../img/main/stocks/1.png" alt="фото процент" class="stock__img">
+                                            <img src="../img/pages-img/main/stocks/1.png" alt="фото процент" class="stock__img">
                                         </div>
                                         <div class="stock__item-title">Платим ипотеку за вас</div>
                                     </div>
@@ -632,7 +641,7 @@
                                 <a href="./stocks/single-stock.html" class="stock__item">
                                     <div class="stock__item-body">
                                         <div class="stock__img-wrap">
-                                            <img src="../img/main/stocks/2.png" alt="фото стул" class="stock__img">
+                                            <img src="../img/pages-img/main/stocks/2.png" alt="фото стул" class="stock__img">
                                         </div>
                                         <div class="stock__item-title">Мебель в подарок</div>
                                     </div>
@@ -642,7 +651,7 @@
                                 <a href="./stocks/single-stock.html" class="stock__item">
                                     <div class="stock__item-body">
                                         <div class="stock__img-wrap">
-                                            <img src="../img/main/stocks/3.png" alt="фото сертификат" class="stock__img">
+                                            <img src="../img/pages-img/main/stocks/3.png" alt="фото сертификат" class="stock__img">
                                         </div>
                                         <div class="stock__item-title">Сертификат 100 000 ₽</div>
                                     </div>
@@ -652,9 +661,11 @@
                         <div class="swiper-pagination stocks__swiper-pagination"></div>
                     </div>
                 </div>
-                <a href="./pages/stocks/stocks.html" class="stocks__link button button_link">Все акции</a>
+                <a href="./stocks/stocks.html" class="stocks__link button button_link">Все акции</a>
             </div>
         </div>
+
+        <!-- ПОВТОРЯЕТСЯ НА 8 СТРАНИЦАХ(но есть различия в тексте - вынес в отдельный стиль) -->
         <div class="feedback">
             <div class="feedback__container my-container">
                 <div class="feedback__wrapper bordered-block">
@@ -700,7 +711,7 @@
     <footer class="footer">
         <div class="footer__container my-container">
             <div class="footer__contacts">
-                <a href="../../index.html" class="footer__logo-link"><img src="../img/logo-footer.png" alt="Логотип"
+                <a href="../index.html" class="footer__logo-link"><img src="../img/logo-footer.png" alt="Логотип"
                         class="footer__logo"></a>
                 <div class="footer__contacts-numbers">
                     <a href="tel:+73472665191" class="footer__contacts-number-first">+7 (347) 266-51-91</a>
@@ -712,21 +723,21 @@
             <div class="footer__nav">
                 <nav class="footer__menu">
                     <ul class="footer__menu-items">
-                        <li class="footer__menu-item"><a href="" class="footer__menu-link">О КОМПАНИИ</a></li>
-                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">АКЦИИ</a></li>
-                        <li class="footer__menu-item"><a href="" class="footer__menu-link">ОПЛАТА И ИПОТЕКА</a></li>
-                        <li class="footer__menu-item"><a href="" class="footer__menu-link">ГАЛЕРЕЯ</a></li>
-                        <li class="footer__menu-item"><a href="" class="footer__menu-link">НОВОСТИ</a></li>
+                        <li class="footer__menu-item"><a href="./about.html" class="footer__menu-link">О КОМПАНИИ</a></li>
+                        <li class="footer__menu-item"><a href="./stocks/stocks.html" class="footer__menu-link">АКЦИИ</a></li>
+                        <li class="footer__menu-item"><a href="./payment.html" class="footer__menu-link">ОПЛАТА И ИПОТЕКА</a></li>
+                        <li class="footer__menu-item"><a href="./photo-and-video.html" class="footer__menu-link">ГАЛЕРЕЯ</a></li>
+                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">НОВОСТИ</a></li>
                     </ul>
                     <ul class="footer__menu-items">
-                        <li class="footer__menu-item"><a href="" class="footer__menu-link">КОТТЕДЖНЫЕ КОМПЛЕКСЫ</a></li>
-                        <li class="footer__menu-item"><a href="" class="footer__menu-link">КРАСНАЯ ПОЛЯНА</a></li>
-                        <li class="footer__menu-item"><a href="" class="footer__menu-link">ГЕОМЕТРИЯ</a></li>
-                        <li class="footer__menu-item"><a href="" class="footer__menu-link">ЛЕРМОНТОВ</a></li>
-                        <li class="footer__menu-item"><a href="" class="footer__menu-link">FAMILY PARK</a></li>
-                        <li class="footer__menu-item"><a href="" class="footer__menu-link">ЭКО-ВИЛЛАДЖ (НАГАЕВО)</a></li>
-                        <li class="footer__menu-item"><a href="" class="footer__menu-link">ЭКО-ВИЛЛАДЖ (ШМИДТОВО)</a></li>
-                        <li class="footer__menu-item"><a href="" class="footer__menu-link">СТРОИТЕЛЬСТВО НА ВАШЕМ
+                        <li class="footer__menu-item"><a href="./complexes/complexes.html" class="footer__menu-link">КОТТЕДЖНЫЕ КОМПЛЕКСЫ</a></li>
+                        <li class="footer__menu-item"><a href="./complexes/single-complex.html" class="footer__menu-link">КРАСНАЯ ПОЛЯНА</a></li>
+                        <li class="footer__menu-item"><a href="./complexes/single-complex.html" class="footer__menu-link">ГЕОМЕТРИЯ</a></li>
+                        <li class="footer__menu-item"><a href="./complexes/single-complex.html" class="footer__menu-link">ЛЕРМОНТОВ</a></li>
+                        <li class="footer__menu-item"><a href="./complexes/single-complex.html" class="footer__menu-link">FAMILY PARK</a></li>
+                        <li class="footer__menu-item"><a href="./complexes/single-complex.html" class="footer__menu-link">ЭКО-ВИЛЛАДЖ (НАГАЕВО)</a></li>
+                        <li class="footer__menu-item"><a href="./complexes/single-complex.html" class="footer__menu-link">ЭКО-ВИЛЛАДЖ (ШМИДТОВО)</a></li>
+                        <li class="footer__menu-item"><a href="./construction.html" class="footer__menu-link">СТРОИТЕЛЬСТВО НА ВАШЕМ
                                 УЧАСТКЕ</a>
                         </li>
                     </ul>
@@ -735,14 +746,14 @@
             <div class="footer__socials">
                 <div class="social__links footer__socials-links">
                     <a href="" class="social__link footer__socials-link"><img
-                            src="../img/social-media-icons/telegram (Traced).svg" alt="Иконка телеграм"
+                            src="../img/social-media-icons/telegram.svg" alt="Иконка телеграм"
                             class="social__link-icon footer__social-link-icon"></a>
-                    <a href="" class="social__link"><img src="../img/social-media-icons/vk (Traced).svg" alt="Иконка вк"
+                    <a href="" class="social__link"><img src="../img/social-media-icons/vk.svg" alt="Иконка вк"
                             class="social__link-icon footer__social-link-icon"></a>
                     <a href="" class="social__link"><img src="../img/social-media-icons/youtube.svg" alt="Иконка ютьюб"
                             class="social__link-icon footer__social-link-icon"></a>
                 </div>
-                <button class="footer__button">Обратный звонок</button>
+                <button class="footer__button" data-bs-toggle="modal" data-bs-target="#callModal">Обратный звонок</button>
             </div>
         </div>
     </footer>
@@ -754,6 +765,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://vjs.zencdn.net/8.16.1/video.min.js"></script>
 
     <!-- СКРИПТ ДЛЯ ХЕДЕРА -->
     <script>
