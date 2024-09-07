@@ -21,6 +21,7 @@
     background: #F4F4F4;
     justify-content: center;
     align-items: center;
+    user-select: none;
 }
 
 .button:hover {
