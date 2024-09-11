@@ -53,7 +53,7 @@ iframe {
 
 input:focus {
     outline: none;
-    box-shadow: 0px 0px 8px 1px #e6e6e6a9;
+    border-color: #838383c7;
 }
 
 button {

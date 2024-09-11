@@ -1,12 +1,18 @@
-.top-banner__left {
-    display: flex;
-}
-.top-banner__left-inner {
-    align-self: center;
+.top-banner__title {
+    max-width: 517px;
+    line-height: 66px;
 }
 .top-banner__text {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+}
+.top-banner__button {
+    max-width: 399px;
 }
 .top-banner__img-wrap {
     max-height: 500px;
+}
+
+
+.feedback__text {
+    font-size: 18px;
 }

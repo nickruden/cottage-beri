@@ -1,6 +1,6 @@
 /* 1 блок */
 .top-block {
-    padding-top: 39px;
+    padding-top: calc(39px + 79px);
     padding-bottom: 20px;
 }
 
@@ -8,7 +8,7 @@
     display: flex;
 }
 
-.top-block__container>* {
+.top-block__container > * {
     width: 50%;
 }
 
@@ -35,7 +35,7 @@
 
 .top-block__title {
     max-width: 710px;
-    margin-bottom: 20px;
+    margin-bottom: 80px;
     font-size: 64px;
     line-height: 70px;
 }
@@ -73,6 +73,7 @@
 
 .top-block__right {
     max-width: 760px;
+    max-height: 760px;
 }
 
 .top-block__slider {
@@ -141,6 +142,12 @@
     overflow: hidden;
 }
 
+@media (min-width: 1600px) {
+    .top-block__advantages {
+        height: 100%;
+    }
+}
+
 .top-block__advantages::after {
     content: '';
     position: absolute;
@@ -170,7 +177,6 @@
 .top-block__advantages-items {
     margin-bottom: 35px;
     color: #FFF;
-    max-width: 310px;
 }
 
 .top-block__advantages-item {
@@ -482,7 +488,7 @@
 
 @media (max-width: 970px) {
     .top-block {
-        padding-top: calc(31px + 54px);
+        padding-top: calc(30px + 54px);
     }
 }
 
@@ -653,6 +659,12 @@
 @media (max-width: 560px) {
     .top-block {
         padding-bottom: 50px;
+    }
+}
+
+@media (min-width: 551px) {
+    .top-block__advantages {
+        max-height: 379px;
     }
 }
 
@@ -862,15 +874,7 @@
     .top-block__advantages-items {
         max-width: 280px;
     }
-
-    .top-block__advantages-item span:first-child {
-        display: none;
-    }
-
-    .top-block__advantages-item span:nth-of-type(2) {
-        display: inline !Important;
-    }
-
+    
     .top-block__button-icon {
         height: 20px;
         margin-left: 8px;
@@ -973,7 +977,8 @@
 }
 
 .stocks__title {
-    display: none;
+    align-self: flex-start;
+    margin-bottom: 50px;
 }
 
 .stocks__items {
@@ -1026,6 +1031,10 @@
 }
 
 @media (max-width: 1400px) {
+    .stocks__title {
+        margin-bottom: 40px;
+    }
+
     .stocks__items {
         margin-bottom: 55px;
     }
@@ -1037,6 +1046,10 @@
 }
 
 @media (max-width: 1300px) {
+    .stocks__title {
+        margin-bottom: 35px;
+    }
+
     .stocks__items {
         margin-bottom: 50px;
     }
@@ -1056,6 +1069,10 @@
 }
 
 @media (max-width: 1170px) {
+    .stocks__title {
+        margin-bottom: 33px;
+    }
+
     .stocks__items {
         margin-bottom: 45px;
     }
@@ -1076,6 +1093,10 @@
 @media (max-width: 991px) {
     .stocks__swiper-wrapper {
         margin-bottom: 26px !Important;
+    }
+
+    .stocks__title {
+        margin-bottom: 30px;
     }
 
     .stocks__items {
@@ -1111,8 +1132,6 @@
     }
 
     .stocks__title {
-        display: block;
-        align-self: flex-start;
         margin-bottom: 27px;
     }
 
@@ -1157,6 +1176,10 @@
 }
 
 @media (max-width: 600px) {
+    .stocks__title {
+        margin-bottom: 23px;
+    }
+
     .stocks__slider {
         margin-bottom: 17px;
     }
