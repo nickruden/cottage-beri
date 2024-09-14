@@ -285,7 +285,7 @@
                     <form action="" class="feedback-form">
                         <input type="text" name="name" id="name-input" placeholder="Имя"
                             class="feedback-form__input call-modal__input-name bordered-block">
-                        <input type="text" name="phone" id="phone-input" placeholder="Телефон"
+                        <input type="tel" name="phone" id="phone-input" placeholder="Телефон"
                             class="feedback-form__input call-modal__input-phone bordered-block">
                         <button class="feedback-form__button call-modal__button button">Отправить</button>
                     </form>
@@ -1084,19 +1084,37 @@
         console.log(elements)
         const maskOptions = {
             mask: '+{7} (000) 000-00-00',
-        } 
-        
+        }
+
         for (let i = 0; i < elements.length; i++) {
             const originalPlaceholder = elements[i].placeholder;
 
-            elements[i].addEventListener('focus', function() {
+            elements[i].addEventListener('mouseover', function () {
+                this.placeholder = '+7 (999) 999-99-99'
+            })
+
+            elements[i].addEventListener('mouseout', function () {
+                this.placeholder = originalPlaceholder;
+            })
+
+
+            elements[i].addEventListener('focus', function () {
                 maskOptions.lazy = false;
 
-                const mask = new IMask(this, maskOptions);
+                if (!this.mask) {
+                    this.mask = new IMask(this, maskOptions);
+                }
+            });
+
+            elements[i].addEventListener('blur', function () {
+                if (this.mask) {
+                    this.mask.destroy();
+                    this.mask = null;
+                }
+                this.value = "";
             });
         }
     </script>
-
 
     <!-- СКРИПТ ДЛЯ ХЕДЕРА -->
     <script>

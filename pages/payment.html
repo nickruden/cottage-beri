@@ -375,13 +375,53 @@
                         </div>
                     </div>
                 </div>
+                <div class="advantage-speed__slider">
+                    <div class="swiper advantage-speed__swiper">
+                        <div class="swiper-wrapper advantage-speed__swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div href="./stocks/single-stock.html" class="advantage-speed__item">
+                                    <div class="advantage-speed__item-body">
+                                        <div class=advantage-speed__img-wrap">
+                                            <img src="../img/pages-img/payment/avantage-speed/card1.jpg" alt="фото стол с журналом" class="advantage-speed__img">
+                                        </div>
+                                        <div class="advantage-speed__item-text">мы сразу информируем вас о всех <br> условиях сделки</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div href="./stocks/single-stock.html" class="advantage-speed__item">
+                                    <div class="advantage-speed__item-body">
+                                        <div class="advantage-speed__img-wrap">
+                                            <img src="../img/pages-img/payment/avantage-speed/card2.jpg" alt="фото девушка улыбается" class="advantage-speed__img">
+                                        </div>
+                                        <div class="advantage-speed__item-text">к вам прикрепляется личный менеджер, который будет всегда на связи</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div href="./stocks/single-stock.html" class="advantage-speed__item">
+                                    <div class="advantage-speed__item-body">
+                                        <div class="advantage-speed__img-wrap">
+                                            <img src="../img/pages-img/payment/avantage-speed/card3.jpg" alt="фото семья сидит на крыльце" class="advantage-speed__img">
+                                        </div>
+                                        <div class="advantage-speed__item-text">на одобрение заявки у банка уходит <br> от трех дней</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination advantage-speed__swiper-pagination"></div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="advantage-reliable">
             <div class="advantage-reliable__container my-container">
+                <div class="advantage-reliable__wrapper">
                 <div class="advantage-reliable__left">
-                    <div class="advantage-reliable__title title"><span>Надежно</span></div>
-                    <div class="advantage-reliable__text">Наша компания аккредитована во всех популярных у населения банках
+                    <div class="advantage-reliable__desc">
+                        <div class="advantage-reliable__title title"><span>Надежно</span></div>
+                        <div class="advantage-reliable__text">Наша компания аккредитована во всех <br> популярных у населения банках
+                        </div>
                     </div>
                     <div class="advantage-reliable__left-img-wrap"><img src="../img/pages-img/payment/reliable/sber-logo.jpg" alt="логотип сбербанк"
                             class="advantage-reliable__img"></div>
@@ -400,6 +440,7 @@
                                 class="advantage-reliable__img"></div>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
         <div class="advantage-safety">
@@ -421,10 +462,10 @@
                     </div>
                     <div class="advantage-safety__right-text">
                         <ol class="advantage-safety__list">
-                            <li class="advantage-safety__list-item"><span>покупатель кладет деньги</span> на эскроу-счет</li>
-                            <li class="advantage-safety__list-item"><span>продавец выполняет</span> условия договора</li>
-                            <li class="advantage-safety__list-item"><span>банк следит</span> за выполнением условий</li>
-                            <li class="advantage-safety__list-item">после этого <span>продавец забирает оплату</span></li>
+                            <li class="advantage-safety__list-item"><span><span>покупатель кладет деньги</span> на эскроу-счет</span></li>
+                            <li class="advantage-safety__list-item"><span><span>продавец выполняет</span> условия договора</span></li>
+                            <li class="advantage-safety__list-item"><span><span>банк следит</span> за выполнением условий</span></li>
+                            <li class="advantage-safety__list-item"><span> после этого <span>продавец забирает оплату</span></span></li>
                         </ol>
                     </div>
                 </div>
@@ -572,7 +613,7 @@
         <div class="payment">
             <div class="payment__container my-container">
                 <div class="payment__wrapper">
-                    <div class="payment__title title"><span>В результате вы можете купить </span> дом в Уфе</div>
+                    <div class="payment__title title"><span>В результате вы можете</span> купить дом в Уфе</div>
                     <div class="payment__items">
                         <div class="payment__item">
                             <img src="../img/payment-icons/cash-icon.svg" alt="" class="payment__icon">
@@ -591,7 +632,7 @@
                             <div class="payment__name">В рассрочку 0%</div>
                         </div>
                     </div>
-                    <a href="" class="payment__link button">Получить консультацию</a>
+                    <a href="" class="payment__link button button_link">Все варианты оплаты</a>
                 </div>
             </div>
         </div>
@@ -801,6 +842,28 @@
     <!-- СКРИПТ ДЛЯ СЛАЙДЕРА БЛОКА АКЦИИ -->
     <script>
         const swiper_stocks = new Swiper('.stocks__swiper', {
+            direction: 'horizontal',
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 20,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+
+            breakpoints: {
+                701:
+                {
+                    slidesPerView: 2, // два слайда при ширине 701px и выше
+                }
+            }
+        });
+    </script>
+
+
+    <!-- СКРИПТ ДЛЯ СЛАЙДЕРА БЛОКА АКЦИИ -->
+    <script>
+        const swiper_advantageSpeed = new Swiper('.advantage-speed__swiper', {
             direction: 'horizontal',
             loop: true,
             slidesPerView: 1,
