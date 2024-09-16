@@ -632,7 +632,6 @@
     margin-bottom: 30px;
 }
 .advantage-safety__text {
-    font-size: 18px;
     max-width: 566px;
 }
 .advantage-safety__text:not(:last-child) {
@@ -785,6 +784,12 @@
     }
 }
 
+@media (max-width: 880px) {
+    .advantage-safety__text {
+        font-size: 14px;
+    }
+}
+
 @media (max-width: 794px) {
     .advantage-safety__wrapper {
         display: flex;
@@ -907,10 +912,6 @@
     }
     .stocks__title {
         margin-bottom: 15px;
-    }
-
-    .advantage-safety__text {
-        font-size: 14px;
     }
 }
 

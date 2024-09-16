@@ -807,18 +807,11 @@
         const swiper_awards = new Swiper('.awards__swiper', {
             direction: 'horizontal',
             loop: true,
-            slidesPerView: 2, // Устанавливаем количество слайдов на вид автоматически
+            slidesPerView: 2,
             spaceBetween: 20,
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
-            },
-
-            breakpoints: {
-                701:
-                {
-                    slidesPerView: 2, // два слайда при ширине 701px и выше
-                }
             }
         });
     </script>
