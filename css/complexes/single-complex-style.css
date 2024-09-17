@@ -563,13 +563,147 @@
     margin-bottom: 50px;
 }
 
-.complex-map__map-block {
+.complex-map__map-block-block {
     border-radius: 8px;
 }
 
 @media (min-width: 1441px) {
-    .complex-map__map-block {
+    .complex-map__map-block-block {
         height: 481px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .complex-map__title {
+        margin-bottom: 40px;
+    }
+
+    .complex-map__map-block {
+        height: 450px !Important;
+    }
+}
+
+@media (max-width: 1300px) {
+    .complex-map__title {
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 1260px) {
+    .complex-map {
+        padding-bottom: 90px;
+    }
+}
+
+@media (max-width: 1170px) {
+    .complex-map__title {
+        margin-bottom: 33px;
+    }
+
+    .complex-map__map-block {
+        height: 430px !Important;
+    }
+}
+
+@media (max-width: 1070px) {
+    .complex-map {
+        padding-bottom: 80px;
+    }
+}
+
+@media (max-width: 991px) {
+    .complex-map__wrapper {
+        padding: 30px 0px 40px 0px;
+    }
+
+    .complex-map__description-title {
+        font-size: 27px;
+        line-height: 33px;
+    }
+
+    .complex-map__title {
+        margin-bottom: 30px;
+    }
+
+    .complex-map__map-block {
+        height: 410px !Important;
+    }
+}
+
+@media (max-width: 880px) {
+    .complex-map {
+        padding-bottom: 70px;
+    }
+}
+
+@media (max-width: 794px) {
+    .complex-map {
+        padding-bottom: 60px;
+    }
+
+    .complex-map__title {
+        margin-bottom: 27px;
+    }
+
+    .complex-map__map-block {
+        height: 400px !Important;
+    }
+}
+
+@media (max-width: 700px) {
+    .complex-map__description-title {
+        font-size: 26px;
+        line-height: 32px;
+    }
+}
+
+@media (max-width: 600px) {
+    .complex-map__title {
+        margin-bottom: 23px;
+    }
+
+    .complex-map__map-block {
+        height: 350px !Important;
+    }
+}
+
+@media (max-width: 560px) {
+    .complex-map {
+        padding-bottom: 50px;
+    }
+}
+
+@media (max-width: 516px) {
+    .complex-map__title {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .complex-map {
+        padding-bottom: 40px;
+    }
+
+    .complex-map__map-block {
+        height: 340px !Important;
+    }
+}
+
+@media (max-width: 425px) {
+    .complex-map__map-block {
+        height: 360px !Important;
+    }
+}
+
+@media (max-width: 375px) {
+    .complex-map__map-block {
+        height: 330px !Important;
+    }
+}
+
+@media (max-width: 350px) {
+    .complex-map__map-block {
+        height: 300px !Important;
     }
 }
 

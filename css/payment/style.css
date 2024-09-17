@@ -456,6 +456,12 @@
     }
 }
 
+@media (max-width: 1260px) {
+    .advantage-reliable {
+        padding-bottom: 90px;
+    }
+}
+
 @media (max-width: 1230px) {
     .advantage-reliable__title {
         margin-bottom: 5px;
@@ -475,6 +481,9 @@
 }
 
 @media (max-width: 1070px) {
+    .advantage-reliable {
+        padding-bottom: 80px;
+    }
     .advantage-reliable__text {
         font-size: 15px;
         line-height: 20px;
@@ -489,6 +498,10 @@
 }
 
 @media (max-width: 880px) {
+    .advantage-reliable {
+        padding-bottom: 70px;
+    }
+
     .advantage-reliable__wrapper {
         flex-direction: column;
         row-gap: 20px;
@@ -514,6 +527,12 @@
 
     .advantage-reliable__banks-logo-group > * {
         flex: 1 1 50%;
+    }
+}
+
+@media (max-width: 794px) {
+    .advantage-reliable {
+        padding-bottom: 60px;
     }
 }
 
@@ -553,6 +572,10 @@
 }
 
 @media (max-width: 560px) {
+    .advantage-reliable {
+        padding-bottom: 50px;
+    }
+
     .advantage-reliable__title {
         margin-bottom: 12px;
     }
@@ -573,6 +596,12 @@
 
     .advantage-reliable__banks-logo-group {
         column-gap: 13px;
+    }
+}
+
+@media (max-width: 500px) {
+    .advantage-reliable {
+        padding-bottom: 40px;
     }
 }
 
@@ -781,12 +810,6 @@
     }
     .advantage-safety__list  {
         font-size: 16px;
-    }
-}
-
-@media (max-width: 880px) {
-    .advantage-safety__text {
-        font-size: 14px;
     }
 }
 
@@ -1096,7 +1119,7 @@
 
 /* 9 БЛОК */
 .trade-in {
-    margin-bottom: 110px;
+    padding-bottom: 110px;
 }
 .traid-in__container {
 }
@@ -1107,7 +1130,7 @@
     flex: 1 1 50%;
 }
 .traid-in__body {
-    padding: 40px 0px 0px 40px;
+    padding: 40px;
 }
 .traid-in__title {
     line-height: 66px;
@@ -1142,8 +1165,252 @@
     max-width: 326px;
 }
 .traid-in__img-wrap {
+    width: 100%;
 }
 .traid-in__img {
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 1500px) {
+    .traid-in__wrapper > * {
+        flex: 1 0 50%;
+    }
+}
+
+@media (max-width: 1400px) {
+    .trade-in__text {
+        font-size: 17px;
+    }
+    .trade-in__list {
+        font-size: 17px;
+        margin-bottom: 36px;
+    }
+    .trade-in__list-item:not(:last-child) {
+        margin-bottom: 18px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .trade-in__list {
+        margin-bottom: 32px;
+    }
+    .traid-in__img-wrap {
+        position: relative;
+        overflow: hidden;
+    }
+    .traid-in__img {
+        position: relative;
+        right: 10%;
+    }
+    .traid-in__text {
+        margin-bottom: 23px;
+    }
+}
+
+@media (max-width: 1230px) {
+    .trade-in__text {
+        font-size: 16px;
+    }
+    .trade-in__list {
+        font-size: 16px;
+    }
+    .trade-in__list-item:not(:last-child) {
+        margin-bottom: 16px;
+    }
+}
+
+@media (max-width: 1260px) {
+    .trade-in {
+        padding-bottom: 90px;
+    }
+    .traid-in__img {
+        right: 15%;
+    }
+    .traid-in__img-wrap {
+        max-height: 600px;
+    }
+    .trade-in__list-item::before {
+        margin-right: 15px;
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 1170px) {
+    .traid-in__img {
+        right: 20%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .traid-in__body {
+        padding: 30px;
+    }
+    .traid-in__img {
+        right: 25%;
+    }
+    .traid-in__text {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 1070px) {
+    .trade-in {
+        padding-bottom: 80px;
+    }
+}
+
+@media (max-width: 991px) {
+    .traid-in__text {
+        font-size: 15px;
+    }
+    .trade-in__list {
+        font-size: 15px;
+    }
+    .trade-in__list-item::before {
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 880px) {
+    .trade-in {
+        padding-bottom: 70px;
+    }
+    .traid-in__img {
+        right: 30%;
+    }
+}
+
+@media (max-width: 847px) {
+    .traid-in__img {
+        right: 35%;
+    }
+}
+@media (max-width: 810px) {
+    .traid-in__img {
+        right: 40%;
+    }
+}
+
+@media (max-width: 794px) {
+    .trade-in {
+        padding-bottom: 60px;
+    }
+    .trade-in__list-item::before {
+        margin-right: 15px;
+        font-size: 19px;
+    }
+    .traid-in__text {
+        margin-bottom: 23px;
+    }
+    .traid-in__wrapper {
+        flex-direction: column-reverse;
+    }
+    .traid-in__img {
+        right: 0;
+        object-fit: contain;
+        width: 100%;
+        height: auto;
+    }
+    .traid-in__body {
+        padding: 40px;
+    }
+    .trade-in__text {
+        font-size: 17px;
+    }
+    .trade-in__list {
+        font-size: 17px;
+        margin-bottom: 36px;
+    }
+    .trade-in__list-item:not(:last-child) {
+        margin-bottom: 18px;
+    }
+    .traid-in__img-wrap {
+        max-height: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .traid-in__body {
+        padding: 30px;
+    }
+    .trade-in__text {
+        font-size: 16px;
+    }
+    .trade-in__list {
+        font-size: 16px;
+        margin-bottom: 29px;
+    }
+    .trade-in__list-item:not(:last-child) {
+        margin-bottom: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .traid-in__text > br {
+        display: none;
+    }
+    .trade-in__list-item > br {
+        display: none;
+    }
+}
+
+@media (max-width: 560px) {
+    .trade-in {
+        padding-bottom: 50px;
+    }
+}
+
+@media (max-width: 516px) {
+    .trade-in__text {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    .trade-in__list {
+        font-size: 15px;
+        margin-bottom: 23px;
+    }
+    .trade-in__list-item:not(:last-child) {
+        margin-bottom: 13px;
+    }
+}
+
+@media (max-width: 500px) {
+    .trade-in {
+        padding-bottom: 40px;
+    }
+    .traid-in__body {
+        padding: 20px;
+    }
+    .trade-in__list-item::before {
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 425px) {
+    .trade-in__list {
+        margin-bottom: 20px;
+    }
+    .trade-in__text {
+        font-size: 14px;
+    }
+    .trade-in__list {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 390px) {
+    .trade-in__link {
+        max-width: 100%;
+
+    }
+}
+
+@media (max-width: 375px) {
+    .trade-in__list-item:not(:last-child) {
+        margin-bottom: 10px;
+    }
 }
 
 

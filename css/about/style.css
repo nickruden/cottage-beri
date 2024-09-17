@@ -28,7 +28,7 @@
 }
 .our-mission__img {
     height: 100%;
-    object-fit: cover
+    object-fit: cover;
 }
 @media (max-width: 1400px) {
     .our-mission__text {
@@ -80,10 +80,6 @@
     }
     .our-mission__title {
         margin-bottom: 12px;
-    }
-    .our-mission__img-wrap {
-        position: relative;
-        overflow: hidden;
     }
     .our-mission__body {
         padding: 25px;
@@ -775,8 +771,6 @@
 }
 .why-choose-us__card {
     flex: 1 1 50%;
-}
-.why-choose-us__card-items {
     display: flex;
 }
 .why-choose-us__card-body {

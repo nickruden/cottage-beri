@@ -254,6 +254,139 @@
     }
 }
 
+@media (max-width: 1400px) {
+    .project-map__title {
+        margin-bottom: 40px;
+    }
+
+    .project-map__map-block {
+        height: 450px !Important;
+    }
+}
+
+@media (max-width: 1300px) {
+    .project-map__title {
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 1260px) {
+    .project-map {
+        padding-bottom: 90px;
+    }
+}
+
+@media (max-width: 1170px) {
+    .project-map__title {
+        margin-bottom: 33px;
+    }
+
+    .project-map__map-block {
+        height: 430px !Important;
+    }
+}
+
+@media (max-width: 1070px) {
+    .project-map {
+        padding-bottom: 80px;
+    }
+}
+
+@media (max-width: 991px) {
+    .project-map__wrapper {
+        padding: 30px 0px 40px 0px;
+    }
+
+    .project-map__description-title {
+        font-size: 27px;
+        line-height: 33px;
+    }
+
+    .project-map__title {
+        margin-bottom: 30px;
+    }
+
+    .project-map__map-block {
+        height: 410px !Important;
+    }
+}
+
+@media (max-width: 880px) {
+    .project-map {
+        padding-bottom: 70px;
+    }
+}
+
+@media (max-width: 794px) {
+    .project-map {
+        padding-bottom: 60px;
+    }
+
+    .project-map__title {
+        margin-bottom: 27px;
+    }
+
+    .project-map__map-block {
+        height: 400px !Important;
+    }
+}
+
+@media (max-width: 700px) {
+    .project-map__description-title {
+        font-size: 26px;
+        line-height: 32px;
+    }
+}
+
+@media (max-width: 600px) {
+    .project-map__title {
+        margin-bottom: 23px;
+    }
+
+    .project-map__map-block {
+        height: 350px !Important;
+    }
+}
+
+@media (max-width: 560px) {
+    .project-map {
+        padding-bottom: 50px;
+    }
+}
+
+@media (max-width: 516px) {
+    .project-map__title {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .project-map {
+        padding-bottom: 40px;
+    }
+
+    .project-map__map-block {
+        height: 340px !Important;
+    }
+}
+
+@media (max-width: 425px) {
+    .project-map__map-block {
+        height: 360px !Important;
+    }
+}
+
+@media (max-width: 375px) {
+    .project-map__map-block {
+        height: 330px !Important;
+    }
+}
+
+@media (max-width: 350px) {
+    .project-map__map-block {
+        height: 300px !Important;
+    }
+}
 
 /* 7 БЛОК */
 .how-buy {
