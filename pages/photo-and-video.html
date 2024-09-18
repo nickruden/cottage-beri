@@ -389,6 +389,7 @@
                         <div class="swiper-button-prev what-saying__slider-button-prev">
                             <img src="../img/link-arrow.svg" alt="" class="swiper-button__prev-img">
                         </div>
+                        <div class="swiper-pagination what-saying__slider-pagination"></div>
                     </div>
                 </div>
             </div>
@@ -513,7 +514,7 @@
                                     <div class="construction-progress__slide">
                                         <div class="construction-progress__video">
                                             <img src="../img/pages-img/photo-and-video/construction-progress/video-banner.jpg"
-                                                alt="" class="wconstruction-progress_video-poster">
+                                                alt="" class="construction-progress__video-poster">
                                             <div class="video-play-button" data-bs-toggle="modal"
                                                 data-bs-target="#videoModal"></div>
                                         </div>
@@ -527,6 +528,7 @@
                         <div class="swiper-button-prev construction-progress__slider-button-prev">
                             <img src="../img/link-arrow.svg" alt="" class="swiper-button__prev-img">
                         </div>
+                        <div class="swiper-pagination construction-progress__slider-pagination"></div>
                     </div>
                 </div>
             </div>
@@ -551,7 +553,7 @@
                                     <div class="housewarming__slide">
                                         <div class="housewarming__video">
                                             <img src="../img/pages-img/photo-and-video/housewarming/video-banner.jpg" alt=""
-                                                class="housewarming_video-poster">
+                                                class="housewarming__video-poster">
                                             <div class="video-play-button" data-bs-toggle="modal"
                                                 data-bs-target="#videoModal"></div>
                                         </div>
@@ -565,6 +567,7 @@
                         <div class="swiper-button-prev housewarming__slider-button-prev">
                             <img src="../img/link-arrow.svg" alt="" class="swiper-button__prev-img">
                         </div>
+                        <div class="swiper-pagination housewarming__slider-pagination"></div>
                     </div>
                     <div class="housewarming__body">
                         <div class="housewarming__title title">Справляем <span>новоселье!</span></div>
@@ -754,6 +757,10 @@
             loop: true,
             slidesPerView: 1,
             spaceBetween: 20,
+            pagination: {
+                el: ".what-saying__slider-pagination",
+                clickable: true,
+            },
             navigation: {
                 nextEl: ".what-saying__slider-button-next",
                 prevEl: ".what-saying__slider-button-prev",
@@ -768,6 +775,10 @@
             loop: true,
             slidesPerView: 1,
             spaceBetween: 20,
+            pagination: {
+                el: ".construction-progress__slider-pagination",
+                clickable: true,
+            },
             navigation: {
                 nextEl: ".construction-progress__slider-button-next",
                 prevEl: ".construction-progress__slider-button-prev",
@@ -782,6 +793,10 @@
             loop: true,
             slidesPerView: 1,
             spaceBetween: 20,
+            pagination: {
+                el: ".housewarming__slider-pagination",
+                clickable: true,
+            },
             navigation: {
                 nextEl: ".housewarming__slider-button-next",
                 prevEl: ".housewarming__slider-button-prev",

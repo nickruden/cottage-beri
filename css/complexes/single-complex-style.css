@@ -310,24 +310,46 @@
 
 /* 4 БЛОК */
 .complexes-advantages {
-    padding-bottom: 177px;
+    padding-bottom: 100px;
 }
 
-.complexes-advantages__container {}
+.complexes-advantages__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .complexes-advantages__title {
-    margin-bottom: 50px;
+    align-self: flex-start;
+    padding-bottom: 50px;
 }
 
 .complexes-advantages__items {
     display: flex;
     flex-wrap: wrap;
+    column-gap: 20px;
     row-gap: 60px;
+    justify-content: space-between;
 }
 
 .complexes-advantages__item {
     display: flex;
-    flex: 1 1 33.333%;
+    flex: 1 1 calc(33% - 20px);
+}
+
+@media (min-width: 911px) {
+    .complexes-advantages__item:nth-child(3),
+    .complexes-advantages__item:nth-child(6) {
+        display: flex;
+    }
+    
+    .complexes-advantages__item:nth-child(3) > .complexes-advantages__item-body,
+    .complexes-advantages__item:nth-child(6) > .complexes-advantages__item-body {
+        width: 280px;
+    }
+    .complexes-advantages__item:nth-child(1) > .complexes-advantages__item-body {
+        width: 230px;
+    }
 }
 
 .complexes-advantages__item-img-wrap {
@@ -337,6 +359,7 @@
 }
 
 .complexes-advantages__img {
+    width: 100%;
     object-fit: cover;
 }
 
@@ -352,6 +375,254 @@
 
 .complexes-advantages__item-desc {
     max-width: 297px;
+}
+
+.complexes-advantages__buttons {
+    display: flex;
+    gap: 15px;
+}
+.complexes-advantages__link {
+    max-width: 295px;
+}
+.complexes-advantages__button {
+    max-width: 328px;
+}
+
+@media (max-width: 1500px) {
+    .complexes-advantages__item-desc {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .complexes-advantages__title {
+        padding-bottom: 40px;
+    }
+    .complexes-advantages__img {
+        width: 100px;
+        height: 100%;
+    }
+    .complexes-advantages__item-title {
+        font-size: 20px;
+        line-height: 23px;
+        margin-bottom: 7px;
+    }
+    .complexes-advantages__item-desc {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .complexes-advantages__title {
+        padding-bottom: 35px;
+    }
+    .complexes-advantages__img {
+        width: 140px;
+        height: 100%;
+    }
+
+    .complexes-advantages__item-title {
+        font-size: 24px;
+        line-height: 24px;
+        margin-bottom: 10px;
+    }
+    
+    .complexes-advantages__item-desc {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1260px) {
+    .complexes-advantages {
+        padding-bottom: 90px;
+    }
+}
+
+@media (max-width: 1170px) {
+    .complexes-advantages__title {
+        padding-bottom: 33px;
+    }
+
+    .complexes-advantages__img {
+        width: 120px;
+        height: 100%;
+    }
+
+    .complexes-advantages__item-title {
+        font-size: 21px;
+        line-height: 22px;
+    }
+    
+    .complexes-advantages__item-desc {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 1070px) {
+    .complexes-advantages__title {
+        padding-bottom: 80px;
+    }
+
+    .complexes-advantages__img {
+        width: 120px;
+        height: 100%;
+    }
+
+    .complexes-advantages__item-title {
+        font-size: 18px;
+        line-height: 20px;
+        margin-bottom: 7px;
+    }
+    
+    .complexes-advantages__item-desc {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 910px) {
+    .complexes-advantages__item-img-wrap {
+        margin-right: 20px;
+        overflow: visible;
+    }
+    
+    .complexes-advantages__img {
+        border-radius: 8px;
+    }
+    .complexes-advantages__item {
+        flex: 1 1 100%;
+    }
+    .complexes-advantages__item-title {
+        font-size: 24px;
+        line-height: 24px;
+        margin-bottom: 10px;
+    }
+    
+    .complexes-advantages__item-desc {
+        font-size: 18px;
+        max-width: 397px;
+    }
+
+    .complexes-advantages__img {
+        width: 140px;
+        height: 100%;
+    }
+    
+    .complexes-advantages__item-desc > br {
+        display: none;
+    }
+}
+
+@media (max-width: 880px) {
+    .complexes-advantages__title {
+        padding-bottom: 70px;
+    }
+
+    .complexes-advantages__items {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 0px;
+    }
+    .complexes-advantages__items {
+        row-gap: 49px;
+    }
+}
+
+@media (max-width: 794px) {
+    .complexes-advantages {
+        padding-bottom: 60px;
+    }
+
+    .complexes-advantages__title {
+        padding-bottom: 27px;
+    }
+
+    .complexes-advantages__item-title {
+        font-size: 22px;
+        line-height: 21px;
+    }
+    
+    .complexes-advantages__item-desc {
+        font-size: 16px;
+    }
+
+    .complexes-advantages__img {
+        width: 120px;
+    }
+
+    .complexes-advantages__items {
+        row-gap: 30px;
+    }
+}
+
+@media (max-width: 650px) {
+    .complexes-advantages__item-body {
+        padding-right: 30px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .complexes-advantages__title {
+        padding-bottom: 23px;
+    }
+
+    .complexes-advantages__img {
+        width: 110px;
+        height: 98px;
+    }
+}
+
+@media (max-width: 560px) {
+    .complexes-advantages {
+        padding-bottom: 50px;
+    }
+    .complexes-advantages__items {
+        row-gap: 15px;
+    }
+    .complexes-advantages__item-title {
+        font-size: 18px;
+        line-height: 20px;
+        margin-bottom: 7px;
+    }
+    
+    .complexes-advantages__item-desc {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 516px) {
+    .complexes-advantages__title {
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .complexes-advantages {
+        padding-bottom: 40px;
+    }
+
+    .complexes-advantages__item-title {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .complexes-advantages__img {
+        width: 105px;
+        height: 94px;
+    }
+    
+    .complexes-advantages__item-desc {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 425px) {
+    .complexes-advantages__items {
+        row-gap: 10px;
+    }
+    .complexes-advantages__item-body {
+        padding-right: 5px;
+    }
 }
 
 
