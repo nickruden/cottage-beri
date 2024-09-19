@@ -7,6 +7,8 @@
     <title>Коттедж-бери</title>
     <link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
+
     <!-- ПОДКЛЮЧЕНИЕ СТИЛЕЙ ДЛЯ VIDEOSJS -->
     <link href="https://vjs.zencdn.net/8.16.1/video-js.css" rel="stylesheet" />
     <link href="https://unpkg.com/@videojs/themes@1/dist/city/index.css" rel="stylesheet" />
@@ -430,7 +432,7 @@
         <div class="stocks">
             <div class="stocks__container my-container">
                 <div class="stocks__title title">Акции</div>
-                <div class="stocks__items">
+                <!-- <div class="stocks__items">
                     <a href="./pages/stocks/single-stock.html" class="stock__item">
                         <div class="stock__item-body">
                             <div class="stock__img-wrap">
@@ -455,7 +457,7 @@
                             <div class="stock__item-title">Сертификат 100 000 ₽</div>
                         </div>
                     </a>
-                </div>
+                </div> -->
                 <div class="stocks__slider">
                     <div class="swiper stocks__swiper">
                         <div class="swiper-wrapper stocks__swiper-wrapper">
@@ -803,7 +805,7 @@
             </div>
         </div>
 
-        <div class="reviews">
+        <!-- <div class="reviews">
             <div class="reviews__container my-container">
                 <div class="reviews__title title">Отзывы</div>
                 <div class="reviews__slider">
@@ -830,6 +832,56 @@
                             <div class="swiper-slide">
                                 <div class="reviews__slide bordered-block">
                                     <img src="./img/pages-img/main/reviews/1.png" alt="" class="reviews__slide-img">
+                                </div>
+                                <div class="reviews__slide-triangle"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="swiper-button-next reviews__slider-button-next">
+                        <img src="./img/link-arrow.svg" alt="" class="swiper-button__next-img">
+                    </div>
+                    <div class="swiper-button-prev reviews__slider-button-prev ">
+                        <img src="./img/link-arrow.svg" alt="" class="swiper-button__prev-img">
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="reviews">
+            <div class="reviews__container my-container">
+                <div class="reviews__title title">Отзывы</div>
+                <div class="reviews__slider">
+                    <div class="swiper reviews__swiper">
+                        <div class="swiper-wrapper reviews__slider-wrapper">
+                            <div class="swiper-slide">
+                                <div class="reviews__slide bordered-block">
+                                    <a href="javascript:;" data-fancybox data-src="./img/pages-img/main/reviews/1.png">
+                                        <img src="./img/pages-img/main/reviews/1.png" alt="" class="reviews__slide-img">
+                                    </a>
+                                </div>
+                                <div class="reviews__slide-triangle"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="reviews__slide bordered-block">
+                                    <a href="javascript:;" data-fancybox data-src="./img/pages-img/main/reviews/2.png">
+                                        <img src="./img/pages-img/main/reviews/2.png" alt="" class="reviews__slide-img">
+                                    </a>
+                                </div>
+                                <div class="reviews__slide-triangle"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="reviews__slide bordered-block">
+                                    <a href="javascript:;" data-fancybox data-src="./img/pages-img/main/reviews/3.png">
+                                        <img src="./img/pages-img/main/reviews/3.png" alt="" class="reviews__slide-img">
+                                    </a>
+                                </div>
+                                <div class="reviews__slide-triangle"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="reviews__slide bordered-block">
+                                    <a href="javascript:;" data-fancybox data-src="./img/pages-img/main/reviews/1.png">
+                                        <img src="./img/pages-img/main/reviews/1.png" alt="" class="reviews__slide-img">
+                                    </a>
                                 </div>
                                 <div class="reviews__slide-triangle"></div>
                             </div>
@@ -1067,7 +1119,7 @@
         </div>
     </footer>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
     <!-- ПОДКЛЮЧЕНИE СКРИПТОВ БИБЛИОТЕК -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -1076,7 +1128,34 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://vjs.zencdn.net/8.16.1/video.min.js"></script>
 
-    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    Fancybox.bind('[data-fancybox="gallery"]', {
+        Toolbar: {
+            display: {
+                left: [],
+                middle: [],
+                right: ["close"],
+            },
+        },
+        Thumbs: {
+            autoStart: false,
+        },
+        Carousel: {
+            infinite: false,
+            navigation: false,
+        },
+        on: {
+            init: () => {
+                swiper.allowTouchMove = false; // Отключаем Swiper
+            },
+            destroy: () => {
+                swiper.allowTouchMove = true; // Включаем Swiper
+            },
+        },
+    });
+});
+        </script>
     <!-- !!!!! НОВЫЙ СКРИПТ !!!!! СКРИПТ ДЛЯ МАСКИ В ФОРМЕ -->
     <script src="https://unpkg.com/imask"></script>
     <script>
@@ -1189,6 +1268,10 @@
             },
 
             breakpoints: {
+                992:
+                {
+                    slidesPerView: 3,
+                },
                 701:
                 {
                     slidesPerView: 2, // два слайда при ширине 701px и выше

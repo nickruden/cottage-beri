@@ -161,22 +161,8 @@
 
 @media (max-width: 500px) {
     .banner-title {
-        font-size: 29px;
+        font-size: 28px;
         line-height: 39px!Important;
-    }
-}
-
-@media (max-width: 425px) {
-    .banner-title {
-        font-size: 26px;
-        line-height: 36px!Important;
-    }
-}
-
-@media (max-width: 320px) {
-    .banner-title {
-        font-size: 24px;
-        line-height: 30px!Important;
     }
 }
 

@@ -1018,13 +1018,17 @@
     margin-bottom: 50px;
 }
 
-.stocks__items {
+/* .stocks__items {
+    display: flex;
+    width: 100%;
+    margin-bottom: 60px;
+} */
+.stocks__swiper-wrapper {
     display: flex;
     width: 100%;
     margin-bottom: 60px;
 }
-
-.stocks__items>* {
+.stocks__items > * {
     flex: 0 1 50%;
 }
 
@@ -1056,7 +1060,10 @@
 }
 
 .stocks__slider {
-    display: none;
+    /* display: none; */
+    display: flex;
+    width: 100%;
+    margin-bottom: 60px;
 }
 
 .stocks__swiper-pagination {
@@ -1072,7 +1079,7 @@
         margin-bottom: 40px;
     }
 
-    .stocks__items {
+    .stocks__slider  {
         margin-bottom: 55px;
     }
 
@@ -1087,7 +1094,7 @@
         margin-bottom: 35px;
     }
 
-    .stocks__items {
+    .stocks__slider {
         margin-bottom: 50px;
     }
 }
@@ -1110,7 +1117,7 @@
         margin-bottom: 33px;
     }
 
-    .stocks__items {
+    .stocks__slider  {
         margin-bottom: 45px;
     }
 
@@ -1128,22 +1135,22 @@
 }
 
 @media (max-width: 991px) {
-    .stocks__swiper-wrapper {
-        margin-bottom: 26px !Important;
-    }
-
     .stocks__title {
         margin-bottom: 30px;
     }
 
-    .stocks__items {
+    /* .stocks__items {
         display: none;
-    }
+    } */
 
     .stocks__slider {
         display: flex;
         margin-bottom: 27px;
         width: 100%;
+    }
+    
+    .stocks__swiper-wrapper {
+        margin-bottom: 26px !Important;
     }
 }
 
@@ -1213,10 +1220,6 @@
 }
 
 @media (max-width: 600px) {
-    .stocks__title {
-        margin-bottom: 23px;
-    }
-
     .stocks__slider {
         margin-bottom: 17px;
     }

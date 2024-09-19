@@ -469,6 +469,79 @@
                         </div>
                     </div>
                 </div>
+                <div class="our-team__slider">
+                    <div class="swiper our-team__swiper">
+                        <div class="swiper-wrapper our-team__swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="our-team__persone-card bordered-block">
+                                    <div class="our-team__persone-card-items">
+                                        <div class="our-team__persone-card-img-wrap"><img src="../img/pages-img/about/our-team/card1.png" alt="" class="our-team__persone-card-img"></div>
+                                        <div class="our-team__persone-card-description">
+                                            <div class="our-team__persone-card-title">Фамилия Имя Отчество</div>
+                                            <div class="our-team__persone-card-text">должность</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="our-team__persone-card bordered-block">
+                                    <div class="our-team__persone-card-items">
+                                        <div class="our-team__persone-card-img-wrap"><img src="../img/pages-img/about/our-team/card2.png" alt="" class="our-team__persone-card-img"></div>
+                                        <div class="our-team__persone-card-description">
+                                            <div class="our-team__persone-card-title">Фамилия Имя Отчество</div>
+                                            <div class="our-team__persone-card-text">должность</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="our-team__persone-card bordered-block">
+                                    <div class="our-team__persone-card-items">
+                                        <div class="our-team__persone-card-img-wrap"><img src="../img/pages-img/about/our-team/card3.png" alt="" class="our-team__persone-card-img"></div>
+                                        <div class="our-team__persone-card-description">
+                                            <div class="our-team__persone-card-title">Фамилия Имя Отчество</div>
+                                            <div class="our-team__persone-card-text">должность</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="our-team__persone-card bordered-block">
+                                    <div class="our-team__persone-card-items">
+                                        <div class="our-team__persone-card-img-wrap"><img src="../img/pages-img/about/our-team/card4.png" alt="" class="our-team__persone-card-img"></div>
+                                        <div class="our-team__persone-card-description">
+                                            <div class="our-team__persone-card-title">Фамилия Имя Отчество</div>
+                                            <div class="our-team__persone-card-text">должность</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="our-team__persone-card bordered-block">
+                                    <div class="our-team__persone-card-items">
+                                        <div class="our-team__persone-card-img-wrap"><img src="../img/pages-img/about/our-team/card5.png" alt="" class="our-team__persone-card-img"></div>
+                                        <div class="our-team__persone-card-description">
+                                            <div class="our-team__persone-card-title">Фамилия Имя Отчество</div>
+                                            <div class="our-team__persone-card-text">должность</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="our-team__persone-card bordered-block">
+                                    <div class="our-team__persone-card-items">
+                                        <div class="our-team__persone-card-img-wrap"><img src="../img/pages-img/about/our-team/card6.png" alt="" class="our-team__persone-card-img"></div>
+                                        <div class="our-team__persone-card-description">
+                                            <div class="our-team__persone-card-title">Фамилия Имя Отчество</div>
+                                            <div class="our-team__persone-card-text">должность</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination our-team__swiper-pagination"></div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="why-choose-us">
@@ -572,7 +645,7 @@
         <div class="stocks">
             <div class="stocks__container my-container">
                 <div class="stocks__title title"><span>Акции</span></div>
-                <div class="stocks__items">
+                <!-- <div class="stocks__items">
                     <a href="./stocks/single-stock.html" class="stock__item">
                         <div class="stock__item-body">
                             <div class="stock__img-wrap">
@@ -597,7 +670,7 @@
                             <div class="stock__item-title">Сертификат 100 000 ₽</div>
                         </div>
                     </a>
-                </div>
+                </div> -->
                 <div class="stocks__slider">
                     <div class="swiper stocks__swiper">
                         <div class="swiper-wrapper stocks__swiper-wrapper">
@@ -777,6 +850,27 @@
         });
     </script>
 
+<!-- СКРИПТ ДЛЯ СЛАЙДЕРА БЛОКА НАША КОМАНДА -->
+<script>
+    const swiper_ourTeam = new Swiper('.our-team__swiper', {
+        direction: 'horizontal',
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+
+        breakpoints: {
+            701:
+            {
+                slidesPerView: 2, // два слайда при ширине 701px и выше
+            }
+        }
+    });
+</script>
+
     <!-- СКРИПТ ДЛЯ СЛАЙДЕРА БЛОКА АКЦИИ -->
     <script>
         const swiper_stocks = new Swiper('.stocks__swiper', {
@@ -790,6 +884,10 @@
             },
 
             breakpoints: {
+                992:
+                {
+                    slidesPerView: 3,
+                },
                 701:
                 {
                     slidesPerView: 2, // два слайда при ширине 701px и выше

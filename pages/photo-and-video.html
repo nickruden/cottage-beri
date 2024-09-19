@@ -506,7 +506,7 @@
                                             <img src="../img/pages-img/photo-and-video/construction-progress/video-banner.jpg"
                                                 alt="" class="construction-progress__video-poster">
                                             <div class="video-play-button" data-bs-toggle="modal"
-                                                data-bs-target="#videoModal"></div>
+                                                data-bs-target="#videoModal" data-title="Видео 1" data-src="../video/31637395_MotionElements_earth-hologram_preview.mp4"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -516,7 +516,7 @@
                                             <img src="../img/pages-img/photo-and-video/construction-progress/video-banner.jpg"
                                                 alt="" class="construction-progress__video-poster">
                                             <div class="video-play-button" data-bs-toggle="modal"
-                                                data-bs-target="#videoModal"></div>
+                                                data-bs-target="#videoModal" data-title="Видео 2" data-src="../video/31637395_MotionElements_earth-hologram_preview.mp4"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -583,8 +583,7 @@
             <div class="modal-dialog modal-video__modal-dialog" style="max-width: 90%; width: 90%; height: 90%;">
                 <div class="modal-content modal-video__modal-content" style="width: 100%;">
                     <div class="modal-header modal-video__modal-header">
-                        <div class="modal-video__title title"><span>Что говорят</span> люди
-                        </div>
+                        <div class="modal-video__title title">Заголовок по умолчанию</div>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body modal-video__modal-body d-flex justify-content-center align-items-center">
@@ -737,16 +736,26 @@
 
     <!-- СКРИПТ МОДАЛЬНОГО ОКНА С ВИДЕО -->
     <script>
-        const videoModal = document.getElementById('videoModal');
-        videoModal.addEventListener('shown.bs.modal', function () {
-            const videoPlayer = videojs('modal-video');
-            videoPlayer.play();
-        });
+        document.addEventListener('DOMContentLoaded', function () {
+            const videoModal = document.getElementById('videoModal');
+            const videoTitle = videoModal.querySelector('.modal-video__title');
+            const videoElement = videoModal.querySelector('#modal-video');
+            const videoSource = videoElement.querySelector('source');
 
-        videoModal.addEventListener('hidden.bs.modal', function () {
-            const videoPlayer = videojs('modal-video');
-            videoPlayer.pause();
-            videoPlayer.currentTime(0);
+            videoModal.addEventListener('show.bs.modal', function (event) {
+                const button = event.relatedTarget;
+                const title = button.getAttribute('data-title');
+                const src = button.getAttribute('data-src');
+
+                videoTitle.textContent = title;
+                videoSource.setAttribute('src', src);
+                videoElement.load();
+            });
+
+            videoModal.addEventListener('hidden.bs.modal', function () {
+                videoElement.pause();
+                videoElement.currentTime = 0;
+            });
         });
     </script>
 

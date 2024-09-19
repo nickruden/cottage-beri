@@ -538,32 +538,47 @@
     color: #646666;
 }
 
-.stocks__slider {
+.our-team__slider {
     display: none;
 }
 
-.stocks__swiper-pagination {
+.our-team__swiper-pagination {
     position: relative;
 }
 
-.stocks__swiper > .swiper-wrapper {
+.our-team__swiper > .swiper-wrapper {
     margin-bottom: 15px;
 }
 
 @media (max-width: 1400px) {
     .our-team__title {
-        margin-bottom: 77px;
+        margin-bottom: 87px;
     }
 
     .our-team__persone-card-title {
-        font-size: 28px;
-        line-height: 38px;
+        font-size: 27px;
+        line-height: 36px;
+    }
+
+    .our-team__persone-card-img-wrap {
+        height: 320px;
+    }
+
+    .our-team__persone-card-img {
+        max-height: 120%;
     }
 }
 
 @media (max-width: 1300px) {
     .our-team__title {
-        margin-bottom: 72px;
+        margin-bottom: 82px;
+    }
+    .our-team__persone-card-description {
+        padding: 25px 10px 20px 10px;
+    }
+    .our-team__persone-card-text {
+        font-size: 18px;
+        line-height: 36px;
     }
 }
 
@@ -572,11 +587,36 @@
         font-size: 26px;
         line-height: 36px;
     }
+    .our-team__persone-card-img-wrap {
+        height: 290px;
+    }
+
+    .our-team__persone-card-img {
+        max-height: 120%;
+    }
+    .our-team__persone-card-text {
+        font-size: 16px;
+        line-height: 28px;
+    }
+    .our-team__persone-card-description {
+        padding: 20px 10px 20px 10px;
+    }
+    .our-team__persone-card-title {
+        font-size: 23px;
+        line-height: 30px;
+    }
 }
 
 @media (max-width: 1260px) {
     .our-team {
         padding-bottom: 90px;
+    }
+    .our-team__persone-card-title {
+        font-size: 23px;
+        line-height: 30px;
+    }
+    .our-team__persone-cards {
+        row-gap: 90px;
     }
 }
 
@@ -585,21 +625,39 @@
         margin-bottom: 70px;
     }
 
-    .our-team__persone-card-title {
-        font-size: 23px;
-        line-height: 36px;
+    .our-team__persone-card-img-wrap {
+        height: 250px;
     }
+
+    .our-team__persone-card-img {
+        max-height: 120%;
+    }
+    
 }
 
 @media (max-width: 1070px) {
     .our-team {
         padding-bottom: 80px;
     }
+    .our-team__persone-card-img-wrap {
+        height: 220px;
+    }
+
+    .our-team__persone-card-img {
+        max-height: 120%;
+    }
+    .our-team__persone-card-text {
+        line-height: 25px;
+    }
+    .our-team__persone-card-title {
+        font-size: 21px;
+        line-height: 22px;
+    }
 }
 
 @media (max-width: 991px) {
     .our-team__title {
-        margin-bottom: 60px;
+        margin-bottom: 53px;
     }
 
     .our-team__persone-cards {
@@ -614,143 +672,205 @@
     .our-team__swiper-wrapper {
         margin-bottom: 26px !Important;
     }
+
+    .our-team__persone-card-img-wrap {
+        height: 290px;
+    }
+
+    .our-team__persone-card-img {
+        max-height: 110%;
+    }
+
+    .our-team__persone-card-title {
+        font-size: 27px;
+        line-height: 36px;
+    }
+    .our-team__persone-card-description {
+        padding: 25px 10px 20px 10px;
+    }
+    .our-team__persone-card-text {
+        font-size: 18px;
+        line-height: 36px;
+    }
 }
 
 @media (max-width: 880px) {
-    .stocks {
+    .our-team {
         padding-bottom: 70px;
     }
-}
-
-@media (max-width: 847px) {
-    .stock__item-title {
-        padding: 20px 0px 20px 20px;
+    .our-team__persone-card-img-wrap {
+        height: 260px;
     }
 
-    .stocks__slider {
-        margin-bottom: 24px;
+    .our-team__persone-card-img {
+        max-height: 120%;
+    }
+
+    .our-team__persone-card-title {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    .our-team__persone-card-text {
+        font-size: 17px;
+        line-height: 30px;
     }
 }
 
 @media (max-width: 794px) {
-    .stocks {
-        padding-bottom: 60px;
+    .our-team {
+        padding-bottom: 65px;
     }
 
-    .stocks__title {
-        margin-bottom: 27px;
+    .our-team__title {
+        margin-bottom: 50px;
     }
 
-    .stock__item-title {
-        padding: 20px 0px 20px 20px;
+    .our-team__persone-card-img-wrap {
+        height: 240px;
     }
 
-    .stocks__slider {
-        margin-bottom: 21px;
+    .our-team__persone-card-img {
+        max-height: 120%;
+    }
+
+    .our-team__persone-card-title {
+        font-size: 22px;
+        line-height: 25px;
+    }
+    .our-team__persone-card-description {
+        padding: 20px 10px 20px 10px;
+    }
+    .our-team__persone-card-text {
+        font-size: 16px;
+        line-height: 27px;
     }
 }
 
 @media (max-width: 700px) {
-    .stocks__swiper-wrapper {
+    .our-team__swiper-wrapper {
         margin-bottom: 23px !Important;
     }
 
-    .stocks__slider {
-        margin-bottom: 22px;
-    }
-
-    .stock__item {
-        width: 100%;
-    }
-
-    .stocks__slider>.swiper-slide {
+    .our-team__slider>.swiper-slide {
         width: 100% !important;
     }
 
-    .stock__item-body {
-        max-height: none;
+    .our-team__title {
+        margin-bottom: 45px;
     }
 
-    .stock__item-title {
-        font-size: 28px;
-        line-height: 38px;
+    .our-team__persone-card-img-wrap {
+        height: 320px;
     }
 
-    .stocks__slider {
-        margin-bottom: 26px;
+    .our-team__persone-card-img {
+        max-height: 110%;
     }
-}
 
-@media (max-width: 600px) {
-    .stocks__slider {
-        margin-bottom: 17px;
+    .our-team__persone-card-title {
+        font-size: 26px;
+        line-height: 28px;
+    }
+    .our-team__persone-card-description {
+        padding: 25px 10px 20px 10px;
+    }
+    .our-team__persone-card-text {
+        font-size: 18px;
+        line-height: 31px;
     }
 }
 
 @media (max-width: 560px) {
-    .stocks {
+    .our-team {
         padding-bottom: 50px;
     }
 }
 
 @media (max-width: 516px) {
-    .stocks__title {
-        margin-bottom: 20px;
+    .our-team__title {
+        margin-bottom: 40px;
     }
 
-    .stocks__swiper-wrapper {
+    .our-team__swiper-wrapper {
         margin-bottom: 18px !Important;
     }
 }
 
 @media (max-width: 500px) {
-    .stocks {
+    .our-team {
         padding-bottom: 40px;
     }
-
-    .stocks__slider {
-        margin-bottom: 15px;
+    .our-team__persone-card-img-wrap {
+        height: 280px;
     }
 
-    .stock__item-title {
-        font-size: 26px;
-        line-height: 36px;
+    .our-team__persone-card-img {
+        max-height: 110%;
+    }
+
+    .our-team__persone-card-title {
+        font-size: 22px;
+        line-height: 25px;
+    }
+    .our-team__persone-card-description {
+        padding: 20px 10px 20px 10px;
+    }
+    .our-team__persone-card-text {
+        font-size: 16px;
+        line-height: 27px;
     }
 }
 
 @media (max-width: 425px) {
-    .stocks__swiper-wrapper {
+    .our-team__title {
+        margin-bottom: 54px;
+    }
+
+    .our-team__swiper-wrapper {
         margin-bottom: 15px !Important;
     }
 
-    .stock__item-title {
-        font-size: 20px;
-        line-height: 30px;
-        padding: 15px 0px 20px 15px;
+    .our-team__persone-card-img-wrap {
+        height: 250px;
     }
-}
 
-@media (max-width: 390px) {
-    .stocks__link {
-        max-width: 100%;
+    .our-team__persone-card-img {
+        max-height: 120%;
+    }
+
+    .our-team__persone-card-title {
+        font-size: 20px;
+        line-height: 22px;
+    }
+
+    .our-team__persone-card-text {
+        line-height: 23px;
     }
 }
 
 @media (max-width: 375px) {
-    .stock__item-title {
-        font-size: 18px;
-        line-height: 25px;
-        padding: 10px 0px 10px 10px;
+    .our-team__persone-card-img-wrap {
+        height: 220px;
     }
 
-    .stocks__slider {
-        margin-bottom: 9px;
+    .our-team__persone-card-img {
+        max-height: 120%;
+    }
+    .our-team__persone-card-title {
+        font-size: 18px;
+        line-height: 20px;
     }
 }
 
 @media (max-width: 320px) {
-    .stock__item-title {
-        font-size: 16px;
+    .our-team__persone-card-img-wrap {
+        height: 218px;
+    }
+
+    .our-team__persone-card-img {
+        max-height: 120%;
+    }
+    .our-team__persone-card-text {
         line-height: 20px;
     }
 }
@@ -1210,12 +1330,16 @@
     margin-bottom: 50px;
 }
 
-.stocks__items {
+/* .stocks__items {
+    display: flex;
+    width: 100%;
+    margin-bottom: 60px;
+} */
+.stocks__swiper-wrapper {
     display: flex;
     width: 100%;
     margin-bottom: 60px;
 }
-
 .stocks__items > * {
     flex: 0 1 50%;
 }
@@ -1248,14 +1372,17 @@
 }
 
 .stocks__slider {
-    display: none;
+    /* display: none; */
+    display: flex;
+    width: 100%;
+    margin-bottom: 60px;
 }
 
 .stocks__swiper-pagination {
     position: relative;
 }
 
-.stocks__swiper > .swiper-wrapper {
+.stocks__swiper>.swiper-wrapper {
     margin-bottom: 15px;
 }
 
@@ -1264,7 +1391,7 @@
         margin-bottom: 40px;
     }
 
-    .stocks__items {
+    .stocks__slider  {
         margin-bottom: 55px;
     }
 
@@ -1279,7 +1406,7 @@
         margin-bottom: 35px;
     }
 
-    .stocks__items {
+    .stocks__slider {
         margin-bottom: 50px;
     }
 }
@@ -1302,7 +1429,7 @@
         margin-bottom: 33px;
     }
 
-    .stocks__items {
+    .stocks__slider  {
         margin-bottom: 45px;
     }
 
@@ -1324,9 +1451,9 @@
         margin-bottom: 30px;
     }
 
-    .stocks__items {
+    /* .stocks__items {
         display: none;
-    }
+    } */
 
     .stocks__slider {
         display: flex;

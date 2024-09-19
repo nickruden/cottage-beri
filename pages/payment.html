@@ -349,7 +349,7 @@
         <div class="advantage-speed">
             <div class="advantage-speed__container my-container">
                 <div class="advantage-speed__title title"><span>Быстро</span></div>
-                <div class="advantage-speed__items">
+                <!-- <div class="advantage-speed__items">
                     <div href="./stocks/single-stock.html" class="advantage-speed__item">
                         <div class="advantage-speed__item-body">
                             <div class=advantage-speed__img-wrap">
@@ -374,7 +374,7 @@
                             <div class="advantage-speed__item-text">на одобрение заявки у банка уходит от трех дней</div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="advantage-speed__slider">
                     <div class="swiper advantage-speed__swiper">
                         <div class="swiper-wrapper advantage-speed__swiper-wrapper">
@@ -533,18 +533,13 @@
         <div class="mortgage-calculator">
             <div class="mortgage-calculator__container my-container">
                 <div class="mortgage-calculator__wrapper">
-                    <div class="mortgage-calculator__top">
+                    <div class="mortgage-calculator__inner">
+                    <div class="mortgage-calculator__left">
                         <div class="mortgage-calculator__description">
                             <div class="mortgage-calculator__title title">Ипотечный <span>калькулятор</span></div>
                             <div class="mortgage-calculator__text">С помощью удобного ипотечного калькулятора вы сможете быстро
                                 рассчитать сумму ежемесячного платежа и переплату.</div>
                         </div>
-                        <div class="mortgage-calculator__recommendation">
-                            <div class="mortgage-calculator__recommendation-text">Ваш запрос подходит под условия Семейной ипотеки и
-                                условия акции Мебель в подарок</div>
-                        </div>
-                    </div>
-                    <div class="mortgage-calculator__calculator">
                         <form action="" class="mortgage-calculator__form">
                             <div class="mortgage-calculator__form-item">
                                 <lable class="mortgage-calculator__form-lable">Стоимость недвижимости, ₽ </lable>
@@ -563,6 +558,12 @@
                                 <input type="text" class="mortgage-calculator__form-input" placeholder="20">
                             </div>
                         </form>
+                    </div>
+                    <div class="mortgage-calculator__right">
+                        <div class="mortgage-calculator__recommendation">
+                            <div class="mortgage-calculator__recommendation-text">Ваш запрос подходит под условия Семейной ипотеки и
+                                условия акции Мебель в подарок</div>
+                        </div>
                         <div class="mortgage-calculator__check">
                             <div class="mortgage-calculator__check-item">
                                 <div class="mortgage-calculator__check-title">Ежемесячный платеж</div>
@@ -582,6 +583,7 @@
                             </div>
                         </div>
                     </div>
+                </div>
                     <button class="mortgage-calculator__button button">Подать заявку на ипотеку</button>
                 </div>
             </div>
@@ -639,7 +641,7 @@
         <div class="stocks">
             <div class="stocks__container my-container">
                 <div class="stocks__title title"><span>Акции</span></div>
-                <div class="stocks__items">
+                <!-- <div class="stocks__items">
                     <a href="./stocks/single-stock.html" class="stock__item">
                         <div class="stock__item-body">
                             <div class="stock__img-wrap">
@@ -664,7 +666,7 @@
                             <div class="stock__item-title">Сертификат 100 000 ₽</div>
                         </div>
                     </a>
-                </div>
+                </div> -->
                 <div class="stocks__slider">
                     <div class="swiper stocks__swiper">
                         <div class="swiper-wrapper stocks__swiper-wrapper">
@@ -850,8 +852,11 @@
                 el: ".swiper-pagination",
                 clickable: true,
             },
-
             breakpoints: {
+                992:
+                {
+                    slidesPerView: 3,
+                },
                 701:
                 {
                     slidesPerView: 2, // два слайда при ширине 701px и выше
@@ -874,6 +879,10 @@
             },
 
             breakpoints: {
+                992:
+                {
+                    slidesPerView: 3,
+                },
                 701:
                 {
                     slidesPerView: 2, // два слайда при ширине 701px и выше

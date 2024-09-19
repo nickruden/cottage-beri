@@ -1,8 +1,4 @@
 /* 1 БЛОК */
-.top-banner__container {
-    max-height: 510px;
-}
-
 .top-banner__text {
     line-height: 36px;
     margin-bottom: 30px;
@@ -19,6 +15,333 @@
 
 .top-banner__img-wrap {
     max-height: 510px;
+}
+
+@media (max-width: 1600px) {
+    .top-banner__img-wrap {
+        height: auto;
+        width: 100%;
+    }
+    .banner-title {
+        font-size: 60px;
+        line-height: 70px!Important;
+    }
+}
+
+@media (max-width: 1510px) {
+    .banner-title {
+        font-size: 50px;
+        line-height: 60px!Important;
+    }
+}
+
+@media (max-width: 1440px) {
+    .top-banner__text {
+        font-size: 24px;
+        line-height: 35px;
+        margin-bottom: 28px;
+        max-width: 400px;
+    }
+    
+    .top-banner__list {
+        margin-bottom: 35px;
+    }
+    
+    .top-banner__item {
+        font-size: 18px;
+        line-height: 23px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .top-banner__text {
+        font-size: 22px;
+        line-height: 32px;
+        margin-bottom: 27px;
+    }
+    
+    .top-banner__list {
+        margin-bottom: 30px;
+    }
+    
+    .top-banner__item {
+        font-size: 17px;
+    }
+
+    .top-banner__left {
+        padding: 30px;
+    }
+
+    .banner-title {
+        font-size: 45px;
+        line-height: 55px!Important;
+    }
+}
+@media (max-width: 1280px) {
+    .top-banner__container {
+        max-height: 500px;
+    }
+    .top-banner__button {
+        max-width: 320px;
+        font-size: 17px;
+        padding: 16px 0px 16px 0px;
+    }
+    .top-banner__button-icon {
+        margin-left: 6px;
+    }
+    .top-banner__catalog-info {
+    max-width: 320px;
+    }
+    .top-banner__img-wrap {
+        height: auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .top-banner__text {
+        font-size: 22px;
+        line-height: 32px;
+        margin-bottom: 25px;
+        max-width: 310px;
+    }
+
+    .top-banner__item {
+        font-size: 15px;
+        line-height: 21px;
+    }
+
+    .top-banner__item:not(:last-child) {
+        margin-bottom: 5px;
+    }
+}
+@media (max-width: 1170px) {
+    .top-banner__left {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 1130px) {
+    .top-banner__text {
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 21px;
+    }
+
+    .top-banner__item {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .banner-title {
+        font-size: 42px;
+        line-height: 52px!Important;
+    }
+}
+
+@media (max-width: 991px) {
+    .top-banner__left {
+        padding: 20px;
+    }
+
+    .banner-title {
+        font-size: 37px;
+        line-height: 46px!Important;
+    }
+}
+
+@media (max-width: 970px) {
+    .top-banner {
+        padding-top: calc(30px + 54px);
+    }
+}
+
+@media (max-width: 880px) {
+    .top-banner__container {
+        max-height: none;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .top-banner__container > * {
+        flex: 1 1 100%;
+        max-width: none;
+    }
+
+    .top-banner__img-wrap {
+        max-height: none;
+    }
+
+    .banner-title {
+        font-size: 45px;
+        line-height: 55px!Important;
+    }
+
+    .top-banner__text {
+        font-size: 22px;
+        line-height: 38px;
+        margin-bottom: 27px;
+    }
+    
+    .top-banner__button {
+        max-width: 350px;
+        font-size: 18px;
+        padding: 16px 0px 16px 0px;
+    }
+    .top-banner__catalog-info {
+        max-width: 350px;
+        }
+    .top-banner__list {
+        margin-bottom: 40px;
+    }
+    
+    .top-banner__item {
+        font-size: 17px;
+    }
+
+    .top-banner__left {
+        padding: 30px;
+    }
+
+    .top-banner__item:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 700px) {
+.top-banner__left {
+    padding: 25px;
+}
+.top-banner__text {
+    font-size: 21px;
+    line-height: 28px;
+    margin-bottom: 20px;
+}
+
+.top-banner__item {
+    font-size: 15px;
+    line-height: 21px;
+}
+.top-banner__button {
+    max-width: 320px;
+    font-size: 17px;
+    padding: 16px 0px 16px 0px;
+}
+.top-banner__catalog-info {
+    max-width: 320px;
+    }
+
+    .top-banner__button-icon {
+        height: 22px;
+        margin-left: 12px;
+    }
+}
+
+@media (max-width: 850px) {
+    .top-banner {
+        padding-top: calc(25px + 54px);
+    }
+}
+
+@media (max-width: 794px) {
+    .top-banner {
+        padding-top: calc(20px + 54px);
+        padding-bottom: 61px;
+    }
+    .banner-title {
+        font-size: 40px;
+        line-height: 50px!Important;
+    }
+    .top-banner__text {
+        margin-bottom: 25px;
+        line-height: 32px;
+    }
+    .top-banner__list {
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 600px) {
+    .top-banner {
+        padding-top: calc(17px + 54px);
+    }
+    
+    .top-banner__item:not(:last-child) {
+        margin-bottom: 5px;
+    }
+
+    .top-banner__text {
+        font-size: 21px;
+        line-height: 26px;
+        margin-bottom: 17px;
+    }
+    .banner-title {
+        font-size: 33px;
+        line-height: 43px!Important;
+    }
+    .top-banner__button {
+        padding: 14px 0px 13px 0px;
+    }
+}
+
+@media (max-width: 500px) {
+    .top-banner__left {
+        padding: 26px 13px 35px 13px;
+    }
+    .top-banner__left > *:not(.button) {
+        padding: 0px 10px;
+    }
+    .banner-title {
+        font-size: 28px;
+        line-height: 39px!Important;
+    }
+    .top-banner__catalog-info {
+        font-size: 10px;
+    }
+    .top-banner__button {
+        font-size: 16px;
+        padding: 13px 0px 12px 0px;
+    }
+}
+
+@media (max-width: 500px) {
+    .top-banner__text {
+        font-size: 18px;
+        line-height: 20px;
+        margin-bottom: 14px;
+    }
+    .top-banner__list {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 490px) {
+    .top-banner {
+        padding-top: calc(12px + 54px);
+    }
+    .top-banner__button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 425px) {
+    .top-banner__left {
+        padding: 30px 10px 47px 10px;
+    }
+
+    .top-banner__item {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .top-banner__text {
+        margin-bottom: 10px;
+    }
+
+    .top-banner__button-icon {
+        height: 20px;
+        margin-left: 8px;
+    }
 }
 
 
@@ -38,11 +361,15 @@
     margin-bottom: 50px;
 }
 
-.advantage-speed__items {
+/* .advantage-speed__items {
+    display: flex;
+    width: 100%;
+} */
+
+.advantage-speed__swiper-wrapper {
     display: flex;
     width: 100%;
 }
-
 .advantage-speed__items > * {
     flex: 0 1 50%;
 }
@@ -81,8 +408,13 @@
 }
 
 .advantage-speed__slider {
-    display: none;
+    display: flex;
+    width: 100%;
 }
+/* 
+.advantage-speed__slider {
+    display: none;
+} */
 
 .advantage-speed__swiper-pagination {
     position: relative;
@@ -97,10 +429,6 @@
         margin-bottom: 40px;
     }
 
-    .advantage-speed__items {
-        margin-bottom: 55px;
-    }
-
     .advantage-speed__item-text {
         font-size: 17px;
         padding: 30px 30px 32px 30px;
@@ -110,10 +438,6 @@
 @media (max-width: 1300px) {
     .advantage-speed__title {
         margin-bottom: 35px;
-    }
-
-    .advantage-speed__items {
-        margin-bottom: 50px;
     }
 }
 
@@ -163,6 +487,8 @@
 
     .advantage-speed__item-text {
         padding: 20px;
+        font-size: 14px;
+        line-height: 20px;
     }
 
     .advantage-speed__item:first-child .advantage-speed__item-text {
@@ -170,6 +496,11 @@
     }
 }
 
+@media (max-width: 1040px) {
+    .advantage-speed__item:first-child .advantage-speed__item-text {
+        padding: 15px;
+    }
+}
 @media (max-width: 1070px) {
     .advantage-speed {
         padding-bottom: 80px;
@@ -1014,13 +1345,23 @@
     max-width: 1500px;
     margin-left: 40px;
 }
-.mortgage-calculator__top {
+.mortgage-calculator__inner {
     display: flex;
     margin-bottom: 50px;
+}
+.mortgage-calculator__left {
+
+}
+.mortgage-calculator__right {
+    max-width: 642px;
+    width: 100%;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 .mortgage-calculator__description {
-    margin-right: 116px;
+    margin-bottom: 50px;
 }
 .mortgage-calculator__title {
     line-height: 66px;
@@ -1035,6 +1376,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 44px 0px;
     background-color: #EFF6FF;
     max-width: 640px;
     width: 100%;
@@ -1051,7 +1393,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 21px;
-    margin-right: 118px;
     max-width: 743px;
 }
 .mortgage-calculator__form-item {
@@ -1089,6 +1430,8 @@
     row-gap: 32px;
     column-gap: 100px;
     flex-wrap: wrap;
+    max-width: 462px;
+    margin-bottom: 12px;
 }
 .mortgage-calculator__check-title {
     color: #646666;
@@ -1114,6 +1457,457 @@
 .mortgage-calculator__button {
     align-self: center;
     max-width: 361px;
+}
+
+@media (max-width: 1600px) {
+    .mortgage-calculator__right {
+        max-width: 542px;
+    }
+    .mortgage-calculator__recommendation-text {
+        text-align: center;
+    }
+}
+
+@media (max-width: 1500px) {
+    .mortgage-calculator__title {
+        font-size: 50px;
+    }
+    .mortgage-calculator__text {
+        font-size: 17px;
+    }
+    .mortgage-calculator__right {
+        max-width: 542px;
+    }
+    .mortgage-calculator__recommendation-text {
+        text-align: center;
+    }
+    .mortgage-calculator__form {
+        max-width: 643px;
+    }
+    .mortgage-calculator__form-item:nth-of-type(odd) {
+        flex: 0 1 calc(60% - 21px);
+    }
+    .mortgage-calculator__form-item:nth-of-type(even) {
+        flex: 0 1 calc(40% - 21px);
+    }
+}
+@media (max-width: 1400px) {
+    .mortgage-calculator__title {
+        font-size: 45px;
+        line-height: 55px;
+        margin-bottom: 30px;
+    }
+    .mortgage-calculator__recommendation-text {
+        font-size: 17px;
+    }
+    .mortgage-calculator__form {
+        max-width: 600px;
+    }
+    .mortgage-calculator__check-number {
+        font-size: 18px;
+    }
+    .mortgage-calculator__check-title {
+        font-size: 17px;
+    }
+    .mortgage-calculator__check {
+        column-gap: 70px;
+    }
+}
+@media (max-width: 1320px) {
+    .mortgage-calculator__title {
+        font-size: 40px;
+        line-height: 50px;
+    }
+    .mortgage-calculator__text {
+        max-width: 540px;
+    }
+    .mortgage-calculator__right {
+        max-width: 442px;
+    }
+    .mortgage-calculator__form {
+        max-width: 550px;
+    }
+}
+
+@media (max-width: 1240px) {
+    .mortgage-calculator__title {
+        margin-bottom: 25px;
+    }
+    .mortgage-calculator__text {
+        font-size: 16px;
+    }
+    .mortgage-calculator__recommendation {
+        padding: 30px 20px;
+    }
+    .mortgage-calculator__recommendation-text {
+        font-size: 16px;
+    }
+    .mortgage-calculator__check-number {
+        font-size: 16px;
+    }
+    .mortgage-calculator__check-title {
+        font-size: 16px;
+    }
+    .mortgage-calculator__check {
+        column-gap: 50px;
+    }
+}
+@media (max-width: 1190px) {
+    .mortgage-calculator__title {
+        margin-bottom: 20px;
+    }
+    .mortgage-calculator__text {
+        max-width: 460px;
+    }
+    .mortgage-calculator__recommendation {
+        margin-top: 5%;
+        padding: 30px 20px;
+    }
+    .mortgage-calculator__right {
+        max-width: 400px;
+    }
+    .mortgage-calculator__form {
+        max-width: 500px;
+    }
+}
+@media (max-width: 1070px) {
+    .mortgage-calculator__description {
+        margin-bottom: 40px;
+    }
+    .mortgage-calculator__title {
+        font-size: 35px;
+        line-height: 45px;
+    }
+    .mortgage-calculator__text {
+        font-size: 14px;
+        max-width: 460px;
+    }
+    .mortgage-calculator__recommendation {
+        font-size: 14px;
+    }
+    .mortgage-calculator__recommendation-text {
+        font-size: 14px;
+    }
+    .mortgage-calculator__right {
+        max-width: 400px;
+    }
+    .mortgage-calculator__form {
+        max-width: 450px;
+    }
+    .mortgage-calculator__form-lable {
+        left: 13px;
+    }
+    .mortgage-calculator__form-input {
+        padding: 37px 13px 12px 13px;
+    }
+    .mortgage-calculator__check-number {
+        font-size: 15px;
+    }
+    .mortgage-calculator__check-title {
+        font-size: 15px;
+    }
+    .mortgage-calculator__check {
+        column-gap: 30px;
+        row-gap: 25px;
+    }
+    .mortgage-calculator__inner {
+        margin-bottom: 45px;
+    }
+}
+
+@media (max-width: 991px) {
+    .mortgage-calculator__title {
+        font-size: 38px;
+        line-height: 48px;
+    }
+    .mortgage-calculator__wrapper {
+        margin-left: 0;
+    }
+    .mortgage-calculator__inner {
+        justify-content: space-evenly;
+    }
+    .mortgage-calculator__form-item:nth-of-type(odd) {
+        flex: 0 1 100%;
+    }
+    .mortgage-calculator__form-item:nth-of-type(even) {
+        flex: 0 1 100%;
+    }
+    .mortgage-calculator__check {
+        max-height: none;
+        column-gap: 100px;
+        flex-wrap: nowrap;
+        max-width: 462px;
+        margin-bottom: 12px;
+    }
+    .mortgage-calculator__right {
+        margin-left: 0px;
+        max-width: 300px;
+    }
+    .mortgage-calculator__form-lable {
+        left: 20px;
+    }
+    .mortgage-calculator__form-input {
+        padding: 37px 20px 12px 20px;
+    }
+    .mortgage-calculator__check {
+        row-gap: 45px;
+    }
+}
+@media (max-width: 880px) {
+    .mortgage-calculator__right {
+        max-width: 350px;
+    }
+    .mortgage-calculator__left {
+        max-width: 400px;
+    }
+    .mortgage-calculator__form {
+        max-width: 350px;
+    }
+    .mortgage-calculator__inner {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mortgage-calculator__title {
+        font-size: 33px;
+        line-height: 43px;
+    }
+}
+@media (max-width: 750px) {
+    .mortgage-calculator__inner {
+        flex-direction: column;
+    }
+    .mortgage-calculator__right {
+        max-width: none;
+    }
+    .mortgage-calculator__left {
+        max-width: none;
+    }
+    .mortgage-calculator__form {
+        max-width: none;
+    }
+    .mortgage-calculator__form-item:nth-of-type(odd) {
+        flex: 0 1 calc(55% - 20px);
+    }
+    .mortgage-calculator__form-item:nth-of-type(even) {
+        flex: 0 1 45%;
+    }
+    .mortgage-calculator__check {
+        display: flex;
+        flex-direction: column;
+        max-height: 144px;
+        row-gap: 32px;
+        column-gap: 70px;
+        flex-wrap: wrap;
+        max-width: 462px;
+        margin-bottom: 0px;
+        width: 100%;
+    }
+    .mortgage-calculator__recommendation {
+        max-width: none;
+        margin-bottom: 20px;
+        margin-top: 0;
+    }
+
+    .mortgage-calculator__left {
+        margin-bottom: 25px;
+    }
+
+    .mortgage-calculator__right {
+        align-items: center;
+    }
+
+    .mortgage-calculator__title {
+        margin-bottom: 20px;
+    }
+    .mortgage-calculator__recommendation-text {
+        font-size: 17px;
+    }
+    .mortgage-calculator__text {
+        font-size: 17px;
+        max-width: 560px;
+    }
+    .mortgage-calculator__check-number {
+        font-size: 18px;
+    }
+    .mortgage-calculator__check-title {
+        font-size: 17px;
+    }
+    .mortgage-calculator__description {
+        margin-bottom: 25px;
+    }
+    .mortgage-calculator__form {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .mortgage-calculator__check {
+        row-gap: 28px;
+        column-gap: 50px;
+        margin-bottom: 12px;
+    }
+
+    .mortgage-calculator__left {
+        margin-bottom: 22px;
+    }
+
+    .mortgage-calculator__right {
+        align-items: center;
+    }
+
+    .mortgage-calculator__title {
+        margin-bottom: 20px;
+    }
+    .mortgage-calculator__recommendation-text {
+        font-size: 16px;
+    }
+    .mortgage-calculator__text {
+        font-size: 16px;
+    }
+    .mortgage-calculator__check-number {
+        font-size: 17px;
+    }
+    .mortgage-calculator__check-title {
+        font-size: 16px;
+    }
+    .mortgage-calculator__description {
+        margin-bottom: 22px;
+    }
+    .mortgage-calculator__inner {
+        margin-bottom: 32px;
+    }
+}
+@media (max-width: 500px) {
+    .mortgage-calculator__title {
+        font-size: 29px;
+        line-height: 39px;
+    }
+    .mortgage-calculator__text {
+        padding-right: 20px;
+    }
+    .mortgage-calculator__check {
+        row-gap: 20px;
+        column-gap: 0;
+    }
+
+    .mortgage-calculator__check-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1 1 50%;
+    }
+
+    .mortgage-calculator__left {
+        margin-bottom: 22px;
+    }
+
+    .mortgage-calculator__right {
+        align-items: center;
+    }
+
+    .mortgage-calculator__title {
+        margin-bottom: 20px;
+    }
+    .mortgage-calculator__recommendation-text {
+        font-size: 16px;
+    }
+    .mortgage-calculator__text {
+        font-size: 16px;
+    }
+    .mortgage-calculator__recommendation {
+        padding: 25px 20px;
+    }
+    .mortgage-calculator__check-number {
+        font-size: 18px;
+    }
+    .mortgage-calculator__check-title {
+        font-size: 16px;
+    }
+    .mortgage-calculator__description {
+        margin-bottom: 22px;
+    }
+}
+
+@media (max-width: 440px) {
+    .mortgage-calculator__check {
+        row-gap: 20px;
+        column-gap: 0;
+    }
+
+    .mortgage-calculator__check-item {
+        align-items: flex-start;
+    }
+
+    .mortgage-calculator__left {
+        margin-bottom: 20px;
+    }
+
+    .mortgage-calculator__right {
+        align-items: center;
+    }
+
+    .mortgage-calculator__title {
+        margin-bottom: 20px;
+    }
+    .mortgage-calculator__recommendation-text {
+        text-align: start;
+        font-size: 15px;
+    }
+    .mortgage-calculator__text {
+        font-size: 15px;
+    }
+    .mortgage-calculator__recommendation {
+        padding: 20px;
+    }
+    .mortgage-calculator__check-number {
+        font-size: 18px;
+    }
+    .mortgage-calculator__check-title {
+        font-size: 16px;
+    }
+    .mortgage-calculator__description {
+        margin-bottom: 20px;
+    }
+    .mortgage-calculator__check {
+        max-height: none;
+        flex-wrap: nowrap;
+    }
+    .mortgage-calculator__right {
+        align-items: center;
+    }
+    .mortgage-calculator__form-item:nth-of-type(odd) {
+        flex: 0 1 100%;
+    }
+    .mortgage-calculator__form-item:nth-of-type(even) {
+        flex: 0 1 100%;
+    }
+    .mortgage-calculator__inner {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 425px) {
+    .mortgage-calculator__title {
+        font-size: 26px;
+        line-height: 36px;
+    }
+}
+@media (max-width: 390px) {
+    .mortgage-calculator__text {
+        padding-right: 0;
+    }
+    .mortgage-calculator__button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 320px) {
+    .mortgage-calculator__title {
+        font-size: 24px;
+        line-height: 34px;
+    }
 }
 
 
@@ -1695,12 +2489,16 @@
     margin-bottom: 50px;
 }
 
-.stocks__items {
+/* .stocks__items {
+    display: flex;
+    width: 100%;
+    margin-bottom: 60px;
+} */
+.stocks__swiper-wrapper {
     display: flex;
     width: 100%;
     margin-bottom: 60px;
 }
-
 .stocks__items > * {
     flex: 0 1 50%;
 }
@@ -1733,7 +2531,10 @@
 }
 
 .stocks__slider {
-    display: none;
+    /* display: none; */
+    display: flex;
+    width: 100%;
+    margin-bottom: 60px;
 }
 
 .stocks__swiper-pagination {
@@ -1749,7 +2550,7 @@
         margin-bottom: 40px;
     }
 
-    .stocks__items {
+    .stocks__slider  {
         margin-bottom: 55px;
     }
 
@@ -1764,7 +2565,7 @@
         margin-bottom: 35px;
     }
 
-    .stocks__items {
+    .stocks__slider {
         margin-bottom: 50px;
     }
 }
@@ -1787,7 +2588,7 @@
         margin-bottom: 33px;
     }
 
-    .stocks__items {
+    .stocks__slider  {
         margin-bottom: 45px;
     }
 
@@ -1809,9 +2610,9 @@
         margin-bottom: 30px;
     }
 
-    .stocks__items {
+    /* .stocks__items {
         display: none;
-    }
+    } */
 
     .stocks__slider {
         display: flex;
