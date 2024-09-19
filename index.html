@@ -1190,7 +1190,14 @@
                     this.mask.destroy();
                     this.mask = null;
                 }
-                this.value = "";
+
+                let valueWithoutPrefix = this.value.replace(/^\+7|^\8/, '');
+                
+                if (/[0-9]/.test(valueWithoutPrefix)) {
+                    return;
+                } else {
+                    this.value = "";
+                }
             });
         }
     </script>

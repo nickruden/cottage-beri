@@ -451,7 +451,7 @@
 
     .top-block__title {
         font-size: 64px;
-        line-height: 70px;
+        line-height: 70px!Important;
         margin-bottom: 80px;
     }
 
@@ -534,7 +534,7 @@
 
     .top-block__title {
         font-size: 58px;
-        line-height: 65px;
+        line-height: 65px!Important;
         margin-bottom: 60px;
     }
 
@@ -621,7 +621,7 @@
 
     .top-block__title {
         font-size: 47px;
-        line-height: 60px;
+        line-height: 60px!Important;
     }
 
     .top-block__slider {
@@ -660,7 +660,7 @@
 
     .top-block__title {
         font-size: 45px;
-        line-height: 56px;
+        line-height: 56px!Important;
         margin-bottom: 40px;
     }
 
@@ -723,7 +723,7 @@
 
     .top-block__title {
         font-size: 40px;
-        line-height: 50px;
+        line-height: 50px!Important;
         margin-bottom: 60px;
     }
 
@@ -818,7 +818,7 @@
 
     .top-block__title {
         font-size: 36px;
-        line-height: 40px;
+        line-height: 40px!Important;
         margin-bottom: 50px;
     }
 }
@@ -877,7 +877,6 @@
 
     .top-block__title {
         font-size: 30px;
-        line-height: 40px;
         margin-bottom: 40px;
     }
 
@@ -939,7 +938,7 @@
 
     .top-block__title {
         font-size: 29px;
-        line-height: 35px;
+        line-height: 35px!Important;
     }
 
     .top-block__unique-offers {
@@ -982,7 +981,7 @@
 @media (max-width: 320px) {
     .top-block__title {
         font-size: 26px;
-        line-height: 30px;
+        line-height: 30px!Important;
     }
 
     .top-block__advantages-title {
