@@ -927,6 +927,9 @@
     .complexes-advantages__item-body {
         padding-right: 5px;
     }
+    .complexes-advantages__title {
+        max-width: 320px;
+    }
 }
 
 
