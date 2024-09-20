@@ -733,28 +733,40 @@
             overlay.style.display = 'none';
         });
     </script>
-
-    <!-- СКРИПТ МОДАЛЬНОГО ОКНА С ВИДЕО -->
+    
+    
+    <!-- СКРИПТ МОДАЛЬНОГО ОКНА С ВИДЕО, РАБОТАЕТ ТАК - ДОБАВЛЯЕТЕ НА КНОПКУ ИЛИ НА САМО ПРЕВЬЮ, 
+        ТО ЧТО ДОЛЖНО ОТКРЫТЬ ВИДЕО DATA-TITLE и DATA SRC - и модальное окно открывается 
+        с нужным видео и заголовком -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+
+            document.querySelectorAll('.video-play-button').forEach(button => {
+                button.addEventListener('click', function () {
+                    const videoTitle = this.getAttribute('data-title');
+                    const videoSrc = this.getAttribute('data-src');
+
+
+                    const modalTitle = document.querySelector('#videoModal .modal-video__title');
+                    modalTitle.innerHTML = videoTitle;
+
+
+                    const videoPlayer = videojs('modal-video');
+                    videoPlayer.src({ src: videoSrc, type: 'video/mp4' });
+                });
+            });
+
+
             const videoModal = document.getElementById('videoModal');
-            const videoTitle = videoModal.querySelector('.modal-video__title');
-            const videoElement = videoModal.querySelector('#modal-video');
-            const videoSource = videoElement.querySelector('source');
-
-            videoModal.addEventListener('show.bs.modal', function (event) {
-                const button = event.relatedTarget;
-                const title = button.getAttribute('data-title');
-                const src = button.getAttribute('data-src');
-
-                videoTitle.textContent = title;
-                videoSource.setAttribute('src', src);
-                videoElement.load();
+            videoModal.addEventListener('shown.bs.modal', function () {
+                const videoPlayer = videojs('modal-video');
+                videoPlayer.play();
             });
 
             videoModal.addEventListener('hidden.bs.modal', function () {
-                videoElement.pause();
-                videoElement.currentTime = 0;
+                const videoPlayer = videojs('modal-video');
+                videoPlayer.pause();
+                videoPlayer.currentTime(0);
             });
         });
     </script>
