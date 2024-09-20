@@ -516,7 +516,7 @@
                                             <img src="../img/pages-img/photo-and-video/construction-progress/video-banner.jpg"
                                                 alt="" class="construction-progress__video-poster">
                                             <div class="video-play-button" data-bs-toggle="modal"
-                                                data-bs-target="#videoModal" data-title="Видео 2" data-src="../video/31637395_MotionElements_earth-hologram_preview.mp4"></div>
+                                                data-bs-target="#videoModal" data-title="Видео 2" data-src="../video/7667227-uhd_3840_2160_30fps.mp4"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -734,35 +734,37 @@
         });
     </script>
     
-    
+
     <!-- СКРИПТ МОДАЛЬНОГО ОКНА С ВИДЕО, РАБОТАЕТ ТАК - ДОБАВЛЯЕТЕ НА КНОПКУ ИЛИ НА САМО ПРЕВЬЮ, 
         ТО ЧТО ДОЛЖНО ОТКРЫТЬ ВИДЕО DATA-TITLE и DATA SRC - и модальное окно открывается 
         с нужным видео и заголовком -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-
+            // Обработчик события для открытия модального окна с видео
             document.querySelectorAll('.video-play-button').forEach(button => {
                 button.addEventListener('click', function () {
                     const videoTitle = this.getAttribute('data-title');
                     const videoSrc = this.getAttribute('data-src');
 
-
+                    // Обновляем заголовок модального окна
                     const modalTitle = document.querySelector('#videoModal .modal-video__title');
-                    modalTitle.innerHTML = videoTitle;
+                    modalTitle.innerHTML = `<span>${videoTitle}</span> люди`;
 
-
+                    // Обновляем источник видео в модальном окне
                     const videoPlayer = videojs('modal-video');
                     videoPlayer.src({ src: videoSrc, type: 'video/mp4' });
+                    videoPlayer.load(); // Перезагружаем видео, чтобы обновить интерфейс
                 });
             });
 
-
+            // Обработчик события для воспроизведения видео при открытии модального окна
             const videoModal = document.getElementById('videoModal');
             videoModal.addEventListener('shown.bs.modal', function () {
                 const videoPlayer = videojs('modal-video');
                 videoPlayer.play();
             });
 
+            // Обработчик события для остановки и сброса видео при закрытии модального окна
             videoModal.addEventListener('hidden.bs.modal', function () {
                 const videoPlayer = videojs('modal-video');
                 videoPlayer.pause();
