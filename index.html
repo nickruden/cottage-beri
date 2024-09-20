@@ -7,7 +7,10 @@
     <title>Коттедж-бери</title>
     <link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+  />
 
     <!-- ПОДКЛЮЧЕНИЕ СТИЛЕЙ ДЛЯ VIDEOSJS -->
     <link href="https://vjs.zencdn.net/8.16.1/video-js.css" rel="stylesheet" />
@@ -175,7 +178,7 @@
                         <a href="tel:+79273335651" class="header__contacts-numbers-second">+7 (927) 333-56-51</a>
                     </div>
                     <div class="header__contact-address">г. Уфа, ул. Блюхера, 2/1 пн-пт 09:00 – 19:00</div>
-                    <button class="header__contacts-button" data-bs-toggle="modal" data-bs-target="#callModal">Обратный
+                    <button class="header__contacts-button" data-form="callModal">Обратный
                         звонок</button>
                 </div>
             </div>
@@ -308,6 +311,43 @@
             </div>
         </div>
     </div>
+
+    <div class="modal fade call-modal" id="consultationModal" tabindex="-1" aria-labelledby="callModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered call-modal__dialog">
+            <div class="modal-content call-modal__content">
+                <div class="modal-header call-modal__header">
+                    <button type="button" class="btn-close call-modal__close-button p-0" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body call-modal__body">
+                    <div class="call-modal__title title">Записаться на констультацию</div>
+                    <div class="call-modal__text text-block_fSize_20">Хотите уточнить информацию? Оставьте свои
+                        контактные
+                        данные, и мы вам перезвоним в ближайшее время.</div>
+                    <form action="" class="feedback-form">
+                        <input type="text" name="name" id="name-input" placeholder="Имя"
+                            class="feedback-form__input call-modal__input-name bordered-block">
+                        <input type="tel" name="phone" id="phone-input" placeholder="Телефон"
+                            class="feedback-form__input call-modal__input-phone bordered-block">
+                        <button class="feedback-form__button call-modal__button button">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- КАЖДОЙ КНОПКЕ КОТОРАЯ ОТКРЫВАЕТ МОДАЛЬНОЕ ОКНО ДОБАВЛЯЕТЕ DATA-FORM И УКАЗЫВАЕТЕ ID МОДАЛЬНОГО ОКНА -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('[data-form]').forEach(button => {
+                button.addEventListener('click', function () {
+                    const formId = this.getAttribute('data-form');
+                    const modal = new bootstrap.Modal(document.getElementById(formId));
+                    modal.show();
+                });
+            });
+        });
+    </script>
 
     <!-- ОВЕРЛЕЙ ТОЛЬКО ДЛЯ МОДАЛКИ С ФОРМОЙ -->
     <div class="overlay" id="overlay"></div>
@@ -596,7 +636,7 @@
                     <div class="complexes-map__buttons">
                         <a href="./pages/complexes/complexes.html"
                             class="complexes-map__more-link button button_link">Узнать больше</a>
-                        <button class="complexes-map__consult-button button">Записаться на консультацию</button>
+                        <button class="complexes-map__consult-button button" data-form="consultationModal">Записаться на консультацию</button>
                     </div>
                 </div>
             </div>
@@ -661,38 +701,44 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="reports__slide">
-                                    <img src="./img/pages-img/main/reports/slide-1-img.jpg" alt=""
-                                        class="reports__slide-img">
+                                    <a href="./img/nhk8jg3psng71.jpg" data-fancybox="reports">
+                                        <img src="./img/nhk8jg3psng71.jpg" alt="" class="reports__slide-img">
+                                    </a>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="reports__slide">
-                                    <img src="./img/pages-img/main/reports/slide-2-img.jpg" alt=""
-                                        class="reports__slide-img">
+                                    <a href="./img/pages-img/main/reports/slide-2-img.jpg" data-fancybox="reports">
+                                        <img src="./img/pages-img/main/reports/slide-2-img.jpg" alt="" class="reports__slide-img">
+                                    </a>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="reports__slide">
-                                    <img src="./img/pages-img/main/reports/slide-3-img.jpg" alt=""
-                                        class="reports__slide-img">
+                                    <a href="./img/pages-img/main/reports/slide-3-img.jpg" data-fancybox="reports">
+                                        <img src="./img/pages-img/main/reports/slide-3-img.jpg" alt="" class="reports__slide-img">
+                                    </a>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="reports__slide">
-                                    <img src="./img/pages-img/main/reports/slide-1-img.jpg" alt=""
-                                        class="reports__slide-img">
+                                    <a href="./img/pages-img/main/reports/slide-1-img.jpg" data-fancybox="reports">
+                                        <img src="./img/pages-img/main/reports/slide-1-img.jpg" alt="" class="reports__slide-img">
+                                    </a>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="reports__slide">
-                                    <img src="./img/pages-img/main/reports/slide-2-img.jpg" alt=""
-                                        class="reports__slide-img">
+                                    <a href="./img/pages-img/main/reports/slide-2-img.jpg" data-fancybox="reports">
+                                        <img src="./img/pages-img/main/reports/slide-2-img.jpg" alt="" class="reports__slide-img">
+                                    </a>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="reports__slide">
-                                    <img src="./img/pages-img/main/reports/slide-3-img.jpg" alt=""
-                                        class="reports__slide-img">
+                                    <a href="./img/pages-img/main/reports/slide-3-img.jpg" data-fancybox="reports">
+                                        <img src="./img/pages-img/main/reports/slide-3-img.jpg" alt="" class="reports__slide-img">
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -791,7 +837,9 @@
                 <div class="viewing__cards">
                     <div class="viewing__card">
                         <div class="viewing__card-items">
-                            <img src="./img/pages-img/main/viewing/3D-tour.jpg" alt="" class="viewing__card-img">
+                            <div class="viewing__card-wrap-img">
+                            <img src="./img/nhk8jg3psng71.jpg" alt="" class="viewing__card-img">
+                        </div>
                             <div class="vewing__description">
                                 <button class="viewing__card-button button">Записаться на 3Д-тур</button>
                             </div>
@@ -799,7 +847,9 @@
                     </div>
                     <div class="viewing__card">
                         <div class="viewing__card-items">
+                            <div class="viewing__card-wrap-img">
                             <img src="./img/pages-img/main/viewing/excursion.jpg" alt="" class="viewing__card-img">
+                        </div>
                             <div class="vewing__description">
                                 <button class="viewing__card-button button">Записаться на экскурсию</button>
                             </div>
@@ -819,7 +869,7 @@
                             баню, беседку.</div>
                     </div>
                     <div class="what-saying__video" data-bs-toggle="modal" data-bs-target="#videoModal">
-                        <img src="./video/poster.jpg" alt="" class="what-saying__video-poster">
+                        <img src="./img/nhk8jg3psng71.jpg" alt="" class="what-saying__video-poster">
                         <div class="video-play-button"></div>
                     </div>
                 </div>
@@ -897,7 +947,7 @@
                         <div class="swiper-wrapper reviews__slider-wrapper">
                             <div class="swiper-slide">
                                 <div class="reviews__slide bordered-block">
-                                    <a href="javascript:;" data-fancybox data-src="./img/pages-img/main/reviews/1.png">
+                                    <a href="javascript:;" data-fancybox="reviews" data-src="./img/pages-img/main/reviews/1.png">
                                         <img src="./img/pages-img/main/reviews/1.png" alt="" class="reviews__slide-img">
                                     </a>
                                 </div>
@@ -905,7 +955,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="reviews__slide bordered-block">
-                                    <a href="javascript:;" data-fancybox data-src="./img/pages-img/main/reviews/2.png">
+                                    <a href="javascript:;" data-fancybox="reviews" data-src="./img/pages-img/main/reviews/2.png">
                                         <img src="./img/pages-img/main/reviews/2.png" alt="" class="reviews__slide-img">
                                     </a>
                                 </div>
@@ -913,7 +963,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="reviews__slide bordered-block">
-                                    <a href="javascript:;" data-fancybox data-src="./img/pages-img/main/reviews/3.png">
+                                    <a href="javascript:;" data-fancybox="reviews" data-src="./img/pages-img/main/reviews/3.png">
                                         <img src="./img/pages-img/main/reviews/3.png" alt="" class="reviews__slide-img">
                                     </a>
                                 </div>
@@ -921,7 +971,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="reviews__slide bordered-block">
-                                    <a href="javascript:;" data-fancybox data-src="./img/pages-img/main/reviews/1.png">
+                                    <a href="javascript:;" data-fancybox="reviews" data-src="./img/pages-img/main/reviews/1.png">
                                         <img src="./img/pages-img/main/reviews/1.png" alt="" class="reviews__slide-img">
                                     </a>
                                 </div>
@@ -950,7 +1000,7 @@
                         <button class="consultation__button button">Записаться на консультацию</button>
                     </div>
                     <div class="consultation__img-wrap">
-                        <img src="./img/pages-img/main/consultation/consultation-img.jpg" alt=""
+                        <img src="./img/nhk8jg3psng71.jpg" alt=""
                             class="consultation__img">
                     </div>
                 </div>
@@ -1180,7 +1230,8 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <!-- ПОДКЛЮЧЕНИE СКРИПТОВ БИБЛИОТЕК -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -1189,34 +1240,23 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://vjs.zencdn.net/8.16.1/video.min.js"></script>
 
+
+    <!-- ПОДКЛЮЧЕНИЕ Fancybox -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            Fancybox.bind('[data-fancybox="gallery"]', {
-                Toolbar: {
-                    display: {
-                        left: [],
-                        middle: [],
-                        right: ["close"],
-                    },
-                },
-                Thumbs: {
-                    autoStart: false,
-                },
-                Carousel: {
-                    infinite: false,
-                    navigation: false,
-                },
-                on: {
-                    init: () => {
-                        swiper.allowTouchMove = false; // Отключаем Swiper
-                    },
-                    destroy: () => {
-                        swiper.allowTouchMove = true; // Включаем Swiper
-                    },
-                },
-            });
+        Fancybox.bind('[data-fancybox="reports"]', {
+            dragToClose: false,
+            Toolbar: false,
         });
     </script>
+
+    <script>
+        Fancybox.bind('[data-fancybox="reviews"]', {
+            dragToClose: false,
+            Toolbar: false,
+        });
+    </script>
+
+
     <!-- !!!!! НОВЫЙ СКРИПТ !!!!! СКРИПТ ДЛЯ МАСКИ В ФОРМЕ -->
     <script src="https://unpkg.com/imask"></script>
     <script>

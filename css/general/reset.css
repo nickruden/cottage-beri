@@ -34,6 +34,10 @@ body {
     flex-direction: column;
 }
 
+p {
+    margin-bottom: 0;
+}
+
 a {
     text-decoration: none;
     color: #292929;

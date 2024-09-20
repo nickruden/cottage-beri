@@ -36,6 +36,7 @@
     background: #f5c140;
 }
 .promotion-block__img-wrap {
+    max-height: 510px;
     max-width: 770px;
 }
 .promotion-block__img {
@@ -115,6 +116,9 @@
 @media (max-width: 794px) {
     .promotion-block {
         padding-bottom: 60px;
+    }
+    .promotion-block__img-wrap {
+        max-height: none;
     }
     .promotion-block__wrapper {
         flex-direction: column;

@@ -19,6 +19,8 @@
     <!-- ПОДКЛЮЧЕНИЕ СТИЛЕЙ ДЛЯ СЛАЙДЕРА -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css">
+
     <!-- ПОДКЛЮЧЕНИЕ ОБЩИХ СТИЛЕЙ -->
     <link rel="stylesheet" href="../css/general/reset.css">
     <link rel="stylesheet" href="../css/general/custom.css">
@@ -343,7 +345,7 @@
             <div class="project-desc__container my-container">
                 <div class="project-desc__wrapper bordered-block">
                     <div class="project-desc__wrap-img">
-                        <img src="../img/pages-img/project/project-desc/project.jpg" alt="" class="project-desc__img">
+                        <img src="../img/nhk8jg3psng71.jpg" alt="" class="project-desc__img">
                     </div>
                     <div class="project-desc__body">
                         <div class="project-desc__head">
@@ -430,7 +432,7 @@
                 </div>
                 <div class="about-complex__images">
                     <div class="about-complex__wrap-img">
-                            <img src="../img/pages-img/project/characteristics/img_1.jpg" alt="" class="about-complex__img">
+                            <img src="../img/nhk8jg3psng71.jpg" alt="" class="about-complex__img">
                         </div>
                         <div class="about-complex__wrap-img">
                             <img src="../img/pages-img/project/characteristics/img_2.jpg" alt="" class="about-complex__img">
@@ -523,22 +525,35 @@
                 <div class="project-map__map-block" id="project-map"></div>
             </div>
         </div>
+        
         <div class="how-buy">
             <div class="how-buy__container my-container">
-                <div class="how-buy__title title">Как <span>купить дом</span></div>
+                <div class="how-buy__title title">Как заказать <span>строительство</span></div>
                 <div class="how-buy__payment-types">
-                    <button class="how-buy__button how-buy__button_active">Рассрочка</button>
-                    <button class="how-buy__button">Trade-in</button>
-                    <button class="how-buy__button">Ипотека</button>
-                    <button class="how-buy__button">Полная оплата</button>
+                    <button class="how-buy__button how-buy__button_active" data-tab="installment">Рассрочка</button>
+                    <button class="how-buy__button" data-tab="trade-in">Trade-in</button>
+                    <button class="how-buy__button" data-tab="mortgage">Ипотека</button>
+                    <button class="how-buy__button" data-tab="full-payment">Полная оплата</button>
                 </div>
                 <div class="how-buy__body bordered-block">
-                    <div class="how-buy__payment-type-descriprion">
+                    <div class="how-buy__payment-type-descriprion" id="installment">
                         <div class="how-buy__payment-type-title">Рассрочка 0%</div>
                         <p class="how-buy__payment-type-text">Мы готовы обсудить с вами индивидуальные условия
                             беспроцентной рассрочки на период до одного года без участия банков.</p>
                         <p class="how-buy__payment-type-text">Оставьте заявку, и мы рассмотрим ваш запрос и найдем
                             оптимальное решение</p>
+                    </div>
+                    <div class="how-buy__payment-type-descriprion" id="trade-in" style="display: none;">
+                        <div class="how-buy__payment-type-title">Trade-in</div>
+                        <p class="how-buy__payment-type-text">Описание условия Trade-in.</p>
+                    </div>
+                    <div class="how-buy__payment-type-descriprion" id="mortgage" style="display: none;">
+                        <div class="how-buy__payment-type-title">Ипотека</div>
+                        <p class="how-buy__payment-type-text">Описание условия ипотеки.</p>
+                    </div>
+                    <div class="how-buy__payment-type-descriprion" id="full-payment" style="display: none;">
+                        <div class="how-buy__payment-type-title">Полная оплата</div>
+                        <p class="how-buy__payment-type-text">Описание условия полной оплаты.</p>
                     </div>
                     <div class="how-buy__feedback">
                         <div class="how-buy__feedback-title">Оставьте свои данные</div>
@@ -554,6 +569,29 @@
                 </div>
             </div>
         </div>
+        
+        <!-- !!!! НОВЫЙ СКРИПТ !!!! -->
+        <!-- СКРИПТ ДЛЯ ПЕРЕКЛЮЧЕНИЯ КНОПКОК В БЛОКЕ HOW-BUY -->
+        <script>
+            document.querySelectorAll('.how-buy__button').forEach(button => {
+                button.addEventListener('click', function () {
+                    const tab = this.getAttribute('data-tab');
+
+                    document.querySelectorAll('.how-buy__payment-type-descriprion').forEach(desc => {
+                        desc.style.display = desc.id === tab ? 'block' : 'none';
+                    }); // показываем блок, который по id совпадает с data-tab
+
+                    document.querySelectorAll('.how-buy__button').forEach(btn => {
+                        btn.classList.remove('how-buy__button_active');
+                    });
+
+                    this.classList.add('how-buy__button_active');
+                    document.getElementById('tab').value = tab;
+                });
+            });
+        </script>
+
+
         <div class="similar-projects">
             <div class="similar-projects__container my-container">
                 <div class="similar-projects__title title"><span>Похожие</span> проекты</div>
@@ -593,7 +631,7 @@
                             <a href="./project.html" class="similar-projects__item">
                                 <div class="similar-projects__item-body bordered-block">
                                     <div class="similar-projects__img-wrap">
-                                        <img src="../img/pages-img/project/similar/item_1.jpg" alt="фото процент" class="similar-projects__img">
+                                        <img src="../img/nhk8jg3psng71.jpg" alt="фото процент" class="similar-projects__img">
                                         <div class="similar-projects__img-option">1 этаж / 94 м²</div>
                                     </div>
                                     <div class="similar-projects__item-title">Проект ЛАЙТ 65, штукатурка</div>
@@ -667,7 +705,7 @@
                             <a href="./project.html" class="viewied-projects__item">
                                 <div class="viewied-projects__item-body bordered-block">
                                     <div class="viewied-projects__img-wrap">
-                                        <img src="../img/pages-img/project/viewed/item_1.jpg" alt="фото процент" class="viewied-projects__img">
+                                        <img src="../img/nhk8jg3psng71.jpg" alt="фото процент" class="viewied-projects__img">
                                         <div class="viewied-projects__img-option">1 этаж / 94 м²</div>
                                     </div>
                                     <div class="viewied-projects__item-title">Коттедж «Альфа», 7 300 000 ₽</div>
@@ -779,6 +817,7 @@
 
 
     <!-- ПОДКЛЮЧЕНИE СКРИПТОВ ДЛЯ РАБОТЫ БИБЛИОТЕК -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

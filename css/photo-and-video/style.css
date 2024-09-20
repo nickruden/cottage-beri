@@ -12,6 +12,7 @@
     position: relative;
     cursor: pointer;
 }
+
 @media (max-width: 1600px) {
     .top-banner__left {
         flex: 1 1 41.5%;
@@ -31,6 +32,10 @@
         font-size: 24px;
         line-height: 35px;
         margin-bottom: 67px;
+    }
+
+    .top-banner__img {
+        width: 100%;
     }
     
     .top-banner__list {
@@ -665,6 +670,7 @@
 }
 .media-say__video-poster {
     border-radius: 8px;
+    object-fit: cover;
     aspect-ratio: 473 / 320;
     width: 100%;
 }

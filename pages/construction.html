@@ -314,7 +314,7 @@
                     <button class="top-banner__button button">Заказать консультацию</button>
                 </div>
                 <div class="top-banner__img-wrap">
-                    <img src="../img/pages-img/construction/top-banner.jpg" alt="баннер" class="top-banner__img">
+                    <img src="../img/nhk8jg3psng71.jpg" alt="баннер" class="top-banner__img">
                 </div>
             </div>
         </div>
@@ -438,18 +438,30 @@
             <div class="how-buy__container my-container">
                 <div class="how-buy__title title">Как заказать <span>строительство</span></div>
                 <div class="how-buy__payment-types">
-                    <button class="how-buy__button how-buy__button_active">Рассрочка</button>
-                    <button class="how-buy__button">Trade-in</button>
-                    <button class="how-buy__button">Ипотека</button>
-                    <button class="how-buy__button">Полная оплата</button>
+                    <button class="how-buy__button how-buy__button_active" data-tab="installment">Рассрочка</button>
+                    <button class="how-buy__button" data-tab="trade-in">Trade-in</button>
+                    <button class="how-buy__button" data-tab="mortgage">Ипотека</button>
+                    <button class="how-buy__button" data-tab="full-payment">Полная оплата</button>
                 </div>
                 <div class="how-buy__body bordered-block">
-                    <div class="how-buy__payment-type-descriprion">
+                    <div class="how-buy__payment-type-descriprion" id="installment">
                         <div class="how-buy__payment-type-title">Рассрочка 0%</div>
                         <p class="how-buy__payment-type-text">Мы готовы обсудить с вами индивидуальные условия
                             беспроцентной рассрочки на период до одного года без участия банков.</p>
                         <p class="how-buy__payment-type-text">Оставьте заявку, и мы рассмотрим ваш запрос и найдем
                             оптимальное решение</p>
+                    </div>
+                    <div class="how-buy__payment-type-descriprion" id="trade-in" style="display: none;">
+                        <div class="how-buy__payment-type-title">Trade-in</div>
+                        <p class="how-buy__payment-type-text">Описание условия Trade-in.</p>
+                    </div>
+                    <div class="how-buy__payment-type-descriprion" id="mortgage" style="display: none;">
+                        <div class="how-buy__payment-type-title">Ипотека</div>
+                        <p class="how-buy__payment-type-text">Описание условия ипотеки.</p>
+                    </div>
+                    <div class="how-buy__payment-type-descriprion" id="full-payment" style="display: none;">
+                        <div class="how-buy__payment-type-title">Полная оплата</div>
+                        <p class="how-buy__payment-type-text">Описание условия полной оплаты.</p>
                     </div>
                     <div class="how-buy__feedback">
                         <div class="how-buy__feedback-title">Оставьте свои данные</div>
@@ -465,26 +477,24 @@
                 </div>
             </div>
         </div>
-
+        
         <!-- !!!! НОВЫЙ СКРИПТ !!!! -->
-        <!-- СКРИПТ ДЛЯ ПЕРЕКЛЮЧЕНИЯ КНОПКО В БЛОКЕ HOW-BUY -->
+        <!-- СКРИПТ ДЛЯ ПЕРЕКЛЮЧЕНИЯ КНОПКОК В БЛОКЕ HOW-BUY -->
         <script>
-            const buttons = document.querySelectorAll('.how-buy__button');
-            const paymentTypeTitle = document.querySelector('.how-buy__payment-type-title');
-
-            buttons.forEach(button => {
+            document.querySelectorAll('.how-buy__button').forEach(button => {
                 button.addEventListener('click', function () {
-                    buttons.forEach(btn => btn.classList.remove('how-buy__button_active'));
+                    const tab = this.getAttribute('data-tab');
+
+                    document.querySelectorAll('.how-buy__payment-type-descriprion').forEach(desc => {
+                        desc.style.display = desc.id === tab ? 'block' : 'none';
+                    }); // показываем блок, который по id совпадает с data-tab
+
+                    document.querySelectorAll('.how-buy__button').forEach(btn => {
+                        btn.classList.remove('how-buy__button_active');
+                    });
+
                     this.classList.add('how-buy__button_active');
-
-                    // так как неоткуда брать текст заголовка, беру из кнопки
-                    const buttonText = this.textContent.trim();
-
-                    if (buttonText == 'Рассрочка') {
-                        paymentTypeTitle.textContent = 'Рассрочка 0%';
-                    } else {
-                        paymentTypeTitle.textContent = buttonText;
-                    }
+                    document.getElementById('tab').value = tab;
                 });
             });
         </script>

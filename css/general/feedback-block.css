@@ -15,7 +15,9 @@
 }
 
 .feedback__img {
-    width: 760px;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
     aspect-ratio: 760 / 480;
 }
 

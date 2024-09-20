@@ -19,6 +19,11 @@
     <!-- ПОДКЛЮЧЕНИЕ СТИЛЕЙ ДЛЯ СЛАЙДЕРА -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+  />
+
     <!-- ПОДКЛЮЧЕНИЕ ОБЩИХ СТИЛЕЙ -->
     <link rel="stylesheet" href="../../css/general/reset.css">
     <link rel="stylesheet" href="../../css/general/custom.css">
@@ -322,7 +327,7 @@
                     </div>
                 </div>
                 <div class="top-banner__img-wrap">
-                    <img src="../../img/pages-img/complexes/single-complex/top-banner.jpg" alt="баннер" class="top-banner__img">
+                    <img src="../../img/nhk8jg3psng71.jpg" alt="баннер" class="top-banner__img">
                 </div>
             </div>
         </div>
@@ -359,7 +364,7 @@
                         <button class="about-complex__button button">Скачать презентацию</button>
                     </div>
                     <div class="about-complex__video" data-bs-toggle="modal" data-bs-target="#videoModal">
-                        <img src="../../img/pages-img/complexes/single-complex/about-complex/about-video-img.jpg" alt=""
+                        <img src="../../img/nhk8jg3psng71.jpg" alt=""
                             class="about-complex__video-poster">
                         <div class="video-play-button"></div>
                     </div>
@@ -367,29 +372,25 @@
                 </div>
             </div>
         </div>
-        <div style="margin: 0 auto;" class="modal fade modal-video" id="videoModal"
-                        aria-labelledby="videoModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-video__modal-dialog"
-                            style="max-width: 90%; width: 90%; height: 90%;">
-                            <div class="modal-content modal-video__modal-content" style="width: 100%;">
-                                <div class="modal-header modal-video__modal-header">
-                                    <div class="modal-video__title title"><span>Что говорят</span> люди
-                                    </div>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div
-                                    class="modal-body modal-video__modal-body d-flex justify-content-center align-items-center">
-                                    <video id="modal-video" class="video-js vjs-theme-city modal-video__video" controls
-                                        preload="auto" data-setup='{"controlBar": {"pictureInPictureToggle": false}}'>
-                                        <source src="../../video/31637395_MotionElements_earth-hologram_preview.mp4"
-                                            type="video/mp4">
-                                        Ваш браузер не поддерживает видео.
-                                    </video>
-                                </div>
-                            </div>
+        <div style="margin: 0 auto;" class="modal fade modal-video" id="videoModal" aria-labelledby="videoModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-video__modal-dialog" style="max-width: 90%; width: 90%; height: 90%;">
+                <div class="modal-content modal-video__modal-content" style="width: 100%;">
+                    <div class="modal-header modal-video__modal-header">
+                        <div class="modal-video__title title"><span>Что говорят</span> люди
                         </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
+                    <div class="modal-body modal-video__modal-body d-flex justify-content-center align-items-center">
+                        <video id="modal-video" class="video-js vjs-theme-city modal-video__video" controls preload="auto"
+                            data-setup='{"controlBar": {"pictureInPictureToggle": false}}'>
+                            <source src="../../video/31637395_MotionElements_earth-hologram_preview.mp4" type="video/mp4">
+                            Ваш браузер не поддерживает видео.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="complexes-advantages">
             <div class="complexes-advantages__container my-container">
                 <div class="complexes-advantages__title title"><span>Жизнь</span> в доме своей мечты</div>
@@ -472,22 +473,30 @@
                         <div class="swiper-wrapper gallery__slider-wrapper">
                             <div class="swiper-slide">
                                 <div class="gallery__slide">
-                                    <img src="../../img/pages-img/complexes/single-complex/gallery/image_1.jpg" alt="" class="gallery__slide-img">
+                                    <a href="../../img/nhk8jg3psng71.jpg" data-fancybox="gallery">
+                                        <img src="../../img/nhk8jg3psng71.jpg" alt="" class="gallery__slide-img">
+                                    </a>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="gallery__slide">
-                                    <img src="../../img/pages-img/complexes/single-complex/gallery/image_2.jpg" alt="" class="gallery__slide-img">
+                                    <a href="../../img/pages-img/complexes/single-complex/gallery/image_2.jpg" data-fancybox="gallery">
+                                        <img src="../../img/pages-img/complexes/single-complex/gallery/image_2.jpg" alt="" class="gallery__slide-img">
+                                    </a>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="gallery__slide">
-                                    <img src="../../img/pages-img/complexes/single-complex/gallery/image_3.jpg" alt="" class="gallery__slide-img">
+                                    <a href="../../img/pages-img/complexes/single-complex/gallery/image_3.jpg" data-fancybox="gallery">
+                                        <img src="../../img/pages-img/complexes/single-complex/gallery/image_3.jpg" alt="" class="gallery__slide-img">
+                                    </a>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="gallery__slide">
-                                    <img src="../../img/pages-img/complexes/single-complex/gallery/image_1.jpg" alt="" class="gallery__slide-img">
+                                    <a href="../../img/pages-img/complexes/single-complex/gallery/image_1.jpg" data-fancybox="gallery">
+                                        <img src="../../img/pages-img/complexes/single-complex/gallery/image_1.jpg" alt="" class="gallery__slide-img">
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -509,7 +518,7 @@
                     <div class="cottage-types__cottage bordered-block">
                         <a href="../project.html" class="cottage-types__cottage-link">
                             <div class="cottage-types__cottage-wrap-img">
-                                <img src="../../img/pages-img/complexes/single-complex/cottage-types/cottage_1.jpg" alt=""
+                                <img src="../../img/nhk8jg3psng71.jpg" alt=""
                                     class="cottage-types__cottage-img">
                                 <div class="cottage-types__img-cottage-options">
                                     <div class="cottage-types__img-cottage-option">3 комнаты</div>
@@ -566,14 +575,26 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="cottage-types__buttons">
                                     <button class="cottage-types__button button">Забронировать дом</button>
                                     <a href="../project.html" class="cottage-types__link button button_link">Подробнее</a>
+                                </div>
                                 </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="cottage-types__cottage bordered-block">
+                        <a href="../project.html" class="cottage-types__cottage-link">
+                            <div class="cottage-types__cottage-wrap-img">
+                                <img src="../../img/pages-img/complexes/single-complex/cottage-types/cottage_2.jpg" alt=""
+                                    class="cottage-types__cottage-img">
+                                <div class="cottage-types__img-cottage-options">
+                                    <div class="cottage-types__img-cottage-option">4 комнаты</div>
+                                    <div class="cottage-types__img-cottage-option">от 3,65 млн ₽</div>
+                                </div>
+                            </div>
+                        </a>
                         <div class="cottage-types__body">
                             <a href="../project.html" class="cottage-types__cottage-link">
                                 <div class="cottage-types__cottage-title">Коттедж «Оптима»</div>
@@ -629,16 +650,6 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="../project.html" class="cottage-types__cottage-link">
-                            <div class="cottage-types__cottage-wrap-img">
-                                <img src="../../img/pages-img/complexes/single-complex/cottage-types/cottage_2.jpg" alt=""
-                                    class="cottage-types__cottage-img">
-                                <div class="cottage-types__img-cottage-options">
-                                    <div class="cottage-types__img-cottage-option">4 комнаты</div>
-                                    <div class="cottage-types__img-cottage-option">от 3,65 млн ₽</div>
-                                </div>
-                            </div>
-                        </a>
                     </div>
                     <div class="cottage-types__cottage bordered-block">
                         <a href="../project.html" class="cottage-types__cottage-link">
@@ -756,22 +767,35 @@
                 </div>
             </div>
         </div>
+
         <div class="how-buy">
             <div class="how-buy__container my-container">
-                <div class="how-buy__title title">Как <span>купить дом</span> в Уфе</div>
+                <div class="how-buy__title title">Как заказать <span>строительство</span></div>
                 <div class="how-buy__payment-types">
-                    <button class="how-buy__button how-buy__button_active">Рассрочка</button>
-                    <button class="how-buy__button">Trade-in</button>
-                    <button class="how-buy__button">Ипотека</button>
-                    <button class="how-buy__button">Полная оплата</button>
+                    <button class="how-buy__button how-buy__button_active" data-tab="installment">Рассрочка</button>
+                    <button class="how-buy__button" data-tab="trade-in">Trade-in</button>
+                    <button class="how-buy__button" data-tab="mortgage">Ипотека</button>
+                    <button class="how-buy__button" data-tab="full-payment">Полная оплата</button>
                 </div>
                 <div class="how-buy__body bordered-block">
-                    <div class="how-buy__payment-type-descriprion">
+                    <div class="how-buy__payment-type-descriprion" id="installment">
                         <div class="how-buy__payment-type-title">Рассрочка 0%</div>
                         <p class="how-buy__payment-type-text">Мы готовы обсудить с вами индивидуальные условия
                             беспроцентной рассрочки на период до одного года без участия банков.</p>
                         <p class="how-buy__payment-type-text">Оставьте заявку, и мы рассмотрим ваш запрос и найдем
                             оптимальное решение</p>
+                    </div>
+                    <div class="how-buy__payment-type-descriprion" id="trade-in" style="display: none;">
+                        <div class="how-buy__payment-type-title">Trade-in</div>
+                        <p class="how-buy__payment-type-text">Описание условия Trade-in.</p>
+                    </div>
+                    <div class="how-buy__payment-type-descriprion" id="mortgage" style="display: none;">
+                        <div class="how-buy__payment-type-title">Ипотека</div>
+                        <p class="how-buy__payment-type-text">Описание условия ипотеки.</p>
+                    </div>
+                    <div class="how-buy__payment-type-descriprion" id="full-payment" style="display: none;">
+                        <div class="how-buy__payment-type-title">Полная оплата</div>
+                        <p class="how-buy__payment-type-text">Описание условия полной оплаты.</p>
                     </div>
                     <div class="how-buy__feedback">
                         <div class="how-buy__feedback-title">Оставьте свои данные</div>
@@ -787,26 +811,24 @@
                 </div>
             </div>
         </div>
-
+        
         <!-- !!!! НОВЫЙ СКРИПТ !!!! -->
-        <!-- СКРИПТ ДЛЯ ПЕРЕКЛЮЧЕНИЯ КНОПКО В БЛОКЕ HOW-BUY -->
+        <!-- СКРИПТ ДЛЯ ПЕРЕКЛЮЧЕНИЯ КНОПКОК В БЛОКЕ HOW-BUY -->
         <script>
-            const buttons = document.querySelectorAll('.how-buy__button');
-            const paymentTypeTitle = document.querySelector('.how-buy__payment-type-title');
-
-            buttons.forEach(button => {
+            document.querySelectorAll('.how-buy__button').forEach(button => {
                 button.addEventListener('click', function () {
-                    buttons.forEach(btn => btn.classList.remove('how-buy__button_active'));
+                    const tab = this.getAttribute('data-tab');
+
+                    document.querySelectorAll('.how-buy__payment-type-descriprion').forEach(desc => {
+                        desc.style.display = desc.id === tab ? 'block' : 'none';
+                    }); // показываем блок, который по id совпадает с data-tab
+
+                    document.querySelectorAll('.how-buy__button').forEach(btn => {
+                        btn.classList.remove('how-buy__button_active');
+                    });
+
                     this.classList.add('how-buy__button_active');
-
-                    // так как неоткуда брать текст заголовка, беру из кнопки
-                    const buttonText = this.textContent.trim();
-
-                    if (buttonText == 'Рассрочка') {
-                        paymentTypeTitle.textContent = 'Рассрочка 0%';
-                    } else {
-                        paymentTypeTitle.textContent = buttonText;
-                    }
+                    document.getElementById('tab').value = tab;
                 });
             });
         </script>
@@ -935,6 +957,8 @@
 
 
     <!-- ПОДКЛЮЧЕНИE СКРИПТОВ ДЛЯ РАБОТЫ БИБЛИОТЕК -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -988,28 +1012,42 @@
         });
     </script>
 
+<style>
+    .swiper-disabled {
+        pointer-events: none;
+        touch-action: none;
+        user-select: none;
+    }
+</style>
+
     <!-- СКРИПТ ДЛЯ СЛАЙДЕРА БЛОКА GALLERY -->
     <script>
-        const swiper_gallery = new Swiper('.gallery__swiper', {
-            direction: 'horizontal',
-            loop: true,
-            slidesPerView: 1, // Устанавливаем количество слайдов на вид автоматически
-            spaceBetween: 20,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
+    // Инициализация Swiper
+    const swiper_gallery = new Swiper('.gallery__swiper', {
+        direction: 'horizontal',
+        loop: true,
+        slidesPerView: 1, // Устанавливаем количество слайдов на вид автоматически
+        spaceBetween: 20,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            992: {
+                slidesPerView: 3,
             },
-
-            breakpoints: {
-                992:
-                {
-                    slidesPerView: 3,
-                },
-                701:
-                {
-                    slidesPerView: 2,
-                }
+            701: {
+                slidesPerView: 2,
             }
+        }
+    });
+    </script>
+
+    <!-- ПОДКЛЮЧЕНИЕ Fancybox -->
+    <script>
+        Fancybox.bind('[data-fancybox="gallery"]', {
+            dragToClose: false,
+            Toolbar: false,
         });
     </script>
 

@@ -25,6 +25,10 @@
     .top-banner__list {
         margin-bottom: 35px;
     }
+
+    .top-banner__img {
+        width: 100%;
+    }
     
     .top-banner__item {
         font-size: 18px;

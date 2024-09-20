@@ -9,6 +9,7 @@
     max-width: 340px;
     margin-bottom: 48px;
 }
+
 @media (max-width: 1600px) {
     .top-banner__left {
         flex: 1 1 41.5%;
@@ -366,6 +367,9 @@
     display: flex;
 }
 .project-desc__wrap-img {
+    max-width: 760px;
+    overflow: hidden;
+    position: relative;
 }
 .project-desc__img {
     height: 100%;
@@ -457,6 +461,7 @@
     display: flex;
     flex-direction: column;
     font-size: 16px;
+    letter-spacing: -0.05em;
 }
 .project-desc__cottage-component-text>span {
     font-weight: 700;
@@ -470,6 +475,12 @@
     margin-bottom: 18px;
 }
 
+@media (min-width: 1601px) {
+    .project-desc__wrap-img {
+        max-height: 600px;
+    }
+}
+
 @media (max-width: 1600px) {
     .project-desc__body {
         padding: 30px;
@@ -479,531 +490,309 @@
     }
 }
 
-@media (max-width: 1523px) {
-    .project-desc__texts {
-        font-size: 15px;
+@media (max-width: 1601px) {
+    .project-desc__wrap-img {
+        max-width: 730px;
     }
+}
+
+@media (max-width: 1520px) {
+    .project-desc__body-wrapper {
+        gap: 32px;
+    }
+
     .cottage-types__list-item {
-        font-size: 15px;
+        font-size: 16px;
         max-height: 22px;
     }
     .cottage-types__list-item::before {
-        font-size: 23px;
+        font-size: 24px;
         margin-right: 10px;
     }
     .project-desc__head {
         margin-bottom: 28px;
     }
+
+    .project-desc__cottage-component-items {
+        margin-bottom: 27px;
+    }
+    
+    .project-desc__cottage-component-text {
+        font-size: 15px;
+    }
+    
+    .project-desc__button {
+        font-size: 17px;
+        margin-bottom: 15px;
+    }
 }
 @media (max-width: 1500px) {
-    .project-desc__body {
-        padding: 26px;
+    .project-desc__cottage-wrap-img {
+        max-width: 700px;
     }
 }
 
-@media (max-width: 1470px) {
-    .project-desc__body {
-        width: 100%;
-    }
+@media (max-width: 1440px) {
     .project-desc__body-wrapper {
-        flex-direction: column;
-        gap: 20px;
-    }
-    .project-desc__body-wrapper > * {
-        width: 100%;
-    }
-    .project-desc__texts {
-        max-width: none;
-    }
-    .project-desc__cottage-component-items {
         display: flex;
-        flex-wrap: wrap;
-        column-gap: 60px;
+        gap: 26px;
     }
-    .project-desc__cottage-component-item {
-        flex: 1 1 calc(50% - 60px);
-    }
-}
-@media (max-width: 1430px) {
-    .project-desc__cottage-component-items {
-        display: flex;
-        flex-wrap: wrap;
-        column-gap: 30px;
-    }
-    .project-desc__cottage-component-item {
+
+    .project-desc__text {
         font-size: 15px;
-        flex: 1 1 calc(50% - 30px);
     }
-}
-@media (max-width: 1400px) {
-    .cottage-types__list-item:not(:last-child) {
-        margin-bottom: 14px;
-    }
-    .project-desc__texts {
-        font-size: 14px;
-    }
-    .cottage-types__list-item {
-        font-size: 14px;
-        max-height: 20px;
-    }
-    .cottage-types__list-item::before {
-        font-size: 21px;
-        margin-right: 8px;
-    }
-    .project-desc__head {
-        margin-bottom: 25px;
-    }
-    .project-desc__cottage-component-items {
-        display: flex;
-        flex-wrap: wrap;
-        column-gap: 30px;
-    }
+    
     .project-desc__cottage-component-text {
         font-size: 14px;
     }
-    .cottage-types__payment-option {
+    
+    .project-desc__button {
+        font-size: 16px;
         padding: 13px 0px;
-        max-width: 270px;
-    }
-    .cottage-types__payment-option-title {
-        font-size: 14px;
-        margin-bottom: 12px;
+        margin-bottom: 15px;
     }
 }
 
-@media (max-width: 1360px) {
+@media (max-width: 1400px) {
+    .project-desc__cottage-wrap-img {
+        max-width: 680px;
+    }
+    .project-desc__text {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1370px) {
+    .project-desc__wrapper {
+        flex-direction: column;
+    }
+
+    .project-desc__img {
+        height: 100%;
+        width: 100%;
+        max-width: none;
+    }
+
+    .project-desc__wrap-img {
+        max-width: none;
+        max-height: 580px;
+    }
+
+    .project-desc__text {
+        font-size: 18px;
+    }
+    
+    .project-desc__text:not(:last-child) {
+        margin-bottom: 10px;
+    }
+    
     .project-desc__cottage-component-items {
-        display: inline-block;
+        margin-bottom: 32px;
     }
-}
-@media (max-width: 1340px) {
+    
+    .project-desc__cottage-component-text {
+        font-size: 16px;
+    }
+    
+    .project-desc__button {
+        margin-bottom: 18px;
+    }
+
+    .project-desc__texts {
+        max-width: 600px;
+    }
+
     .project-desc__head {
-        margin-bottom: 20px;
+        max-width: 1100px;
     }
-    .cottage-types__list-item {
-        font-size: 14px;
-        max-height: 20px;
+
+    .project-desc__cottage-components {
+        align-items: center;
+        width: 100%;
     }
-    .cottage-types__list-item::before {
-        font-size: 20px;
-        margin-right: 5px;
-    }
-    .cottage-types__list-item:not(:last-child) {
-        margin-bottom: 11px;
-    }
-}
-@media (max-width: 1330px) {
-    .project-desc__head {
-        margin-bottom: 20px;
-    }
-    .cottage-types__list-item {
-        font-size: 14px;
-        max-height: 20px;
-    }
-    .cottage-types__list-item::before {
-        font-size: 20px;
-        margin-right: 5px;
-    }
-    .cottage-types__list-item:not(:last-child) {
-        margin-bottom: 11px;
+    .project-desc__cottage-components-inner {
+        display: flex;
+        flex-direction: column;
     }
 }
 
 @media (max-width: 1300px) {
-    .how-buy__title {
-        margin-bottom: 35px;
-    }
-
-    .how-buy__payment-type-descriprion {
-        padding: 27px 30px 50px 30px;
-    }
-
-    .how-buy__feedback {
-        padding: 27px 30px 30px 30px;
-    }
-}
-
-@media (max-width: 1260px) {
-    .how-buy {
-        padding-bottom: 91px;
-    }
-
-    .how-buy__feedback-title,
-    .how-buy__payment-type-title {
-        font-size: 27px;
-        line-height: 32px;
-    }
-
-    .how-buy__form-button {
-        padding: 15px 0px 15px 0px;
-    }
-
-    .how-buy__payment-types {
-        margin-bottom: 37px;
-        gap: 13px;
-    }
-
-    .how-buy__button {
-        width: 210px;
-        padding: 15.5px 0px;
+    .project-desc__body {
+        padding: 30px;
     }
 }
 
 @media (max-width: 1170px) {
-    .how-buy__title {
-        margin-bottom: 33px;
-    }
-
-    .how-buy__payment-type-text {
-        font-size: 16px;
-    }
-
-    .how-buy__feedback-text {
-        font-size: 16px;
-        line-height: 21px;
-        margin-bottom: 27px;
-    }
-
-    .how-buy__payment-type-text:not(:last-child) {
-        margin-bottom: 10px;
-    }
-
-    .how-buy__payment-types {
-        margin-bottom: 34px;
-    }
-
-    .how-buy__button {
-        font-size: 16px;
-        padding: 15px 0px;
+    .project-desc__body {
+        padding: 25px;
     }
 }
 
 @media (max-width: 1070px) {
-    .how-buy {
-        padding-bottom: 81px;
+    .project-desc__text {
+        font-size: 17px;
     }
-
-    .how-buy__payment-type-descriprion {
-        padding: 25px 28px 40px 28px;
-    }
-
-    .how-buy__feedback {
-        padding: 25px 28px 30px 28px;
-    }
-
-    .how-buy__button {
-        width: 180px;
-        padding: 14.5px 0px;
+    .project-desc__cottage-component-text {
+        font-size: 16px;
     }
 }
 
 @media (max-width: 991px) {
-    .how-buy__title {
+    .project-desc__body {
+        padding: 35px;
+    }
+
+    .project-desc__head {
+        margin-bottom: 27px;
+    }
+
+    .project-desc__cottage-component-icon {
+        margin-right: 15px;
+    }
+
+    .project-desc__cottage-component-items {
         margin-bottom: 30px;
-    }
-
-    .how-buy__feedback {
-        text-align: center;
-    }
-
-    .how-buy__feedback-text {
-        max-width: 310px;
-    }
-
-    .how-buy__form-button {
-        font-size: 16px;
-        padding: 14px 0px 14px 0px;
-    }
-}
-
-@media (max-width: 948px) {
-    .how-buy__input {
-        margin-bottom: 0 !Important;
-        max-width: 290px;
-        width: 100%;
-    }
-
-    .how-buy__input:nth-of-type(2) {
-        max-width: 290px;
-    }
-}
-
-@media (max-width: 880px) {
-    .how-buy {
-        padding-bottom: 71px;
-    }
-
-    .how-buy__payment-type-descriprion {
-        padding: 20px 25px 30px 25px;
-    }
-
-    .how-buy__feedback {
-        padding: 20px 25px 30px 25px;
-    }
-
-    .how-buy__input {
-        margin-bottom: 0 !Important;
-        max-width: 290px;
-        width: 100%;
-    }
-
-    .how-buy__payment-type-text:not(:last-child) {
-        margin-bottom: 12px;
-    }
-
-    .how-buy__payment-types {
-        margin-bottom: 28px;
-        gap: 10px;
-    }
-
-    .how-buy__button {
-        width: 150px;
-        font-size: 16px;
-        padding: 15px 0px;
     }
 }
 
 @media (max-width: 850px) {
-    .how-buy__payment-type-text {
-        font-size: 15px;
+    .project-desc__body {
+        padding: 30px;
     }
 
-    .how-buy__feedback-text {
-        font-size: 15px;
-        line-height: 20px;
-        margin-bottom: 24px;
-    }
-
-    .how-buy__button {
-        font-size: 15px;
-        padding: 14.5px 0px;
-    }
-
-    .how-buy__feedback {
-        text-align: center;
-    }
-
-    .how-buy__feedback-title,
-    .how-buy__payment-type-title {
-        font-size: 24px;
-        line-height: 28px;
+    .project-desc__cottage-component-icon {
+        margin-right: 11px;
     }
 }
 
 @media (max-width: 794px) {
-    .how-buy {
-        padding-bottom: 61px;
+    .project-desc__body-wrapper {
+        gap: 30px;
     }
 
-    .how-buy__title {
-        margin-bottom: 27px;
+    .project-desc__text {
+        font-size: 16px;
     }
-
-    .how-buy__payment-types {
-        margin-bottom: 25px;
-    }
-
-    .how-buy__button {
-        width: 145px;
-        font-size: 14px;
-        padding: 14px 0px;
-    }
-
 }
 
+@media (max-width: 670px) {
+    .project-desc__body {
+        padding: 20px;
+    }
+
+    .project-desc__cottage-component-items {
+        margin-bottom: 26px;
+    }
+
+    .cottage-types__payment-option-title {
+        margin-bottom: 13px;
+    }
+}
+p {
+    margin-bottom: 0;
+}
 @media (max-width: 650px) {
-    .how-buy__payment-types {
-        margin-bottom: 32px;
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-
-    .how-buy__button {
-        flex: 1 1 calc(50% - 15px);
-        font-size: 16px;
-        padding: 15px 0px;
-    }
-}
-
-@media (max-width: 600px) {
-    .how-buy__body.bordered-block {
-        border-radius: 0px;
-        border: none;
-    }
-
-    .how-buy__payment-types {
-        margin-bottom: 29px;
-    }
-
-    .how-buy__payment-type-descriprion {
-        border: none;
-    }
-
-    .how-buy__feedback {
-        border: 1px solid #D9D9D9;
-        border-radius: 8px;
-        overflow: hidden;
-    }
-
-    .how-buy__body {
+    .project-desc__body-wrapper {
         flex-direction: column;
+        gap: 26px;
     }
-
-    .how-buy__feedback {
-        padding: 25px 28px 30px 28px;
+    .project-desc__head {
+        margin-bottom: 23px;
     }
-
-    .how-buy__payment-type-descriprion {
-        padding: 0px;
-        margin-bottom: 20px;
+    .project-desc__cottage-component-items {
+        display: flex;
+        flex-wrap: wrap;
     }
-
-    .how-buy__payment-type-descriprion {
-        width: 100%;
+    .project-desc__cottage-component-item {
+        display: flex;
+        flex: 1 1 50%;
     }
-
-    .how-buy__payment-type-text:not(:last-child) {
-        margin-bottom: 10px;
+    .project-desc__buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
     }
-
-    .how-buy__feedback-title,
-    .how-buy__payment-type-title {
-        font-size: 27px;
-        line-height: 32px;
+    .project-desc__cottage-component-icon {
+        margin-right: 20px;
     }
-
-    .how-buy__payment-type-text {
-        font-size: 16px;
-        max-width: 600px;
+    .project-desc__button {
+        margin-bottom: 0px;
     }
-
-    .how-buy__feedback-text {
-        max-width: none;
-        font-size: 16px;
-        line-height: 21px;
-        margin-bottom: 27px;
-    }
-
-    .how-buy__input {
-        max-width: none;
-        width: 100%;
-    }
-
-    .how-buy__input:nth-of-type(2) {
-        max-width: none;
-        width: 100%;
-    }
-
-    .how-buy__form-button {
-        max-width: none;
-        width: 100%;
-    }
-
-    .how-buy__payment-types {
-        margin-bottom: 27px;
-    }
-}
-
-@media (max-width: 560px) {
-    .how-buy {
-        padding-bottom: 51px;
-    }
-}
-
-@media (max-width: 516px) {
-    .how-buy__title {
-        margin-bottom: 20px;
-    }
-
-    .how-buy__feedback-title,
-    .how-buy__payment-type-title {
-        font-size: 24px;
-        line-height: 27px;
-    }
-
-    .how-buy__feedback {
-        padding: 20px 25px 26px 25px;
-    }
-
-    .how-buy__payment-types {
-        margin-bottom: 24px;
-        gap: 12px;
-    }
-
-    .how-buy__button {
+    .project-desc__text {
         font-size: 15px;
-        padding: 14.5px 0px;
+    }
+}
+
+@media (max-width: 550px) {
+    .project-desc__head {
+        gap: 20px;
+    }
+    .cottage-types__payment-option {
+        max-width: 250px;
+    } 
+    .project-desc__cottage-component-items {
+        justify-content: center;
+        flex: 1 1 100%;
+    }
+    .project-desc__cottage-component-item {
+        flex: 1 1 100%;
+    }
+    .project-desc__cottage-component-icon {
+        margin-right: 16px;
+    }
+    .cottage-types__payment-option-title {
+        margin-bottom: 11px;
     }
 }
 
 @media (max-width: 500px) {
-    .how-buy {
-        padding-bottom: 41px;
+    .cottage-types__cottage-title {
+        font-size: 24px;
     }
 
-    .how-buy__feedback-title,
-    .how-buy__payment-type-title {
-        font-size: 22px;
-        line-height: 25px;
-    }
-
-    .how-buy__payment-type-text {
-        font-size: 15px;
-    }
-
-    .how-buy__feedback-text {
-        font-size: 15px;
-        margin-bottom: 22px;
-    }
-
-    .how-buy__payment-type-text:not(:last-child) {
-        margin-bottom: 12px;
-    }
-
-    .how-buy__payment-types {
-        margin-bottom: 21px;
-    }
-}
-
-@media (max-width: 425px) {
-    .how-buy__feedback {
-        padding: 20px 22px 23px 22px;
-    }
-
-    .how-buy__feedback-text {
-        margin-bottom: 14px;
-        line-height: 20px;
-    }
-
-    .how-buy__payment-types {
+    .project-desc__cottage-component-items {
         margin-bottom: 20px;
-        gap: 10px;
     }
 
-    .how-buy__button {
-        font-size: 14px;
-        padding: 14px 0px;
-    }
-}
-
-@media (max-width: 375px) {
-    .how-buy__feedback {
-        padding: 20px;
-    }
-
-    .how-buy__feedback-title,
-    .how-buy__payment-type-title {
-        font-size: 20px;
-        line-height: 22px;
-    }
-
-    .how-buy__payment-type-text {
+    .project-desc__text {
         font-size: 14px;
     }
 
-    .how-buy__feedback-text {
-        font-size: 14px;
+    .project-desc__cottage-title {
+        margin-bottom: 20px;
+    }
+    
+    .project-desc__body-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .project-desc__cottage-component-icon {
+        margin-right: 13px;
+    }
+    .cottage-types__payment-option-title {
         margin-bottom: 10px;
+    }
+
+}
+@media (max-width: 490px) {
+    .project-desc__head {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    .cottage-types__payment-option {
+        max-width: none;
+    } 
+    .project-desc__cottage-component-items {
+        justify-content: flex-start;
+    }
+    .project-desc__button {
+        width: 100%;
+    }
+
+}
+@media (max-width: 425px) {
+    .project-desc__cottage-component-icon {
+        margin-right: 10px;
     }
 }
 
@@ -1049,7 +838,9 @@
     gap: 20px;
 }
 .about-complex__wrap-img {
+    height: 100%;
     flex: 1 1 50%;
+    max-height: 384px;
     border-radius: 8px;
     overflow: hidden;
 }
@@ -2649,9 +2440,13 @@
 }
 .similar-projects__img-wrap {
     position: relative;
+    height: 100%;
+    max-height: 350px;
 }
 .similar-projects__img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     aspect-ratio: 500 / 350;
 }
 .similar-projects__img-option {
@@ -2770,6 +2565,10 @@
 @media (max-width: 991px) {
     .similar-projects__title {
         margin-bottom: 30px;
+    }
+
+    .similar-projects__img-wrap {
+        max-height: none;
     }
 
     /* .similar-projects__items {
@@ -2968,11 +2767,14 @@
 .viewied-projects__item-body {
 }
 .viewied-projects__img-wrap {
-    aspect-ratio: 500 / 350;
+    height: 100%;
+    max-height: 350px;
     position: relative;
 }
 .viewied-projects__img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     aspect-ratio: 500 / 350;
 }
 .viewied-projects__img-option {
@@ -3092,6 +2894,10 @@
 @media (max-width: 991px) {
     .viewied-projects__title {
         margin-bottom: 30px;
+    }
+
+    .viewied-projects__img-wrap {
+        max-height: none;
     }
 
     /* .viewied-projects__items {
