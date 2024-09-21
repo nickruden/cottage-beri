@@ -6,7 +6,7 @@
     margin-bottom: 32px;
 }
 .top-banner__text {
-    max-width: 340px;
+    max-width: 500px;
     margin-bottom: 48px;
 }
 
@@ -486,7 +486,7 @@
     overflow: hidden;
     border: 0;
     background: #F4F4F4;
-    z-index: 1000;
+    z-index: 17;
 }
 
 .project-desc__tabs-button {
@@ -867,8 +867,10 @@
 @media (max-width: 490px) {
     .project-desc__tabs {
         position: relative;
-        bottom: calc(100% + 30px);
+        bottom: auto;
+        top: 0;
         left: 50%;
+        margin-bottom: 20px;
     }
 
     .project-desc__tabs-item {
@@ -877,8 +879,8 @@
     
     .project-desc__tabs-button {
         width: 100%;
-        font-size: 17px;
-        padding: 9px 23px;
+        font-size: 16px;
+        padding: 9px 21px;
     }
     .project-desc__head {
         flex-direction: column;
@@ -901,6 +903,11 @@
     }
 }
 @media (max-width: 350px) {
+    .project-desc__tabs-button {
+        width: 100%;
+        font-size: 14px;
+        padding: 9px 18px;
+    }
     .project-desc__tabs-button {
         font-size: 14px;
         padding: 9px 18px;

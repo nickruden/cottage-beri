@@ -1356,6 +1356,7 @@
     left: 15px;
     display: flex;
     gap: 5px;
+    z-index: 18;
 }
 
 .cottage-types__img-cottage-option {
@@ -1370,6 +1371,7 @@
     display: flex;
     flex-direction: column;
     padding: 30px 30px 31px 40px;
+    position: relative;
 }
 
 .cottage-types__cottage-title {
@@ -1444,13 +1446,81 @@
     max-width: 301px;
 }
 
+.cottage-types__tabs {
+    position: absolute;
+    bottom: 30px;
+    right: 10%;
+    transform: translateX(10%);
+    border-radius: 30px;
+    overflow: hidden;
+    border: 0;
+    background: #F4F4F4;
+    z-index: 17;
+}
+
+.cottage-types__tabs-button {
+    border: 0!Important;
+    margin: 0!Important;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px;
+    color: #292929;
+    border-radius: 30px!Important;
+    padding: 9px 23px;
+}
+
+.cottage-types__tabs-button:hover {
+    color: #83B32B;
+}
+
+.cottage-types__tabs-button.active {
+    background: #FFCA44!Important;
+}
+
+.cottage-types__tab-content {
+    width: 760px;
+    height: 100%;
+}
+
+.cottage-types__tab-pane {
+    height: 100%;
+}
+
+.cottage-types__slider {
+    width: 100%;
+    height: 100%;
+    max-height: 584px;
+}
+
+.cottage-types__swiper {
+    height: 100%;
+}
+
+.cottage-types__swiper-wrapper {
+}
+
+.cottage-types__slide {
+    width: 100%!important;
+}
+
+.cottage-types__slide-wrap-img {
+    height: 100%;
+}
+
+.cottage-types__slide-img {
+    height: 100%;
+    max-width: 760px;
+    object-fit: cover;
+    aspect-ratio: 760 / 497;
+}
+
 @media (min-width: 1601px) {
     .cottage-types__cottage-wrap-img {
         max-height: 556px;
     }
 }
 
-@media (max-width: 1601px) {
+@media (max-width: 1600px) {
     .cottage-types__cottage-wrap-img {
         max-width: 730px;
     }
@@ -1535,6 +1605,23 @@
 
     .cottage-types__cottage:nth-of-type(even) > .cottage-types__cottage-link {
         order: 0;
+    }
+
+    .cottage-types__tab-content {
+        width: 100%;
+    }
+
+    .cottage-types__slide-wrap-img {
+        width: 100%;
+    }
+
+    .cottage-types__slider {
+        max-width: none;
+    }
+
+    .cottage-types__slide-img {
+        width: 100%;
+        max-width: none;
     }
 
     .cottage-types__cottage-img {

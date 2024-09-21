@@ -42,9 +42,11 @@
 .modal-video__modal-header {
     border-bottom: none;
     padding-bottom: 0;
-    padding-left: 40px;
-    padding-right: 40px;
     padding-top: 30px;
+    width: 90%;
+    padding-left: 0;
+    padding-right: 0;
+    align-self: center;
 }
 
 .modal-video__modal-dialog {
@@ -64,6 +66,9 @@
     align-items: center;
 }
 
+.modal-video__modal-body {
+    padding: 0px;
+}
 .modal-video__video {
     height: 90%;
     width: 90%;
