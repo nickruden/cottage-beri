@@ -7,22 +7,14 @@
     <title>О компании</title>
     <link rel="shortcut icon" href="../img/favicon.svg" type="image/x-icon">
 
-    <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
-  />
+    <!-- ПОДКЛЮЧЕНИЕ СТИЛЕЙ ДЛЯ РАБОТЫ БИБЛИОТЕК -->
+    <link href="../libs/style/video-js.css" rel="stylesheet" />
+    <link href="../libs/style/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../libs/style/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../libs/style/fancybox.css" />
 
-    <!-- ПОДКЛЮЧЕНИЕ СТИЛЕЙ ДЛЯ VIDEOSJS -->
-    <link href="https://vjs.zencdn.net/8.16.1/video-js.css" rel="stylesheet" />
-    <link href="https://unpkg.com/@videojs/themes@1/dist/city/index.css" rel="stylesheet" />
-    <link href="https://unpkg.com/@videojs/themes@1/dist/sea/index.css" rel="stylesheet">
-
-    <!-- ПОДКЛЮЧЕНИЕ СТИЛЕЙ ДЛЯ BOOTSTRAP 5.3.3 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-    <!-- ПОДКЛЮЧЕНИЕ СТИЛЕЙ ДЛЯ СЛАЙДЕРА -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- ПОДКЛЮЧЕНИЕ ШРИФТА-->
+    <link rel="stylesheet" href="../font/inter.css">
 
     <!-- ПОДКЛЮЧЕНИЕ ОБЩИХ СТИЛЕЙ -->
     <link rel="stylesheet" href="../css/general/reset.css">
@@ -39,10 +31,6 @@
 
     <!-- ПОДКЛЮЧЕНИЕ СТИЛЕЙ ДЛЯ СТРАНИЦЫ -->
     <link rel="stylesheet" href="../css/about/style.css">
-
-    <!-- ПОДКЛЮЧЕНИЕ ШРИФТА-->
-    <link rel="preconnect" href="https://rsms.me/">
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 
 </head>
 
@@ -555,7 +543,7 @@
                 <div class="why-choose-us__cards">
                     <div class="why-choose-us__card bordered-block">
                             <div class="why-choose-us__card-body">
-                            <div class="why-choose-us__card__title">Сотрудники за:</div>
+                            <div class="why-choose-us__card-title">Сотрудники за:</div>
                             <ul class="why-choose-us__card-list">
                                 <li class="why-choose-us__card-list-item">шикарный офис в центре города;
                                 </li>
@@ -579,7 +567,7 @@
                     </div>
                     <div class="why-choose-us__card bordered-block">
                             <div class="why-choose-us__card-body">
-                            <div class="why-choose-us__card__title">Клиенты за то, что:</div>
+                            <div class="why-choose-us__card-title">Клиенты за то, что:</div>
                             <ul class="why-choose-us__card-list">
                                 <li class="why-choose-us__card-list-item">реальность соответствует ожиданиям;
                                 </li>
@@ -830,14 +818,15 @@
     </footer>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
     <!-- ПОДКЛЮЧЕНИE СКРИПТОВ ДЛЯ РАБОТЫ БИБЛИОТЕК -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://vjs.zencdn.net/8.16.1/video.min.js"></script>
+    <script src="../libs/js/popper.min.js"></script>
+    <script src="../libs/js/bootstrap.bundle.min.js"></script>
+    <script src="../libs/js/swiper-bundle.min.js"></script>
+    <script src="../libs/js/video.min.js"></script>
+    <script src="../libs/js/fancybox.umd.js"></script>
+    <script src="../libs/js/imask.js"></script>
+
 
 
     <!-- ПОДКЛЮЕНИЕ Fancybox -->
@@ -851,55 +840,56 @@
 
     <!-- СКРИПТ ДЛЯ ХЕДЕРА -->
     <script>
-        const navbarToggler = document.querySelector('.navbar-toggler');
-        const navbarCollapse = document.getElementById('navbarNav');
-        const overlay = document.getElementById('overlay');
-        const callbackButton = document.querySelector('.header__mobile-contacts-button');
-        const callModal = document.getElementById('callModal');
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            const navbarCollapse = document.getElementById('navbarNav');
+            const overlay = document.getElementById('overlay');
+            const callbackButton = document.querySelector('.header__mobile-contacts-button');
+            const callModal = document.getElementById('callModal');
+    
+            navbarToggler.addEventListener('click', function () {
+                document.body.style.overflow = 'hidden';
+                overlay.style.display = 'block';
+            });
+    
+            navbarCollapse.addEventListener('hidden.bs.collapse', function () {
+                document.body.style.overflow = 'visible';
+                overlay.style.display = 'none';
+            });
+    
+            callbackButton.addEventListener('click', function () {
+                navbarCollapse.classList.remove('show');
+                navbarToggler.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = 'visible';
+                overlay.style.display = 'none';
+            });
+    
+            callModal.addEventListener('hidden.bs.modal', function () {
+                document.body.style.overflow = 'visible';
+                overlay.style.display = 'none';
+            });
+    </script>
+    
+    
+    <!-- СКРИПТ ДЛЯ СЛАЙДЕРА БЛОКА НАША КОМАНДА -->
+    <script>
+        const swiper_ourTeam = new Swiper('.our-team__swiper', {
+            direction: 'horizontal',
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 20,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
 
-        navbarToggler.addEventListener('click', function () {
-            document.body.style.overflow = 'hidden';
-            overlay.style.display = 'block';
-        });
-
-        navbarCollapse.addEventListener('hidden.bs.collapse', function () {
-            document.body.style.overflow = 'visible';
-            overlay.style.display = 'none';
-        });
-
-        callbackButton.addEventListener('click', function () {
-            navbarCollapse.classList.remove('show');
-            navbarToggler.setAttribute('aria-expanded', 'false');
-            document.body.style.overflow = 'visible';
-            overlay.style.display = 'none';
-        });
-
-        callModal.addEventListener('hidden.bs.modal', function () {
-            document.body.style.overflow = 'visible';
-            overlay.style.display = 'none';
+            breakpoints: {
+                701: {
+                    slidesPerView: 2, // два слайда при ширине 701px и выше
+                }
+            }
         });
     </script>
 
-<!-- СКРИПТ ДЛЯ СЛАЙДЕРА БЛОКА НАША КОМАНДА -->
-<script>
-    const swiper_ourTeam = new Swiper('.our-team__swiper', {
-        direction: 'horizontal',
-        loop: true,
-        slidesPerView: 1,
-        spaceBetween: 20,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-
-        breakpoints: {
-            701:
-            {
-                slidesPerView: 2, // два слайда при ширине 701px и выше
-            }
-        }
-    });
-</script>
 
     <!-- СКРИПТ ДЛЯ СЛАЙДЕРА БЛОКА АКЦИИ -->
     <script>
@@ -926,6 +916,7 @@
         });
     </script>
 
+
     <!-- СКРИПТ ДЛЯ СЛАЙДЕРА БЛОКА ДОСТИЖЕНИЯ -->
     <script>
         const swiper_awards = new Swiper('.awards__swiper', {
@@ -939,6 +930,7 @@
             }
         });
     </script>
+
 
     <!-- ПОДКЛЮЧЕНИЕ API КАРТ (ВЗЯЛ СВОЁ API ЯНДЕКСА) -->
     <script src="https://api-maps.yandex.ru/2.1/?apikey=f028c4f8-776d-4ba3-b079-94a909b9cca1

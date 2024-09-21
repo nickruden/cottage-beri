@@ -7,19 +7,14 @@
     <title>Дом из газобетона и кирпича «Лайт 65»</title>
     <link rel="shortcut icon" href="../img/favicon.svg" type="image/x-icon">
 
-    <!-- ПОДКЛЮЧЕНИЕ СТИЛЕЙ ДЛЯ VIDEOSJS -->
-    <link href="https://vjs.zencdn.net/8.16.1/video-js.css" rel="stylesheet" />
-    <link href="https://unpkg.com/@videojs/themes@1/dist/city/index.css" rel="stylesheet" />
-    <link href="https://unpkg.com/@videojs/themes@1/dist/sea/index.css" rel="stylesheet">
+    <!-- ПОДКЛЮЧЕНИЕ СТИЛЕЙ ДЛЯ РАБОТЫ БИБЛИОТЕК -->
+    <link href="../libs/style/video-js.css" rel="stylesheet" />
+    <link href="../libs/style/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../libs/style/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../libs/style/fancybox.css" />
 
-    <!-- ПОДКЛЮЧЕНИЕ СТИЛЕЙ ДЛЯ BOOTSTRAP 5.3.3 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-    <!-- ПОДКЛЮЧЕНИЕ СТИЛЕЙ ДЛЯ СЛАЙДЕРА -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css">
+    <!-- ПОДКЛЮЧЕНИЕ ШРИФТА-->
+    <link rel="stylesheet" href="../font/inter.css">
 
     <!-- ПОДКЛЮЧЕНИЕ ОБЩИХ СТИЛЕЙ -->
     <link rel="stylesheet" href="../css/general/reset.css">
@@ -36,13 +31,35 @@
     <!-- ПОДКЛЮЧЕНИЕ СТИЛЕЙ ДЛЯ СТРАНИЦЫ АКЦИЙ -->
     <link rel="stylesheet" href="../css/project/style.css">
 
-    <!-- ПОДКЛЮЧЕНИЕ ШРИФТА-->
-    <link rel="preconnect" href="https://rsms.me/">
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-
 </head>
 
 <body>
+    <!-- МОДАЛЬНОЕ ОКНО С ФОРМОЙ -->
+    <div class="modal fade call-modal" id="callModal" tabindex="-1" aria-labelledby="callModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered call-modal__dialog">
+            <div class="modal-content call-modal__content">
+                <div class="modal-header call-modal__header">
+                    <button type="button" class="btn-close call-modal__close-button p-0" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body call-modal__body">
+                    <div class="call-modal__title title">Обратный звонок</div>
+                    <div class="call-modal__text text-block_fSize_20">Хотите уточнить информацию? Оставьте свои
+                        контактные
+                        данные, и мы вам перезвоним в ближайшее время.</div>
+                    <form action="" class="feedback-form">
+                        <input type="text" name="" id="" placeholder="Имя"
+                            class="feedback-form__input call-modal__input-name bordered-block">
+                        <input type="text" name="" id="" placeholder="Телефон"
+                            class="feedback-form__input call-modal__input-phone bordered-block">
+                        <button class="feedback-form__button call-modal__button button">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <header class="header">
         <div class="header__container my-container">
             <div class="header__main">
@@ -278,31 +295,7 @@
         </div>
     </header>
 
-    <!-- МОДАЛЬНОЕ ОКНО С ФОРМОЙ -->
-    <div class="modal fade call-modal" id="callModal" tabindex="-1" aria-labelledby="callModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered call-modal__dialog">
-            <div class="modal-content call-modal__content">
-                <div class="modal-header call-modal__header">
-                    <button type="button" class="btn-close call-modal__close-button p-0" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                </div>
-                <div class="modal-body call-modal__body">
-                    <div class="call-modal__title title">Обратный звонок</div>
-                    <div class="call-modal__text text-block_fSize_20">Хотите уточнить информацию? Оставьте свои
-                        контактные
-                        данные, и мы вам перезвоним в ближайшее время.</div>
-                    <form action="" class="feedback-form">
-                        <input type="text" name="" id="" placeholder="Имя"
-                            class="feedback-form__input call-modal__input-name bordered-block">
-                        <input type="text" name="" id="" placeholder="Телефон"
-                            class="feedback-form__input call-modal__input-phone bordered-block">
-                        <button class="feedback-form__button call-modal__button button">Отправить</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    
     <!-- ОВЕРЛЕЙ ТОЛЬКО ДЛЯ МОДАЛКИ С ФОРМОЙ -->
     <div class="overlay" id="overlay"></div>
 
@@ -525,7 +518,6 @@
                 <div class="project-map__map-block" id="project-map"></div>
             </div>
         </div>
-        
         <div class="how-buy">
             <div class="how-buy__container my-container">
                 <div class="how-buy__title title">Как заказать <span>строительство</span></div>
@@ -569,176 +561,159 @@
                 </div>
             </div>
         </div>
-        
-        <!-- !!!! НОВЫЙ СКРИПТ !!!! -->
-        <!-- СКРИПТ ДЛЯ ПЕРЕКЛЮЧЕНИЯ КНОПКОК В БЛОКЕ HOW-BUY -->
-        <script>
-            document.querySelectorAll('.how-buy__button').forEach(button => {
-                button.addEventListener('click', function () {
-                    const tab = this.getAttribute('data-tab');
-
-                    document.querySelectorAll('.how-buy__payment-type-descriprion').forEach(desc => {
-                        desc.style.display = desc.id === tab ? 'block' : 'none';
-                    }); // показываем блок, который по id совпадает с data-tab
-
-                    document.querySelectorAll('.how-buy__button').forEach(btn => {
-                        btn.classList.remove('how-buy__button_active');
-                    });
-
-                    this.classList.add('how-buy__button_active');
-                    document.getElementById('tab').value = tab;
-                });
-            });
-        </script>
-
-
         <div class="similar-projects">
             <div class="similar-projects__container my-container">
                 <div class="similar-projects__title title"><span>Похожие</span> проекты</div>
-            <!-- <div class="similar-projects__items">
-                <a href="./project.html" class="similar-projects__item">
-                    <div class="similar-projects__item-body bordered-block">
-                        <div class="similar-projects__img-wrap">
-                            <img src="../img/pages-img/project/similar/item_1.jpg" alt="фото процент" class="similar-projects__img">
-                            <div class="similar-projects__img-option">1 этаж / 94 м²</div>
-                        </div>
-                        <div class="similar-projects__item-title">Проект ЛАЙТ 65, штукатурка</div>
-                    </div>
-                </a>
-                <a href="./project.html" class="similar-projects__item">
-                    <div class="similar-projects__item-body bordered-block">
-                        <div class="similar-projects__img-wrap">
-                            <img src="../img/pages-img/project/similar/item_2.jpg" alt="фото стул" class="similar-projects__img">
-                            <div class="similar-projects__img-option">1 этаж / 94 м²</div>
-                        </div>
-                        <div class="similar-projects__item-title">Проект ЛАЙТ+95, кирпич</div>
-                    </div>
-                </a>
-                <a href="./project.html" class="similar-projects__item">
-                    <div class="similar-projects__item-body bordered-block">
-                        <div class="similar-projects__img-wrap">
-                            <img src="../img/pages-img/project/similar/item_3.jpg" alt="фото сертификат" class="similar-projects__img">
-                            <div class="similar-projects__img-option">1 этаж / 94 м²</div>
-                        </div>
-                        <div class="similar-projects__item-title">Проект ЛАЙТ+95, штукатурка</div>
-                    </div>
-                </a>
-            </div> -->
-            <div class="similar-projects__slider">
-                <div class="swiper similar-projects__swiper">
-                    <div class="swiper-wrapper similar-projects__swiper-wrapper">
-                        <div class="swiper-slide">
-                            <a href="./project.html" class="similar-projects__item">
-                                <div class="similar-projects__item-body bordered-block">
-                                    <div class="similar-projects__img-wrap">
-                                        <img src="../img/nhk8jg3psng71.jpg" alt="фото процент" class="similar-projects__img">
-                                        <div class="similar-projects__img-option">1 этаж / 94 м²</div>
-                                    </div>
-                                    <div class="similar-projects__item-title">Проект ЛАЙТ 65, штукатурка</div>
+                <!-- <div class="similar-projects__items">
+                        <a href="./project.html" class="similar-projects__item">
+                            <div class="similar-projects__item-body bordered-block">
+                                <div class="similar-projects__img-wrap">
+                                    <img src="../img/pages-img/project/similar/item_1.jpg" alt="фото процент" class="similar-projects__img">
+                                    <div class="similar-projects__img-option">1 этаж / 94 м²</div>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="./project.html" class="similar-projects__item">
-                                <div class="similar-projects__item-body bordered-block">
-                                    <div class="similar-projects__img-wrap">
-                                        <img src="../img/pages-img/project/similar/item_2.jpg" alt="фото процент" class="similar-projects__img">
-                                        <div class="similar-projects__img-option">1 этаж / 94 м²</div>
-                                    </div>
-                                    <div class="similar-projects__item-title">Проект ЛАЙТ+95, кирпич</div>
+                                <div class="similar-projects__item-title">Проект ЛАЙТ 65, штукатурка</div>
+                            </div>
+                        </a>
+                        <a href="./project.html" class="similar-projects__item">
+                            <div class="similar-projects__item-body bordered-block">
+                                <div class="similar-projects__img-wrap">
+                                    <img src="../img/pages-img/project/similar/item_2.jpg" alt="фото стул" class="similar-projects__img">
+                                    <div class="similar-projects__img-option">1 этаж / 94 м²</div>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="./project.html" class="similar-projects__item">
-                                <div class="similar-projects__item-body bordered-block">
-                                    <div class="similar-projects__img-wrap">
-                                        <img src="../img/pages-img/project/similar/item_3.jpg" alt="фото процент" class="similar-projects__img">
-                                        <div class="similar-projects__img-option">1 этаж / 94 м²</div>
-                                    </div>
-                                    <div class="similar-projects__item-title">Проект ЛАЙТ+95, штукатурка</div>
+                                <div class="similar-projects__item-title">Проект ЛАЙТ+95, кирпич</div>
+                            </div>
+                        </a>
+                        <a href="./project.html" class="similar-projects__item">
+                            <div class="similar-projects__item-body bordered-block">
+                                <div class="similar-projects__img-wrap">
+                                    <img src="../img/pages-img/project/similar/item_3.jpg" alt="фото сертификат" class="similar-projects__img">
+                                    <div class="similar-projects__img-option">1 этаж / 94 м²</div>
                                 </div>
-                            </a>
+                                <div class="similar-projects__item-title">Проект ЛАЙТ+95, штукатурка</div>
+                            </div>
+                        </a>
+                    </div> -->
+                <div class="similar-projects__slider">
+                    <div class="swiper similar-projects__swiper">
+                        <div class="swiper-wrapper similar-projects__swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="./project.html" class="similar-projects__item">
+                                    <div class="similar-projects__item-body bordered-block">
+                                        <div class="similar-projects__img-wrap">
+                                            <img src="../img/nhk8jg3psng71.jpg" alt="фото процент"
+                                                class="similar-projects__img">
+                                            <div class="similar-projects__img-option">1 этаж / 94 м²</div>
+                                        </div>
+                                        <div class="similar-projects__item-title">Проект ЛАЙТ 65, штукатурка</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="./project.html" class="similar-projects__item">
+                                    <div class="similar-projects__item-body bordered-block">
+                                        <div class="similar-projects__img-wrap">
+                                            <img src="../img/pages-img/project/similar/item_2.jpg" alt="фото процент"
+                                                class="similar-projects__img">
+                                            <div class="similar-projects__img-option">1 этаж / 94 м²</div>
+                                        </div>
+                                        <div class="similar-projects__item-title">Проект ЛАЙТ+95, кирпич</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="./project.html" class="similar-projects__item">
+                                    <div class="similar-projects__item-body bordered-block">
+                                        <div class="similar-projects__img-wrap">
+                                            <img src="../img/pages-img/project/similar/item_3.jpg" alt="фото процент"
+                                                class="similar-projects__img">
+                                            <div class="similar-projects__img-option">1 этаж / 94 м²</div>
+                                        </div>
+                                        <div class="similar-projects__item-title">Проект ЛАЙТ+95, штукатурка</div>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
+                        <div class="swiper-pagination similar-projects__swiper-pagination"></div>
                     </div>
-                    <div class="swiper-pagination similar-projects__swiper-pagination"></div>
                 </div>
             </div>
-        </div>
         </div>
         <div class="viewied-projects">
             <div class="viewied-projects__container my-container">
                 <div class="viewied-projects__title title"><span>Просмотренные</span> проекты</div>
-            <!-- <div class="viewied-projects__items">
-                <a href="./project.html" class="viewied-projects__item">
-                    <div class="viewied-projects__item-body bordered-block">
-                        <div class="viewied-projects__img-wrap">
-                            <img src="../img/pages-img/project/viewed/item_1.jpg" alt="фото процент" class="viewied-projects__img">
-                            <div class="viewied-projects__img-option">1 этаж / 94 м²</div>
-                        </div>
-                        <div class="viewied-projects__item-title">Коттедж «Альфа», 7 300 000 ₽</div>
-                    </div>
-                </a>
-                <a href="./project.html" class="viewied-projects__item">
-                    <div class="viewied-projects__item-body bordered-block">
-                        <div class="viewied-projects__img-wrap">
-                            <img src="../img/pages-img/project/viewed/item_2.jpg" alt="фото стул" class="viewied-projects__img">
-                            <div class="viewied-projects__img-option">1 этаж / 94 м²</div>
-                        </div>
-                        <div class="viewied-projects__item-title">Коттедж «Омега», 8 200 000 ₽</div>
-                    </div>
-                </a>
-                <a href="./project.html" class="viewied-projects__item">
-                    <div class="viewied-projects__item-body bordered-block">
-                        <div class="viewied-projects__img-wrap">
-                            <img src="../img/pages-img/project/viewed/item_3.jpg" alt="фото сертификат" class="viewied-projects__img">
-                            <div class="viewied-projects__img-option">1 этаж / 94 м²</div>
-                        </div>
-                        <div class="viewied-projects__item-title">Коттедж «Сигма», 7 800 000 ₽</div>
-                    </div>
-                </a>
-            </div> -->
-            <div class="viewied-projects__slider">
-                <div class="swiper viewied-projects__swiper">
-                    <div class="swiper-wrapper viewied-projects__swiper-wrapper">
-                        <div class="swiper-slide">
-                            <a href="./project.html" class="viewied-projects__item">
-                                <div class="viewied-projects__item-body bordered-block">
-                                    <div class="viewied-projects__img-wrap">
-                                        <img src="../img/nhk8jg3psng71.jpg" alt="фото процент" class="viewied-projects__img">
-                                        <div class="viewied-projects__img-option">1 этаж / 94 м²</div>
-                                    </div>
-                                    <div class="viewied-projects__item-title">Коттедж «Альфа», 7 300 000 ₽</div>
+                <!-- <div class="viewied-projects__items">
+                        <a href="./project.html" class="viewied-projects__item">
+                            <div class="viewied-projects__item-body bordered-block">
+                                <div class="viewied-projects__img-wrap">
+                                    <img src="../img/pages-img/project/viewed/item_1.jpg" alt="фото процент" class="viewied-projects__img">
+                                    <div class="viewied-projects__img-option">1 этаж / 94 м²</div>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="./project.html" class="viewied-projects__item">
-                                <div class="viewied-projects__item-body bordered-block">
-                                    <div class="viewied-projects__img-wrap">
-                                        <img src="../img/pages-img/project/viewed/item_2.jpg" alt="фото стул" class="viewied-projects__img">
-                                        <div class="viewied-projects__img-option">1 этаж / 94 м²</div>
-                                    </div>
-                                    <div class="viewied-projects__item-title">Коттедж «Омега», 8 200 000 ₽</div>
+                                <div class="viewied-projects__item-title">Коттедж «Альфа», 7 300 000 ₽</div>
+                            </div>
+                        </a>
+                        <a href="./project.html" class="viewied-projects__item">
+                            <div class="viewied-projects__item-body bordered-block">
+                                <div class="viewied-projects__img-wrap">
+                                    <img src="../img/pages-img/project/viewed/item_2.jpg" alt="фото стул" class="viewied-projects__img">
+                                    <div class="viewied-projects__img-option">1 этаж / 94 м²</div>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="./project.html" class="viewied-projects__item">
-                                <div class="viewied-projects__item-body bordered-block">
-                                    <div class="viewied-projects__img-wrap">
-                                        <img src="../img/pages-img/project/viewed/item_3.jpg" alt="фото сертификат" class="viewied-projects__img">
-                                        <div class="viewied-projects__img-option">1 этаж / 94 м²</div>
-                                    </div>
-                                    <div class="viewied-projects__item-title">Коттедж «Сигма», 7 800 000 ₽</div>
+                                <div class="viewied-projects__item-title">Коттедж «Омега», 8 200 000 ₽</div>
+                            </div>
+                        </a>
+                        <a href="./project.html" class="viewied-projects__item">
+                            <div class="viewied-projects__item-body bordered-block">
+                                <div class="viewied-projects__img-wrap">
+                                    <img src="../img/pages-img/project/viewed/item_3.jpg" alt="фото сертификат" class="viewied-projects__img">
+                                    <div class="viewied-projects__img-option">1 этаж / 94 м²</div>
                                 </div>
-                            </a>
+                                <div class="viewied-projects__item-title">Коттедж «Сигма», 7 800 000 ₽</div>
+                            </div>
+                        </a>
+                    </div> -->
+                <div class="viewied-projects__slider">
+                    <div class="swiper viewied-projects__swiper">
+                        <div class="swiper-wrapper viewied-projects__swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="./project.html" class="viewied-projects__item">
+                                    <div class="viewied-projects__item-body bordered-block">
+                                        <div class="viewied-projects__img-wrap">
+                                            <img src="../img/nhk8jg3psng71.jpg" alt="фото процент"
+                                                class="viewied-projects__img">
+                                            <div class="viewied-projects__img-option">1 этаж / 94 м²</div>
+                                        </div>
+                                        <div class="viewied-projects__item-title">Коттедж «Альфа», 7 300 000 ₽</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="./project.html" class="viewied-projects__item">
+                                    <div class="viewied-projects__item-body bordered-block">
+                                        <div class="viewied-projects__img-wrap">
+                                            <img src="../img/pages-img/project/viewed/item_2.jpg" alt="фото стул"
+                                                class="viewied-projects__img">
+                                            <div class="viewied-projects__img-option">1 этаж / 94 м²</div>
+                                        </div>
+                                        <div class="viewied-projects__item-title">Коттедж «Омега», 8 200 000 ₽</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="./project.html" class="viewied-projects__item">
+                                    <div class="viewied-projects__item-body bordered-block">
+                                        <div class="viewied-projects__img-wrap">
+                                            <img src="../img/pages-img/project/viewed/item_3.jpg" alt="фото сертификат"
+                                                class="viewied-projects__img">
+                                            <div class="viewied-projects__img-option">1 этаж / 94 м²</div>
+                                        </div>
+                                        <div class="viewied-projects__item-title">Коттедж «Сигма», 7 800 000 ₽</div>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
+                        <div class="swiper-pagination viewied-projects__swiper-pagination"></div>
                     </div>
-                    <div class="swiper-pagination viewied-projects__swiper-pagination"></div>
                 </div>
             </div>
-        </div>
         </div>
 
         <!-- ПОВТОРЯЕТСЯ НА ВСЕХ СТРАНИЦАХ, МОЖНО ДОБАВИТЬ В ОБЩИЙ ШАБЛОН -->
@@ -816,15 +791,17 @@
     </footer>
 
 
-    <!-- ПОДКЛЮЧЕНИE СКРИПТОВ ДЛЯ РАБОТЫ БИБЛИОТЕК -->
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://vjs.zencdn.net/8.16.1/video.min.js"></script>
 
+    <!-- ПОДКЛЮЧЕНИE СКРИПТОВ ДЛЯ РАБОТЫ БИБЛИОТЕК -->
+    <script src="../libs/js/popper.min.js"></script>
+    <script src="../libs/js/bootstrap.bundle.min.js"></script>
+    <script src="../libs/js/swiper-bundle.min.js"></script>
+    <script src="../libs/js/video.min.js"></script>
+    <script src="../libs/js/fancybox.umd.js"></script>
+    <script src="../libs/js/imask.js"></script>
+    
+    
+    
     <!-- СКРИПТ ДЛЯ ХЕДЕРА -->
     <script>
         const navbarToggler = document.querySelector('.navbar-toggler');
@@ -855,7 +832,30 @@
             overlay.style.display = 'none';
         });
     </script>
+    
+    
+    <!-- !!!! НОВЫЙ СКРИПТ !!!! -->
+    <!-- СКРИПТ ДЛЯ ПЕРЕКЛЮЧЕНИЯ КНОПКОК В БЛОКЕ HOW-BUY -->
+    <script>
+        document.querySelectorAll('.how-buy__button').forEach(button => {
+            button.addEventListener('click', function () {
+                const tab = this.getAttribute('data-tab');
 
+                document.querySelectorAll('.how-buy__payment-type-descriprion').forEach(desc => {
+                    desc.style.display = desc.id === tab ? 'block' : 'none';
+                }); // показываем блок, который по id совпадает с data-tab
+
+                document.querySelectorAll('.how-buy__button').forEach(btn => {
+                    btn.classList.remove('how-buy__button_active');
+                });
+
+                this.classList.add('how-buy__button_active');
+                document.getElementById('tab').value = tab;
+            });
+        });
+    </script>
+    
+    
     <!-- СКРИПТ ДЛЯ СЛАЙДЕРА БЛОКА ПОХОЖИЕ ПРОЕКТЫ -->
     <script>
         const swiper_similarProjects = new Swiper('.similar-projects__swiper', {
@@ -880,7 +880,8 @@
             }
         });
     </script>
-
+    
+    
     <!-- СКРИПТ ДЛЯ СЛАЙДЕРА БЛОКА ПРОСМОТРЕННЫЕ ПРОЕКТЫ -->
     <script>
         const swiper_viewiedProjects = new Swiper('.viewied-projects__swiper', {

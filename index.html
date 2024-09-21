@@ -7,22 +7,14 @@
     <title>Коттедж-бери</title>
     <link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon">
 
-    <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
-  />
+    <!-- ПОДКЛЮЧЕНИЕ СТИЛЕЙ ДЛЯ РАБОТЫ БИБЛИОТЕК -->
+    <link href="./libs/style/video-js.css" rel="stylesheet" />
+    <link href="./libs/style/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./libs/style/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./libs/style/fancybox.css" />
 
-    <!-- ПОДКЛЮЧЕНИЕ СТИЛЕЙ ДЛЯ VIDEOSJS -->
-    <link href="https://vjs.zencdn.net/8.16.1/video-js.css" rel="stylesheet" />
-    <link href="https://unpkg.com/@videojs/themes@1/dist/city/index.css" rel="stylesheet" />
-    <link href="https://unpkg.com/@videojs/themes@1/dist/sea/index.css" rel="stylesheet">
-
-    <!-- ПОДКЛЮЧЕНИЕ СТИЛЕЙ ДЛЯ BOOTSTRAP 5.3.3 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-    <!-- ПОДКЛЮЧЕНИЕ СТИЛЕЙ ДЛЯ СЛАЙДЕРА -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- ПОДКЛЮЧЕНИЕ ШРИФТА-->
+    <link rel="stylesheet" href="./font/inter.css">
 
     <!-- ПОДКЛЮЧЕНИЕ ОБЩИХ СТИЛЕЙ -->
     <link rel="stylesheet" href="./css/general/reset.css">
@@ -40,13 +32,79 @@
     <!-- ПОДКЛЮЧЕНИЕ СТИЛЕЙ ДЛЯ СТРАНИЦЫ -->
     <link rel="stylesheet" href="./css/main/style.css">
 
-    <!-- ПОДКЛЮЧЕНИЕ ШРИФТА-->
-    <link rel="preconnect" href="https://rsms.me/">
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-
 </head>
 
 <body>
+    <!-- МОДАЛЬНОЕ ОКНО С ФОРМОЙ -->
+    <div class="modal fade call-modal" id="callModal" tabindex="-1" aria-labelledby="callModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered call-modal__dialog">
+            <div class="modal-content call-modal__content">
+                <div class="modal-header call-modal__header">
+                    <button type="button" class="btn-close call-modal__close-button p-0" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body call-modal__body">
+                    <div class="call-modal__title title">Обратный звонок</div>
+                    <div class="call-modal__text text-block_fSize_20">Хотите уточнить информацию? Оставьте свои
+                        контактные
+                        данные, и мы вам перезвоним в ближайшее время.</div>
+                    <form action="" class="feedback-form">
+                        <input type="text" name="name" id="name-input" placeholder="Имя"
+                            class="feedback-form__input call-modal__input-name bordered-block">
+                        <input type="tel" name="phone" id="phone-input" placeholder="Телефон"
+                            class="feedback-form__input call-modal__input-phone bordered-block">
+                        <button class="feedback-form__button call-modal__button button">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade call-modal" id="consultationModal" tabindex="-1" aria-labelledby="callModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered call-modal__dialog">
+            <div class="modal-content call-modal__content">
+                <div class="modal-header call-modal__header">
+                    <button type="button" class="btn-close call-modal__close-button p-0" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body call-modal__body">
+                    <div class="call-modal__title title">Записаться на констультацию</div>
+                    <div class="call-modal__text text-block_fSize_20">Хотите уточнить информацию? Оставьте свои
+                        контактные
+                        данные, и мы вам перезвоним в ближайшее время.</div>
+                    <form action="" class="feedback-form">
+                        <input type="text" name="name" id="name-input" placeholder="Имя"
+                            class="feedback-form__input call-modal__input-name bordered-block">
+                        <input type="tel" name="phone" id="phone-input" placeholder="Телефон"
+                            class="feedback-form__input call-modal__input-phone bordered-block">
+                        <button class="feedback-form__button call-modal__button button">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- МОДАЛЬНОЕ ОКНО С ВИДЕО -->
+    <div style="margin: 0 auto;" class="modal fade modal-video" id="videoModal" aria-labelledby="videoModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-video__modal-dialog" style="max-width: 90%; width: 90%; height: 90%;">
+            <div class="modal-content modal-video__modal-content" style="width: 100%;">
+                <div class="modal-header modal-video__modal-header">
+                    <div class="modal-video__title title">Заголовок по умолчанию</div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body modal-video__modal-body d-flex justify-content-center align-items-center">
+                    <video id="modal-video" class="video-js vjs-theme-city modal-video__video" controls preload="auto"
+                        data-setup='{"controlBar": {"pictureInPictureToggle": false}}'>
+                        <source src="../video/31637395_MotionElements_earth-hologram_preview.mp4" type="video/mp4">
+                        Ваш браузер не поддерживает видео.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <header class="header">
         <div class="header__container my-container">
             <div class="header__main">
@@ -287,70 +345,10 @@
         </div>
     </header>
 
-    <!-- МОДАЛЬНОЕ ОКНО С ФОРМОЙ -->
-    <div class="modal fade call-modal" id="callModal" tabindex="-1" aria-labelledby="callModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered call-modal__dialog">
-            <div class="modal-content call-modal__content">
-                <div class="modal-header call-modal__header">
-                    <button type="button" class="btn-close call-modal__close-button p-0" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                </div>
-                <div class="modal-body call-modal__body">
-                    <div class="call-modal__title title">Обратный звонок</div>
-                    <div class="call-modal__text text-block_fSize_20">Хотите уточнить информацию? Оставьте свои
-                        контактные
-                        данные, и мы вам перезвоним в ближайшее время.</div>
-                    <form action="" class="feedback-form">
-                        <input type="text" name="name" id="name-input" placeholder="Имя"
-                            class="feedback-form__input call-modal__input-name bordered-block">
-                        <input type="tel" name="phone" id="phone-input" placeholder="Телефон"
-                            class="feedback-form__input call-modal__input-phone bordered-block">
-                        <button class="feedback-form__button call-modal__button button">Отправить</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade call-modal" id="consultationModal" tabindex="-1" aria-labelledby="callModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered call-modal__dialog">
-            <div class="modal-content call-modal__content">
-                <div class="modal-header call-modal__header">
-                    <button type="button" class="btn-close call-modal__close-button p-0" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                </div>
-                <div class="modal-body call-modal__body">
-                    <div class="call-modal__title title">Записаться на констультацию</div>
-                    <div class="call-modal__text text-block_fSize_20">Хотите уточнить информацию? Оставьте свои
-                        контактные
-                        данные, и мы вам перезвоним в ближайшее время.</div>
-                    <form action="" class="feedback-form">
-                        <input type="text" name="name" id="name-input" placeholder="Имя"
-                            class="feedback-form__input call-modal__input-name bordered-block">
-                        <input type="tel" name="phone" id="phone-input" placeholder="Телефон"
-                            class="feedback-form__input call-modal__input-phone bordered-block">
-                        <button class="feedback-form__button call-modal__button button">Отправить</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- КАЖДОЙ КНОПКЕ КОТОРАЯ ОТКРЫВАЕТ МОДАЛЬНОЕ ОКНО ДОБАВЛЯЕТЕ DATA-FORM И УКАЗЫВАЕТЕ ID МОДАЛЬНОГО ОКНА -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            document.querySelectorAll('[data-form]').forEach(button => {
-                button.addEventListener('click', function () {
-                    const formId = this.getAttribute('data-form');
-                    const modal = new bootstrap.Modal(document.getElementById(formId));
-                    modal.show();
-                });
-            });
-        });
-    </script>
 
     <!-- ОВЕРЛЕЙ ТОЛЬКО ДЛЯ МОДАЛКИ С ФОРМОЙ -->
     <div class="overlay" id="overlay"></div>
+
 
     <main class="main">
         <div class="top-block">
@@ -870,75 +868,12 @@
                     </div>
                     <div class="what-saying__video" data-bs-toggle="modal" data-bs-target="#videoModal">
                         <img src="./img/nhk8jg3psng71.jpg" alt="" class="what-saying__video-poster">
-                        <div class="video-play-button"></div>
+                        <div class="video-play-button" data-bs-toggle="modal"
+                        data-bs-target="#videoModal" data-title="Что говоря люди" data-src="./video/7667227-uhd_3840_2160_30fps.mp4"></div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- МОДАЛЬНОЕ ОКНО С ВИДЕО -->
-        <div style="margin: 0 auto;" class="modal fade modal-video" id="videoModal" aria-labelledby="videoModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-video__modal-dialog" style="max-width: 90%; width: 90%; height: 90%;">
-                <div class="modal-content modal-video__modal-content" style="width: 100%;">
-                    <div class="modal-header modal-video__modal-header">
-                        <div class="modal-video__title title"><span>Что говорят</span> люди
-                        </div>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body modal-video__modal-body d-flex justify-content-center align-items-center">
-                        <video id="modal-video" class="video-js vjs-theme-city modal-video__video" controls
-                            preload="auto" data-setup='{"controlBar": {"pictureInPictureToggle": false}}'>
-                            <source src="./video/31637395_MotionElements_earth-hologram_preview.mp4" type="video/mp4">
-                            Ваш браузер не поддерживает видео.
-                        </video>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- <div class="reviews">
-            <div class="reviews__container my-container">
-                <div class="reviews__title title">Отзывы</div>
-                <div class="reviews__slider">
-                    <div class="swiper reviews__swiper">
-                        <div class="swiper-wrapper reviews__slider-wrapper">
-                            <div class="swiper-slide">
-                                <div class="reviews__slide bordered-block">
-                                    <img src="./img/pages-img/main/reviews/1.png" alt="" class="reviews__slide-img">
-                                </div>
-                                <div class="reviews__slide-triangle"></div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="reviews__slide bordered-block">
-                                    <img src="./img/pages-img/main/reviews/2.png" alt="" class="reviews__slide-img">
-                                </div>
-                                <div class="reviews__slide-triangle"></div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="reviews__slide bordered-block">
-                                    <img src="./img/pages-img/main/reviews/3.png" alt="" class="reviews__slide-img">
-                                </div>
-                                <div class="reviews__slide-triangle"></div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="reviews__slide bordered-block">
-                                    <img src="./img/pages-img/main/reviews/1.png" alt="" class="reviews__slide-img">
-                                </div>
-                                <div class="reviews__slide-triangle"></div>
-                            </div>
-                        </div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-                    <div class="swiper-button-next reviews__slider-button-next">
-                        <img src="./img/link-arrow.svg" alt="" class="swiper-button__next-img">
-                    </div>
-                    <div class="swiper-button-prev reviews__slider-button-prev ">
-                        <img src="./img/link-arrow.svg" alt="" class="swiper-button__prev-img">
-                    </div>
-                </div>
-            </div>
-        </div> -->
         <div class="reviews">
             <div class="reviews__container my-container">
                 <div class="reviews__title title">Отзывы</div>
@@ -1231,17 +1166,18 @@
     </footer>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
     <!-- ПОДКЛЮЧЕНИE СКРИПТОВ БИБЛИОТЕК -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://vjs.zencdn.net/8.16.1/video.min.js"></script>
+    <script src="./libs/js/popper.min.js"></script>
+    <script src="./libs/js/bootstrap.bundle.min.js"></script>
+    <script src="./libs/js/swiper-bundle.min.js"></script>
+    <script src="./libs/js/video.min.js"></script>
+    <script src="./libs/js/fancybox.umd.js"></script>
+    <script src="./libs/js/imask.js"></script>
 
 
-    <!-- ПОДКЛЮЧЕНИЕ Fancybox -->
+
+    <!-- ПОДКЛЮЧЕНИЕ Fancybox ДЛЯ БЛОКА REPOSRTS -->
     <script>
         Fancybox.bind('[data-fancybox="reports"]', {
             dragToClose: false,
@@ -1249,6 +1185,8 @@
         });
     </script>
 
+
+    <!-- ПОДКЛЮЧЕНИЕ Fancybox ДЛЯ БЛОКА ОТЗЫВЫ -->
     <script>
         Fancybox.bind('[data-fancybox="reviews"]', {
             dragToClose: false,
@@ -1257,8 +1195,7 @@
     </script>
 
 
-    <!-- !!!!! НОВЫЙ СКРИПТ !!!!! СКРИПТ ДЛЯ МАСКИ В ФОРМЕ -->
-    <script src="https://unpkg.com/imask"></script>
+    <!-- СКРИПТ ДЛЯ МАСКИ В ФОРМЕ -->
     <script>
         const elements = document.querySelectorAll('input[name=phone]');
         console.log(elements)
@@ -1303,6 +1240,25 @@
         }
     </script>
 
+
+
+    <!-- СКРИПТ ДЛЯ МОДАЛЬНОГО ОКНА С ФОРМОЙ
+            КАЖДОЙ КНОПКЕ КОТОРАЯ ОТКРЫВАЕТ МОДАЛЬНОЕ ОКНО ДОБАВЛЯЕТЕ 
+            DATA-FORM И УКАЗЫВАЕТЕ ID МОДАЛЬНОГО ОКНА -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('[data-form]').forEach(button => {
+                button.addEventListener('click', function () {
+                    const formId = this.getAttribute('data-form');
+                    const modal = new bootstrap.Modal(document.getElementById(formId));
+                    modal.show();
+                });
+            });
+        });
+    </script>
+    
+    
+    
     <!-- СКРИПТ ДЛЯ ХЕДЕРА -->
     <script>
         const navbarToggler = document.querySelector('.navbar-toggler');
@@ -1334,6 +1290,8 @@
         });
     </script>
 
+
+
     <!-- СКРИПТ ДЛЯ СЛАЙДЕРА ПЕРВОГО БЛОКА -->
     <script>
         const swiper_topBlock = new Swiper('.top-block__swiper', {
@@ -1363,6 +1321,8 @@
         });
     </script>
 
+
+
     <!-- СКРИПТ ДЛЯ СЛАЙДЕРА БЛОКА АКЦИИ -->
     <script>
         const swiper_stocks = new Swiper('.stocks__swiper', {
@@ -1387,6 +1347,8 @@
             }
         });
     </script>
+
+
 
     <!-- СКРИПТ ДЛЯ СЛАЙДЕРА БЛОКА REPORTS -->
     <script>
@@ -1415,20 +1377,45 @@
         });
     </script>
 
-    <!-- СКРИПТ МОДАЛЬНОГО ОКНА С ВИДЕО -->
-    <script>
-        const videoModal = document.getElementById('videoModal');
-        videoModal.addEventListener('shown.bs.modal', function () {
-            const videoPlayer = videojs('modal-video');
-            videoPlayer.play();
-        });
 
-        videoModal.addEventListener('hidden.bs.modal', function () {
-            const videoPlayer = videojs('modal-video');
-            videoPlayer.pause();
-            videoPlayer.currentTime(0);
+
+    <!-- СКРИПТ МОДАЛЬНОГО ОКНА С ВИДЕО -->
+    <!-- СКРИПТ МОДАЛЬНОГО ОКНА С ВИДЕО, РАБОТАЕТ ТАК - ДОБАВЛЯЕТЕ НА КНОПКУ ИЛИ НА САМО ПРЕВЬЮ, 
+        ТО ЧТО ДОЛЖНО ОТКРЫТЬ ВИДЕО DATA-TITLE и DATA-SRC - и модальное окно открывается 
+        с нужным видео и заголовком -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.video-play-button').forEach(button => {
+                button.addEventListener('click', function () {
+                    const videoTitle = this.getAttribute('data-title');
+                    const videoSrc = this.getAttribute('data-src');
+
+                    // обновляем заголовок модального окна
+                    const modalTitle = document.querySelector('#videoModal .modal-video__title');
+                    modalTitle.innerHTML = videoTitle;
+
+                    // обновляем источник видео в модальном окне
+                    const videoPlayer = videojs('modal-video');
+                    videoPlayer.src({ src: videoSrc, type: 'video/mp4' });
+                    videoPlayer.load();
+                });
+            });
+
+            const videoModal = document.getElementById('videoModal');
+            videoModal.addEventListener('shown.bs.modal', function () {
+                const videoPlayer = videojs('modal-video');
+                videoPlayer.play();
+            });
+
+            videoModal.addEventListener('hidden.bs.modal', function () {
+                const videoPlayer = videojs('modal-video');
+                videoPlayer.pause();
+                videoPlayer.currentTime(0);
+            });
         });
     </script>
+
+
 
     <!-- СКРИПТ ДЛЯ СЛАЙДЕРА БЛОКА REVIEWS -->
     <script>
@@ -1456,6 +1443,8 @@
             }
         });
     </script>
+
+
 
     <!-- ПОДКЛЮЧЕНИЕ API КАРТ (ВЗЯЛ СВОЁ API ЯНДЕКСА) -->
     <script src="https://api-maps.yandex.ru/2.1/?apikey=f028c4f8-776d-4ba3-b079-94a909b9cca1

@@ -1,0 +1,42 @@
+/*
+Font families defined by this CSS:
+  - InterVariable  variable font for modern web browsers
+  - Inter          static fonts for older web browsers (small optical size)
+  - InterDisplay   static fonts for older web browsers (large optical size)
+
+Usage example:
+  :root { font-family: Inter, sans-serif; }
+  @supports (font-variation-settings: normal) {
+    :root { font-family: InterVariable, sans-serif; }
+  }
+
+*/
+@font-face {
+    font-family: InterVariable;
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url('./InterVariable.woff2') format('woff2');
+  }
+
+  /* legacy name "Inter var" (Oct 2023) */
+  @font-face { font-family:'Inter var'; font-style:normal; font-weight:100 900; font-display:swap; src: url('./InterVariable.woff2') format('woff2'); }
+  
+  /* static fonts */
+  @font-face { font-family:Inter; font-style:normal; font-weight:400; font-display:swap; src:url("./normal/Inter-Regular.woff2") format("woff2"); }
+  @font-face { font-family:Inter; font-style:italic; font-weight:400; font-display:swap; src:url("./italic/Inter-Italic.woff2") format("woff2"); }
+  @font-face { font-family:Inter; font-style:normal; font-weight:500; font-display:swap; src:url("./normal/Inter-Medium.woff2") format("woff2"); }
+  @font-face { font-family:Inter; font-style:italic; font-weight:500; font-display:swap; src:url("./italic/Inter-MediumItalic.woff2") format("woff2"); }
+  @font-face { font-family:Inter; font-style:normal; font-weight:600; font-display:swap; src:url("./normal/Inter-SemiBold.woff2") format("woff2"); }
+  @font-face { font-family:Inter; font-style:italic; font-weight:600; font-display:swap; src:url("./italic/Inter-SemiBoldItalic.woff2") format("woff2"); }
+  @font-face { font-family:Inter; font-style:normal; font-weight:700; font-display:swap; src:url("./normal/Inter-Bold.woff2") format("woff2"); }
+  @font-face { font-family:Inter; font-style:italic; font-weight:700; font-display:swap; src:url("./italic/Inter-BoldItalic.woff2") format("woff2"); }
+
+  @font-face { font-family:InterDisplay; font-style:normal; font-weight:400; font-display:swap; src:url("./normal/InterDisplay-Regular.woff2") format("woff2"); }
+  @font-face { font-family:InterDisplay; font-style:italic; font-weight:400; font-display:swap; src:url("./italic/InterDisplay-Italic.woff2") format("woff2"); }
+  @font-face { font-family:InterDisplay; font-style:normal; font-weight:500; font-display:swap; src:url("./normal/InterDisplay-Medium.woff2") format("woff2"); }
+  @font-face { font-family:InterDisplay; font-style:italic; font-weight:500; font-display:swap; src:url("./italic/InterDisplay-MediumItalic.woff2") format("woff2"); }
+  @font-face { font-family:InterDisplay; font-style:normal; font-weight:600; font-display:swap; src:url("./normal/InterDisplay-SemiBold.woff2") format("woff2"); }
+  @font-face { font-family:InterDisplay; font-style:italic; font-weight:600; font-display:swap; src:url("./italic/InterDisplay-SemiBoldItalic.woff2") format("woff2"); }
+  @font-face { font-family:InterDisplay; font-style:normal; font-weight:700; font-display:swap; src:url("./normal/InterDisplay-Bold.woff2") format("woff2"); }
+  @font-face { font-family:InterDisplay; font-style:italic; font-weight:700; font-display:swap; src:url("./italic/InterDisplay-BoldItalic.woff2") format("woff2"); }

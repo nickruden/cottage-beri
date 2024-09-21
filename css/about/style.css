@@ -848,7 +848,7 @@
 .why-choose-us__card-body {
     padding: 40px 20px 30px 40px;
 }
-.why-choose-us__card__title {
+.why-choose-us__card-title {
     font-size: 30px;
     margin-bottom: 16px;
 }
@@ -862,6 +862,9 @@
     display: flex;
     align-items: center;
 }
+.why-choose-us__card-list-item:not(:last-child) {
+    margin-bottom: 2px;
+}
 .why-choose-us__card-list-item::before {
     content: '•';
     font-size: 18px;
@@ -870,227 +873,204 @@
 }
 .why-choose-us__card-img-wrap {
     margin-left: auto;
+    height: 100%;
+    max-height: 286px;
+    max-width: 286px;
 }
 .why-choose-us__card-img {
     height: 100%;
+    width: 100%;
     object-fit: cover;
+    aspect-ratio: 286 / 286;
 }
-@media (max-width: 1400px) {
-    .why-choose-us__title {
-        margin-bottom: 40px;
-    }
 
-    .stocks__items {
-        margin-bottom: 55px;
-    }
-
-    .stock__item-title {
+@media (max-width: 1600px) {
+    .why-choose-us__card-title {
         font-size: 28px;
-        line-height: 38px;
     }
-}
-
-@media (max-width: 1300px) {
-    .why-choose-us__title {
-        margin-bottom: 35px;
+    .why-choose-us__card-list-item {
+        line-height: 27px;
     }
-
-    .stocks__items {
-        margin-bottom: 50px;
-    }
-}
-
-@media (max-width: 1230px) {
-    .stock__item-title {
-        font-size: 26px;
-        line-height: 36px;
-    }
-}
-
-@media (max-width: 1260px) {
-    .why-choose-us {
-        padding-bottom: 90px;
-    }
-}
-
-@media (max-width: 1170px) {
-    .why-choose-us__title {
-        margin-bottom: 33px;
-    }
-
-    .stocks__items {
-        margin-bottom: 45px;
-    }
-
-    .stock__item-title {
-        padding: 20px 0px 30px 19px;
-        font-size: 23px;
-        line-height: 36px;
-    }
-}
-
-@media (max-width: 1070px) {
-    .why-choose-us {
-        padding-bottom: 80px;
-    }
-}
-
-@media (max-width: 991px) {
-    .why-choose-us__title {
-        margin-bottom: 30px;
-    }
-
-    .stocks__items {
-        display: none;
-    }
-
-    .stocks__slider {
-        display: flex;
-        margin-bottom: 27px;
-        width: 100%;
-    }
-    
-    .stocks__swiper-wrapper {
-        margin-bottom: 26px !Important;
-    }
-}
-
-@media (max-width: 880px) {
-    .why-choose-us {
-        padding-bottom: 70px;
-    }
-}
-
-@media (max-width: 847px) {
-    .stock__item-title {
-        padding: 20px 0px 20px 20px;
-    }
-
-    .stocks__slider {
-        margin-bottom: 24px;
-    }
-}
-
-@media (max-width: 794px) {
-    .why-choose-us {
-        padding-bottom: 60px;
-    }
-
-    .why-choose-us__title {
-        margin-bottom: 27px;
-    }
-
-    .stock__item-title {
-        padding: 20px 0px 20px 20px;
-    }
-
-    .stocks__slider {
-        margin-bottom: 21px;
-    }
-}
-
-@media (max-width: 700px) {
-    .stocks__swiper-wrapper {
-        margin-bottom: 23px !Important;
-    }
-
-    .stocks__slider {
-        margin-bottom: 22px;
-    }
-
-    .stock__item {
-        width: 100%;
-    }
-
-    .stocks__slider>.swiper-slide {
-        width: 100% !important;
-    }
-
-    .stock__item-body {
+    .why-choose-us__card-img-wrap {
         max-height: none;
     }
-
-    .stock__item-title {
-        font-size: 28px;
-        line-height: 38px;
+}
+@media (max-width: 1500px) {
+    .why-choose-us__card-body {
+        padding: 30px 20px 30px 30px;
     }
-
-    .stocks__slider {
-        margin-bottom: 26px;
+    .why-choose-us__card-title {
+        font-size: 25px;
+        margin-bottom: 13px;
     }
 }
-
-@media (max-width: 600px) {
-    .stocks__slider {
+@media (max-width: 1440px) {
+    .why-choose-us__card-list-item {
+        font-size: 15px;
+        line-height: 24px;
+    }
+}
+@media (max-width: 1350px) {
+    .why-choose-us__card-list-item {
+        line-height: 22px;
+    }
+}
+@media (max-width: 1300px) {
+    .why-choose-us__card-title {
         margin-bottom: 17px;
     }
 }
 
-@media (max-width: 560px) {
-    .why-choose-us {
-        padding-bottom: 50px;
+@media (max-width: 1260px) {
+    .why-choose-us__card-body {
+        padding: 25px 20px 25px 25px;
+    }
+    .why-choose-us__card-title {
+        font-size: 22px;
     }
 }
-
-@media (max-width: 516px) {
-    .why-choose-us__title {
-        margin-bottom: 20px;
+@media (max-width: 1190px) {
+    .why-choose-us__card {
+        flex-direction: column-reverse;
     }
-
-    .stocks__swiper-wrapper {
-        margin-bottom: 18px !Important;
+    .why-choose-us__card-img-wrap {
+        max-height: 286px;
+        max-width: none;
+        margin-left: 0;
     }
-}
-
-@media (max-width: 500px) {
-    .why-choose-us {
-        padding-bottom: 40px;
-    }
-
-    .stocks__slider {
+    .why-choose-us__card-title {
+        font-size: 28px;
         margin-bottom: 15px;
     }
+    .why-choose-us__card-list {
+        max-width: none;
+    }
+    .why-choose-us__card-list-item {
+        font-size: 16px;
+        line-height: 25px;
+    }
+    .why-choose-us__card-body {
+        padding: 35px 20px 35px 35px;
+    }
+}
+@media (max-width: 1070px) {
+    .why-choose-us__card-body {
+        padding: 30px 20px 30px 30px;
+        max-height: 290px;
+        height: 100%;
+    }
+}
 
-    .stock__item-title {
-        font-size: 26px;
-        line-height: 36px;
+@media (max-width: 991px) {
+    .why-choose-us__card-body {
+        padding: 20px;
+    }
+    .why-choose-us__card-list-item {
+        font-size: 17px;
+        line-height: 26px;
+    }
+}
+@media (max-width: 880px) {
+    .why-choose-us__card-title {
+        font-size: 24px;
+    }
+    .why-choose-us__card-list-item {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .why-choose-us__card-body {
+        max-height: none;
+        height: 100%;
+    }
+}
+@media (max-width: 830px) {
+    .why-choose-us__card-body {
+        max-height: 350px;
+    }
+}
+
+@media (max-width: 750px) {
+    .why-choose-us__cards {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .why-choose-us__card {
+        flex: 1 1 100%;
+    }
+    .why-choose-us__card-title {
+        font-size: 25px;
+        margin-bottom: 17px;
+    }
+    .why-choose-us__card-body {
+        padding: 28px;
+        max-height: none;
+    }
+    .why-choose-us__card-list-item {
+        font-size: 17px;
+        line-height: 26px;
+    }
+    .why-choose-us__card-img-wrap {
+        max-height: 286px;
+    }
+    
+}
+@media (max-width: 700px) {
+    .why-choose-us__card-body {
+        padding: 25px;
+    }
+}
+@media (max-width: 620px) {
+    .why-choose-us__card-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .why-choose-us__card-list-item {
+        font-size: 16px;
+    }
+    .why-choose-us__card-list-item:not(:last-child) {
+        margin-bottom: 6px;
+    }
+}
+@media (max-width: 560px) {
+    .why-choose-us__card-body {
+        padding: 23px;
+    }
+}
+@media (max-width: 500px) {
+    .why-choose-us__card-title {
+        font-size: 22px;
+        margin-bottom: 16px;
+    }
+    .why-choose-us__card-body {
+        padding: 20px;
     }
 }
 
 @media (max-width: 425px) {
-    .stocks__swiper-wrapper {
-        margin-bottom: 15px !Important;
-    }
-
-    .stock__item-title {
+    .why-choose-us__card-title {
         font-size: 20px;
-        line-height: 30px;
-        padding: 15px 0px 20px 15px;
+    }
+    .why-choose-us__card-body {
+        padding: 20px 20px 20px 10px;
+    }
+    .why-choose-us__card-list-item {
+        font-size: 15px;
+        line-height: 18px;
+        margin-left: 10px;
+    }
+    .why-choose-us__card-list-item:not(:last-child) {
+        margin-bottom: 10px;
+    }
+    .why-choose-us__card-list-item::before {
+        content: '•';
+        font-size: 21px;
+        color: #83B32B;
+        margin-right: 10px;
     }
 }
-
-@media (max-width: 390px) {
-    .stocks__link {
-        max-width: 100%;
-    }
-}
-
 @media (max-width: 375px) {
-    .stock__item-title {
-        font-size: 18px;
-        line-height: 25px;
-        padding: 10px 0px 10px 10px;
-    }
-
-    .stocks__slider {
-        margin-bottom: 9px;
-    }
-}
-
-@media (max-width: 320px) {
-    .stock__item-title {
-        font-size: 16px;
-        line-height: 20px;
+    .why-choose-us__card-list-item {
+        font-size: 14px;
     }
 }
 

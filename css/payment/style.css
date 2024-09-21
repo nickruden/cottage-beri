@@ -1316,7 +1316,7 @@
     flex: 1 1 50%;
 }
 .mortgage-types__card-body {
-    padding: 40px 0px 0px 40px;
+    padding: 40px 40px 30px 40px;
 }
 .mortgage-types__card-title {
     font-size: 30px;
@@ -1340,9 +1340,171 @@
     color: #292929;
 }
 .mortgage-types__card-img-wrap {
+    max-height: 270px;
+    height: 100%;
 }
 .mortgage-types__card-img {
-    object-fit: contain;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 380 / 270;
+}
+
+@media (max-width: 1440px) {
+    .mortgage-types__card-title {
+        font-size: 27px;
+        margin-bottom: 25px;
+    }
+    .mortgage-types__card-list-item {
+        margin-left: 10px;
+        font-size: 17px;
+    }
+    .mortgage-types__card-img-wrap {
+        max-height: none;
+    }
+}
+@media (max-width: 1400px) {
+    .mortgage-types__card-body {
+        padding: 35px 30px 30px 35px;
+    }
+    .mortgage-types__card-title {
+        margin-bottom: 22px;
+    }
+}
+@media (max-width: 1300px) {
+    .mortgage-types__card-title {
+        margin-bottom: 17px;
+    }
+}
+
+@media (max-width: 1240px) {
+    .mortgage-types__card-body {
+        padding: 27px 27px 25px 35px;
+    }
+    .mortgage-types__card-title {
+        font-size: 24px;
+        margin-bottom: 23px;
+    }
+    .mortgage-types__card-list-item {
+        margin-left: 7px;
+        font-size: 16px;
+    }
+}
+@media (max-width: 1190px) {
+    .mortgage-types__card-body {
+        padding: 25px 20px 25px 30px;
+    }
+}
+@media (max-width: 1130px) {
+    .mortgage-types__card {
+        display: flex;
+        flex-direction: column-reverse;
+        flex: 1 1 calc(50% - 20px);
+    }
+    .mortgage-types__card-body {
+        padding: 40px 20px 40px 40px;
+    }
+    .mortgage-types__card-img-wrap {
+        max-height: 270px;
+    }
+    .mortgage-types__card-title {
+        font-size: 27px;
+        margin-bottom: 22px;
+    }
+    .mortgage-types__card-list-item {
+        margin-left: 18px;
+        font-size: 17px;
+    }
+    .mortgage-types__card-list {
+        max-width: 370px;
+    }
+}
+@media (max-width: 1070px) {
+    .mortgage-types__card-body {
+        padding: 35px 20px 35px 35px;
+    }
+}
+
+@media (max-width: 991px) {
+    .mortgage-types__card-body {
+        padding: 30px 20px 30px 30px;
+    }
+    .mortgage-types__card-list-item {
+        font-size: 17px;
+    }
+}
+@media (max-width: 880px) {
+    .mortgage-types__card-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .mortgage-types__card-list-item {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 750px) {
+    .mortgage-types__card-title {
+        font-size: 23px;
+        margin-bottom: 17px;
+    }
+    .mortgage-types__card-list-item {
+        font-size: 15px;
+    }
+    .mortgage-types__card-img-wrap {
+        max-height: none;
+    }
+    
+}
+
+@media (max-width: 620px) {
+    .mortgage-types__card {
+        flex: 1 1 100%;
+    }
+    .mortgage-types__card-img-wrap {
+        max-height: 270px;
+    }
+    .mortgage-types__card-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .mortgage-types__card-list-item {
+        font-size: 16px;
+    }
+    .mortgage-types__card-body {
+        padding: 30px 20px 30px 30px;
+    }
+}
+@media (max-width: 500px) {
+    .mortgage-types__card-title {
+        font-size: 22px;
+        margin-bottom: 16px;
+    }
+    .mortgage-types__card-body {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 425px) {
+    .mortgage-types__card-title {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+    .mortgage-types__card-body {
+        padding: 20px 20px 20px 10px;
+    }
+    .mortgage-types__card-list-item {
+        font-size: 15px;
+        margin-left: 28px;
+    }
+}
+@media (max-width: 375px) {
+    .mortgage-types__card-title {
+        margin-bottom: 10px;
+    }
+    .mortgage-types__card-list-item {
+        font-size: 14px;
+    }
 }
 
 
