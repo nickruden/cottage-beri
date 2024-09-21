@@ -254,35 +254,6 @@
     }
 }
 
-@media (max-width: 700px) {
-.top-banner__left {
-    padding: 25px;
-}
-.top-banner__text {
-    font-size: 21px;
-    line-height: 28px;
-    margin-bottom: 20px;
-}
-
-.top-banner__item {
-    font-size: 15px;
-    line-height: 21px;
-}
-.top-banner__button {
-    max-width: 320px;
-    font-size: 17px;
-    padding: 16px 0px 16px 0px;
-}
-.top-banner__catalog-info {
-    max-width: 320px;
-    }
-
-    .top-banner__button-icon {
-        height: 22px;
-        margin-left: 12px;
-    }
-}
-
 @media (max-width: 850px) {
     .top-banner {
         padding-top: calc(25px + 54px);
@@ -306,6 +277,35 @@
         margin-bottom: 35px;
     }
 }
+
+@media (max-width: 700px) {
+    .top-banner__left {
+        padding: 25px;
+    }
+    .top-banner__text {
+        font-size: 21px;
+        line-height: 28px;
+        margin-bottom: 20px;
+    }
+    
+    .top-banner__item {
+        font-size: 15px;
+        line-height: 21px;
+    }
+    .top-banner__button {
+        max-width: 320px;
+        font-size: 17px;
+        padding: 16px 0px 16px 0px;
+    }
+    .top-banner__catalog-info {
+        max-width: 320px;
+        }
+    
+        .top-banner__button-icon {
+            height: 22px;
+            margin-left: 12px;
+        }
+    }
 
 @media (max-width: 600px) {
     .top-banner {

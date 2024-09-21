@@ -366,10 +366,11 @@
 .project-desc__wrapper {
     display: flex;
 }
-.project-desc__wrap-img {
+.project-desc__wrap-left {
     max-width: 760px;
     overflow: hidden;
     position: relative;
+    height: 584px;
 }
 .project-desc__img {
     height: 100%;
@@ -381,6 +382,7 @@
     display: flex;
     flex-direction: column;
     padding: 36px;
+    position: relative;
 }
 .project-desc__head {
     display: flex;
@@ -475,10 +477,67 @@
     margin-bottom: 18px;
 }
 
-@media (min-width: 1601px) {
-    .project-desc__wrap-img {
-        max-height: 600px;
-    }
+.project-desc__tabs {
+    position: absolute;
+    bottom: 30px;
+    left: -50%;
+    transform: translateX(-50%);
+    border-radius: 30px;
+    overflow: hidden;
+    border: 0;
+    background: #F4F4F4;
+    z-index: 1000;
+}
+
+.project-desc__tabs-button {
+    border: 0!Important;
+    margin: 0!Important;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px;
+    color: #292929;
+    border-radius: 30px!Important;
+    padding: 9px 23px;
+}
+
+.project-desc__tabs-button:hover {
+    color: #83B32B;
+}
+
+.project-desc__tabs-button.active {
+    background: #FFCA44!Important;
+}
+
+.project-desc__tab-content {
+    width: 760px;
+    height: 100%;
+}
+
+.project-desc__tab-pane {
+    height: 100%;
+}
+
+.project-desc__slider {
+    width: 100%;
+    height: 100%;
+    max-height: 584px;
+}
+.project-desc__swiper {
+    height: 100%;
+}
+.project-desc__swiper-wrapper {
+}
+.project-desc__slide {
+    width: 100%!important;
+}
+.project-desc__slide-wrap-img {
+    height: 100%;
+}
+.project-desc__slide-img {
+    height: 100%;
+    max-width: 760px;
+    object-fit: cover;
+    aspect-ratio: 760 / 497;
 }
 
 @media (max-width: 1600px) {
@@ -488,10 +547,10 @@
     .project-desc__texts {
         font-size: 17px;
     }
-}
-
-@media (max-width: 1601px) {
-    .project-desc__wrap-img {
+    .project-desc__wrap-left {
+        max-width: 730px;
+    }
+    .project-desc__slider {
         max-width: 730px;
     }
 }
@@ -527,9 +586,12 @@
     }
 }
 @media (max-width: 1500px) {
-    .project-desc__cottage-wrap-img {
+    /* .project-desc__wrap-left {
         max-width: 700px;
     }
+    .project-desc__slider {
+        max-width: 700px;
+    } */
 }
 
 @media (max-width: 1440px) {
@@ -554,7 +616,10 @@
 }
 
 @media (max-width: 1400px) {
-    .project-desc__cottage-wrap-img {
+    .project-desc__wrap-left {
+        max-width: 680px;
+    }
+    .project-desc__slider {
         max-width: 680px;
     }
     .project-desc__text {
@@ -573,9 +638,32 @@
         max-width: none;
     }
 
-    .project-desc__wrap-img {
+    .project-desc__tab-content {
+        width: 100%;
+    }
+
+    .project-desc__slide-wrap-img {
+        width: 100%;
+    }
+
+    .project-desc__slider {
+        max-width: none;
+    }
+
+    .project-desc__slide-img {
+        width: 100%;
+        max-width: none;
+    }
+
+    .project-desc__wrap-left {
         max-width: none;
         max-height: 580px;
+        height: 100%;
+    }
+
+    .project-desc__tabs {
+        bottom: calc(100% + 30px);
+        left: 50%;
     }
 
     .project-desc__text {
@@ -688,9 +776,7 @@
         margin-bottom: 13px;
     }
 }
-p {
-    margin-bottom: 0;
-}
+
 @media (max-width: 650px) {
     .project-desc__body-wrapper {
         flex-direction: column;
@@ -720,6 +806,10 @@ p {
     }
     .project-desc__text {
         font-size: 15px;
+    }
+    .project-desc__tabs-button {
+        font-size: 17px;
+        padding: 9px 20px;
     }
 }
 
@@ -772,9 +862,24 @@ p {
     .cottage-types__payment-option-title {
         margin-bottom: 10px;
     }
-
 }
+
 @media (max-width: 490px) {
+    .project-desc__tabs {
+        position: relative;
+        bottom: calc(100% + 30px);
+        left: 50%;
+    }
+
+    .project-desc__tabs-item {
+        width: 50%;
+    }
+    
+    .project-desc__tabs-button {
+        width: 100%;
+        font-size: 17px;
+        padding: 9px 23px;
+    }
     .project-desc__head {
         flex-direction: column;
         margin-bottom: 20px;
@@ -793,6 +898,12 @@ p {
 @media (max-width: 425px) {
     .project-desc__cottage-component-icon {
         margin-right: 10px;
+    }
+}
+@media (max-width: 350px) {
+    .project-desc__tabs-button {
+        font-size: 14px;
+        padding: 9px 18px;
     }
 }
 

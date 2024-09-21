@@ -1230,6 +1230,10 @@
 }
 
 @media (max-width: 600px) {
+    .stocks__title {
+        margin-bottom: 23px;
+    }
+
     .stocks__slider {
         margin-bottom: 17px;
     }
@@ -1602,7 +1606,7 @@
 
 @media (max-width: 560px) {
     .cottage-complexes {
-        padding-bottom: 50px;
+        padding-bottom: 51px;
     }
 }
 

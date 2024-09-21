@@ -1581,9 +1581,54 @@
 .feedback__title {
     font-size: 38px;
     line-height: 42px;
-    margin-bottom: 20px;
 }
 
 .feedback__text {
-    max-width: 600px;
+    max-width: 550px;
+}
+
+.feedback__img-wrap {
+    width: 100%;
+}
+
+@media (max-width: 1440px) {
+    .feedback__title {
+        font-size: 35px;
+        line-height: 43px!Important;
+    }
+}
+
+@media (max-width: 1300px) {
+    .feedback__title {
+        font-size: 32px!Important;
+        line-height: 38px!Important;
+    }
+}
+
+@media (max-width: 991px) {
+    .feedback__title {
+        font-size: 32px!Important;
+        line-height: 38px!Important;
+    }
+}
+
+@media (max-width: 500px) {
+    .feedback__title {
+        font-size: 29px!Important;
+        line-height: 39px!Important;
+    }
+}
+
+@media (max-width: 425px) {
+    .feedback__title {
+        font-size: 26px!Important;
+        line-height: 36px!Important;
+    }
+}
+
+@media (max-width: 320px) {
+    .feedback__title {
+        font-size: 24px!Important;
+        line-height: 30px!Important;
+    }
 }

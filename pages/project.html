@@ -337,10 +337,54 @@
         <div class="project-desc">
             <div class="project-desc__container my-container">
                 <div class="project-desc__wrapper bordered-block">
-                    <div class="project-desc__wrap-img">
-                        <img src="../img/nhk8jg3psng71.jpg" alt="" class="project-desc__img">
+                    <div class="project-desc__wrap-left">
+                        <!-- <ul class="nav nav-tabs project-desc__tabs" id="myTab" role="tablist">
+                            <li class="nav-item project-desc__tabs-item" role="presentation">
+                                <button class="nav-link active project-desc__tabs-button" id="photo-tab" data-bs-toggle="tab" data-bs-target="#photo" type="button" role="tab" aria-controls="photo" aria-selected="true">Фото</button>
+                            </li>
+                            <li class="nav-item project-desc__tabs-item" role="presentation">
+                                <button class="nav-link project-desc__tabs-button" id="slider-tab" data-bs-toggle="tab" data-bs-target="#slider" type="button" role="tab" aria-controls="slider" aria-selected="false">Планировка</button>
+                            </li>
+                        </ul> -->
+                    
+                        <div class="tab-content project-desc__tab-content">
+                            <div class="tab-pane fade show active project-desc__tab-pane" id="photo" role="tabpanel" aria-labelledby="photo-tab">
+                                <img src="../img/nhk8jg3psng71.jpg" alt="" class="project-desc__img">
+                            </div>
+                            <div class="tab-pane fade project-desc__tab-pane" id="slider" role="tabpanel" aria-labelledby="slider-tab">
+                                <div class="project-desc__slider">
+                                    <div class="swiper project-desc__swiper">
+                                        <div class="swiper-wrapper project-desc__swiper-wrapper">
+                                            <div class="swiper-slide project-desc__slide">
+                                                <div class="project-desc__slide-wrap-img">
+                                                    <img src="../img/nhk8jg3psng71.jpg" alt="" class="project-desc__slide-img">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide project-desc__slide">
+                                                <div class="project-desc__slide-wrap-img">
+                                                    <img src="../img/pages-img/project/project-desc/project.jpg" alt="" class="project-desc__slide-img">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide project-desc__slide">
+                                                <div class="project-desc__slide-wrap-img">
+                                                    <img src="../img/pages-img/project/project-desc/project.jpg" alt="" class="project-desc__slide-img">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="project-desc__body">
+                        <ul class="nav nav-tabs project-desc__tabs" id="myTab" role="tablist">
+                            <li class="nav-item project-desc__tabs-item" role="presentation">
+                                <button class="nav-link active project-desc__tabs-button" id="photo-tab" data-bs-toggle="tab" data-bs-target="#photo" type="button" role="tab" aria-controls="photo" aria-selected="true">Фото</button>
+                            </li>
+                            <li class="nav-item project-desc__tabs-item" role="presentation">
+                                <button class="nav-link project-desc__tabs-button" id="slider-tab" data-bs-toggle="tab" data-bs-target="#slider" type="button" role="tab" aria-controls="slider" aria-selected="false">Планировка</button>
+                            </li>
+                        </ul>
                         <div class="project-desc__head">
                             <ul class="cottage-types__list">
                                 <li class="cottage-types__list-item">3 комнаты</li>
@@ -833,6 +877,21 @@
         });
     </script>
     
+
+    <!-- СКРИПТ ДЛЯ СЛАЙДЕРА БЛОКА О ПРОЕКТЕ -->
+    <script>
+        const swiper_projectDesc = new Swiper('.project-desc__swiper', {
+            direction: 'horizontal',
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 20,
+            centeredSlidesBounds: true,
+            autoplay: {
+                delay: 100000,
+            }
+        });
+    </script>
+
     
     <!-- !!!! НОВЫЙ СКРИПТ !!!! -->
     <!-- СКРИПТ ДЛЯ ПЕРЕКЛЮЧЕНИЯ КНОПКОК В БЛОКЕ HOW-BUY -->

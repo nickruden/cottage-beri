@@ -6,42 +6,15 @@
     margin-bottom: 73px;
 }
 
-@media (max-width: 1600px) {
-    .top-banner__left {
-        flex: 1 1 41.5%;
-    }
-    
-    .top-banner__img-wrap {
-        flex: 1 1 58.5%;
-    }
-
-    .banner-title {
-        font-size: 50px;
-        line-height: 60px;
-    }
-}
 @media (max-width: 1440px) {
     .top-banner__text {
-        font-size: 24px;
-        line-height: 35px;
         margin-bottom: 67px;
         max-width: 400px;
-    }
-    
-    .top-banner__list {
-        margin-bottom: 35px;
-    }
-    
-    .top-banner__item {
-        font-size: 18px;
-        line-height: 23px;
     }
 }
 
 @media (max-width: 1300px) {
     .top-banner__text {
-        font-size: 22px;
-        line-height: 32px;
         margin-bottom: 50px;
         max-width: 350px;
     }
@@ -50,77 +23,12 @@
         font-size: 45px;
         line-height: 55px!Important;
     }
-    
-    .top-banner__list {
-        margin-bottom: 30px;
-    }
-    
-    .top-banner__item {
-        font-size: 17px;
-    }
-
-    .top-banner__left {
-        padding: 30px;
-    }
-}
-@media (max-width: 1280px) {
-    .top-banner__container {
-        max-height: 500px;
-    }
-    .top-banner__button {
-        max-width: 320px;
-        font-size: 17px;
-        padding: 16px 0px 16px 0px;
-    }
-    .top-banner__button-icon {
-        margin-left: 6px;
-    }
-    .top-banner__catalog-info {
-    max-width: 320px;
-    }
-    .top-banner__img-wrap {
-        height: auto;
-        width: 100%;
-    }
-}
-
-@media (max-width: 1200px) {
-    .top-banner__text {
-        font-size: 22px;
-        line-height: 32px;
-        margin-bottom: 25px;
-    }
-
-    .top-banner__item {
-        font-size: 15px;
-        line-height: 21px;
-    }
-
-    .top-banner__item:not(:last-child) {
-        margin-bottom: 5px;
-    }
-}
-@media (max-width: 1170px) {
-    .top-banner__left {
-        padding: 25px;
-    }
 }
 
 @media (max-width: 1130px) {
     .banner-title {
         font-size: 42px;
         line-height: 52px!Important;
-    }
-
-    .top-banner__text {
-        font-size: 20px;
-        line-height: 30px;
-        margin-bottom: 21px;
-    }
-
-    .top-banner__item {
-        font-size: 14px;
-        line-height: 20px;
     }
 }
 
@@ -129,30 +37,9 @@
         font-size: 40px;
         line-height: 50px!Important;
     }
-
-    .top-banner__left {
-        padding: 20px;
-    }
-}
-
-@media (max-width: 970px) {
-    .top-banner {
-        padding-top: calc(30px + 54px);
-    }
 }
 
 @media (max-width: 880px) {
-    .top-banner__container {
-        max-height: none;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .top-banner__container > * {
-        flex: 1 1 100%;
-        max-width: none;
-    }
-
     .top-banner__title {
         max-width: 400px;
     }
@@ -163,48 +50,12 @@
     }
 
     .top-banner__text {
-        font-size: 22px;
-        line-height: 38px;
         margin-bottom: 72px;
         max-width: 300px;
-    }
-    
-    .top-banner__button {
-        max-width: 350px;
-        font-size: 18px;
-        padding: 16px 0px 16px 0px;
-    }
-    .top-banner__catalog-info {
-        max-width: 350px;
-        }
-    .top-banner__list {
-        margin-bottom: 40px;
-    }
-    
-    .top-banner__item {
-        font-size: 17px;
-    }
-
-    .top-banner__left {
-        padding: 30px;
-    }
-
-    .top-banner__item:not(:last-child) {
-        margin-bottom: 10px;
-    }
-}
-
-@media (max-width: 850px) {
-    .top-banner {
-        padding-top: calc(25px + 54px);
     }
 }
 
 @media (max-width: 794px) {
-    .top-banner {
-        padding-top: calc(20px + 54px);
-        padding-bottom: 61px;
-    }
     .banner-title {
         font-size: 40px;
         line-height: 50px!Important;
@@ -213,25 +64,15 @@
         margin-bottom: 50px;
         line-height: 32px;
     }
-    .top-banner__list {
-        margin-bottom: 35px;
-    }
 }
 
 @media (max-width: 700px) {
-    .top-banner__left {
-        padding: 25px;
-    }
     .top-banner__text {
         font-size: 21px;
         line-height: 28px;
         margin-bottom: 42px;
     }
     
-    .top-banner__item {
-        font-size: 15px;
-        line-height: 21px;
-    }
     .top-banner__button {
         max-width: 320px;
         font-size: 17px;
@@ -607,7 +448,7 @@
 
 @media (max-width: 560px) {
     .cottage-complexes {
-        padding-bottom: 50px;
+        padding-bottom: 51px;
     }
 }
 
@@ -845,6 +686,9 @@
 }
 
 @media (max-width: 991px) {
+    .finishing-options__title {
+        margin-bottom: 30px;
+    }
     .finishing-options__variants {
         flex-wrap: wrap;
     }
@@ -923,9 +767,6 @@
     .finishing-options__item {
         padding: 20px;
     }
-    .finishing-options__title {
-        margin-bottom: 30px;
-    }
 
     .finishing-options__list-item {
         font-size: 14px;
@@ -944,6 +785,9 @@
 }
 
 @media (max-width: 600px) {
+    .finishing-options__title {
+        margin-bottom: 23px;
+    }
     .finishing-options__item {
         flex: 1 1 100%;
         padding: 30px 50px 30px 25px;
@@ -969,6 +813,10 @@
     }
 }
 @media (max-width: 516px) {
+    .finishing-options__title {
+        margin-bottom: 20px;
+    }
+    
     .finishing-options__list-item {
         line-height: 22px;
     }
@@ -1047,7 +895,7 @@
 
 .complexes-advantages__title {
     align-self: flex-start;
-    padding-bottom: 50px;
+    margin-bottom: 50px;
 }
 
 .complexes-advantages__items {
@@ -1122,7 +970,7 @@
 
 @media (max-width: 1400px) {
     .complexes-advantages__title {
-        padding-bottom: 40px;
+        margin-bottom: 40px;
     }
     .complexes-advantages__img {
         width: 100px;
@@ -1140,7 +988,7 @@
 
 @media (max-width: 1300px) {
     .complexes-advantages__title {
-        padding-bottom: 35px;
+        margin-bottom: 35px;
     }
     .complexes-advantages__img {
         width: 140px;
@@ -1166,7 +1014,7 @@
 
 @media (max-width: 1170px) {
     .complexes-advantages__title {
-        padding-bottom: 33px;
+        margin-bottom: 33px;
     }
 
     .complexes-advantages__img {
@@ -1185,10 +1033,6 @@
 }
 
 @media (max-width: 1070px) {
-    .complexes-advantages__title {
-        padding-bottom: 80px;
-    }
-
     .complexes-advantages__img {
         width: 120px;
         height: 100%;
@@ -1202,6 +1046,12 @@
     
     .complexes-advantages__item-desc {
         font-size: 15px;
+    }
+}
+
+@media (max-width: 991px) {
+    .complexes-advantages__title {
+        margin-bottom: 30px;
     }
 }
 
@@ -1239,10 +1089,6 @@
 }
 
 @media (max-width: 880px) {
-    .complexes-advantages__title {
-        padding-bottom: 70px;
-    }
-
     .complexes-advantages__items {
         display: flex;
         flex-wrap: wrap;
@@ -1924,4 +1770,39 @@
 
 .feedback__text {
     font-size: 18px;
+}
+
+@media (max-width: 1298px) {
+    .feedback__text {
+        font-size: 17px;
+        line-height: 22px;
+    }
+}
+
+@media (max-width: 1096px) {
+    .feedback__text {
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 991px) {
+    .feedback__text {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+@media (max-width: 794px) {
+    .feedback__text {
+        font-size: 17px;
+        line-height: 22px;
+    }
+}
+
+@media (max-width: 500px) {
+    .feedback__text {
+        font-size: 14px;
+        line-height: 20px;
+    }
 }
