@@ -50,9 +50,9 @@
                         контактные
                         данные, и мы вам перезвоним в ближайшее время.</div>
                     <form action="" class="feedback-form">
-                        <input type="text" name="" id="" placeholder="Имя"
+                        <input type="text" name="name" id="name-input" placeholder="Имя"
                             class="feedback-form__input call-modal__input-name bordered-block">
-                        <input type="text" name="" id="" placeholder="Телефон"
+                        <input type="tel" name="phone" id="phone-input" placeholder="Телефон"
                             class="feedback-form__input call-modal__input-phone bordered-block">
                         <button class="feedback-form__button call-modal__button button">Отправить</button>
                     </form>
@@ -614,9 +614,9 @@
                         <div class="feedback__text">Оставьте свои контактные данные, и мы поможем вам обрести свой дом.
                         </div>
                         <form action="" class="feedback-form">
-                            <input type="text" name="" id="" placeholder="Имя"
+                            <input type="text" name="name" id="name-input" placeholder="Имя"
                                 class="feedback-form__input feedback__input-name bordered-block">
-                            <input type="text" name="" id="" placeholder="Телефон"
+                            <input type="text" name="phone" id="phone-input" placeholder="Телефон"
                                 class="feedback-form__input feedback__input-phone bordered-block">
                             <button class="feedback-form__button feedback__button button">Отправить</button>
                         </form>
@@ -709,76 +709,22 @@
     <script src="../libs/js/imask.js"></script>
 
 
-    
-    <!-- СКРИПТ ДЛЯ ХЕДЕРА -->
-    <script>
-        const navbarToggler = document.querySelector('.navbar-toggler');
-        const navbarCollapse = document.getElementById('navbarNav');
-        const overlay = document.getElementById('overlay');
-        const callbackButton = document.querySelector('.header__mobile-contacts-button');
-        const callModal = document.getElementById('callModal');
+    <!-- СКРИПТЫ ДЛЯ ОБЩИХ ЭЛЕМЕНТОВ -->
+    <script src="../js/header.js"></script>
+    <script src="../js/form-mask.js"></script>
+    <script src="../js/open-modal-form.js"></script>
+    <script src="../js/open-modal-video.js"></script>
+    <script src="../js/how-buy-switch.js"></script>
 
-        navbarToggler.addEventListener('click', function () {
-            document.body.style.overflow = 'hidden';
-            overlay.style.display = 'block';
-        });
+    <!-- ПОДКЛЮЧЕНИЕ API КАРТ (ВЗЯЛ СВОЁ API ЯНДЕКСА) -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=f028c4f8-776d-4ba3-b079-94a909b9cca1&lang=ru" type="text/javascript"></script>
+    <script src="../js/contacts-map.js"></script>
 
-        navbarCollapse.addEventListener('hidden.bs.collapse', function () {
-            document.body.style.overflow = 'visible';
-            overlay.style.display = 'none';
-        });
-
-        callbackButton.addEventListener('click', function () {
-            navbarCollapse.classList.remove('show');
-            navbarToggler.setAttribute('aria-expanded', 'false');
-            document.body.style.overflow = 'visible';
-            overlay.style.display = 'none';
-        });
-
-        callModal.addEventListener('hidden.bs.modal', function () {
-            document.body.style.overflow = 'visible';
-            overlay.style.display = 'none';
-        });
-    </script>
     
 
-    <!-- СКРИПТ МОДАЛЬНОГО ОКНА С ВИДЕО, РАБОТАЕТ ТАК - ДОБАВЛЯЕТЕ НА КНОПКУ ИЛИ НА САМО ПРЕВЬЮ, 
-        ТО ЧТО ДОЛЖНО ОТКРЫТЬ ВИДЕО DATA-TITLE и DATA SRC - и модальное окно открывается 
-        с нужным видео и заголовком -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            document.querySelectorAll('.video-play-button').forEach(button => {
-                button.addEventListener('click', function () {
-                    const videoTitle = this.getAttribute('data-title');
-                    const videoSrc = this.getAttribute('data-src');
+    <!-- СКРИПТЫ ДЛЯ ЭТОЙ СТРАНИЦЫ -->
 
-                    // обновляем заголовок модального окна
-                    const modalTitle = document.querySelector('#videoModal .modal-video__title');
-                    modalTitle.innerHTML = videoTitle;
-
-                    // обновляем источник видео в модальном окне
-                    const videoPlayer = videojs('modal-video');
-                    videoPlayer.src({ src: videoSrc, type: 'video/mp4' });
-                    videoPlayer.load();
-                });
-            });
-
-            const videoModal = document.getElementById('videoModal');
-            videoModal.addEventListener('shown.bs.modal', function () {
-                const videoPlayer = videojs('modal-video');
-                videoPlayer.play();
-            });
-
-            videoModal.addEventListener('hidden.bs.modal', function () {
-                const videoPlayer = videojs('modal-video');
-                videoPlayer.pause();
-                videoPlayer.currentTime(0);
-            });
-        });
-    </script>
-
-
-    <!-- СКРИПТ ДЛЯ СЛАЙДЕРА БЛОКА REVIEWS -->
+    <!-- СКРИПТ ДЛЯ СЛАЙДЕРА БЛОКА ЧТО ГОВОРЯТ ЛЮДИ -->
     <script>
         const swiper_whatSaying = new Swiper('.what-saying__swiper', {
             direction: 'horizontal',
@@ -795,7 +741,6 @@
             },
         });
     </script>
-
 
     <!-- СКРИПТ ДЛЯ СЛАЙДЕРА БЛОКА CONSTRUCTION-PROGRESS -->
     <script>
@@ -815,7 +760,6 @@
         });
     </script>
 
-
     <!-- СКРИПТ ДЛЯ СЛАЙДЕРА БЛОКА HOUSEWARMING -->
     <script>
         const swiper_housewarming = new Swiper('.housewarming__swiper', {
@@ -834,68 +778,6 @@
         });
     </script>
 
-
-    <!-- ПОДКЛЮЧЕНИЕ API КАРТ (ВЗЯЛ СВОЁ API ЯНДЕКСА) -->
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=f028c4f8-776d-4ba3-b079-94a909b9cca1
-    &lang=ru" type="text/javascript">
-    </script>
-
-    <!-- СКРИПТ ДЛЯ КАРТЫ БЛОКА КОНТАКТЫ -->
-    <script type="text/javascript">
-        ymaps.ready(function () {
-            const contactsMap = new ymaps.Map("contacts-map", {
-                center: [54.775006, 56.019577],
-                zoom: 17,
-                controls: [],
-            },
-                { suppressMapOpenBlock: true },
-                {
-                    searchControlProvider: 'yandex#search'
-                }),
-
-                myPlacemarkWithContent2 = new ymaps.Placemark(
-                    [54.775179, 56.022966], {
-                    balloonContent: "г. Уфа, ул. Блюхера, 2/1"
-                }, {
-                    // Опции
-                    preset: "islands#blueFactoryIcon",
-                    iconColor: '#ff0000',
-
-                    // Размеры метки
-                    iconImageSize: [50, 65],
-                    // Смещение левого верхнего угла иконки относительно её "ножки" (точки привязки)
-                    iconImageOffset: [-20, -57],
-
-                });
-            // блокировка передвижения карты
-            contactsMap.behaviors.disable('drag');
-            contactsMap.geoObjects.add(myPlacemarkWithContent2);
-
-            function updateMapCenter() {
-                const windowWidth = window.innerWidth;
-                let newCenterContactsMap, newZoomContactsMap, newCenterMyMap, newZoomMyMap;
-
-                if (windowWidth <= 847) {
-                    newCenterContactsMap = [54.777279, 56.022686];
-                    newZoomContactsMap = 16;
-                }
-                else if (windowWidth <= 500) {
-                    newCenterContactsMap = [54.775979, 56.022966];
-                } else {
-                    newCenterContactsMap = [54.775006, 56.019577];
-                    newZoomContactsMap = 17;
-                }
-
-                contactsMap.setCenter(newCenterContactsMap, newZoomContactsMap);
-            }
-
-            // Обновление центра карты при загрузке страницы
-            updateMapCenter();
-
-            // Обновление центра карты при изменении размера окна
-            window.addEventListener('resize', updateMapCenter);
-        });
-    </script>
 </body>
 
 </html>

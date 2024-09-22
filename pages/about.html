@@ -49,9 +49,9 @@
                         контактные
                         данные, и мы вам перезвоним в ближайшее время.</div>
                     <form action="" class="feedback-form">
-                        <input type="text" name="" id="" placeholder="Имя"
+                        <input type="text" name="name" id="name-input" placeholder="Имя"
                             class="feedback-form__input call-modal__input-name bordered-block">
-                        <input type="text" name="" id="" placeholder="Телефон"
+                        <input type="tel" name="phone" id="phone-input" placeholder="Телефон"
                             class="feedback-form__input call-modal__input-phone bordered-block">
                         <button class="feedback-form__button call-modal__button button">Отправить</button>
                     </form>
@@ -370,7 +370,7 @@
                             <br> Поэтому дома от “Коттедж-БЕРИ” устраивают всех!</p>
                     </div>
                     <div class="our-mission__img-wrap">
-                        <img src="../img/nhk8jg3psng71.jpg" alt="" class="our-mission__img">
+                        <img src="../img/pages-img/about/our-mission/our-mission-img.jpg" alt="" class="our-mission__img">
                     </div>
                 </div>
             </div>
@@ -379,7 +379,7 @@
             <div class="our-goal__container my-container">
                 <div class="our-goal__wrapper bordered-block">
                     <div class="our-goal__img-wrap">
-                        <img src="../img/nhk8jg3psng71.jpg" alt="" class="our-goal__img">
+                        <img src="../img/pages-img/about/our-goal/our-goal-img.jpg" alt="" class="our-goal__img">
                     </div>
                     <div class="our-goal__body">
                         <div class="our-goal__title title">Наша <span>цель</span></div>
@@ -687,7 +687,7 @@
                                 <a href="./stocks/single-stock.html" class="stock__item">
                                     <div class="stock__item-body">
                                         <div class="stock__img-wrap">
-                                            <img src="../img/nhk8jg3psng71.jpg" alt="фото процент" class="stock__img">
+                                            <img src="../img/pages-img/main/stocks/1.png" alt="фото процент" class="stock__img">
                                         </div>
                                         <div class="stock__item-title">Платим ипотеку за вас</div>
                                     </div>
@@ -734,9 +734,9 @@
                         <div class="feedback__text">Хотите уточнить информацию? Оставьте свои контактные данные, и мы
                             вам перезвоним в ближайшее время.</div>
                         <form action="" class="feedback-form">
-                            <input type="text" name="" id="" placeholder="Имя"
+                            <input type="text" name="name" id="name-input" placeholder="Имя"
                                 class="feedback-form__input feedback__input-name bordered-block">
-                            <input type="text" name="" id="" placeholder="Телефон"
+                            <input type="text" name="phone" id="phone-input" placeholder="Телефон"
                                 class="feedback-form__input feedback__input-phone bordered-block">
                             <button class="feedback-form__button feedback__button button">Отправить</button>
                         </form>
@@ -828,9 +828,23 @@
     <script src="../libs/js/video.min.js"></script>
     <script src="../libs/js/fancybox.umd.js"></script>
     <script src="../libs/js/imask.js"></script>
-
-
-
+    
+    
+    <!-- СКРИПТЫ ДЛЯ ОБЩИХ ЭЛЕМЕНТОВ -->
+    <script src="../js/header.js"></script>
+    <script src="../js/form-mask.js"></script>
+    <script src="../js/open-modal-form.js"></script>
+    <script src="../js/open-modal-video.js"></script>
+    <script src="../js/how-buy-switch.js"></script>
+    
+    <!-- ПОДКЛЮЧЕНИЕ API КАРТ (ВЗЯЛ СВОЁ API ЯНДЕКСА) -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=f028c4f8-776d-4ba3-b079-94a909b9cca1&lang=ru" type="text/javascript"></script>
+    <script src="../js/contacts-map.js"></script>
+    
+    
+    
+    <!-- СКРИПТЫ ДЛЯ ЭТОЙ СТРАНИЦЫ -->
+    
     <!-- ПОДКЛЮЕНИЕ Fancybox -->
     <script>
         Fancybox.bind('[data-fancybox="awards"]', {
@@ -839,39 +853,6 @@
         });
     </script>
 
-
-    <!-- СКРИПТ ДЛЯ ХЕДЕРА -->
-    <script>
-            const navbarToggler = document.querySelector('.navbar-toggler');
-            const navbarCollapse = document.getElementById('navbarNav');
-            const overlay = document.getElementById('overlay');
-            const callbackButton = document.querySelector('.header__mobile-contacts-button');
-            const callModal = document.getElementById('callModal');
-    
-            navbarToggler.addEventListener('click', function () {
-                document.body.style.overflow = 'hidden';
-                overlay.style.display = 'block';
-            });
-    
-            navbarCollapse.addEventListener('hidden.bs.collapse', function () {
-                document.body.style.overflow = 'visible';
-                overlay.style.display = 'none';
-            });
-    
-            callbackButton.addEventListener('click', function () {
-                navbarCollapse.classList.remove('show');
-                navbarToggler.setAttribute('aria-expanded', 'false');
-                document.body.style.overflow = 'visible';
-                overlay.style.display = 'none';
-            });
-    
-            callModal.addEventListener('hidden.bs.modal', function () {
-                document.body.style.overflow = 'visible';
-                overlay.style.display = 'none';
-            });
-    </script>
-    
-    
     <!-- СКРИПТ ДЛЯ СЛАЙДЕРА БЛОКА НАША КОМАНДА -->
     <script>
         const swiper_ourTeam = new Swiper('.our-team__swiper', {
@@ -891,7 +872,6 @@
             }
         });
     </script>
-
 
     <!-- СКРИПТ ДЛЯ СЛАЙДЕРА БЛОКА АКЦИИ -->
     <script>
@@ -918,7 +898,6 @@
         });
     </script>
 
-
     <!-- СКРИПТ ДЛЯ СЛАЙДЕРА БЛОКА ДОСТИЖЕНИЯ -->
     <script>
         const swiper_awards = new Swiper('.awards__swiper', {
@@ -933,68 +912,6 @@
         });
     </script>
 
-
-    <!-- ПОДКЛЮЧЕНИЕ API КАРТ (ВЗЯЛ СВОЁ API ЯНДЕКСА) -->
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=f028c4f8-776d-4ba3-b079-94a909b9cca1
-    &lang=ru" type="text/javascript">
-    </script>
-
-    <!-- СКРИПТ ДЛЯ КАРТЫ БЛОКА КОНТАКТЫ -->
-    <script type="text/javascript">
-        ymaps.ready(function () {
-            const contactsMap = new ymaps.Map("contacts-map", {
-                center: [54.775006, 56.019577],
-                zoom: 17,
-                controls: [],
-            },
-                { suppressMapOpenBlock: true },
-                {
-                    searchControlProvider: 'yandex#search'
-                }),
-
-                myPlacemarkWithContent2 = new ymaps.Placemark(
-                    [54.775179, 56.022966], {
-                    balloonContent: "г. Уфа, ул. Блюхера, 2/1"
-                }, {
-                    // Опции
-                    preset: "islands#blueFactoryIcon",
-                    iconColor: '#ff0000',
-
-                    // Размеры метки
-                    iconImageSize: [50, 65],
-                    // Смещение левого верхнего угла иконки относительно её "ножки" (точки привязки)
-                    iconImageOffset: [-20, -57],
-
-                });
-            // блокировка передвижения карты
-            contactsMap.behaviors.disable('drag');
-            contactsMap.geoObjects.add(myPlacemarkWithContent2);
-
-            function updateMapCenter() {
-                const windowWidth = window.innerWidth;
-                let newCenterContactsMap, newZoomContactsMap, newCenterMyMap, newZoomMyMap;
-
-                if (windowWidth <= 847) {
-                    newCenterContactsMap = [54.777279, 56.022686];
-                    newZoomContactsMap = 16;
-                }
-                else if (windowWidth <= 500) {
-                    newCenterContactsMap = [54.775979, 56.022966];
-                } else {
-                    newCenterContactsMap = [54.775006, 56.019577];
-                    newZoomContactsMap = 17;
-                }
-
-                contactsMap.setCenter(newCenterContactsMap, newZoomContactsMap);
-            }
-
-            // Обновление центра карты при загрузке страницы
-            updateMapCenter();
-
-            // Обновление центра карты при изменении размера окна
-            window.addEventListener('resize', updateMapCenter);
-        });
-    </script>
 </body>
 
 </html>
