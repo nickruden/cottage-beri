@@ -670,7 +670,7 @@
 
 @media (max-width: 794px) {
     .our-team {
-        padding-bottom: 65px;
+        padding-bottom: 60px;
     }
 
     .our-team__title {
@@ -895,6 +895,7 @@
         max-height: none;
     }
 }
+
 @media (max-width: 1500px) {
     .why-choose-us__card-body {
         padding: 30px 20px 30px 30px;
@@ -904,10 +905,17 @@
         margin-bottom: 13px;
     }
 }
+
 @media (max-width: 1440px) {
     .why-choose-us__card-list-item {
         font-size: 15px;
         line-height: 24px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .why-choose-us__title {
+        margin-bottom: 40px;
     }
 }
 @media (max-width: 1350px) {
@@ -915,13 +923,21 @@
         line-height: 22px;
     }
 }
+
 @media (max-width: 1300px) {
+    .why-choose-us__title {
+        margin-bottom: 35px;
+    }
+
     .why-choose-us__card-title {
         margin-bottom: 17px;
     }
 }
 
 @media (max-width: 1260px) {
+    .why-choose-us {
+        padding-bottom: 90px;
+    }
     .why-choose-us__card-body {
         padding: 25px 20px 25px 25px;
     }
@@ -929,6 +945,7 @@
         font-size: 22px;
     }
 }
+
 @media (max-width: 1190px) {
     .why-choose-us__card {
         flex-direction: column-reverse;
@@ -953,7 +970,16 @@
         padding: 35px 20px 35px 35px;
     }
 }
+
 @media (max-width: 1070px) {
+    .why-choose-us {
+        padding-bottom: 80px;
+    }
+
+    .why-choose-us__title {
+        margin-bottom: 33px;
+    }
+
     .why-choose-us__card-body {
         padding: 30px 20px 30px 30px;
         max-height: 290px;
@@ -962,15 +988,24 @@
 }
 
 @media (max-width: 991px) {
+    .why-choose-us__title {
+        margin-bottom: 30px;
+    }
+
     .why-choose-us__card-body {
         padding: 20px;
     }
+
     .why-choose-us__card-list-item {
         font-size: 17px;
         line-height: 26px;
     }
 }
+
 @media (max-width: 880px) {
+    .why-choose-us {
+        padding-bottom: 70px;
+    }
     .why-choose-us__card-title {
         font-size: 24px;
     }
@@ -983,9 +1018,20 @@
         height: 100%;
     }
 }
+
 @media (max-width: 830px) {
     .why-choose-us__card-body {
         max-height: 350px;
+    }
+}
+
+@media (max-width: 794px) {
+    .why-choose-us {
+        padding-bottom: 60px;
+    }
+
+    .why-choose-us__title {
+        margin-bottom: 27px;
     }
 }
 
@@ -1012,13 +1058,14 @@
     .why-choose-us__card-img-wrap {
         max-height: 286px;
     }
-    
 }
+
 @media (max-width: 700px) {
     .why-choose-us__card-body {
         padding: 25px;
     }
 }
+
 @media (max-width: 620px) {
     .why-choose-us__card-title {
         font-size: 24px;
@@ -1031,16 +1078,39 @@
         margin-bottom: 6px;
     }
 }
+
+@media (max-width: 600px) {
+    .why-choose-us__title {
+        margin-bottom: 23px;
+    }
+}
+
 @media (max-width: 560px) {
+    .why-choose-us {
+        padding-bottom: 50px;
+    }
+
     .why-choose-us__card-body {
         padding: 23px;
     }
 }
+
+@media (max-width: 516px) {
+    .why-choose-us__title {
+        margin-bottom: 20px;
+    }
+}
+
 @media (max-width: 500px) {
+    .why-choose-us {
+        padding-bottom: 40px;
+    }
+
     .why-choose-us__card-title {
         font-size: 22px;
         margin-bottom: 16px;
     }
+
     .why-choose-us__card-body {
         padding: 20px;
     }
@@ -1264,11 +1334,6 @@
     margin-bottom: 50px;
 }
 
-/* .stocks__items {
-    display: flex;
-    width: 100%;
-    margin-bottom: 60px;
-} */
 .stocks__swiper-wrapper {
     display: flex;
     width: 100%;
@@ -1392,10 +1457,6 @@
         margin-bottom: 30px;
     }
 
-    /* .stocks__items {
-        display: none;
-    } */
-
     .stocks__slider {
         display: flex;
         margin-bottom: 27px;
@@ -1477,6 +1538,10 @@
 }
 
 @media (max-width: 600px) {
+    .stocks__title {
+        margin-bottom: 23px;
+    }
+
     .stocks__slider {
         margin-bottom: 17px;
     }

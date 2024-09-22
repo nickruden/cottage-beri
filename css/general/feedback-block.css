@@ -139,6 +139,12 @@
     }
 }
 
+@media (max-width: 880px) {
+    .feedback {
+        padding-bottom: 70px;
+    }
+}
+
 @media (max-width: 794px) {
     .feedback {
         padding-bottom: 60px;

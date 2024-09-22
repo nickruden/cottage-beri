@@ -19,7 +19,7 @@
 
 }
 .promotion-block__title {
-    line-height: 66px;
+    line-height: 66px!Important;
     margin-bottom: 20px;
 }
 .promotion-block__text {
@@ -50,6 +50,12 @@
     }
 }
 
+@media (max-width: 1440px) {
+    .promotion-block__title {
+        line-height: 60px!Important;
+    }
+}
+
 @media (max-width: 1400px) {
     .promotion-block__body {
         padding: 35px;
@@ -61,8 +67,10 @@
 
 }
 
-@media (max-width: 1329px) {
-
+@media (max-width: 1300px) {
+    .promotion-block__title {
+        line-height: 55px!Important;
+    }
 }
 
 @media (max-width: 1298px) {
@@ -78,13 +86,12 @@
     .promotion-block {
         padding-bottom: 90px;
     }
-
-    .promotion-block__title {
-        line-height: 50px!Important;
-    }
 }
 
-@media (max-width: 1096px) {
+@media (max-width: 1130px) {
+    .promotion-block__title {
+        line-height: 52px!Important;
+    }
 }
 
 @media (max-width: 1070px) {
@@ -102,7 +109,7 @@
 
 @media (max-width: 991px) {
     .promotion-block__title {
-        line-height: 43px!Important;
+        line-height: 50px!Important;
     }
 }
 
@@ -139,6 +146,12 @@
     }
 }
 
+@media (max-width: 768px) {
+    .promotion-block__title {
+        line-height: 43px!Important;
+    }
+}
+
 @media (max-width: 650px) {
     .promotion-block__body {
         padding: 25px;
@@ -147,7 +160,6 @@
 
 @media (max-width: 600px) {
     .promotion-block__title {
-        line-height: 37px!Important;
         max-width: 400px;
     }
 
@@ -174,6 +186,10 @@
         padding-bottom: 40px;
     }
 
+    .promotion-block__title {
+        line-height: 39px!Important;
+    }
+
     .promotion-block__body {
         padding: 20px;
     }
@@ -185,7 +201,7 @@
 
 @media (max-width: 425px) {
     .promotion-block__title {
-        line-height: 20px;
+        line-height: 36px!Important;
     }
 }
 
@@ -195,5 +211,11 @@
     }
     .promotion-block__button {
         width: 100%;
+    }
+}
+
+@media (max-width: 375px) {
+    .promotion-block__title {
+        line-height: 30px!Important;
     }
 }

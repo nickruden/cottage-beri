@@ -35,6 +35,32 @@
 </head>
 
 <body>
+    <!-- МОДАЛЬНОЕ ОКНО С ФОРМОЙ -->
+    <div class="modal fade call-modal" id="callModal" tabindex="-1" aria-labelledby="callModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered call-modal__dialog">
+            <div class="modal-content call-modal__content">
+                <div class="modal-header call-modal__header">
+                    <button type="button" class="btn-close call-modal__close-button p-0" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body call-modal__body">
+                    <div class="call-modal__title title">Обратный звонок</div>
+                    <div class="call-modal__text text-block_fSize_20">Хотите уточнить информацию? Оставьте свои
+                        контактные
+                        данные, и мы вам перезвоним в ближайшее время.</div>
+                    <form action="" class="feedback-form">
+                        <input type="text" name="" id="" placeholder="Имя"
+                            class="feedback-form__input call-modal__input-name bordered-block">
+                        <input type="text" name="" id="" placeholder="Телефон"
+                            class="feedback-form__input call-modal__input-phone bordered-block">
+                        <button class="feedback-form__button call-modal__button button">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <header class="header">
         <div class="header__container my-container">
             <div class="header__main">
@@ -270,30 +296,6 @@
         </div>
     </header>
 
-    <!-- МОДАЛЬНОЕ ОКНО С ФОРМОЙ -->
-    <div class="modal fade call-modal" id="callModal" tabindex="-1" aria-labelledby="callModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered call-modal__dialog">
-            <div class="modal-content call-modal__content">
-                <div class="modal-header call-modal__header">
-                    <button type="button" class="btn-close call-modal__close-button p-0" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                </div>
-                <div class="modal-body call-modal__body">
-                    <div class="call-modal__title title">Обратный звонок</div>
-                    <div class="call-modal__text text-block_fSize_20">Хотите уточнить информацию? Оставьте свои
-                        контактные
-                        данные, и мы вам перезвоним в ближайшее время.</div>
-                    <form action="" class="feedback-form">
-                        <input type="text" name="" id="" placeholder="Имя"
-                            class="feedback-form__input call-modal__input-name bordered-block">
-                        <input type="text" name="" id="" placeholder="Телефон"
-                            class="feedback-form__input call-modal__input-phone bordered-block">
-                        <button class="feedback-form__button call-modal__button button">Отправить</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- ОВЕРЛЕЙ ТОЛЬКО ДЛЯ МОДАЛКИ С ФОРМОЙ -->
     <div class="overlay" id="overlay"></div>
@@ -326,7 +328,7 @@
                     </div>
                 </div>
                 <div class="top-banner__img-wrap">
-                    <img src="../img/nhk8jg3psng71.jpg" alt="баннер" class="top-banner__img">
+                    <img src="../img/pages-img/about/top-banner/banner.jpg" alt="баннер" class="top-banner__img">
                 </div>
             </div>
         </div>
