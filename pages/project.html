@@ -340,7 +340,9 @@
                     <div class="project-desc__wrap-left">
                         <div class="tab-content project-desc__tab-content">
                             <div class="tab-pane fade show active project-desc__tab-pane" id="photo" role="tabpanel" aria-labelledby="photo-tab">
-                                <img src="../img/nhk8jg3psng71.jpg" alt="" class="project-desc__img">
+                                <a href="../img/nhk8jg3psng71.jpg" data-fancybox="project-img">
+                                    <img src="../img/nhk8jg3psng71.jpg" alt="" class="project-desc__img">
+                                </a>
                             </div>
                             <div class="tab-pane fade project-desc__tab-pane" id="slider" role="tabpanel" aria-labelledby="slider-tab">
                                 <div class="project-desc__slider">
@@ -348,17 +350,23 @@
                                         <div class="swiper-wrapper project-desc__swiper-wrapper">
                                             <div class="swiper-slide project-desc__slide">
                                                 <div class="project-desc__slide-wrap-img">
-                                                    <img src="../img/nhk8jg3psng71.jpg" alt="" class="project-desc__slide-img">
+                                                    <a href="../img/nhk8jg3psng71.jpg" data-fancybox="project-slide">
+                                                        <img src="../img/nhk8jg3psng71.jpg" alt="" class="project-desc__slide-img">
+                                                    </a>
                                                 </div>
                                             </div>
                                             <div class="swiper-slide project-desc__slide">
                                                 <div class="project-desc__slide-wrap-img">
-                                                    <img src="../img/pages-img/project/project-desc/project.jpg" alt="" class="project-desc__slide-img">
+                                                    <a href="../img/pages-img/project/project-desc/project.jpg" data-fancybox="project-slide">
+                                                        <img src="../img/pages-img/project/project-desc/project.jpg" alt="" class="project-desc__slide-img">
+                                                    </a>
                                                 </div>
                                             </div>
                                             <div class="swiper-slide project-desc__slide">
                                                 <div class="project-desc__slide-wrap-img">
-                                                    <img src="../img/pages-img/project/project-desc/project.jpg" alt="" class="project-desc__slide-img">
+                                                    <a href="../img/pages-img/project/project-desc/project.jpg" data-fancybox="project-slide">
+                                                        <img src="../img/pages-img/project/project-desc/project.jpg" alt="" class="project-desc__slide-img">
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -460,11 +468,15 @@
                 </div>
                 <div class="about-complex__images">
                     <div class="about-complex__wrap-img">
+                        <a href="../img/nhk8jg3psng71.jpg" data-fancybox="about-img">
                             <img src="../img/nhk8jg3psng71.jpg" alt="" class="about-complex__img">
-                        </div>
-                        <div class="about-complex__wrap-img">
+                        </a>
+                    </div>
+                    <div class="about-complex__wrap-img">
+                        <a href="../img/pages-img/project/characteristics/img_2.jpg" data-fancybox="about-img">
                             <img src="../img/pages-img/project/characteristics/img_2.jpg" alt="" class="about-complex__img">
-                        </div>
+                        </a>
+                    </div>
                     </div>
                 </div>
         </div>
@@ -835,7 +847,20 @@
     <script src="../libs/js/fancybox.umd.js"></script>
     <script src="../libs/js/imask.js"></script>
     
-    
+    <script>
+        Fancybox.bind('[data-fancybox="project-img"]', {
+            dragToClose: false,
+            Toolbar: false,
+        });
+        Fancybox.bind('[data-fancybox="project-slide"]', {
+            dragToClose: false,
+            Toolbar: false,
+        });
+        Fancybox.bind('[data-fancybox="about-img"]', {
+            dragToClose: false,
+            Toolbar: false,
+        });
+    </script>
     
     <!-- СКРИПТ ДЛЯ ХЕДЕРА -->
     <script>
