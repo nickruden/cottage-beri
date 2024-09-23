@@ -362,6 +362,7 @@
     margin-bottom: 35px;
 }
 .cottage-types__list {
+    align-self: center;
     list-style: none;
 }
 .cottage-types__list-item {
