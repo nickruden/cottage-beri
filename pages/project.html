@@ -569,6 +569,7 @@
             <div class="how-buy__container my-container">
                 <div class="how-buy__title title">Как заказать <span>строительство</span></div>
                 <div class="how-buy__payment-types">
+                    <input type="text" name="selected-tab" id="selected-tab-input" value="installment" style="display: none;">
                     <button class="how-buy__button how-buy__button_active" data-tab="installment">Рассрочка</button>
                     <button class="how-buy__button" data-tab="trade-in">Trade-in</button>
                     <button class="how-buy__button" data-tab="mortgage">Ипотека</button>
@@ -599,9 +600,9 @@
                         <div class="how-buy__feedback-text">И узнайте, на каких условиях вы получите рассрочку</div>
                         <form action="" class="feedback-form how-buy__feedback-form">
                             <input type="text" name="name" id="name-input" placeholder="Имя"
-                                class="feedback-form__input feedback__input-name bordered-block">
+                                class="feedback-form__input how-buy__input bordered-block">
                             <input type="text" name="phone" id="phone-input" placeholder="Телефон"
-                                class="feedback-form__input feedback__input-phone bordered-block">
+                                class="feedback-form__input how-buy__input bordered-block">
                             <button class="feedback-form__button how-buy__form-button button">Узнать</button>
                         </form>
                     </div>
