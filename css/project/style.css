@@ -522,9 +522,11 @@
     }
     .project-desc__wrap-left {
         max-width: 730px;
+        height: auto;
     }
     .project-desc__slider {
         max-width: 730px;
+        max-height: none;
     }
 }
 
@@ -613,6 +615,7 @@
 
     .project-desc__slider {
         max-width: none;
+        max-height: 584px;
     }
 
     .project-desc__slide-img {
