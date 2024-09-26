@@ -2714,9 +2714,65 @@
 }
 
 .master-plan__doc {
-    height: 628px;
+    height: 100%;
+    width: 100%;
     border-radius: 8px;
-    background: #F4F4F4;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.polygons {
+    width: 100%;
+    height: 100%
+}
+
+.polygon {
+    cursor: pointer;
+}
+
+.master-plan__svg {
+    width: 100%;
+    height: 100%;
+}
+
+.master-plan__polygon-tooltip {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: white;
+    border-radius: 8px;
+    padding: 7px;
+    font-size: 12px;
+    font-weight: 600;
+    pointer-events: none;
+    display: none;
+}
+.master-plan__polygon-tooltip {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: white;
+    border-radius: 8px;
+    padding: 7px;
+    font-size: 12px;
+    font-weight: 600;
+    pointer-events: none;
+    display: none;
+}
+
+.polygon.free {
+    fill: rgba(70, 185, 70, 0.356); /* Свободен */
+}
+
+.polygon.booked {
+    fill: rgba(179, 179, 62, 0.356); /* Забронирован */
+}
+
+.polygon.sold {
+    fill: rgba(133, 38, 38, 0.356); /* Забронирован */
 }
 
 @media (max-width: 1400px) {
