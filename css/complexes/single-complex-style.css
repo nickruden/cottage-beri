@@ -307,7 +307,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 40px 0px 40px 40px;
+    padding: 40px 0px 10px 40px;
     max-width: 662px;
     margin-right: 118px;
 }
@@ -332,28 +332,24 @@
     position: relative;
     cursor: pointer;
     margin-left: auto;
-    width: 100%;
-    /* max-height: 480px;
-    height: 100%; */
-    background: url('../../img/pages-img/complexes/single-complex/about-complex/about-video-img.jpg') no-repeat center center;
-    background-size: cover;
+    max-height: 480px;
 }
 
 .about-complex__video-poster {
-    /* height: 100%;
+    height: 100%;
     width: 100%;
     object-fit: cover;
-    aspect-ratio: 760 / 480; */
+    aspect-ratio: 760 / 480;
 }
 .about-complex__wrapper > .about-complex__button {
     display: none;
 }
 
 @media (min-width: 1601px) {
-    /* .about-complex__video {
+    .about-complex__video {
         height: 100%;
         max-height: 480px;
-    } */
+    }
 }
 @media (max-width: 1600px) {
     .about-complex__body {
@@ -1459,6 +1455,7 @@
 
     .cottage-types__cottage:nth-of-type(even) > .cottage-types__cottage-link {
         order: 0;
+        margin-left: 0px;
     }
 
     .cottage-types__tab-content {
@@ -2718,13 +2715,11 @@
 }
 
 .master-plan__doc {
+    /* height: 600px; */
     height: 100%;
     width: 100%;
     border-radius: 8px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    overflow: auto;
     position: relative;
 }
 
@@ -2738,45 +2733,95 @@
 }
 
 .master-plan__svg {
+    /* overflow: auto;
+    aspect-ratio: 1280 / 720;
+    width: 1280px;
+    height: 720px; */
     width: 100%;
     height: 100%;
 }
 
 .master-plan__polygon-tooltip {
-    position: absolute;
-    left: 0;
-    top: 0;
-    background: white;
-    border-radius: 8px;
-    padding: 7px;
-    font-size: 12px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
     font-weight: 600;
-    pointer-events: none;
-    display: none;
-}
-.master-plan__polygon-tooltip {
-    position: absolute;
-    left: 0;
-    top: 0;
-    background: white;
-    border-radius: 8px;
-    padding: 7px;
-    font-size: 12px;
-    font-weight: 600;
-    pointer-events: none;
-    display: none;
+    fill: black; /* Цвет текста */
 }
 
+.polygon:hover + .tooltip-group {
+    visibility: visible; /* Показываем текст и фон при наведении на полигон */
+}
+
+/* .master-plan__polygon-tooltip {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: white;
+    border-radius: 8px;
+    padding: 7px;
+    font-size: 16px;
+    font-weight: 600;
+    pointer-events: none;
+    display: none;
+} */
+
 .polygon.free {
-    fill: rgba(70, 185, 70, 0.356); /* Свободен */
+    fill: rgba(70, 185, 70, 0.6); /* Свободен */
 }
 
 .polygon.booked {
-    fill: rgba(179, 179, 62, 0.356); /* Забронирован */
+    fill: rgba(179, 179, 62, 0.6); /* Забронирован */
 }
 
 .polygon.sold {
-    fill: rgba(133, 38, 38, 0.356); /* Забронирован */
+    fill: rgba(133, 38, 38, 0.6); /* Забронирован */
+}
+
+.master-plan__tooltip-colors {
+    display: none;
+}
+
+.area-overlay {
+    position: absolute;
+    opacity: 0.5;
+    pointer-events: none; /* Чтобы не перекрывать клики */
+}
+.area-overlay.sold {
+    background-color: red;
+}
+.area-overlay.free {
+    background-color: green;
+}
+
+@media (max-width: 798px) {
+    .master-plan__doc {
+        margin-bottom: 20px;
+        height: 400px;
+    }
+    .master-plan__tooltip-colors {
+        display: flex;
+        gap: 10px;
+    }
+}
+
+.master-plan__tooltip-color {
+    border-radius: 30px;
+    font-size: 14px;
+    color: #FFF;
+    padding: 5px 15px;
+}
+
+.master-plan__tooltip-color.free {
+    background: green;
+}
+
+.master-plan__tooltip-color.booked {
+    background: orange;
+    color: #000;
+}
+
+.master-plan__tooltip-color.sold {
+    background: red;
 }
 
 @media (max-width: 1400px) {
