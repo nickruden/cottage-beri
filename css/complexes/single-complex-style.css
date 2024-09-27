@@ -307,7 +307,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 40px 0px 10px 40px;
+    padding: 40px 0px 40px 40px;
     max-width: 662px;
     margin-right: 118px;
 }
@@ -332,24 +332,28 @@
     position: relative;
     cursor: pointer;
     margin-left: auto;
-    max-height: 480px;
+    width: 100%;
+    /* max-height: 480px;
+    height: 100%; */
+    background: url('../../img/pages-img/complexes/single-complex/about-complex/about-video-img.jpg') no-repeat center center;
+    background-size: cover;
 }
 
 .about-complex__video-poster {
-    height: 100%;
+    /* height: 100%;
     width: 100%;
     object-fit: cover;
-    aspect-ratio: 760 / 480;
+    aspect-ratio: 760 / 480; */
 }
 .about-complex__wrapper > .about-complex__button {
     display: none;
 }
 
 @media (min-width: 1601px) {
-    .about-complex__video {
+    /* .about-complex__video {
         height: 100%;
         max-height: 480px;
-    }
+    } */
 }
 @media (max-width: 1600px) {
     .about-complex__body {
