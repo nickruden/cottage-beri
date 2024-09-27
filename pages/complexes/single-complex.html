@@ -941,7 +941,8 @@
                             </polygon>
                             <g id="master-plan__polygon-tooltip" class="master-plan__polygon-tooltip"
                                 visibility="hidden">
-                                <rect id="tooltip-bg" x="0" y="0" width="0" height="0" fill="white" rx="8" ry="8"></rect>
+                                <rect id="tooltip-bg" x="0" y="0" width="0" height="0" fill="white" rx="8" ry="8">
+                                </rect>
                                 <text id="tooltip-text" x="0" y="15" fill="black"></text>
                             </g>
                         </g>
@@ -965,6 +966,10 @@
 
                 polygons.forEach(polygon => {
                     polygon.classList.add(polygon.dataset.status);
+
+                    if (polygon.dataset.status === 'free') {
+                        polygon.setAttribute('data-form', 'bookingForm');
+                    }
 
                     polygon.addEventListener('mouseover', function () {
                         const status = this.dataset.status === 'free' ? 'Свободен'
