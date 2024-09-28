@@ -2745,11 +2745,11 @@
     font-family: Arial, sans-serif;
     font-size: 16px;
     font-weight: 600;
-    fill: black; /* Цвет текста */
+    fill: black;
 }
 
 .polygon:hover + .tooltip-group {
-    visibility: visible; /* Показываем текст и фон при наведении на полигон */
+    visibility: visible;
 }
 
 /* .master-plan__polygon-tooltip {
@@ -2804,6 +2804,22 @@
     }
 }
 
+.ps__rail-y {
+    width: 10px;
+}
+
+.ps__thumb-y {
+    width: 7px!Important;
+}
+
+.ps__rail-x {
+    height: 10px;
+}
+
+.ps__thumb-x {
+    height: 7px!Important;
+}
+
 .master-plan__tooltip-color {
     border-radius: 30px;
     font-size: 14px;
@@ -2852,6 +2868,12 @@
     }
 }
 
+@media (max-width: 1024px) {
+    .master-plan__doc {
+        height: 500px;
+    }
+}
+
 @media (max-width: 880px) {
     .master-plan__title {
         margin-bottom: 30px;
@@ -2882,6 +2904,10 @@
 
     .master-plan__title {
         margin-bottom: 23px;
+    }
+
+    .master-plan__doc {
+        height: 400px;
     }
 }
 

@@ -12,6 +12,7 @@
     <link href="../../libs/style/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="../../libs/style/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../../libs/style/fancybox.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/perfect-scrollbar/1.5.0/css/perfect-scrollbar.min.css">
 
     <!-- ПОДКЛЮЧЕНИЕ ШРИФТА-->
     <link rel="stylesheet" href="../../font/inter.css">
@@ -342,7 +343,6 @@
             </div>
         </div>
     </header>
-
 
     <!-- ОВЕРЛЕЙ ТОЛЬКО ДЛЯ МОДАЛКИ С ФОРМОЙ -->
     <div class="overlay" id="overlay"></div>
@@ -866,9 +866,7 @@
         <div class="master-plan">
             <div class="master-plan__container my-container">
                 <div class="master-plan__title title">Генплан поселка <span>Эко-Вилладж</span></div>
-                <div class="master-plan__doc">
-
-
+                <div class="master-plan__doc scrollable">
                     <svg id="master-plan" class="master-plan__svg" style="position: relative;" viewBox="0 0 1280 720"
                         preserveAspectRatio="xMidYMid meet">
 
@@ -876,28 +874,28 @@
                         </image>
 
                         <g class="polygons">
-                            <polygon class="polygon" points="46,68,203,70,200,234,105,232" data-status="free"></polygon>
-                            <polygon class="polygon" points="219,71,295,70,292,236,220,232" data-status="booked">
+                            <polygon class="polygon" points="46,65,203,65,200,244,105,244" data-status="free"></polygon>
+                            <polygon class="polygon" points="219,65,295,65,292,244,220,244" data-status="booked">
                             </polygon>
-                            <polygon class="polygon" points="309,70,380,72,383,236,312,236" data-status="sold">
+                            <polygon class="polygon" points="309,65,380,65,383,244,312,244" data-status="sold">
                             </polygon>
-                            <polygon class="polygon" points="397,69,474,69,471,232,400,227" data-status="free">
+                            <polygon class="polygon" points="397,65,474,65,471,244,400,244" data-status="free">
                             </polygon>
-                            <polygon class="polygon" points="491,72,564,72,564,236,491,234" data-status="booked">
+                            <polygon class="polygon" points="491,65,564,65,564,244,491,244" data-status="booked">
                             </polygon>
-                            <polygon class="polygon" points="584,70,656,71,655,236,582,233" data-status="sold">
+                            <polygon class="polygon" points="584,65,656,65,655,244,582,244" data-status="sold">
                             </polygon>
-                            <polygon class="polygon" points="670,69,743,69,748,233,672,229" data-status="free">
+                            <polygon class="polygon" points="670,65,743,65,748,244,672,244" data-status="free">
                             </polygon>
-                            <polygon class="polygon" points="762,71,834,67,837,233,763,235" data-status="booked">
+                            <polygon class="polygon" points="762,65,834,65,837,244,763,244" data-status="booked">
                             </polygon>
-                            <polygon class="polygon" points="853,72,928,70,922,232,853,227" data-status="sold">
+                            <polygon class="polygon" points="853,65,928,65,922,244,853,244" data-status="sold">
                             </polygon>
-                            <polygon class="polygon" points="941,72,1015,71,1016,234,947,232" data-status="free">
+                            <polygon class="polygon" points="941,65,1015,65,1016,244,947,244" data-status="free">
                             </polygon>
-                            <polygon class="polygon" points="1032,71,1108,72,1101,232,1035,232" data-status="booked">
+                            <polygon class="polygon" points="1032,65,1108,65,1101,244,1035,244" data-status="booked">
                             </polygon>
-                            <polygon class="polygon" points="1126,72,1199,69,1199,229,1123,228" data-status="sold">
+                            <polygon class="polygon" points="1126,65,1199,65,1199,244,1123,244" data-status="sold">
                             </polygon>
                             <polygon class="polygon" points="114,257,290,255,293,415,177,410" data-status="free">
                             </polygon>
@@ -947,7 +945,6 @@
                             </g>
                         </g>
                     </svg>
-
                 </div>
                 <div class="master-plan__tooltip-colors">
                     <div class="master-plan__tooltip-color free">Свободен</div>
@@ -963,6 +960,31 @@
                 const tooltipGroup = document.getElementById('master-plan__polygon-tooltip');
                 const tooltipBg = document.getElementById('tooltip-bg');
                 const tooltipText = document.getElementById('tooltip-text');
+                const masterPlanSvg = document.getElementById('master-plan');
+                const masterPlan = document.getElementById('master-plan__doc');
+    
+                function setFixedSvgSize() {
+                    if (window.innerWidth <= 1024) {
+                        masterPlanSvg.style.width = '1280px';
+                        masterPlanSvg.style.height = '720px';
+                        masterPlanSvg.style.position = 'relative';
+                        masterPlanSvg.style.overflow = 'hidden';
+                        masterPlanSvg.removeAttribute('viewBox');
+                        masterPlanSvg.removeAttribute('preserveAspectRatio');
+
+                    } else {
+                        masterPlanSvg.style.width = '100%';
+                        masterPlanSvg.style.height = '100%';
+                        masterPlanSvg.setAttribute('viewBox', '0 0 1280 720');
+                        masterPlanSvg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+                    }
+                }
+
+                const ps = new PerfectScrollbar('.scrollable');
+
+                setFixedSvgSize();
+
+                window.addEventListener('resize', setFixedSvgSize);
 
                 polygons.forEach(polygon => {
                     polygon.classList.add(polygon.dataset.status);
@@ -1134,6 +1156,7 @@
     <script src="../../libs/js/video.min.js"></script>
     <script src="../../libs/js/fancybox.umd.js"></script>
     <script src="../../libs/js/imask.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/perfect-scrollbar/1.5.0/perfect-scrollbar.min.js"></script>
 
 
     <!-- СКРИПТЫ ДЛЯ ОБЩИХ ЭЛЕМЕНТОВ -->
