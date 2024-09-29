@@ -2793,17 +2793,6 @@
     background-color: green;
 }
 
-@media (max-width: 798px) {
-    .master-plan__doc {
-        margin-bottom: 20px;
-        height: 400px;
-    }
-    .master-plan__tooltip-colors {
-        display: flex;
-        gap: 10px;
-    }
-}
-
 .ps__rail-y {
     width: 10px;
 }
@@ -2868,12 +2857,6 @@
     }
 }
 
-@media (max-width: 1024px) {
-    .master-plan__doc {
-        height: 500px;
-    }
-}
-
 @media (max-width: 880px) {
     .master-plan__title {
         margin-bottom: 30px;
@@ -2883,6 +2866,16 @@
 @media (max-width: 880px) {
     .master-plan {
         padding-bottom: 70px;
+    }
+}
+
+@media (max-width: 798px) {
+    .master-plan__doc {
+        margin-bottom: 20px;
+    }
+    .master-plan__tooltip-colors {
+        display: flex;
+        gap: 10px;
     }
 }
 
@@ -2906,9 +2899,6 @@
         margin-bottom: 23px;
     }
 
-    .master-plan__doc {
-        height: 400px;
-    }
 }
 
 @media (max-width: 560px) {
