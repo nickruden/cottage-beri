@@ -2857,6 +2857,15 @@
     }
 }
 
+@media (max-width: 1024px) {
+    .master-plan__svg {
+        width: 1280px;
+        height: 720px;
+        position: relative;
+        overflow: hidden;
+    }
+}
+
 @media (max-width: 880px) {
     .master-plan__title {
         margin-bottom: 30px;
@@ -2887,6 +2896,11 @@
     .master-plan__title {
         margin-bottom: 27px;
     }
+    .master-plan__svg {
+        display: block;
+        width: 1060px;
+        height: 600px;
+    }
 }
 
 
@@ -2904,6 +2918,12 @@
 @media (max-width: 560px) {
     .master-plan {
         padding-bottom: 50px;
+    }
+
+    .master-plan__svg {
+        display: block;
+        width: 880px;
+        height: 500px;
     }
 }
 
