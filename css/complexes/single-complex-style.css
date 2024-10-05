@@ -2740,6 +2740,10 @@
     width: 100%;
     height: 100%;
 }
+.master-plan__svg > image {
+    display: block;
+    width: 100%;
+}
 
 .master-plan__polygon-tooltip {
     font-family: Arial, sans-serif;
@@ -2786,9 +2790,11 @@
     opacity: 0.5;
     pointer-events: none; /* Чтобы не перекрывать клики */
 }
+
 .area-overlay.sold {
     background-color: red;
 }
+
 .area-overlay.free {
     background-color: green;
 }
