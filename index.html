@@ -48,11 +48,19 @@
                     <div class="call-modal__text text-block_fSize_20">Хотите уточнить информацию? Оставьте свои
                         контактные
                         данные, и мы вам перезвоним в ближайшее время.</div>
-                    <form action="" class="feedback-form">
-                        <input type="text" name="name" id="name-input" placeholder="Имя"
-                            class="feedback-form__input call-modal__input-name bordered-block">
-                        <input type="tel" name="phone" id="phone-input" placeholder="Телефон"
-                            class="feedback-form__input call-modal__input-phone bordered-block">
+                        <form action="" class="feedback-form call-modal__feedback-form needs-validation" novalidate id="call-modal-form">
+                            <input type="text" name="name" id="name-input" placeholder="Имя"
+                                class="feedback-form__input call-modal__input bordered-block" required>
+                            <input type="text" name="phone" id="phone-input" placeholder="Телефон"
+                                class="feedback-form__input call-modal__input bordered-block" required>
+                            <label for="call-modal__agreement-checkbox" class="feedback-form__agree-check call-modal__agree-check">
+                                <input type="checkbox" name="agreement" id="call-modal__agreement-checkbox"
+                                    class="form-check-input feedback-form__agree-checkbox call-modal__agree-checkbox" required>
+                                <span class="feedback-form__custom-checkbox call-modal__custom-checkbox"></span>
+                                <span class="feedback-form__agree-text call-modal__agree-text">Я даю согласие на сбор и обработку моих персональных
+                                    данных</span>
+                            </label>
+                            <div class="feedback-form__response call-modal__response" id="resp-call-modal-form"></div>
                         <button class="feedback-form__button call-modal__button button">Отправить</button>
                     </form>
                 </div>
@@ -73,11 +81,19 @@
                     <div class="call-modal__text text-block_fSize_20">Хотите уточнить информацию? Оставьте свои
                         контактные
                         данные, и мы вам перезвоним в ближайшее время.</div>
-                    <form action="" class="feedback-form">
-                        <input type="text" name="name" id="name-input" placeholder="Имя"
-                            class="feedback-form__input call-modal__input-name bordered-block">
-                        <input type="tel" name="phone" id="phone-input" placeholder="Телефон"
-                            class="feedback-form__input call-modal__input-phone bordered-block">
+                        <form action="" class="feedback-form call-modal__feedback-form needs-validation" novalidate id="consultation-form">
+                            <input type="text" name="name" id="name-input" placeholder="Имя"
+                                class="feedback-form__input call-modal__input bordered-block" required>
+                            <input type="text" name="phone" id="phone-input" placeholder="Телефон"
+                                class="feedback-form__input call-modal__input bordered-block" required>
+                            <label for="consultation__agreement-checkbox" class="feedback-form__agree-check call-modal__agree-check">
+                                <input type="checkbox" name="agreement" id="consultation__agreement-checkbox"
+                                    class="form-check-input feedback-form__agree-checkbox call-modal__agree-checkbox" required>
+                                <span class="feedback-form__custom-checkbox call-modal__custom-checkbox"></span>
+                                <span class="feedback-form__agree-text call-modal__agree-text">Я даю согласие на сбор и обработку моих персональных
+                                    данных</span>
+                            </label>
+                            <div class="feedback-form__response call-modal__response" id="resp-consultation-form"></div>
                         <button class="feedback-form__button call-modal__button button">Отправить</button>
                     </form>
                 </div>
@@ -1069,13 +1085,22 @@
                         <div class="feedback__text text-block_fSize_20">Хотите уточнить информацию? Оставьте свои
                             контактные данные, и мы
                             вам перезвоним в ближайшее время.</div>
-                        <form action="" class="feedback-form">
-                            <input type="text" name="name" id="name-input" placeholder="Имя"
-                                class="feedback-form__input feedback__input-name bordered-block">
-                            <input type="text" name="phone" id="phone-input" placeholder="Телефон"
-                                class="feedback-form__input feedback__input-phone bordered-block">
-                            <button class="feedback-form__button feedback__button button">Отправить</button>
-                        </form>
+                            <form action="" method="post" class="feedback-form needs-validation" novalidate id="feedback-form">
+                                <input type="text" name="name" id="name-input" placeholder="Имя" class="feedback-form__input bordered-block"
+                                    required>
+                                <input type="text" name="phone" id="phone-input" placeholder="Телефон" class="feedback-form__input bordered-block"
+                                    required>
+                                <label for="feedback__agreement-checkbox" class="feedback-form__agree-check">
+                                    <input type="checkbox" name="agreement" id="feedback__agreement-checkbox"
+                                        class="form-check-input feedback-form__agree-checkbox" required>
+                                    <span class="feedback-form__custom-checkbox"></span>
+                                    <span class="feedback-form__agree-text">Я даю согласие на сбор и обработку моих персональных
+                                        данных</span>
+                                </label>
+                                <div class="feedback-form__response" id="resp-feedback-form"></div>
+                                <button class="feedback-form__button feedback__button button">Записаться на
+                                    экскурсию</button>
+                            </form>
                     </div>
                 </div>
             </div>
@@ -1183,6 +1208,7 @@
     <script src="./js/open-modal-form.js"></script>
     <script src="./js/open-modal-video.js"></script>
     <script src="./js/how-buy-switch.js"></script>
+    <script src="./js/validation-form.js"></script>
 
     <!-- ПОДКЛЮЧЕНИЕ API КАРТ (ВЗЯЛ СВОЁ API ЯНДЕКСА) -->
     <script src="https://api-maps.yandex.ru/2.1/?apikey=f028c4f8-776d-4ba3-b079-94a909b9cca1&lang=ru" type="text/javascript"></script>

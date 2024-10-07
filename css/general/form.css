@@ -17,6 +17,61 @@
     outline: none;
 }
 
+.feedback-form__agree-check {
+    display: inline-flex!Important;
+    align-items: center;
+    font-size: 12px;
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+.feedback-form__agree-checkbox {
+    display: none;
+}
+
+.feedback-form__custom-checkbox {
+    display: inline-block;
+    margin-right: 10px;
+    height: 20px;
+    width: 20px;
+    border: 1px solid #D9D9D9;
+    border-radius: 6px;
+    position: relative;
+}
+
+.feedback-form__agree-checkbox:checked + .feedback-form__custom-checkbox {
+    border: 2px solid #83B32B;
+}
+
+.feedback-form__agree-checkbox:checked + .feedback-form__custom-checkbox::before {
+    content: '\2713';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #83B32B;
+    font-size: 18px;
+}
+
+.feedback-form__agree-text {
+    display: block;
+    text-align: start;
+}
+
+.feedback-form__response {
+    font-size: 12px;
+    text-align: start;
+}
+
+.was-validated .feedback-form__input:invalid {
+    border-color: red;
+}
+
+.feedback-form__custom-checkbox.is-invalid {
+    border-color: #dc3545;
+}
+
 .feedback-form__button {
     max-width: 100%;
     width: 100%;
@@ -29,12 +84,22 @@
     }
 }
 
+@media (max-width: 948px) {
+    .feedback-form__agree-text {
+        max-width: 300px;
+    }
+}
+
 @media (max-width: 794px) {
     .feedback-form__input {
         font-size: 16px;
         padding: 16px 20px 17px 20px;
         color: #646666;
         line-height: 25px;
+    }
+
+    .feedback-form__agree-text {
+        max-width: none;
     }
 }
 
@@ -54,10 +119,26 @@
     .feedback-form__input {
         padding: 13px 20px 14px 20px;
     }
+
+    .feedback-form__agree-text {
+        max-width: 300px;
+    }
 }
 
 @media (max-width: 425px) {
     .feedback-form__input {
         padding: 12px 20px 13px 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .feedback-form__agree-text {
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 340px) {
+    .feedback-form__agree-text {
+        max-width: 200px;
     }
 }
