@@ -33,15 +33,15 @@
     })
 
     function showSuccessMessage(form) {
+        // ПОКАЗ ОТВЕТА С СЕРВЕРА
         const formId = form.id;
         const responseDiv = document.getElementById(`resp-${formId}`);
         responseDiv.textContent = 'Спасибо за ваше обращение. Мы свяжемся с вами в ближайшее время ';
         responseDiv.style.color = "#83B32B";
 
+
         // Очищаем поля ввода
         form.reset();
-
-        // Удаляем класс was-validated, чтобы скрыть сообщения об ошибках
         form.classList.remove('was-validated');
         console.log(form)
     }
