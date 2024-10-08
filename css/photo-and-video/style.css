@@ -330,6 +330,7 @@
 .what-saying__slider {
     position: relative;
     max-width: 760px;
+    margin-left: auto;
 }
 .what-saying__swiper {
     height: 100%;
