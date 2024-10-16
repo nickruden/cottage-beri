@@ -147,9 +147,9 @@
     .top-block__advantages {
         height: 100%;
     }
-    .top-block__right {
+    /* .top-block__right {
         max-height: 760px;
-    }
+    } */
 }
 
 .top-block__advantages::after {
