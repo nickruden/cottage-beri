@@ -76,6 +76,9 @@
     max-width: 760px;
     overflow: visible;
 }
+.top-block__right::-webkit-scrollbar {
+    width: 0;
+}
 
 .top-block__slider {
     margin-bottom: 4px;
