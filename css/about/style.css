@@ -453,6 +453,7 @@
 .our-team__persone-card {
     overflow: visible;
     flex: 1 1 calc(33.333% - 20px);
+    max-width: 500px;
 }
 .our-team__persone-card-items {
 }
@@ -496,6 +497,14 @@
 
 .our-team__swiper > .swiper-wrapper {
     margin-bottom: 15px;
+}
+
+@media  (max-width: 1600px) {
+    .our-team__persone-card {
+        overflow: visible;
+        flex: 0 1 calc(33.333% - 20px);
+        max-width: 500px;
+    }
 }
 
 @media (max-width: 1400px) {
@@ -610,6 +619,11 @@
 
     .our-team__persone-cards {
         display: none;
+    }
+
+    .our-team__persone-card {
+        flex: 1 1 calc(33.333% - 20px);
+        max-width: none;
     }
 
     .our-team__slider {
