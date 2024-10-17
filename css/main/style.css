@@ -80,7 +80,7 @@
 
 .top-block__right {
     max-width: 760px;
-    /* overflow: hidden; */
+    overflow-y: hidden;
 }
 
 .top-block__right::-webkit-scrollbar {
