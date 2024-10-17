@@ -6,6 +6,11 @@
 
 .top-block__container {
     display: flex;
+    overflow: visible;
+}
+
+.top-block__container::-webkit-scrollbar {
+    width: 0;
 }
 
 .top-block__container > * {
@@ -76,6 +81,7 @@
     max-width: 760px;
     overflow: visible;
 }
+
 .top-block__right::-webkit-scrollbar {
     width: 0;
 }
