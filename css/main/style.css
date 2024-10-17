@@ -2,11 +2,12 @@
 .top-block {
     padding-top: calc(39px + 79px);
     padding-bottom: 20px;
+    overflow: hidden;
 }
 
 .top-block__container {
     display: flex;
-    overflow: visible;
+    overflow: hidden;
 }
 
 .top-block__container::-webkit-scrollbar {
@@ -79,7 +80,7 @@
 
 .top-block__right {
     max-width: 760px;
-    overflow: visible;
+    overflow: hidden;
 }
 
 .top-block__right::-webkit-scrollbar {
