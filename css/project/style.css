@@ -1487,14 +1487,22 @@
 .project-map {
     padding-bottom: 100px;
 }
+
 .project-map__container {
 }
+
 .project-map__title {
     margin-bottom: 50px;
 }
+
 .project-map__map-block {
     border-radius: 8px;
 }
+
+.project-map__map-block > * {
+        height: 100%;
+}
+
 @media (min-width: 1441px) {
     .project-map__map-block {
         height: 481px;
